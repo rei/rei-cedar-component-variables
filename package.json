@@ -1,0 +1,14 @@
+{
+  "name": "@rei/cedar-component-variables",
+  "version": "0.0.1",
+  "description": "Style variables exported from Cedar components",
+  "style": "dist/index.scss",
+  "files": [
+    "dist"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "@rei/cdr-tokens": "1.0.0-beta.2"
+  }
+}
