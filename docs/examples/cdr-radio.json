@@ -1,0 +1,17 @@
+{
+  "name": "cdr-radio",
+  "notes": [],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/radio/",
+  "examples": [
+    {
+      "name": "default",
+      "tag": "label",
+      "styles": ["@include cdr-label-base-mixin;"]
+    },
+    {
+      "name": "compact",
+      "tag": "label",
+      "styles": ["@include cdr-label-base-mixin;", "@include cdr-label-compact-mixin;"]
+    }
+  ]
+}

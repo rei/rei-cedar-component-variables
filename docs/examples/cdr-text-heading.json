@@ -1,0 +1,12 @@
+{
+  "name": "cdr-text--heading",
+  "notes": [],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/headings/",
+  "examples": [
+    {
+      "name": "heading-large-responsive",
+      "tag": "h1",
+      "styles": ["@include cdr-text-heading-large-responsive-mixin;"]
+    }
+  ]
+}

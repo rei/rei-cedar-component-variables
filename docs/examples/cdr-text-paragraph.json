@@ -1,0 +1,12 @@
+{
+  "name": "cdr-text--paragraph",
+  "notes": [],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/paragraphs/",
+  "examples": [
+    {
+      "name": "paragraph-default",
+      "tag": "p",
+      "styles": ["@include cdr-text-base-mixin;"]
+    }
+  ]
+}

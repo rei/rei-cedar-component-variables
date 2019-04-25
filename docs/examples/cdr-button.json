@@ -1,0 +1,35 @@
+{
+  "name": "cdr-button",
+  "notes": [
+    "All Cedar buttons must use the 'base' mixin as well as either the 'primary' or 'secondary' mixin. Additional modifiers can be added as well.",
+    "Button mixins should ideally be applied to HTML 'button' elements, but may also work on other HTML tags (i.e, div, a, span, etc.)"
+  ],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/buttons/",
+  "examples": [
+    {
+      "name": "primary",
+      "tag": "button",
+      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-primary-mixin;"]
+    },
+    {
+      "name": "secondary",
+      "tag": "button",
+      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-secondary-mixin;"]
+    },
+    {
+      "name": "primary-small",
+      "tag": "button",
+      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-primary-mixin;", "@include cdr-button-small-mixin;"]
+    },
+    {
+      "name": "secondary-medium",
+      "tag": "button",
+      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-secondary-mixin;", "@include cdr-button-medium-mixin;"]
+    },
+    {
+      "name": "primary-large",
+      "tag": "button",
+      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-primary-mixin;", "@include cdr-button-large-mixin;"]
+    }
+  ]
+}
