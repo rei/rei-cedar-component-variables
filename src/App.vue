@@ -1,5 +1,5 @@
 <script>
-import varsPackage from '../../package.json';
+import packageJson from '../package.json';
 import compExamples from '../examples';
 import CompBlock from './CompBlock';
 
@@ -15,10 +15,10 @@ export default {
   },
   computed: {
     packageVersion() {
-      return varsPackage.version;
+      return packageJson.version;
     },
     tokensVersion() {
-      return varsPackage.peerDependencies['@rei/cdr-tokens'];
+      return packageJson.peerDependencies['@rei/cdr-tokens'];
     },
     cedarVersion() {
       // TODO: how to do this?

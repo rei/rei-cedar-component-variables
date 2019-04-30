@@ -7,7 +7,11 @@
     "dist"
   ],
   "scripts": {
-    "build:single-file": ""
+    "build:single-file": "",
+    "build:docs": "npm run build:stylesheet && vue-cli-service build",
+    "build:stylesheet": "node ./build-stylesheet.js",
+    "lint": "vue-cli-service lint",
+    "serve": "npm run build:stylesheet && vue-cli-service serve"
   },
   "author": "",
   "license": "MIT",
@@ -15,6 +19,43 @@
     "@rei/cdr-tokens": "1.0.0"
   },
   "devDependencies": {
-    "@rei/cdr-tokens": "^1.0.0"
-  }
+    "@rei/cdr-assets": "^0.3.0",
+    "@rei/cdr-tokens": "^1.0.0",
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "fs-extra": "^7.0.1",
+    "lodash": "^4.17.11",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "vue": "^2.5.22",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
