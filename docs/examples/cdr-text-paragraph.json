@@ -6,7 +6,27 @@
     {
       "name": "paragraph-default",
       "tag": "p",
-      "styles": ["@include cdr-text-base-mixin;"]
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-base-mixin;"]
+    },
+    {
+      "name": "body-responsive",
+      "tag": "p",
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-body-responsive-mixin;"]
+    },
+    {
+      "name": "citation",
+      "tag": "p",
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-citation-mixin;"]
+    },
+    {
+      "name": "display-responsive",
+      "tag": "p",
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-display-responsive-mixin;"]
+    },
+    {
+      "name": "display-static",
+      "tag": "p",
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-display-static-mixin;"]
     }
   ]
 }

@@ -1,17 +1,23 @@
 {
   "name": "cdr-checkbox",
-  "notes": [],
+  "notes": [
+    "styles/svg for the checkbox input are not currently exported",
+    "cdr-radio and cdr-checkbox both make use of the cdr-label mixins",
+    "examples assume that the <input/> element is inside of the <label>"
+  ],
   "docs": "https://rei.github.io/rei-cedar-docs/components/checkbox/",
   "examples": [
     {
       "name": "default",
       "tag": "label",
-      "styles": ["@include cdr-label-base-mixin;"]
+      "styles": ["@include cdr-label-base-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"],
+      "content": "<input type=\"checkbox\"/>"
     },
     {
       "name": "compact",
       "tag": "label",
-      "styles": ["@include cdr-label-base-mixin;", "@include cdr-label-compact-mixin;"]
+      "styles": ["@include cdr-label-base-mixin;", "@include cdr-label-compact-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"],
+      "content": "<input type=\"checkbox\"/>"
     }
   ]
 }

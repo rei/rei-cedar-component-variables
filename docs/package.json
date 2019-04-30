@@ -14,8 +14,7 @@
   },
   "devDependencies": {
     "@rei/cdr-assets": "^0.3.0",
-    "@rei/cdr-tokens": "1.0.0-beta.2",
-    "vue": "^2.5.22",
+    "@rei/cdr-tokens": "^1.0.0",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
     "@vue/cli-service": "^3.4.0",
@@ -26,6 +25,7 @@
     "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
+    "vue": "^2.5.22",
     "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
