@@ -22,7 +22,6 @@ export default {
 
     <table>
       <tr class="header-row">
-        <th>name</th>
         <th>example</th>
         <th>tag</th>
         <th>code</th>
@@ -55,4 +54,5 @@ export default {
 table {
   width: 100%;
 }
+
 </style>

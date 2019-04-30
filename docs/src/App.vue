@@ -31,10 +31,15 @@ export default {
 <template>
   <div class="cdr-container-fluid">
     <h2 class="heading">rei-cedar-component-variables@{{ packageVersion }} examples</h2>
-    <p class="sub-heading">Exported from rei-cedar@{{ cedarVersion }}. Depends on rei-cedar-tokens@{{ tokensVersion }}.</p>
-    <p>
-      - For information on how to install and use this package, see the <a href="https://github.com/rei/rei-cedar-component-variables">README.md</a>
-    </p>
+    <ul class="sub-heading">
+      <!--<li>Exported from rei-cedar@{{ cedarVersion }}.</li>-->
+      <li>Depends on rei-cedar-tokens@{{ tokensVersion }}.</li>
+      <li>Component variables are currently only exported in SCSS format.</li>
+      <li>Example code on this page is intended to be added to a class that targets the HTML tag for that example.</li>
+      <li>The links in the example code can be used to look up the definitions of mixins and variables on github, or you can also look them up manually in the `/dist` directory</li>
+      <li>For more information on how to install and use this package, see the <a href="https://github.com/rei/rei-cedar-component-variables">README.md</a></li>
+    </ul>
+
     <hr/>
     <div class="cdr-container">
       <comp-block v-for="compData in compExamples" :key="compData.name" :comp-data="compData"/>

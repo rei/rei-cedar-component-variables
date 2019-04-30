@@ -29,6 +29,9 @@ export default {
 
       }).join("\n")
     },
+    exampleContent() {
+      return `${this.example.content || ''}${this.example.name}`
+    }
   }
 }
 </script>
@@ -37,12 +40,7 @@ export default {
   <tr class="example-row">
 
     <td>
-      {{ example.name }}
-    </td>
-    <td>
-      <component :is="example.tag" :class="className" href="#">
-        {{ example.content || example.name }}
-      </component>
+      <component :is="example.tag" :class="className" href="#" v-html="exampleContent"/>
     </td>
 
 
