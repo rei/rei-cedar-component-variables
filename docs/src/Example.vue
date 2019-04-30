@@ -64,8 +64,12 @@ export default {
   width: 25%;
 }
 
+.example-row td:last-child {
+  width: 50%;
+}
+
 .code-block code {
-  font-size: $cdr-text-default-body-compact-size;
+  font-size: $cdr-text-default-compact-size;
   user-select: all;
 }
 

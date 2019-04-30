@@ -6,9 +6,15 @@
   "files": [
     "dist"
   ],
+  "scripts": {
+    "build:single-file": ""
+  },
   "author": "",
   "license": "MIT",
   "peerDependencies": {
-    "@rei/cdr-tokens": "1.0.0-beta.2"
+    "@rei/cdr-tokens": "1.0.0"
+  },
+  "devDependencies": {
+    "@rei/cdr-tokens": "^1.0.0"
   }
 }
