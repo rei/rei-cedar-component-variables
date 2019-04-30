@@ -17,7 +17,9 @@ export default {
         const isMixin = Boolean(mixin[1]);
         const variable = line.split('$');
         const query = (mixin[1] || variable[1]).replace(';', '');
-        const link = `<a href="https://github.com/rei/rei-cedar/search?q=${query}" target="_blank">${query}</a>`;
+
+        // link to look up definition of mixins/variables. If structure of /dist changes, will need to update this URL
+        const link = `<a href="https://github.com/rei/rei-cedar-component-variables/search?q=${query}+path%3A%2Fdist%2Fscss" target="_blank">${query}</a>`;
 
         if (isMixin) {
           return `@include ${link};`;
