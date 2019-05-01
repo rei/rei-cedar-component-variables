@@ -52,6 +52,8 @@ The `/dist` folder in this project should never be edited directly as it is mean
 
 Update steps:
 - Ensure that your copy of `rei-cedar` and `rei-cedar-component-variables` are in the same directory
-- Run the `build:variables` script in `rei-cedar` to copy the variable files for all supported components into this repository. If you are adding support for a component, you will need to update that build script.
-- Update `cdr-tokens` dependencies in this project so that the version exactly matches the version currently being used in `rei-cedar`
-- Update `docs/examples` as needed
+- Run the `build:variables` script in `rei-cedar` to copy the variable files for all supported components into this repository. If you are adding support for a component, you will need to update that build script. If there are no changes to the `/dist` directory, then there is no need to do anything else.
+- Update the `cdr-tokens` dependencies in this project's `package.json` so that the version exactly matches the version currently being used in `rei-cedar`
+- Update `/examples` as needed. Note that you will need to re-start the `serve` script any time the example SCSS code changes.
+- Bump the version of this package
+- Run the `build:docs` script in this project

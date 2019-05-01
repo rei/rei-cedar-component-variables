@@ -7,7 +7,7 @@
     "dist"
   ],
   "scripts": {
-    "build:docs": "npm run build:stylesheet && vue-cli-service build",
+    "build:docs": "npm run build:stylesheet && vue-cli-service build && node ./deploy.js",
     "build:stylesheet": "node ./build-stylesheet.js",
     "lint": "vue-cli-service lint",
     "serve": "npm run build:stylesheet && vue-cli-service serve"
@@ -15,7 +15,7 @@
   "author": "",
   "license": "MIT",
   "peerDependencies": {
-    "@rei/cdr-tokens": "1.0.0"
+    "@rei/cdr-tokens": "^1.0.0"
   },
   "devDependencies": {
     "@rei/cdr-assets": "^0.3.0",
@@ -27,6 +27,7 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "fs-extra": "^7.0.1",
+    "gh-pages": "^2.0.1",
     "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
