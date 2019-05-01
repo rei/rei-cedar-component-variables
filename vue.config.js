@@ -1,0 +1,7 @@
+// TODO: ?????
+module.exports = {
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/rei-cedar-component-variables/'
+    : '/',
+  outputDir: 'docs'
+}

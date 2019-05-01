@@ -1,0 +1,44 @@
+{
+  "name": "cdr-text--heading",
+  "notes": [
+    "cdr-text styles can be applied to any HTML tag that contains text (h1-h7, span, p, a, etc.)"
+  ],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/headings/",
+  "examples": [
+    {
+      "name": "heading-large-responsive",
+      "tag": "p",
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-heading-large-responsive-mixin;"]
+    },
+
+    {
+      "name": "heading-large-static",
+      "tag": "p",
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-heading-large-static-mixin;"]
+    },
+    {
+      "name": "heading-medium-responsive",
+      "tag": "p",
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-heading-medium-responsive-mixin;"]
+    },
+    {
+      "name": "heading-medium-static",
+      "tag": "p",
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-heading-medium-static-mixin;"]
+    },{
+      "name": "heading-small-responsive",
+      "tag": "p",
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-heading-small-responsive-mixin;"]
+    },
+    {
+      "name": "heading-small-static",
+      "tag": "p",
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-heading-small-static-mixin;"]
+    },
+    {
+      "name": "subheading",
+      "tag": "p",
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-subheading-mixin"]
+    }
+  ]
+}

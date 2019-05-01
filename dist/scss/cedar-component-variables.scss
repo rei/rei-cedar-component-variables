@@ -1,0 +1,1398 @@
+// Media Queries
+
+// XS
+@mixin xs-mq {
+  @media (min-width: #{$cdr-breakpoint-xs}) {
+    @content;
+  }
+}
+
+@mixin xs-mq-only {
+  @media (min-width: #{$cdr-breakpoint-xs}) and (max-width: calc(#{$cdr-breakpoint-sm} - 1px)) {
+    @content;
+  }
+}
+
+// SM
+@mixin sm-mq {
+  @media (min-width: #{$cdr-breakpoint-sm}) {
+    @content;
+  }
+}
+
+@mixin sm-mq-only {
+  @media (min-width: #{$cdr-breakpoint-sm}) and (max-width: calc(#{$cdr-breakpoint-md} - 1px)) {
+    @content;
+  }
+}
+
+// MD
+@mixin md-mq {
+  @media (min-width: #{$cdr-breakpoint-md}) {
+    @content;
+  }
+}
+
+@mixin md-mq-only {
+  @media (min-width: #{$cdr-breakpoint-md}) and (max-width: calc(#{$cdr-breakpoint-lg} - 1px)) {
+    @content;
+  }
+}
+
+// LG
+@mixin lg-mq {
+  @media (min-width: #{$cdr-breakpoint-lg}) {
+    @content;
+  }
+}
+
+@mixin lg-mq-only {
+  @media (min-width: #{$cdr-breakpoint-lg}) {
+    @content;
+  }
+}
+
+/* ==========================================================================/*
+* Token option variables
+*
+* these are temporary variables, providing
+* cedar components mappings to previously available tokens.
+* These varables should be removed as tokens are available
+*
+=============================================================== */
+
+/* ---------------------
+* Text
+* ------------------- */
+
+/* Redwood */
+@mixin redwood-display-70() {
+  font-style: normal;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: normal;
+}
+
+@mixin redwood-display-60() {
+  font-style: normal;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: normal;
+}
+
+@mixin redwood-display-50() {
+  font-style: normal;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: normal;
+}
+
+@mixin redwood-display-40() {
+  font-style: normal;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: normal;
+}
+
+@mixin redwood-display-30() {
+  font-style: normal;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: normal;
+}
+
+@mixin redwood-display-20() {
+  font-style: normal;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: normal;
+}
+
+@mixin redwood-body-40() {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: normal;
+}
+
+@mixin redwood-display-10() {
+  font-style: normal;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: normal;
+}
+
+@mixin redwood-body-30() {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: normal;
+}
+
+@mixin redwood-body-20() {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: normal;
+}
+
+@mixin redwood-body-10() {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: normal;
+}
+
+/* Maple */
+@mixin maple-utility-70() {
+  font-style: normal;
+  font-family: Roboto Condensed, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: normal;
+}
+
+@mixin maple-utility-60() {
+  font-style: normal;
+  font-family: Roboto Condensed, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: normal;
+}
+
+@mixin maple-utility-50() {
+  font-style: normal;
+  font-family: Roboto Condensed, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: normal;
+}
+
+@mixin maple-utility-40() {
+  font-style: normal;
+  font-family: Roboto Condensed, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: normal;
+}
+
+@mixin maple-utility-30() {
+  font-style: normal;
+  font-family: Roboto Condensed, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: normal;
+}
+
+@mixin maple-utility-20() {
+  font-style: normal;
+  font-family: Roboto Condensed, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: normal;
+}
+
+@mixin maple-utility-10() {
+  font-style: normal;
+  font-family: Roboto Condensed, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: normal;
+}
+
+/* Spruce */
+@mixin spruce-display-90() {
+  font-style: normal;
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 600;
+  font-size: 76px;
+  line-height: 84px;
+  letter-spacing: 0.2px;
+}
+
+@mixin spruce-display-80() {
+  font-style: normal;
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 60px;
+  letter-spacing: 0.2px;
+}
+
+@mixin spruce-display-70() {
+  font-style: normal;
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.2px;
+}
+
+@mixin spruce-display-60() {
+  font-style: normal;
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.2px;
+}
+
+@mixin spruce-display-50() {
+  font-style: normal;
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: 0.2px;
+}
+
+@mixin spruce-display-40() {
+  font-style: normal;
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.2px;
+}
+
+@mixin spruce-display-30() {
+  font-style: normal;
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+}
+
+@mixin spruce-display-20() {
+  font-style: normal;
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+@mixin spruce-display-10() {
+  font-style: normal;
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+@mixin spruce-display-00() {
+  font-style: normal;
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+@mixin spruce-display-100() {
+  font-style: normal;
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-variant: normal;
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 104px;
+  letter-spacing: 0.2px;
+}
+
+@mixin spruce-body-30() {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: normal;
+}
+
+@mixin spruce-body-20() {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: normal;
+}
+
+/* ---------------------
+* Color
+* ------------------- */
+$center-of-attention: #e86868;
+$golden-face: #f8b877;
+$pick-your-potion: #faecec;
+$to-the-rescue: #b5292b;
+$text-color-secondary-on-dark: #999999;
+$high-stakes: #b5292b;
+$moon-shot: #fafafa;
+$lost-in-space: #1a1a1a;
+$crowd-pleaser: #3278ae;
+$hissing-llamas: #f1efe4;
+$instant-winner: #367c3c;
+$text-color-secondary-on-light: #616161;
+$easily-excited: #3278ae;
+$the-tooth: #f7f7f7;
+$background-color-darker: #1a1a1a;
+$threat-level-midnight: #434343;
+$background-color-light: #f7f7f7;
+$old-growth: #46522e;
+$interactive-color-primary: #3278ae;
+$grey-matter: #b8b8b8;
+$text-color-primary-on-dark: #fafafa;
+$hunky-dory: #5197cd;
+$quick-fixe: #a12024;
+$partly-cloudy: #dadada;
+$coal-train: #7a7a7a;
+$attention-grabber: #c83232;
+$text-color-form-placeholder: #7a7a7a;
+$clean-slate: #ffffff;
+$text-color-form-label: #292929;
+$text-color-error-on-dark: #e86868;
+$thin-mint: #edf7ee;
+$holy-smoke: #999999;
+$text-color-error-on-light: #b5292b;
+$taken-for-granite: #616161;
+$dehydrated-lemon: #c77523;
+$go-van-gogh: #1e4e72;
+$background-color-lightest: #ffffff;
+$background-color-lighter: #fafafa;
+$moose-tooth: #faf9f5;
+$interactive-color-primary-selected: #3278ae;
+$light-tension: #fff5eb;
+$interactive-color-primary-hover: #2b6692;
+$heart-of-darkness: #292929;
+$text-color-primary-on-light: #292929;
+$closed-on-monday: #2b6692;
+$ice-age: #ecf2f7;
+$crimp-son-and-clover: #6c9f71;
+$background-color-dark: #292929;
+$suede-shoes: #5197cd;
+$snap-decision: #e86868;
+
+/* ---------------------
+* Outline
+* ------------------- */
+$default-outline: 0.2rem auto -webkit-focus-ring-color;
+
+$cdr-button-base-border: none;
+$cdr-button-base-outline: none;
+$cdr-button-base-border-radius: $cdr-radius-softer;
+$cdr-button-base-display: inline-flex;
+$cdr-button-base-overflow: visible;
+$cdr-button-base-padding: $cdr-space-inset-one-x-squish;
+$cdr-button-base-text-align: left;
+$cdr-button-base-text-decoration: none;
+$cdr-button-base-text-transform: none;
+$cdr-button-base-cursor: pointer;
+
+$cdr-button-primary-background-color: #3278ae;
+$cdr-button-primary-box-shadow: inset 0 0 0 1px #2b6692;
+$cdr-button-primary-fill: #ffffff;
+$cdr-button-primary-color: #ffffff;
+
+$cdr-button-base-icon-align-self: center;
+$cdr-button-base-icon-fill: inherit;
+$cdr-button-base-icon-mr: $cdr-space-quarter-x;
+
+$cdr-button-primary-background-color-hover: #2b6692;
+$cdr-button-primary-fill-hover: #ffffff;
+$cdr-button-primary-color-hover: #ffffff;
+$cdr-button-primary-box-shadow-hover: inset 0 0 0 1px #2b6692;
+$cdr-button-base-outline-hover: none;
+$cdr-button-base-outline-offset-hover: 0;
+$cdr-button-base-text-decoration-hover: none;
+
+$cdr-button-primary-background-color-active: #2b6692;
+$cdr-button-primary-fill-active: #ffffff;
+$cdr-button-primary-color-active: #ffffff;
+$cdr-button-primary-box-shadow-active: inset 0 0 0 1px #2b6692;
+$cdr-button-base-outline-active: none;
+$cdr-button-base-outline-offset-active: 0;
+$cdr-button-base-text-decoration-active: none;
+
+$cdr-button-primary-background-color-focus: #2b6692;
+$cdr-button-primary-fill-focus: #ffffff;
+$cdr-button-primary-color-focus: #ffffff;
+$cdr-button-primary-box-shadow-focus: inset 0 0 0 1px #2b6692;
+$cdr-button-base-outline-focus: $default-outline;
+$cdr-button-base-outline-offset-focus: 0;
+$cdr-button-base-text-decoration-focus: none;
+
+$cdr-button-primary-background-color-disabled: #dadada;
+$cdr-button-primary-color-disabled: #ffffff;
+$cdr-button-primary-box-shadow-disabled: inset 0 0 0 1px #b8b8b8;
+
+$cdr-button-base-cursor-disabled: not-allowed;
+
+$cdr-button-secondary-background-color: #ffffff;
+$cdr-button-secondary-color: #292929;
+$cdr-button-secondary-fill: #292929;
+$cdr-button-secondary-box-shadow: inset 0 0 0 1px #616161;
+
+$cdr-button-secondary-background-color-hover: #f7f7f7;
+$cdr-button-secondary-color-hover: #292929;
+$cdr-button-secondary-fill-hover: #292929;
+$cdr-button-secondary-box-shadow-hover: inset 0 0 0 1px #616161;
+
+$cdr-button-secondary-background-color-active: #f7f7f7;
+$cdr-button-secondary-color-active: #292929;
+$cdr-button-secondary-fill-active: #292929;
+$cdr-button-secondary-box-shadow-active: inset 0 0 0 1px #616161;
+
+$cdr-button-secondary-background-color-focus: #f7f7f7;
+$cdr-button-secondary-color-focus: #292929;
+$cdr-button-secondary-fill-focus: #292929;
+$cdr-button-secondary-box-shadow-focus: inset 0 0 0 1px #616161;
+
+$cdr-button-secondary-background-color-disabled: #ffffff;
+$cdr-button-secondary-color-disabled: #b8b8b8;
+$cdr-button-secondary-fill-disabled: #b8b8b8;
+$cdr-button-secondary-box-shadow-disabled: inset 0 0 0 1px #dadada;
+
+$cdr-button-base-padding-large: $cdr-space-inset-one-and-a-half-x-squish;
+$cdr-button-has-icon-pl-large: $cdr-space-one-and-a-half-x - $cdr-space-quarter-x;
+
+$cdr-button-base-padding-medium: $cdr-space-inset-one-x-squish;
+$cdr-button-has-icon-pl-medium: $cdr-space-one-x - $cdr-space-quarter-x;
+
+$cdr-button-base-padding-small: $cdr-space-inset-three-quarter-x-squish;
+$cdr-button-has-icon-pl-small: $cdr-space-three-quarter-x - $cdr-space-quarter-x;
+
+$cdr-button-base-icon-width-small: 20px;
+$cdr-button-base-icon-height-small: 20px;
+$cdr-button-base-icon-width-medium: $cdr-icon-size;
+$cdr-button-base-icon-height-medium: $cdr-icon-size;
+$cdr-button-base-icon-width-large: $cdr-icon-size;
+$cdr-button-base-icon-height-large: $cdr-icon-size;
+
+$cdr-button-full-width-width: 100%;
+$cdr-button-full-width-justify-content: center;
+
+$cdr-button-icon-only-background-color: none;
+$cdr-button-icon-only-border: none;
+$cdr-button-icon-only-box-shadow: none;
+$cdr-button-icon-only-display: inline-block;
+
+
+$cdr-button-icon-only-padding: $cdr-space-inset-half-x;
+$cdr-button-icon-only-pr: calc($cdr-space-inset-half-x - $cdr-space-quarter-x); // note that this overrides the previous padding variable
+
+$cdr-button-icon-only-fill: $heart-of-darkness;
+
+$cdr-button-icon-only-background-color-hover: none;
+$cdr-button-icon-only-fill-hover: $heart-of-darkness;
+$cdr-button-icon-only-box-shadow-hover: none;
+
+$cdr-button-icon-only-background-color-active: none;
+$cdr-button-icon-only-fill-active: $heart-of-darkness;
+$cdr-button-icon-only-box-shadow-active: none;
+
+$cdr-button-icon-only-background-color-focus: none;
+$cdr-button-icon-only-fill-focus: $heart-of-darkness;
+$cdr-button-icon-only-box-shadow-focus: none;
+
+$cdr-button-icon-only-fill-darkmode: $moon-shot;
+
+@mixin cdr-button-base-text-mixin() {
+  @include redwood-display-30
+}
+
+@mixin cdr-button-base-text-mixin-small() {
+  @include redwood-display-20;
+}
+
+@mixin cdr-button-base-text-mixin-medium() {
+  @include redwood-display-30;
+}
+
+@mixin cdr-button-base-text-mixin-large() {
+  @include redwood-display-40;
+}
+
+/* start of mixin land */
+
+@mixin cdr-button-base-mixin() {
+  @include cdr-button-base-text-mixin;
+
+  border: $cdr-button-base-border;
+  border-radius: $cdr-button-base-border-radius;
+  cursor: $cdr-button-base-cursor;
+  display: $cdr-button-base-display;
+  outline: $cdr-button-base-outline;
+  overflow: $cdr-button-base-overflow;
+  padding: $cdr-button-base-padding;
+  text-align: $cdr-button-base-text-align;
+  text-decoration: $cdr-button-base-text-decoration;
+  text-transform: $cdr-button-base-text-transform;
+
+  /* States
+    ---------- */
+
+  &:hover {
+    outline: $cdr-button-base-outline-hover;
+    outline-offset: $cdr-button-base-outline-offset-hover;
+    text-decoration: $cdr-button-base-text-decoration-hover;
+  }
+
+  &:active {
+    outline: $cdr-button-base-outline-active;
+    outline-offset: $cdr-button-base-outline-offset-active;
+    text-decoration: $cdr-button-base-text-decoration-active;
+  }
+
+  &:focus {
+    outline: $cdr-button-base-outline-focus;
+    outline-offset: $cdr-button-base-outline-offset-focus;
+    text-decoration: $cdr-button-base-text-decoration-focus;
+  }
+
+  &[disabled] {
+    cursor: $cdr-button-base-cursor-disabled;
+  }
+}
+
+@mixin cdr-button-base-icon-mixin() {
+  align-self: $cdr-button-base-icon-align-self;
+  margin-right: $cdr-button-base-icon-mr;
+  fill: $cdr-button-base-icon-fill;
+}
+
+@mixin cdr-button-primary-mixin() {
+  background-color: $cdr-button-primary-background-color;
+  box-shadow: $cdr-button-primary-box-shadow;
+  color: $cdr-button-primary-color;
+  fill: $cdr-button-primary-fill;
+
+  /* States
+    ---------- */
+
+  &:hover {
+    background-color: $cdr-button-primary-background-color-hover;
+    color: $cdr-button-primary-color-hover;
+    box-shadow: $cdr-button-primary-box-shadow-hover;
+    fill: $cdr-button-primary-fill-hover;
+  }
+
+  &:active {
+    background-color: $cdr-button-primary-background-color-active;
+    color: $cdr-button-primary-color-active;
+    box-shadow: $cdr-button-primary-box-shadow-active;
+    fill: $cdr-button-primary-fill-active;
+  }
+
+  &:focus {
+    background-color: $cdr-button-primary-background-color-focus;
+    color: $cdr-button-primary-color-focus;
+    box-shadow: $cdr-button-primary-box-shadow-focus;
+    fill: $cdr-button-primary-fill-focus;
+  }
+
+  &[disabled] {
+    background-color: $cdr-button-primary-background-color-disabled;
+    box-shadow: $cdr-button-primary-box-shadow-disabled;
+    color: $cdr-button-primary-color-disabled;
+  }
+}
+
+@mixin cdr-button-secondary-mixin() {
+  background-color: $cdr-button-secondary-background-color;
+  box-shadow: $cdr-button-secondary-box-shadow;
+  color: $cdr-button-secondary-color;
+  fill: $cdr-button-secondary-fill;
+
+  /* States
+  ---------- */
+
+  &:hover {
+    background-color: $cdr-button-secondary-background-color-hover;
+    box-shadow: $cdr-button-secondary-box-shadow-hover;
+    color: $cdr-button-secondary-color-hover;
+    fill: $cdr-button-secondary-fill-hover;
+  }
+
+  &:active {
+    background-color: $cdr-button-secondary-background-color-active;
+    box-shadow: $cdr-button-secondary-box-shadow-active;
+    color: $cdr-button-secondary-color-active;
+    fill: $cdr-button-secondary-fill-active;
+  }
+
+  &:focus {
+    background-color: $cdr-button-secondary-background-color-focus;
+    box-shadow: $cdr-button-secondary-box-shadow-focus;
+    color: $cdr-button-secondary-color-focus;
+    fill: $cdr-button-secondary-fill-focus;
+  }
+
+  &[disabled] {
+    background-color: $cdr-button-secondary-background-color-disabled;
+    box-shadow: $cdr-button-secondary-box-shadow-disabled;
+    color: $cdr-button-secondary-color-disabled;
+    fill: $cdr-button-secondary-fill-disabled;
+  }
+}
+
+@mixin cdr-button-full-width-mixin() {
+  width: $cdr-button-full-width-width;
+  justify-content: $cdr-button-full-width-justify-content;
+}
+
+@mixin cdr-button-icon-only-mixin() {
+  background: $cdr-button-icon-only-background-color;
+  border: $cdr-button-icon-only-border;
+  box-shadow: $cdr-button-icon-only-box-shadow;
+  display: $cdr-button-icon-only-display;
+  padding: $cdr-button-icon-only-padding;
+  padding-right: $cdr-button-icon-only-pr;
+  fill: $cdr-button-icon-only-fill;
+
+  &:hover {
+    background: $cdr-button-icon-only-background-color-hover;
+    box-shadow: $cdr-button-icon-only-box-shadow-hover;
+    fill: $cdr-button-icon-only-fill-hover;
+  }
+
+  &:active {
+    background: $cdr-button-icon-only-background-color-active;
+    box-shadow: $cdr-button-icon-only-box-shadow-active;
+    fill: $cdr-button-icon-only-fill-active;
+  }
+
+  &:focus {
+    background: $cdr-button-icon-only-background-color-focus;
+    box-shadow: $cdr-button-icon-only-box-shadow-focus;
+    fill: $cdr-button-icon-only-fill-focus;
+  }
+}
+
+@mixin cdr-button-small-mixin() {
+  @include cdr-button-base-text-mixin-small;
+  padding: $cdr-button-base-padding-small;
+  width: auto;
+}
+
+@mixin cdr-button-has-icon-small-mixin {
+  padding-left: $cdr-button-has-icon-pl-small;
+}
+
+@mixin cdr-button-icon-small-mixin {
+  /* This is to correct icon size vs line height */
+  width: $cdr-button-base-icon-width-small;
+  height: $cdr-button-base-icon-height-small;
+}
+
+@mixin cdr-button-medium-mixin() {
+  @include cdr-button-base-text-mixin-medium;
+  padding: $cdr-button-base-padding-medium;
+  width: auto;
+}
+
+@mixin cdr-button-has-icon-medium-mixin {
+  padding-left: $cdr-button-has-icon-pl-medium;
+}
+
+@mixin cdr-button-icon-medium-mixin {
+  /* This is to correct icon size vs line height */
+  width: $cdr-button-base-icon-width-medium;
+  height: $cdr-button-base-icon-height-medium;
+}
+
+@mixin cdr-button-large-mixin() {
+  @include cdr-button-base-text-mixin-large;
+  padding: $cdr-button-base-padding-large;
+  width: auto;
+}
+
+@mixin cdr-button-has-icon-large-mixin {
+  padding-left: $cdr-button-has-icon-pl-large;
+}
+
+@mixin cdr-button-icon-large-mixin {
+  /* This is to correct icon size vs line height */
+  width: $cdr-button-base-icon-width-large;
+  height: $cdr-button-base-icon-height-large;
+}
+
+$cdr-link-base-font-family: inherit;
+$cdr-link-base-font-size: inherit;
+$cdr-link-base-line-height: inherit;
+$cdr-link-base-align-items: center;
+$cdr-link-base-background-color: transparent;
+$cdr-link-base-border: 0;
+$cdr-link-base-margin: 0;
+$cdr-link-base-color: $cdr-color-text-link-lightmode;
+$cdr-link-base-cursor: pointer;
+$cdr-link-base-display: inline-flex;
+$cdr-link-base-fill: $cdr-color-text-link-lightmode;
+$cdr-link-base-outline: none;
+$cdr-link-base-padding: 0;
+$cdr-link-base-text-decoration: underline;
+$cdr-link-base-vertical-align: top;
+
+$cdr-link-base-color-hover: $cdr-color-text-link-lightmode;
+$cdr-link-base-outline-hover: none;
+$cdr-link-base-text-decoration-hover: underline;
+
+$cdr-link-base-color-active: $cdr-color-text-link-lightmode;
+$cdr-link-base-outline-active: none;
+$cdr-link-base-text-decoration-active: underline;
+
+$cdr-link-base-color-focus: $cdr-color-text-link-lightmode;
+$cdr-link-base-outline-focus: $default-outline;
+$cdr-link-base-outline-offset-focus: 0;
+$cdr-link-base-text-decoration-focus: underline;
+
+$cdr-link-standalone-text-decoration: none;
+$cdr-link-standalone-text-decoration-hover: underline;
+$cdr-link-standalone-text-decoration-active: underline;
+$cdr-link-standalone-text-decoration-focus: underline;
+$cdr-link-standalone-text-decoration-visited: underline;
+
+$cdr-link-base-color-lightmode: $cdr-color-text-link-lightmode;
+$cdr-link-base-color-hover-lightmode: $cdr-color-text-link-lightmode;
+$cdr-link-base-color-active-lightmode: $cdr-color-text-link-lightmode;
+$cdr-link-base-color-focus-lightmode: $cdr-color-text-link-lightmode;
+$cdr-link-base-fill-lightmode: $cdr-color-text-link-lightmode;
+
+$cdr-link-base-color-darkmode: $cdr-color-text-link-darkmode;
+$cdr-link-base-color-hover-darkmode: $cdr-color-text-link-darkmode;
+$cdr-link-base-color-active-darkmode: $cdr-color-text-link-darkmode;
+$cdr-link-base-color-focus-darkmode: $cdr-color-text-link-darkmode;
+$cdr-link-base-fill-darkmode: $cdr-color-text-link-darkmode;
+
+@mixin cdr-link-base-mixin() {
+  font-family: $cdr-link-base-font-family;
+  font-size: $cdr-link-base-font-size;
+  line-height: $cdr-link-base-line-height;
+  align-items: $cdr-link-base-align-items;
+  background-color: $cdr-link-base-background-color;
+  border: $cdr-link-base-border;
+  margin: $cdr-link-base-margin;
+  color: $cdr-link-base-color;
+  cursor: $cdr-link-base-cursor;
+  display: $cdr-link-base-display;
+  fill: $cdr-link-base-fill;
+  outline: $cdr-link-base-outline;
+  padding: $cdr-link-base-padding;
+  text-decoration: $cdr-link-base-text-decoration;
+  vertical-align: $cdr-link-base-vertical-align;
+
+  /* States
+    ---------- */
+
+  &:hover {
+    color: $cdr-link-base-color-hover;
+    outline: $cdr-link-base-outline-hover;
+    text-decoration: $cdr-link-base-text-decoration-hover;
+  }
+
+  &:active {
+    color: $cdr-link-base-color-active;
+    outline: $cdr-link-base-outline-active;
+    text-decoration: $cdr-link-base-text-decoration-active;
+  }
+
+  &:focus {
+    color: $cdr-link-base-color-focus;
+    outline: $cdr-link-base-outline-focus;
+    outline-offset: $cdr-link-base-outline-offset-focus;
+    text-decoration: $cdr-link-base-text-decoration-focus;
+  }
+}
+
+@mixin cdr-link-standalone-mixin() {
+  text-decoration: $cdr-link-standalone-text-decoration;
+
+  &:hover {
+    text-decoration: $cdr-link-standalone-text-decoration-hover;
+  }
+
+  &:active {
+    text-decoration: $cdr-link-standalone-text-decoration-active;
+  }
+
+  &:focus {
+    text-decoration: $cdr-link-standalone-text-decoration-focus;
+  }
+
+  &:visited {
+    text-decoration: $cdr-link-standalone-text-decoration-visited;
+  }
+}
+
+@mixin cdr-link-lightmode-mixin() {
+  color: $cdr-link-base-color-lightmode;
+  fill: $cdr-link-base-fill-lightmode;
+
+  /* States
+    ---------- */
+
+  &:hover {
+    color: $cdr-link-base-color-hover-lightmode;
+  }
+
+  &:active {
+    color: $cdr-link-base-color-active-lightmode;
+  }
+
+  &:focus {
+    color: $cdr-link-base-color-focus-lightmode;
+  }
+}
+
+@mixin cdr-link-darkmode-mixin() {
+  color: $cdr-link-base-color-darkmode;
+  fill: $cdr-link-base-fill-darkmode;
+
+  /* States
+    ---------- */
+
+  &:hover {
+    color: $cdr-link-base-color-hover-darkmode;
+  }
+
+  &:active {
+    color: $cdr-link-base-color-active-darkmode;
+  }
+
+  &:focus {
+    color: $cdr-link-base-color-focus-darkmode;
+  }
+}
+
+/* base */
+@mixin cdr-text-base-text-mixin() {
+  @include cdr-text-default;
+}
+
+$cdr-text-base-margin: 0;
+
+@mixin cdr-text-base-mixin() {
+  @include cdr-text-base-text-mixin;
+  margin: $cdr-text-base-margin
+}
+
+/* body */
+
+@mixin cdr-text-body-text-mixin() {
+  @include cdr-text-editorial-compact;
+}
+
+$cdr-text-body-max-width: 634px;
+$cdr-text-body-stack: 16px;
+
+@mixin cdr-text-body-text-bp-sm-mixin() {
+  @include cdr-text-editorial;
+}
+
+$cdr-text-body-stack-bp-sm: 32px;
+
+@mixin cdr-text-body-responsive-mixin() {
+  @include cdr-text-body-text-mixin;
+
+  max-width: $cdr-text-body-max-width;
+
+  & + & {
+    margin-top: $cdr-text-body-stack;
+  }
+
+  @include sm-mq {
+    @include cdr-text-body-text-bp-sm-mixin;
+
+    & + & {
+      margin-top: $cdr-text-body-stack-bp-sm;
+    }
+  }
+}
+
+/* citation */
+@mixin cdr-text-citation-text-mixin() {
+  @include redwood-display-10;
+}
+
+@mixin cdr-text-citation-mixin() {
+  @include cdr-text-citation-text-mixin;
+}
+
+/* subheading */
+@mixin cdr-text-subheading-text-mixin() {
+  @include spruce-display-20;
+}
+
+@mixin cdr-text-subheading-mixin() {
+  @include cdr-text-subheading-text-mixin;
+}
+
+/* display-responsive */
+@mixin cdr-text-display-text-mixin() {
+  @include spruce-display-60;
+}
+
+@mixin cdr-text-display-text-bp-sm-mixin() {
+  @include spruce-display-70;
+}
+
+@mixin cdr-text-display-text-bp-lg-mixin() {
+  @include spruce-display-80;
+}
+
+@mixin cdr-text-display-responsive-mixin() {
+  @include cdr-text-display-text-mixin;
+
+  /* @ small */
+  @include sm-mq {
+    @include cdr-text-display-text-bp-sm-mixin;
+  }
+
+  /* @ large */
+  @include lg-mq {
+    @include cdr-text-display-text-bp-lg-mixin;
+  }
+}
+
+/* display-static */
+@mixin cdr-text-display-text-static-mixin() {
+  @include spruce-display-70;
+}
+
+@mixin cdr-text-display-static-mixin() {
+  @include cdr-text-display-text-static-mixin;
+}
+
+
+/* heading */
+
+/* heading-small-responsive */
+@mixin cdr-text-heading-text-small-mixin() {
+  @include spruce-display-30;
+}
+
+@mixin cdr-text-heading-text-small-bp-lg-mixin() {
+  @include spruce-display-40;
+}
+
+@mixin cdr-text-heading-small-responsive-mixin() {
+  @include cdr-text-heading-text-small-mixin;
+
+  /* @ large */
+  @include lg-mq {
+    @include cdr-text-heading-text-small-bp-lg-mixin;
+  }
+}
+
+/* heading-small-static */
+
+@mixin cdr-text-heading-text-small-static-mixin() {
+  @include spruce-display-30;
+}
+
+@mixin cdr-text-heading-small-static-mixin() {
+  @include cdr-text-heading-text-small-static-mixin;
+}
+
+/* heading-medium-responsive */
+
+@mixin cdr-text-heading-text-medium-mixin() {
+  @include spruce-display-40;
+}
+
+@mixin cdr-text-heading-text-medium-bp-lg-mixin() {
+  @include spruce-display-50;
+}
+
+@mixin cdr-text-heading-medium-responsive-mixin() {
+  @include cdr-text-heading-text-medium-mixin;
+
+  /* @ large */
+  @include lg-mq {
+    @include cdr-text-heading-text-medium-bp-lg-mixin;
+  }
+}
+
+/* heading-medium-static */
+
+@mixin cdr-text-heading-medium-static-mixin() {
+  @include spruce-display-40;
+}
+
+@mixin cdr-text-heading-text-medium-static-mixin() {
+  @include cdr-text-heading-text-medium-static-mixin;
+}
+
+
+/* heading-large-responsive */
+
+
+@mixin cdr-text-heading-text-large-mixin() {
+  @include spruce-display-40;
+}
+
+@mixin cdr-text-heading-text-large-bp-sm-mixin() {
+  @include spruce-display-50;
+}
+
+@mixin cdr-text-heading-text-large-bp-lg-mixin() {
+  @include spruce-display-70;
+}
+
+@mixin cdr-text-heading-large-responsive-mixin() {
+  @include cdr-text-heading-text-large-mixin;
+
+  /* @ small */
+  @include sm-mq {
+    @include cdr-text-heading-text-large-bp-sm-mixin;
+  }
+
+  /* @ large */
+  @include lg-mq {
+    @include cdr-text-heading-text-large-bp-lg-mixin;
+  }
+}
+
+/* heading-large-static */
+
+@mixin cdr-text-heading-text-large-static-mixin() {
+  @include spruce-display-50;
+}
+
+@mixin cdr-text-heading-large-static-mixin() {
+  @include cdr-text-heading-text-large-static-mixin;
+}
+
+$cdr-label-base-spacing: 8px;
+
+@mixin cdr-label-base-text-mixin() {
+  @include redwood-display-30;
+}
+
+$cdr-label-base-color: #292929;
+$cdr-label-base-display: inline-block;
+$cdr-label-base-margin: 0;
+@mixin cdr-label-base-mixin() {
+  @include cdr-label-base-text-mixin;
+
+  color: $cdr-label-base-color;
+  display: $cdr-label-base-display;
+  margin: $cdr-label-base-margin;
+}
+
+$cdr-label-base-cursor-hover: pointer;
+
+@mixin cdr-label-hover-mixin() {
+  cursor: $cdr-label-base-cursor-hover;
+}
+
+$cdr-label-base-cursor-disabled: default;
+$cdr-label-color-disabled: #b8b8b8;
+
+@mixin cdr-label-disabled-mixin() {
+  color: $cdr-label-color-disabled !important;
+  cursor: $cdr-label-base-cursor-disabled;
+}
+
+
+@mixin cdr-label-compact-text-mixin() {
+  @include redwood-display-20;
+}
+@mixin cdr-label-compact-mixin() {
+  @include cdr-label-compact-text-mixin;
+}
+
+/* PRIVATE */
+/* Assumed icon width of slot provided icon.  We may want to add a user provided
+  width option in the future.  */
+$input-pre-icon-default-width: 25px;
+/* PRIVATE */
+
+/* input label */
+@mixin cdr-input-label-text-mixin() {
+  @include maple-utility-20;
+}
+$cdr-input-label-color: $heart-of-darkness;
+$cdr-input-label-display: inline-block;
+$cdr-input-label-margin: 0;
+$cdr-input-label-mb: $cdr-space-quarter-x;
+$cdr-input-label-mr: $cdr-space-inset-quarter-x;
+@mixin cdr-input-label-mixin() {
+  @include cdr-input-label-text-mixin;
+
+  color: $cdr-input-label-color;
+  display: $cdr-input-label-display;
+  margin: $cdr-input-label-margin;
+  margin-bottom: $cdr-input-label-mb;
+  margin-right: $cdr-input-label-mr;
+}
+
+/* input label disabled */
+$cdr-input-label-color-disabled: $grey-matter;
+@mixin cdr-input-label-disabled-mixin() {
+  color: $cdr-input-label-color-disabled;
+}
+
+/* input base */
+@mixin cdr-input-base-text-mixin() {
+  @include redwood-display-30;
+}
+$cdr-input-base-color: $heart-of-darkness;
+$cdr-input-base-box-shadow: inset 0 0 0 1px $taken-for-granite;
+$cdr-input-base-border: 0;
+$cdr-input-base-border-radius: $cdr-radius-softer;
+$cdr-input-base-padding: $cdr-space-inset-half-x;
+$cdr-input-base-height: 40px;
+$cdr-input-base-display: block;
+$cdr-input-base-width: 100%;
+$cdr-input-base-overflow: visible;
+$cdr-input-base-margin: 0;
+$cdr-input-base-background-color-disabled: $moon-shot;
+$cdr-input-base-color-disabled: $grey-matter;
+$cdr-input-base-box-shadow-disabled: inset 0 0 0 1px $partly-cloudy;
+$cdr-input-base-box-shadow-disabled-hover: inset 0 0 0 1px $partly-cloudy;
+$cdr-input-base-placeholder-color-disabled: $grey-matter;
+$cdr-input-base-box-shadow-active: inset 0 0 0 1px $easily-excited;
+$cdr-input-base-box-shadow-focus: inset 0 0 0 1px $easily-excited;
+@mixin cdr-input-base-placeholder-text-mixin() {
+  @include redwood-display-30;
+}
+$cdr-input-base-placeholder-font-style: italic;
+$cdr-input-base-placeholder-color: $coal-train;
+
+@mixin cdr-input-base-mixin() {
+  @include cdr-input-base-text-mixin;
+
+  color: $cdr-input-base-color;
+  box-shadow: $cdr-input-base-box-shadow;
+  border: $cdr-input-base-border;
+  border-radius: $cdr-input-base-border-radius;
+  padding: $cdr-input-base-padding;
+  height: $cdr-input-base-height;
+  display: $cdr-input-base-display;
+  width: $cdr-input-base-width;
+  overflow: $cdr-input-base-overflow;
+  margin: $cdr-input-base-margin;
+
+  &[disabled] {
+    background-color: $cdr-input-base-background-color-disabled;
+    color: $cdr-input-base-color-disabled;
+    box-shadow: $cdr-input-base-box-shadow-disabled;
+
+    &:hover {
+      box-shadow: $cdr-input-base-box-shadow-disabled-hover;
+    }
+
+    &::placeholder {
+      color: $cdr-input-base-placeholder-color-disabled;
+    }
+  }
+
+  &:active {
+    box-shadow: $cdr-input-base-box-shadow-active;
+  }
+
+  &:focus {
+    box-shadow: $cdr-input-base-box-shadow-active;
+  }
+
+  &::placeholder {
+    @include cdr-input-base-placeholder-text-mixin;
+
+    font-style: $cdr-input-base-placeholder-font-style;
+    color: $cdr-input-base-placeholder-color;
+  }
+}
+
+/* --multiline */
+$cdr-input-multiline-height: auto;
+@mixin cdr-input-multiline-mixin() {
+  $cdr-input-multiline-height: auto;
+}
+
+/* --large */
+$cdr-input-pt-large: $cdr-space-one-x;
+$cdr-input-pb-large: $cdr-space-one-x;
+$cdr-input-height-large: 48px;
+@mixin cdr-input-large-mixin() {
+  padding-top: $cdr-input-pt-large;
+  padding-bottom: $cdr-input-pb-large;
+  height: $cdr-input-height-large;
+}
+
+/* required label */
+$cdr-input-required-label-color: $taken-for-granite;
+
+@mixin cdr-input-required-label-mixin() {
+  color: $cdr-input-required-label-color;
+}
+
+/* info link */
+@mixin cdr-input-info-container-text-mixin() {
+  @include maple-utility-20;
+}
+$cdr-input-info-container-float: right;
+
+@mixin cdr-input-info-container-mixin() {
+  @include cdr-input-info-container-text-mixin;
+
+  float: $cdr-input-info-container-float;
+}
+
+/* helper text */
+@mixin cdr-input-helper-text-text-mixin() {
+  @include redwood-display-20;
+}
+$cdr-input-helper-text-color: $taken-for-granite;
+$cdr-input-helper-text-pl: $cdr-space-half-x;
+$cdr-input-helper-text-pt: $cdr-space-quarter-x;
+
+@mixin cdr-input-helper-text-mixin() {
+  @include cdr-input-helper-text-text-mixin;
+
+  color: $cdr-input-helper-text-color;
+  padding-left: $cdr-input-helper-text-pl;
+  padding-top: $cdr-input-helper-text-pt;
+}
+
+/* ==========================================================================
+  # CdrSelect
+
+  This file provides a contract between
+  design tokens and cedar non-changing variables.
+
+  TOC:
+
+    :Base - Select
+      :States
+========================================================================== */
+$cdr-select-base-font-size: 16px;
+$cdr-select-base-font-style: normal;
+$cdr-select-base-font-weight: 400;
+$cdr-select-base-font-family: Roboto;
+$cdr-select-base-line-height: 16px;
+
+$cdr-select-base-box-sizing: border-box;
+$cdr-select-base-width: 100%;
+$cdr-select-base-display: block;
+$cdr-select-base-text-transform: none;
+$cdr-select-base-margin: 0;
+$cdr-select-base-text-align: start;
+$cdr-select-base-color: #000000;
+$cdr-select-base-border: 1px solid #c5c5c5;
+$cdr-select-base-border-radius: $cdr-radius-soft;
+$cdr-select-base-height: calc($cdr-space-one-and-a-half-x + $cdr-select-base-line-height);
+$cdr-select-base-background-color: #ffffff;
+$cdr-select-base-background-color-disabled: #e9e9e9;
+
+$cdr-select-base-multiple-padding: 0;
+
+$cdr-select-base-option-line-height: 1;
+$cdr-select-base-option-box-sizing: border-box;
+
+@mixin cdr-select-base-mixin() {
+  box-sizing: $cdr-select-base-box-sizing;
+  font-size: $cdr-select-base-font-size;
+  line-height: $cdr-select-base-line-height;
+  text-align: $cdr-select-base-text-align;
+  color: $cdr-select-base-color;
+  font-style: $cdr-select-base-font-style;
+  font-weight: $cdr-select-base-font-weight;
+  font-family: $cdr-select-base-font-family;
+  width: $cdr-select-base-width;
+  display: $cdr-select-base-display;
+  border: $cdr-select-base-border;
+  border-radius: $cdr-select-base-border-radius;
+  height: $cdr-select-base-height;
+  background-color: $cdr-select-base-background-color;
+  text-transform: $cdr-select-base-text-transform;
+  margin: $cdr-select-base-margin;
+
+  &[multiple] {
+    padding: $cdr-select-base-multiple-padding;
+  }
+
+  & option {
+    line-height: $cdr-select-base-option-line-height;
+    box-sizing: $cdr-select-base-option-box-sizing;
+  }
+
+  /* States
+    ---------- */
+  &[disabled] {
+    background-color: $cdr-select-base-background-color-disabled;
+  }
+}
+
+@mixin cdr-select-base-label-text-mixin() {
+  @include maple-utility-20;
+}
+
+$cdr-select-base-label-display: block;
+$cdr-select-base-label-margin: 0;
+
+@mixin cdr-select-base-label-mixin() {
+  @include cdr-select-base-label-text-mixin;
+
+  display: $cdr-select-base-label-display;
+  margin: $cdr-select-base-label-margin;
+}

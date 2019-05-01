@@ -1,0 +1,17 @@
+{
+  "name": "cdr-link",
+  "notes": [],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/links/",
+  "examples": [
+    {
+      "name": "default",
+      "tag": "a",
+      "styles": ["@include cdr-link-base-mixin;"]
+    },
+    {
+      "name": "standalone",
+      "tag": "a",
+      "styles": ["@include cdr-link-base-mixin;", "@include cdr-link-standalone-mixin;"]
+    }
+  ]
+}
