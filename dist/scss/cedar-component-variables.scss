@@ -959,7 +959,7 @@ $cdr-text-body-stack-bp-sm: 32px;
     margin-top: $cdr-text-body-stack;
   }
 
-  @media (--sm-mq) {
+  @include sm-mq {
     @include cdr-text-body-text-bp-sm-mixin;
 
     & + & {
@@ -1003,12 +1003,12 @@ $cdr-text-body-stack-bp-sm: 32px;
   @include cdr-text-display-text-mixin;
 
   /* @ small */
-  @media (--sm-mq) {
+  @include sm-mq {
     @include cdr-text-display-text-bp-sm-mixin;
   }
 
   /* @ large */
-  @media (--lg-mq) {
+  @include lg-mq {
     @include cdr-text-display-text-bp-lg-mixin;
   }
 }
@@ -1038,7 +1038,7 @@ $cdr-text-body-stack-bp-sm: 32px;
   @include cdr-text-heading-text-small-mixin;
 
   /* @ large */
-  @media (--lg-mq) {
+  @include lg-mq {
     @include cdr-text-heading-text-small-bp-lg-mixin;
   }
 }
@@ -1067,7 +1067,7 @@ $cdr-text-body-stack-bp-sm: 32px;
   @include cdr-text-heading-text-medium-mixin;
 
   /* @ large */
-  @media (--lg-mq) {
+  @include lg-mq {
     @include cdr-text-heading-text-medium-bp-lg-mixin;
   }
 }
@@ -1102,12 +1102,12 @@ $cdr-text-body-stack-bp-sm: 32px;
   @include cdr-text-heading-text-large-mixin;
 
   /* @ small */
-  @media (--sm-mq) {
+  @include sm-mq {
     @include cdr-text-heading-text-large-bp-sm-mixin;
   }
 
   /* @ large */
-  @media (--lg-mq) {
+  @include lg-mq {
     @include cdr-text-heading-text-large-bp-lg-mixin;
   }
 }
