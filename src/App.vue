@@ -38,6 +38,7 @@ export default {
       <li>Example code on this page is intended to be added to a class that targets the HTML tag for that example.</li>
       <li>The links in the example code can be used to look up the definitions of mixins and variables on github, or you can also look them up manually in the `/dist` directory</li>
       <li>For more information on how to install and use this package, see the <a href="https://github.com/rei/rei-cedar-component-variables">README.md</a></li>
+      <li>We also maintain a <a href="https://codesandbox.io/s/qkwn78nw99">codesandbox</a> where you can experiment with using the variables</li>
     </ul>
 
     <hr/>
