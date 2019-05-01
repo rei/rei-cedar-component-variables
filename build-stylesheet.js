@@ -1,3 +1,4 @@
+/* this script compiles the classes needed to render each example in /examples */ 
 const fs = require('fs-extra');
 const compExamples = require('./examples');
 

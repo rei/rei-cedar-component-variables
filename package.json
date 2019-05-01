@@ -2,12 +2,11 @@
   "name": "@rei/cedar-component-variables",
   "version": "0.0.1",
   "description": "Style variables exported from Cedar components",
-  "style": "dist/index.scss",
+  "style": "dist/scss/index.scss",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build:single-file": "",
     "build:docs": "npm run build:stylesheet && vue-cli-service build",
     "build:stylesheet": "node ./build-stylesheet.js",
     "lint": "vue-cli-service lint",
