@@ -14,11 +14,19 @@ export default {
 
 <template>
   <div class="comp-block">
-    <h3 class="heading"><a :id="compData.name" :href="`#${compData.name}`">{{ compData.name }}</a></h3>
+    <h3 class="heading">
+      <a :id="compData.name" :href="`#${compData.name}`">
+        {{ compData.name }}
+      </a>
+    </h3>
     <ul>
-      <li v-for="(note, i) in compData.notes" :key="`${compData.name}-note-${i}`">{{ note }}</li>
+      <li v-for="(note, i) in compData.notes" :key="`${compData.name}-note-${i}`">
+        {{ note }}
+      </li>
     </ul>
-    <a class="docs-link" :href="compData.docs" target="_blank">Cedar component documentation</a>
+    <a class="docs-link" :href="compData.docs" target="_blank">
+      Cedar component documentation
+    </a>
 
     <table>
       <tr class="header-row">
@@ -26,7 +34,12 @@ export default {
         <th>tag</th>
         <th>code</th>
       </tr>
-      <example v-for="example in compData.examples" :key="`${compData.name}-${example.name}`" :example="example" :name="compData.name" />
+      <example
+        v-for="example in compData.examples" 
+        :key="`${compData.name}-${example.name}`"
+        :example="example"
+        :name="compData.name"
+      />
     </table>
   </div>
 </template>

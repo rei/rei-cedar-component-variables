@@ -40,7 +40,12 @@ export default {
   <tr class="example-row">
 
     <td>
-      <component :is="example.tag" :class="className" href="#" v-html="exampleContent"/>
+      <component
+        :is="example.tag"
+        :class="className"
+        href="#"
+        v-html="exampleContent"
+      />
     </td>
 
 
@@ -49,7 +54,9 @@ export default {
     </td>
 
     <td>
-      <pre class="code-block"><code v-html="codeBlock"/></pre>
+      <pre class="code-block">
+        <code v-html="codeBlock"/>
+      </pre>
     </td>
 
   </tr>
