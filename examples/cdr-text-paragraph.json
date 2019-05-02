@@ -6,7 +6,7 @@
     {
       "name": "paragraph-default",
       "tag": "p",
-      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-base-mixin;"]
+      "styles": ["@include cdr-text-base-mixin;"]
     },
     {
       "name": "body-responsive",
