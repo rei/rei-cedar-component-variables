@@ -1,0 +1,24 @@
+{
+  "name": "cdr-input",
+  "notes": [
+    "see cedar component documentation for examples of how to arrange the labels and inputs"
+  ],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/input/",
+  "examples": [
+    {
+      "name": "default-label",
+      "tag": "label",
+      "styles": ["@include cdr-input-label-mixin;"]
+    },
+    {
+      "name": "default-input",
+      "tag": "input",
+      "styles": ["@include cdr-input-base-mixin;"],
+      "props": {
+        "type": "text",
+        "placeholder": "placeholder",
+        "value": "default-input"
+      }
+    }
+  ]
+}

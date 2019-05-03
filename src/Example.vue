@@ -13,20 +13,11 @@ export default {
     codeBlock() {
       // transforms example code to add github search queries to all mixins/variables
       return this.example.styles.map(line => {
-        const mixin = line.split('@include ');
-        const isMixin = Boolean(mixin[1]);
-        const variable = line.split('$');
-        const query = (mixin[1] || variable[1]).replace(';', '');
+        const varName = line.match(/(cdr-[a-z\-]+)/)[0];
+        // TODO: once vars get merged into cedar, update this query to point at that repo
+        const link = `<a href="https://github.com/rei/rei-cedar-component-variables/search?q=${varName}+path%3A%2Fdist%2Fscss+filename%3A%2A.vars.scss" target="_blank">${varName}</a>`;
 
-        // link to look up definition of mixins/variables. If structure of /dist changes, will need to update this URL
-        const link = `<a href="https://github.com/rei/rei-cedar-component-variables/search?q=${query}+path%3A%2Fdist%2Fscss" target="_blank">${query}</a>`;
-
-        if (isMixin) {
-          return `@include ${link};`;
-        }
-
-        return `${variable[0]}$${link};`;
-
+        return line.replace(varName, link);
       }).join("\n")
     },
     exampleContent() {
@@ -45,6 +36,7 @@ export default {
         :class="className"
         href="#"
         v-html="exampleContent"
+        v-bind="example.props"
       />
     </td>
 
@@ -54,9 +46,7 @@ export default {
     </td>
 
     <td>
-      <pre class="code-block">
-        <code v-html="codeBlock"/>
-      </pre>
+      <pre class="code-block"><code v-html="codeBlock"/></pre>
     </td>
 
   </tr>
