@@ -9,6 +9,7 @@
   "scripts": {
     "build:docs": "npm run build:stylesheet && vue-cli-service build && node ./deploy.js",
     "build:stylesheet": "node ./build-stylesheet.js",
+    "build:less": "sass2less dist/scss/*.scss 'dist/less/{name}.less' && node sass2less.js",
     "lint": "vue-cli-service lint",
     "serve": "npm run build:stylesheet && vue-cli-service serve"
   },
@@ -28,6 +29,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "fs-extra": "^7.0.1",
     "gh-pages": "^2.0.1",
+    "less-plugin-sass2less": "^1.2.0",
     "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
