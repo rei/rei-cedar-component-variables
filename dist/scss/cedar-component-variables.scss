@@ -1,57 +1,3 @@
-// Media Queries
-
-// XS
-@mixin xs-mq {
-  @media (min-width: #{$cdr-breakpoint-xs}) {
-    @content;
-  }
-}
-
-@mixin xs-mq-only {
-  @media (min-width: #{$cdr-breakpoint-xs}) and (max-width: calc(#{$cdr-breakpoint-sm} - 1px)) {
-    @content;
-  }
-}
-
-// SM
-@mixin sm-mq {
-  @media (min-width: #{$cdr-breakpoint-sm}) {
-    @content;
-  }
-}
-
-@mixin sm-mq-only {
-  @media (min-width: #{$cdr-breakpoint-sm}) and (max-width: calc(#{$cdr-breakpoint-md} - 1px)) {
-    @content;
-  }
-}
-
-// MD
-@mixin md-mq {
-  @media (min-width: #{$cdr-breakpoint-md}) {
-    @content;
-  }
-}
-
-@mixin md-mq-only {
-  @media (min-width: #{$cdr-breakpoint-md}) and (max-width: calc(#{$cdr-breakpoint-lg} - 1px)) {
-    @content;
-  }
-}
-
-// LG
-@mixin lg-mq {
-  @media (min-width: #{$cdr-breakpoint-lg}) {
-    @content;
-  }
-}
-
-@mixin lg-mq-only {
-  @media (min-width: #{$cdr-breakpoint-lg}) {
-    @content;
-  }
-}
-
 /* ==========================================================================/*
 * Token option variables
 *
@@ -513,13 +459,13 @@ $cdr-button-secondary-fill-disabled: #b8b8b8;
 $cdr-button-secondary-box-shadow-disabled: inset 0 0 0 1px #dadada;
 
 $cdr-button-base-padding-large: $cdr-space-inset-one-and-a-half-x-squish;
-$cdr-button-has-icon-pl-large: $cdr-space-one-and-a-half-x - $cdr-space-quarter-x;
+$cdr-button-has-icon-pl-large: calc(#{$cdr-space-one-and-a-half-x} - #{$cdr-space-quarter-x});
 
 $cdr-button-base-padding-medium: $cdr-space-inset-one-x-squish;
-$cdr-button-has-icon-pl-medium: $cdr-space-one-x - $cdr-space-quarter-x;
+$cdr-button-has-icon-pl-medium: calc(#{$cdr-space-one-x} - #{$cdr-space-quarter-x});
 
 $cdr-button-base-padding-small: $cdr-space-inset-three-quarter-x-squish;
-$cdr-button-has-icon-pl-small: $cdr-space-three-quarter-x - $cdr-space-quarter-x;
+$cdr-button-has-icon-pl-small: calc(#{$cdr-space-three-quarter-x} - #{$cdr-space-quarter-x});
 
 $cdr-button-base-icon-width-small: 20px;
 $cdr-button-base-icon-height-small: 20px;
@@ -538,7 +484,7 @@ $cdr-button-icon-only-display: inline-block;
 
 
 $cdr-button-icon-only-padding: $cdr-space-inset-half-x;
-$cdr-button-icon-only-pr: calc($cdr-space-inset-half-x - $cdr-space-quarter-x); // note that this overrides the previous padding variable
+$cdr-button-icon-only-pr: calc(#{$cdr-space-inset-half-x} - #{$cdr-space-quarter-x}); // note that this overrides the previous padding variable
 
 $cdr-button-icon-only-fill: $heart-of-darkness;
 
@@ -950,21 +896,13 @@ $cdr-text-body-stack: 16px;
 
 $cdr-text-body-stack-bp-sm: 32px;
 
-@mixin cdr-text-body-responsive-mixin() {
+@mixin cdr-text-body-mixin() {
   @include cdr-text-body-text-mixin;
 
   max-width: $cdr-text-body-max-width;
 
   & + & {
     margin-top: $cdr-text-body-stack;
-  }
-
-  @include sm-mq {
-    @include cdr-text-body-text-bp-sm-mixin;
-
-    & + & {
-      margin-top: $cdr-text-body-stack-bp-sm;
-    }
   }
 }
 
@@ -999,18 +937,8 @@ $cdr-text-body-stack-bp-sm: 32px;
   @include spruce-display-80;
 }
 
-@mixin cdr-text-display-responsive-mixin() {
+@mixin cdr-text-display-mixin() {
   @include cdr-text-display-text-mixin;
-
-  /* @ small */
-  @include sm-mq {
-    @include cdr-text-display-text-bp-sm-mixin;
-  }
-
-  /* @ large */
-  @include lg-mq {
-    @include cdr-text-display-text-bp-lg-mixin;
-  }
 }
 
 /* display-static */
@@ -1034,13 +962,8 @@ $cdr-text-body-stack-bp-sm: 32px;
   @include spruce-display-40;
 }
 
-@mixin cdr-text-heading-small-responsive-mixin() {
+@mixin cdr-text-heading-small-mixin() {
   @include cdr-text-heading-text-small-mixin;
-
-  /* @ large */
-  @include lg-mq {
-    @include cdr-text-heading-text-small-bp-lg-mixin;
-  }
 }
 
 /* heading-small-static */
@@ -1063,13 +986,8 @@ $cdr-text-body-stack-bp-sm: 32px;
   @include spruce-display-50;
 }
 
-@mixin cdr-text-heading-medium-responsive-mixin() {
+@mixin cdr-text-heading-medium-mixin() {
   @include cdr-text-heading-text-medium-mixin;
-
-  /* @ large */
-  @include lg-mq {
-    @include cdr-text-heading-text-medium-bp-lg-mixin;
-  }
 }
 
 /* heading-medium-static */
@@ -1098,18 +1016,9 @@ $cdr-text-body-stack-bp-sm: 32px;
   @include spruce-display-70;
 }
 
-@mixin cdr-text-heading-large-responsive-mixin() {
+@mixin cdr-text-heading-large-mixin() {
   @include cdr-text-heading-text-large-mixin;
 
-  /* @ small */
-  @include sm-mq {
-    @include cdr-text-heading-text-large-bp-sm-mixin;
-  }
-
-  /* @ large */
-  @include lg-mq {
-    @include cdr-text-heading-text-large-bp-lg-mixin;
-  }
 }
 
 /* heading-large-static */
@@ -1168,28 +1077,28 @@ $input-pre-icon-default-width: 25px;
 /* PRIVATE */
 
 /* input label */
-@mixin cdr-input-label-text-mixin() {
+@mixin cdr-input-base-label-text-mixin() {
   @include maple-utility-20;
 }
-$cdr-input-label-color: $heart-of-darkness;
-$cdr-input-label-display: inline-block;
-$cdr-input-label-margin: 0;
-$cdr-input-label-mb: $cdr-space-quarter-x;
-$cdr-input-label-mr: $cdr-space-inset-quarter-x;
-@mixin cdr-input-label-mixin() {
-  @include cdr-input-label-text-mixin;
+$cdr-input-base-label-color: $heart-of-darkness;
+$cdr-input-base-label-display: inline-block;
+$cdr-input-base-label-margin: 0;
+$cdr-input-base-label-mb: $cdr-space-quarter-x;
+$cdr-input-base-label-mr: $cdr-space-inset-quarter-x;
+@mixin cdr-input-base-label-mixin() {
+  @include cdr-input-base-label-text-mixin;
 
-  color: $cdr-input-label-color;
-  display: $cdr-input-label-display;
-  margin: $cdr-input-label-margin;
-  margin-bottom: $cdr-input-label-mb;
-  margin-right: $cdr-input-label-mr;
+  color: $cdr-input-base-label-color;
+  display: $cdr-input-base-label-display;
+  margin: $cdr-input-base-label-margin;
+  margin-bottom: $cdr-input-base-label-mb;
+  margin-right: $cdr-input-base-label-mr;
 }
 
 /* input label disabled */
-$cdr-input-label-color-disabled: $grey-matter;
-@mixin cdr-input-label-disabled-mixin() {
-  color: $cdr-input-label-color-disabled;
+$cdr-input-base-label-color-disabled: $grey-matter;
+@mixin cdr-input-base-label-disabled-mixin() {
+  color: $cdr-input-base-label-color-disabled;
 }
 
 /* input base */
@@ -1340,7 +1249,7 @@ $cdr-select-base-text-align: start;
 $cdr-select-base-color: #000000;
 $cdr-select-base-border: 1px solid #c5c5c5;
 $cdr-select-base-border-radius: $cdr-radius-soft;
-$cdr-select-base-height: calc($cdr-space-one-and-a-half-x + $cdr-select-base-line-height);
+$cdr-select-base-height: calc(#{$cdr-space-one-and-a-half-x} + #{$cdr-select-base-line-height});
 $cdr-select-base-background-color: #ffffff;
 $cdr-select-base-background-color-disabled: #e9e9e9;
 

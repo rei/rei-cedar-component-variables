@@ -1,27 +1,25 @@
 {
   "name": "cdr-text--paragraph",
-  "notes": [],
+  "notes": [
+    "cdr-text styles can be applied to any HTML tag that contains text (h1-h7, span, p, a, etc.)",
+    "only static mixins are exported at this time."
+  ],
   "docs": "https://rei.github.io/rei-cedar-docs/components/paragraphs/",
   "examples": [
     {
       "name": "paragraph-default",
       "tag": "p",
-      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-base-mixin;"]
+      "styles": ["@include cdr-text-base-mixin;"]
     },
     {
-      "name": "body-responsive",
+      "name": "body",
       "tag": "p",
-      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-body-responsive-mixin;"]
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-body-mixin;"]
     },
     {
       "name": "citation",
       "tag": "p",
       "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-citation-mixin;"]
-    },
-    {
-      "name": "display-responsive",
-      "tag": "p",
-      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-display-responsive-mixin;"]
     },
     {
       "name": "display-static",

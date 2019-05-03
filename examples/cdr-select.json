@@ -1,0 +1,20 @@
+{
+  "name": "cdr-select",
+  "notes": [
+
+  ],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/select/",
+  "examples": [
+    {
+      "name": "default-label",
+      "tag": "label",
+      "styles": ["@include cdr-select-base-label-mixin;"]
+    },
+    {
+      "name": "default-input",
+      "tag": "select",
+      "styles": ["@include cdr-select-base-mixin;"],
+      "content": "<option>default-input</option>"
+    }
+  ]
+}

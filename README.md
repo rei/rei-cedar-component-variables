@@ -1,11 +1,11 @@
 cdr-component-variables
 ------------------
 
-Component variables exported from [Cedar](https://github.com/rei/rei-cedar). These are intended to be used by teams that cannot consume the Cedar vue components but still need to visually conform to the design system.
+Component variables provide a versioned method for teams to import the exact CSS styles being used in the Cedar vue components and apply them to elements in their project. For example, this package makes available variables like `$cdr-button-base-border-radius` which is the border-radius value for all Cedar button components, as well as mixins like `@include cdr-button-base-mixin` which sets many properties on an element including the border-radius. Most developers will want to use the mixins as they will be easier to maintain in the long term, however the variables are available if you require more control over styling.
 
-Component variables provide a versioned method for teams to import the exact CSS styles that are currently being used inside Cedar components and use them in whatever way fits their architecture. For example, this package makes available variables like `$cdr-button-base-border-radius` which is the border-radius value for all Cedar button components, as well as mixins like `@include cdr-button-base-mixin` which sets many properties on an element including the border-radius.
+These variables and mixins are intended to be used to match the styling of the component/element that they correspond to. For example, `$cdr-button-base-border-radius` should only be used to style the border-radius of a "button-like" element. If you use that variable to set the border-radius on something that is not a button, then that element would be affected any time the Cedar button border radius is changed.
 
-These variables and mixins are intended to be used to match the styling of the component/element that they correspond to. For example, `$cdr-button-base-border-radius` should only be used to style the border-radius of a "button-like" element.
+Each component has a set of `base` mixins which apply to all Cedar components of that type, as well as `modifier` mixins which control the size and appearance of that component. For example, to create a Cedar primary button you would create a class that includes `@include cdr-button-base-mixin; @include cdr-button-primary-mixin;`, whereas if you need a Cedar secondary small button you would create a class that includes `@include cdr-button-base-mixin; @include cdr-button-secondary-mixin; @include cdr-button-small-mixin;`. See the [docs page](https://rei.github.io/rei-cedar-component-variables/#/) for more examples.
 
 ## supported components
 
@@ -19,24 +19,43 @@ The component variables inherit values from the design tokens, so you will need 
 
 `npm install --save-dev @rei/cdr-tokens@1.0.0 @rei/cdr-component-variables`
 
-Your project must be able to compile sass/scss files in order to make use of this package.
+Your project must be able to compile SCSS or LESS in order to make use of this package.
 
-The `/dist` folder in this package contains the individual `vars.scss` files for each of the supported components, as well as some global variables that are used internally. This package makes available a `/dist/scss/index.scss` file which contains import statements for all of the `vars.scss` files, as well as an `dist/scss/cedar-component-variables.scss` file which contains all of the `vars.scss` files concatenated into a single file.
+This package contains `/dist/less` and `/dist/scss` folders, each of which contains `*.vars.{less|scss}` for each component, as well as an `index.{scss|less}` that imports all of those files. It is recommended that you use the `index` file to ensure that all variables are loaded in the correct order. A `dist/{scss|less}/cedar-component-variables.{scss|less}` file is also available which concatenates all of the variable files together.
 
 ## usage
 
+SCSS example:
 ```
 @import '@rei/cdr-tokens/dist/scss/cdr-tokens.scss'; /* import the tokens file */
 @import '@rei/cdr-component-variables/dist/scss/index.scss'; /* import the component variables */
 
-.your-element-class {
+.your-button-class {
   /* use mixins to apply many properties at once */
-  @include cdr-COMPONENT-NAME-base-mixin;
+  @include cdr-button-base-mixin;
+  @include cdr-button-primary-mixin;
 }
 
-.your-other-element-class {
+.your-other-button-class {
   /* use variables if you need to apply specific properties */
-  border-radius: $cdr-COMPONENT-NAME-border-radius'
+  border-radius: $cdr-button-border-radius;
+}
+```
+
+LESS example:
+```
+@import '@rei/cdr-tokens/dist/less/cdr-tokens.less'; /* import the tokens file */
+@import '@rei/cdr-component-variables/dist/less/index.less'; /* import the component variables */
+
+.your-button-class {
+  /* use mixins to apply many properties at once */
+  .cdr-button-base-mixin();
+  .cdr-button-primary-mixin();
+}
+
+.your-other-button-class {
+  /* use variables if you need to apply specific properties */
+  border-radius: @cdr-button-border-radius;
 }
 ```
 
@@ -53,6 +72,7 @@ The `/dist` folder in this project should never be edited directly as it is mean
 Update steps:
 - Ensure that your copy of `rei-cedar` and `rei-cedar-component-variables` are in the same directory
 - Run the `build:variables` script in `rei-cedar` to copy the variable files for all supported components into this repository. If you are adding support for a component, you will need to update that build script. If there are no changes to the `/dist` directory, then there is no need to do anything else.
+- Run the `build:less` script inside this repository to create a LESS copy of the previous SASS export
 - Update the `cdr-tokens` dependencies in this project's `package.json` so that the version exactly matches the version currently being used in `rei-cedar`
 - Update `/examples` as needed. Note that you will need to re-start the `serve` script any time the example SCSS code changes.
 - Bump the version of this package
