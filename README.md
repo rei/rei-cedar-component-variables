@@ -1,11 +1,7 @@
 cdr-component-variables
 ------------------
 
-Component variables provide a versioned method for teams to import the exact CSS styles being used in the Cedar vue components and apply them to elements in their project. For example, this package makes available variables like `$cdr-button-base-border-radius` which is the border-radius value for all Cedar button components, as well as mixins like `@include cdr-button-base-mixin` which sets many properties on an element including the border-radius. Most developers will want to use the mixins as they will be easier to maintain in the long term, however the variables are available if you require more control over styling.
-
-These variables and mixins are intended to be used to match the styling of the component/element that they correspond to. For example, `$cdr-button-base-border-radius` should only be used to style the border-radius of a "button-like" element. If you use that variable to set the border-radius on something that is not a button, then that element would be affected any time the Cedar button border radius is changed.
-
-Each component has a set of `base` mixins which apply to all Cedar components of that type, as well as `modifier` mixins which control the size and appearance of that component. For example, to create a Cedar primary button you would create a class that includes `@include cdr-button-base-mixin; @include cdr-button-primary-mixin;`, whereas if you need a Cedar secondary small button you would create a class that includes `@include cdr-button-base-mixin; @include cdr-button-secondary-mixin; @include cdr-button-small-mixin;`. See the [docs page](https://rei.github.io/rei-cedar-component-variables/#/) for more examples.
+Component variables provide a versioned method for teams to import the exact CSS styles being used in the Cedar vue components and apply them to elements in their project. See the [Cedar docs](https://rei.github.io/rei-cedar-docs/foundation/component-variables/) for more high level information about component variables.
 
 ## supported components
 
