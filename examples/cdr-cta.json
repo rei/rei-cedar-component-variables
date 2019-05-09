@@ -1,0 +1,45 @@
+{
+  "name": "cdr-cta",
+  "notes": [
+    "CTA mixins should only be applied to 'actionable' HTML elements such as Button or Anchor.",
+    "TODO: link to accessibility doc explaining the previous note :p"
+  ],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/cta/",
+  "examples": [
+    {
+      "name": "default",
+      "tag": "button",
+      "styles": ["@include cdr-cta-base-mixin;"]
+    },
+    {
+      "name": "brand",
+      "tag": "button",
+      "styles": ["@include cdr-cta-base-mixin;", "@include cdr-cta-brand-mixin;"]
+    },
+    {
+      "name": "sale",
+      "tag": "button",
+      "styles": ["@include cdr-cta-base-mixin;", "@include cdr-cta-sale-mixin;"]
+    },
+    {
+      "name": "elevated",
+      "tag": "button",
+      "styles": ["@include cdr-cta-base-mixin;", "@include cdr-cta-elevated-mixin;"]
+    },
+    {
+      "name": "full-width",
+      "tag": "button",
+      "styles": ["@include cdr-cta-base-mixin;", "@include cdr-cta-full-width-mixin;"]
+    },
+    {
+      "name": "full-width+sale",
+      "tag": "button",
+      "styles": ["@include cdr-cta-base-mixin;", "@include cdr-cta-full-width-mixin;", "@include cdr-cta-sale-mixin;"]
+    },
+    {
+      "name": "elevated+brand",
+      "tag": "button",
+      "styles": ["@include cdr-cta-base-mixin;", "@include cdr-cta-elevated-mixin;", "@include cdr-cta-brand-mixin;"]
+    }
+  ]
+}

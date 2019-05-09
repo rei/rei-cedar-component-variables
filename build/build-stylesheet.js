@@ -2,7 +2,7 @@
 const fs = require('fs-extra');
 const compExamples = require('../examples');
 
-const OUTPUT_FILE_PATH = '../examples/index.scss';
+const OUTPUT_FILE_PATH = './examples/index.scss'; /* TODO: understand why paths are so weird >_< */
 
 const styles = Object.keys(compExamples).map((compKey) => {
   const comp = compExamples[compKey];
