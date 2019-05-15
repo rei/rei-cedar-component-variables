@@ -3,7 +3,6 @@
   "notes": [
     "Styles for the `inline` variations are not currently supported.",
     "TODO: note about base + (ul || ol) + (compact)",
-    "TODO: note about class names in examples (append -example to everything for clarity?)",
     "CdrList mixins assume that you are using <li> tags for the list items. See the mixin source in `/dist` if you need to customize that."
   ],
   "docs": "https://rei.github.io/rei-cedar-docs/components/list/",
@@ -12,31 +11,31 @@
       "name": "ordered",
       "tag": "ol",
       "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-ordered-mixin;"],
-      "preContent": "<li>one</li><li>two</li><li>three</li>"
+      "postContent": "<li>one</li><li>two</li><li>three</li>"
     },
     {
       "name": "unordered",
       "tag": "ul",
       "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-unordered-mixin;"],
-      "preContent": "<li>one</li><li>two</li><li>three</li>"
+      "postContent": "<li>one</li><li>two</li><li>three</li>"
     },
     {
       "name": "ordered-compact",
       "tag": "ol",
       "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-ordered-mixin;", "@include cdr-list-compact-mixin;"],
-      "preContent": "<li>one</li><li>two</li><li>three</li>"
+      "postContent": "<li>one</li><li>two</li><li>three</li>"
     },
     {
       "name": "ordered-nested",
       "tag": "ol",
-      "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-ordered-mixin;", "& li > & { @include cdr-list-ordered-nested-mixin; }"],
-      "preContent": "<li>one</li><li>two</li><li>three<ol class=\"cdr-list-ordered-nested\"><li>nested</li></ol></li>"
+      "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-ordered-mixin;", "& li > & { @include cdr-list-base-mixin; }", "& li > & { @include cdr-list-ordered-nested-mixin; }"],
+      "postContent": "<li>one</li><li>two</li><li>three<ol class=\"cdr-list-ordered-nested\"><li>nested</li></ol></li>"
     },
     {
       "name": "unordered-nested",
       "tag": "ul",
-      "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-unordered-mixin;", "& li > & { @include cdr-list-unordered-nested-mixin; }"],
-      "preContent": "<li>one</li><li>two</li><li>three<ol class=\"cdr-list-unordered-nested\"><li>nested</li></ol></li>"
+      "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-unordered-mixin;", "& li > & { @include cdr-list-base-mixin; }", "& li > & { @include cdr-list-unordered-nested-mixin; }"],
+      "postContent": "<li>one</li><li>two</li><li>three<ol class=\"cdr-list-unordered-nested\"><li>nested</li></ol></li>"
     }
   ]
 }
