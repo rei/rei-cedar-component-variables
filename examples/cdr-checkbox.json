@@ -11,13 +11,13 @@
       "name": "default",
       "tag": "label",
       "styles": ["@include cdr-label-base-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"],
-      "content": "<input type=\"checkbox\"/>"
+      "preContent": "<input type=\"checkbox\"/>"
     },
     {
       "name": "compact",
       "tag": "label",
       "styles": ["@include cdr-label-base-mixin;", "@include cdr-label-compact-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"],
-      "content": "<input type=\"checkbox\"/>"
+      "preContent": "<input type=\"checkbox\"/>"
     }
   ]
 }

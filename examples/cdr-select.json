@@ -14,7 +14,7 @@
       "name": "default-input",
       "tag": "select",
       "styles": ["@include cdr-select-base-mixin;"],
-      "content": "<option>default-input</option>"
+      "preContent": "<option>default-input</option>"
     }
   ]
 }

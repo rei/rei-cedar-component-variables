@@ -12,31 +12,31 @@
       "name": "ordered",
       "tag": "ol",
       "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-ordered-mixin;"],
-      "content": "<li>one</li><li>two</li><li>three</li>"
+      "preContent": "<li>one</li><li>two</li><li>three</li>"
     },
     {
       "name": "unordered",
       "tag": "ul",
       "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-unordered-mixin;"],
-      "content": "<li>one</li><li>two</li><li>three</li>"
+      "preContent": "<li>one</li><li>two</li><li>three</li>"
     },
     {
       "name": "ordered-compact",
       "tag": "ol",
       "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-ordered-mixin;", "@include cdr-list-compact-mixin;"],
-      "content": "<li>one</li><li>two</li><li>three</li>"
+      "preContent": "<li>one</li><li>two</li><li>three</li>"
     },
     {
       "name": "ordered-nested",
       "tag": "ol",
       "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-ordered-mixin;", "& li > & { @include cdr-list-ordered-nested-mixin; }"],
-      "content": "<li>one</li><li>two</li><li>three<ol class=\"cdr-list-ordered-nested\"><li>nested</li></ol></li>"
+      "preContent": "<li>one</li><li>two</li><li>three<ol class=\"cdr-list-ordered-nested\"><li>nested</li></ol></li>"
     },
     {
       "name": "unordered-nested",
       "tag": "ul",
       "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-unordered-mixin;", "& li > & { @include cdr-list-unordered-nested-mixin; }"],
-      "content": "<li>one</li><li>two</li><li>three<ol class=\"cdr-list-unordered-nested\"><li>nested</li></ol></li>"
+      "preContent": "<li>one</li><li>two</li><li>three<ol class=\"cdr-list-unordered-nested\"><li>nested</li></ol></li>"
     }
   ]
 }

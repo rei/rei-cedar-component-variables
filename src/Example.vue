@@ -21,7 +21,7 @@ export default {
       }).join("\n")
     },
     exampleContent() {
-      return `${this.example.content || ''}${this.example.name}`
+      return `${this.example.preContent || ''}${this.example.name}${this.example.postContent || ''}`
     }
   }
 }
