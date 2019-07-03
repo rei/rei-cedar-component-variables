@@ -1,0 +1,53 @@
+{
+  "name": "cdr-cta",
+  "notes": [
+    "CTA mixins should only be applied to 'actionable' HTML elements such as Button or Anchor.",
+    "TODO: link to accessibility doc explaining the previous note :p",
+    "TODO: make raw cedar SVG available somehow, update this example"
+  ],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/cta/",
+  "examples": [
+    {
+      "name": "default",
+      "tag": "a",
+      "styles": ["@include cdr-cta-base-mixin;", "& svg {@include cdr-cta-base-icon-mixin;}"],
+      "postContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M16 12a.997.997 0 0 0-.288-.702l-5.005-5.005a1 1 0 0 0-1.414 1.414L13.585 12 9.29 16.295a1 1 0 0 0 1.417 1.412l4.98-4.98A.997.997 0 0 0 16 12z\" /></svg>"
+    },
+    {
+      "name": "brand",
+      "tag": "a",
+      "styles": ["@include cdr-cta-base-mixin;", "@include cdr-cta-brand-mixin;", "& svg {@include cdr-cta-base-icon-mixin;}"],
+      "postContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M16 12a.997.997 0 0 0-.288-.702l-5.005-5.005a1 1 0 0 0-1.414 1.414L13.585 12 9.29 16.295a1 1 0 0 0 1.417 1.412l4.98-4.98A.997.997 0 0 0 16 12z\" /></svg>"
+    },
+    {
+      "name": "sale",
+      "tag": "a",
+      "styles": ["@include cdr-cta-base-mixin;", "@include cdr-cta-sale-mixin;", "& svg {@include cdr-cta-base-icon-mixin;}"],
+      "postContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M16 12a.997.997 0 0 0-.288-.702l-5.005-5.005a1 1 0 0 0-1.414 1.414L13.585 12 9.29 16.295a1 1 0 0 0 1.417 1.412l4.98-4.98A.997.997 0 0 0 16 12z\" /></svg>"
+    },
+    {
+      "name": "elevated",
+      "tag": "a",
+      "styles": ["@include cdr-cta-base-mixin;", "@include cdr-cta-elevated-mixin;", "& svg {@include cdr-cta-base-icon-mixin;}"],
+      "postContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M16 12a.997.997 0 0 0-.288-.702l-5.005-5.005a1 1 0 0 0-1.414 1.414L13.585 12 9.29 16.295a1 1 0 0 0 1.417 1.412l4.98-4.98A.997.997 0 0 0 16 12z\" /></svg>"
+    },
+    {
+      "name": "full-width",
+      "tag": "a",
+      "styles": ["@include cdr-cta-base-mixin;", "@include cdr-cta-full-width-mixin;", "& svg {@include cdr-cta-base-icon-mixin;}"],
+      "postContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M16 12a.997.997 0 0 0-.288-.702l-5.005-5.005a1 1 0 0 0-1.414 1.414L13.585 12 9.29 16.295a1 1 0 0 0 1.417 1.412l4.98-4.98A.997.997 0 0 0 16 12z\" /></svg>"
+    },
+    {
+      "name": "full-width--sale",
+      "tag": "a",
+      "styles": ["@include cdr-cta-base-mixin;", "@include cdr-cta-full-width-mixin;", "@include cdr-cta-sale-mixin;", "& svg {@include cdr-cta-base-icon-mixin;}"],
+      "postContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M16 12a.997.997 0 0 0-.288-.702l-5.005-5.005a1 1 0 0 0-1.414 1.414L13.585 12 9.29 16.295a1 1 0 0 0 1.417 1.412l4.98-4.98A.997.997 0 0 0 16 12z\" /></svg>"
+    },
+    {
+      "name": "elevated--brand",
+      "tag": "a",
+      "styles": ["@include cdr-cta-base-mixin;", "@include cdr-cta-brand-mixin;", "@include cdr-cta-elevated-mixin;", "& svg {@include cdr-cta-base-icon-mixin;}"],
+      "postContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M16 12a.997.997 0 0 0-.288-.702l-5.005-5.005a1 1 0 0 0-1.414 1.414L13.585 12 9.29 16.295a1 1 0 0 0 1.417 1.412l4.98-4.98A.997.997 0 0 0 16 12z\" /></svg>"
+    }
+  ]
+}

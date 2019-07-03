@@ -11,13 +11,18 @@
       "name": "default",
       "tag": "label",
       "styles": ["@include cdr-label-base-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"],
-      "content": "<input type=\"radio\"/>"
+      "preContent": "<input type=\"radio\"/>",
+      "attrs": {
+      }
     },
     {
       "name": "compact",
       "tag": "label",
       "styles": ["@include cdr-label-base-mixin;", "@include cdr-label-compact-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"],
-      "content": "<input type=\"radio\"/>"
+      "preContent": "<input type=\"radio\"/>",
+      "attrs": {
+        "modifier": "compact"
+      }
     }
   ]
 }

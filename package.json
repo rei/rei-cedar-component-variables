@@ -1,17 +1,21 @@
 {
-  "name": "@rei/cedar-component-variables",
-  "version": "0.0.1-beta.1",
+  "name": "@rei/cdr-component-variables",
+  "version": "0.1.0-alpha.0",
   "description": "Style variables exported from Cedar components",
   "style": "dist/scss/index.scss",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build:docs": "npm run build:stylesheet && vue-cli-service build && node ./deploy.js",
-    "build:stylesheet": "node ./build-stylesheet.js",
-    "build:less": "sass2less dist/scss/*.scss 'dist/less/{name}.less' && node sass2less.js",
+    "build:docs": "npm run build:stylesheet && vue-cli-service build && node ./build/deploy-docs.js",
+    "build:stylesheet": "node ./build/build-stylesheet.js",
+    "build:less": "sass2less dist/scss/*.scss 'dist/less/{name}.less' && node ./build/build-less.js",
     "lint": "vue-cli-service lint",
     "serve": "npm run build:stylesheet && vue-cli-service serve"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -21,10 +25,11 @@
   "author": "REI Software Engineering",
   "license": "MIT",
   "peerDependencies": {
-    "@rei/cdr-tokens": "^1.0.0"
+    "@rei/cedar": "2.0.2",
+    "@rei/cdr-tokens": "1.0.0"
   },
   "devDependencies": {
-    "@rei/cdr-assets": "^0.3.0",
+    "@rei/cedar": "^2.0.2",
     "@rei/cdr-tokens": "^1.0.0",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
