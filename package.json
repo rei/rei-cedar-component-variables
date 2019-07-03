@@ -1,6 +1,6 @@
 {
-  "name": "@rei/cedar-component-variables",
-  "version": "0.0.1-beta.1",
+  "name": "@rei/cdr-component-variables",
+  "version": "0.1.0",
   "description": "Style variables exported from Cedar components",
   "style": "dist/scss/index.scss",
   "files": [
@@ -28,7 +28,7 @@
     "@rei/cdr-tokens": "^1.0.0"
   },
   "devDependencies": {
-    "@rei/cdr-assets": "^0.3.0",
+    "@rei/cedar": "^2.0.2",
     "@rei/cdr-tokens": "^1.0.0",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
