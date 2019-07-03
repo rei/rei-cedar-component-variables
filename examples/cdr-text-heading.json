@@ -9,22 +9,34 @@
     {
       "name": "heading-large-static",
       "tag": "p",
-      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-heading-large-static-mixin;"]
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-heading-large-static-mixin;"],
+      "attrs": {
+        "modifier": "heading-large"
+      }
     },
     {
       "name": "heading-medium-static",
       "tag": "p",
-      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-heading-medium-static-mixin;"]
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-heading-medium-static-mixin;"],
+      "attrs": {
+        "modifier": "heading-medium"
+      }
     },
     {
       "name": "heading-small-static",
       "tag": "p",
-      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-heading-small-static-mixin;"]
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-heading-small-static-mixin;"],
+      "attrs": {
+        "modifier": "heading-small"
+      }
     },
     {
       "name": "subheading",
       "tag": "p",
-      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-subheading-mixin"]
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-subheading-mixin"],
+      "attrs": {
+        "modifier": "subheading"
+      }
     }
   ]
 }

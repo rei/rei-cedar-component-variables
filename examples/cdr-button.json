@@ -9,27 +9,45 @@
     {
       "name": "primary",
       "tag": "button",
-      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-primary-mixin;"]
+      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-primary-mixin;"],
+      "attrs": {
+        "modifier": "primary"
+      }
     },
     {
       "name": "secondary",
       "tag": "button",
-      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-secondary-mixin;"]
+      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-secondary-mixin;"],
+      "attrs": {
+        "modifier": "secondary"
+      }
     },
     {
       "name": "primary-small",
       "tag": "button",
-      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-primary-mixin;", "@include cdr-button-small-mixin;"]
+      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-primary-mixin;", "@include cdr-button-small-mixin;"],
+      "attrs": {
+        "modifier": "primary",
+        "size": "small"
+      }
     },
     {
       "name": "secondary-medium",
       "tag": "button",
-      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-secondary-mixin;", "@include cdr-button-medium-mixin;"]
+      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-secondary-mixin;", "@include cdr-button-medium-mixin;"],
+      "attrs": {
+        "modifier": "secondary",
+        "size": "medium"
+      }
     },
     {
       "name": "primary-large",
       "tag": "button",
-      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-primary-mixin;", "@include cdr-button-large-mixin;"]
+      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-primary-mixin;", "@include cdr-button-large-mixin;"],
+      "attrs": {
+        "modifier": "primary",
+        "size": "large"
+      }
     }
   ]
 }
