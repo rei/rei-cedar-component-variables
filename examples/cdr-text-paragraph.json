@@ -9,22 +9,17 @@
     {
       "name": "paragraph-default",
       "tag": "p",
-      "styles": ["@include cdr-text-base-mixin;"]
+      "styles": ["@include cdr-text-base-mixin;"],
+      "attrs": {
+      }
     },
     {
       "name": "body",
       "tag": "p",
-      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-body-mixin;"]
-    },
-    {
-      "name": "citation",
-      "tag": "p",
-      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-citation-mixin;"]
-    },
-    {
-      "name": "display-static",
-      "tag": "p",
-      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-display-static-mixin;"]
+      "styles": ["@include cdr-text-base-mixin;", "@include cdr-text-body-mixin;"],
+      "attrs": {
+        "modifier": "body"
+      }
     }
   ]
 }

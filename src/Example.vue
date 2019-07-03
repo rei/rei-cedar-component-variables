@@ -48,6 +48,10 @@ export default {
     <td>
       <pre class="code-block"><code v-html="codeBlock"/></pre>
     </td>
+    
+    <td>
+      <component :is="name.replace(/--.+/, '')" v-bind="example.attrs">{{this.example.name}}</component>
+    </td>
 
   </tr>
 </template>

@@ -6,12 +6,17 @@
     {
       "name": "default",
       "tag": "a",
-      "styles": ["@include cdr-link-base-mixin;"]
+      "styles": ["@include cdr-link-base-mixin;"],
+      "attrs": {
+      }
     },
     {
       "name": "standalone",
       "tag": "a",
-      "styles": ["@include cdr-link-base-mixin;", "@include cdr-link-standalone-mixin;"]
+      "styles": ["@include cdr-link-base-mixin;", "@include cdr-link-standalone-mixin;"],
+      "attrs": {
+        "modifier": "standalone"
+      }
     }
   ]
 }

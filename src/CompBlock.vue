@@ -30,9 +30,10 @@ export default {
 
     <table>
       <tr class="header-row">
-        <th>example</th>
+        <th>variables example</th>
         <th>tag</th>
         <th>code</th>
+        <th>vue component</th>
       </tr>
       <example
         v-for="example in compData.examples" 
