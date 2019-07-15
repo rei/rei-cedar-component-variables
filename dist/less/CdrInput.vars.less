@@ -1,0 +1,176 @@
+/* PRIVATE */
+/* Assumed icon width of slot provided icon.  We may want to add a user provided
+  width option in the future.  */
+@input-pre-icon-default-width: 25px;
+/* PRIVATE */
+
+/* input label */
+.cdr-input-base-label-text-mixin() {
+  // TODO: typography token
+  .maple-utility-20;
+}
+@cdr-input-base-label-color: @cdr-color-text-form-label-lightmode;
+@cdr-input-base-label-display: inline-block;
+@cdr-input-base-label-margin: 0;
+@cdr-input-base-label-mb: @cdr-space-quarter-x;
+@cdr-input-base-label-mr: @cdr-space-inset-quarter-x;
+.cdr-input-base-label-mixin() {
+  .cdr-input-base-label-text-mixin;
+
+  color: @cdr-input-base-label-color;
+  display: @cdr-input-base-label-display;
+  margin: @cdr-input-base-label-margin;
+  margin-bottom: @cdr-input-base-label-mb;
+  margin-right: @cdr-input-base-label-mr;
+}
+
+/* input label disabled */
+@cdr-input-base-label-color-disabled: @cdr-color-text-disabled-lightmode;
+.cdr-input-base-label-disabled-mixin() {
+  color: @cdr-input-base-label-color-disabled;
+}
+
+/* input base */
+.cdr-input-base-text-mixin() {
+  // TODO: typography token
+  .redwood-display-30;
+}
+@cdr-input-base-color: @cdr-color-text-form-label-lightmode;
+@cdr-input-base-box-shadow: inset 0 0 0 1px @cdr-color-border-primary-lightmode;
+@cdr-input-base-border: 0;
+@cdr-input-base-border-radius: @cdr-radius-softer;
+@cdr-input-base-padding: @cdr-space-inset-half-x;
+@cdr-input-base-height: 40px;
+@cdr-input-base-display: block;
+@cdr-input-base-width: 100%;
+@cdr-input-base-overflow: visible;
+@cdr-input-base-margin: 0;
+
+@cdr-input-base-background-color-disabled: @cdr-color-background-lighter;
+@cdr-input-base-color-disabled: @cdr-color-text-form-disabled-lightmode;
+@cdr-input-base-box-shadow-disabled: inset 0 0 0 1px @cdr-color-border-disabled-lightmode;
+@cdr-input-base-box-shadow-disabled-hover: inset 0 0 0 1px @cdr-color-border-disabled-lightmode;
+@cdr-input-base-placeholder-color-disabled: @cdr-color-text-form-disabled-lightmode;
+
+// TODO: easily-excited is #3278ae / cdr-color-text-link-lightmode... cdr-color-border-selected-lightmode at 	#2b6692 seems appropriate here?
+@cdr-input-base-box-shadow-active: inset 0 0 0 1px @easily-excited;
+@cdr-input-base-box-shadow-focus: inset 0 0 0 1px @easily-excited;
+
+.cdr-input-base-placeholder-text-mixin() {
+  // TODO: typography token
+  .redwood-display-30;
+}
+@cdr-input-base-placeholder-font-style: italic;
+@cdr-input-base-placeholder-color: @cdr-color-text-form-placeholder-lightmode;
+
+.cdr-input-base-mixin() {
+  .cdr-input-base-text-mixin;
+  
+
+  color: @cdr-input-base-color;
+  box-shadow: @cdr-input-base-box-shadow;
+  border: @cdr-input-base-border;
+  border-radius: @cdr-input-base-border-radius;
+  padding: @cdr-input-base-padding;
+  height: @cdr-input-base-height;
+  display: @cdr-input-base-display;
+  width: @cdr-input-base-width;
+  overflow: @cdr-input-base-overflow;
+  margin: @cdr-input-base-margin;
+  
+  /* Prevent iOS from altering border and box-shadow */
+  @supports (-webkit-overflow-scrolling: touch) {
+    /* CSS specific to iOS devices */
+    -webkit-appearance: none;
+  }
+  
+  &[type=number]::-webkit-inner-spin-button,
+  &[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+  
+  &[disabled] {
+    background-color: @cdr-input-base-background-color-disabled;
+    color: @cdr-input-base-color-disabled;
+    box-shadow: @cdr-input-base-box-shadow-disabled;
+
+    &:hover {
+      box-shadow: @cdr-input-base-box-shadow-disabled-hover;
+    }
+
+    &::placeholder {
+      color: @cdr-input-base-placeholder-color-disabled;
+    }
+  }
+
+  &:active {
+    box-shadow: @cdr-input-base-box-shadow-active;
+  }
+
+  &:focus {
+    box-shadow: @cdr-input-base-box-shadow-active;
+  }
+
+  &::placeholder {
+    .cdr-input-base-placeholder-text-mixin;
+
+    font-style: @cdr-input-base-placeholder-font-style;
+    color: @cdr-input-base-placeholder-color;
+  }
+}
+
+/* --multiline */
+@cdr-input-multiline-height: auto;
+.cdr-input-multiline-mixin() {
+  height: auto;
+}
+
+/* --large */
+@cdr-input-pt-large: @cdr-space-one-x;
+@cdr-input-pb-large: @cdr-space-one-x;
+@cdr-input-height-large: 48px;
+.cdr-input-large-mixin() {
+  padding-top: @cdr-input-pt-large;
+  padding-bottom: @cdr-input-pb-large;
+  height: @cdr-input-height-large;
+}
+
+/* required label */
+@cdr-input-required-label-color: @taken-for-granite;
+
+.cdr-input-required-label-mixin() {
+  color: @cdr-input-required-label-color;
+}
+
+/* info link */
+.cdr-input-info-container-text-mixin() {
+  // TODO: typography token
+  .maple-utility-20;
+}
+@cdr-input-info-container-float: right;
+
+.cdr-input-info-container-mixin() {
+  .cdr-input-info-container-text-mixin;
+
+  float: @cdr-input-info-container-float;
+}
+
+/* helper text */
+.cdr-input-helper-text-text-mixin() {
+  // TODO: typography token
+  .redwood-display-20;
+}
+@cdr-input-helper-text-color: @taken-for-granite;
+@cdr-input-helper-text-pl: @cdr-space-half-x;
+@cdr-input-helper-text-pt: @cdr-space-quarter-x;
+
+.cdr-input-helper-text-mixin() {
+  .cdr-input-helper-text-text-mixin;
+
+  color: @cdr-input-helper-text-color;
+  padding-left: @cdr-input-helper-text-pl;
+  padding-top: @cdr-input-helper-text-pt;
+}
