@@ -8,9 +8,7 @@
     {
       "name": "default-label",
       "tag": "label",
-      "styles": ["@include cdr-input-base-label-mixin;"],
-      "attrs": {
-      }
+      "styles": ["@include cdr-input-base-label-mixin;"]
     },
     {
       "name": "default-input",

@@ -53,8 +53,10 @@ export default {
     </td>
 
     <td>
-      <component v-if="example.slot" :is="componentName" v-bind="example.attrs" v-html="example.slot"/>
-      <component v-else :is="componentName" v-bind="example.attrs">{{this.example.name}}</component>
+      <div v-if="example.attrs">
+        <component v-if="example.slot" :is="componentName" v-bind="example.attrs" v-html="example.slot"/>
+        <component v-else :is="componentName" v-bind="example.attrs">{{this.example.name}}</component>
+      </div>
     </td>
 
   </tr>
