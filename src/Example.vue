@@ -21,7 +21,10 @@ export default {
       }).join("\n")
     },
     exampleContent() {
-      return `${this.example.preContent || ''}${this.example.name}${this.example.postContent || ''}`
+      return `${this.example.preContent || ''}${this.example.name}${this.example.postContent || ''}${this.example.slot || ''}`
+    },
+    componentName() {
+      return this.name.replace(/--.+/, '');
     }
   }
 }
@@ -48,9 +51,10 @@ export default {
     <td>
       <pre class="code-block"><code v-html="codeBlock"/></pre>
     </td>
-    
+
     <td>
-      <component :is="name.replace(/--.+/, '')" v-bind="example.attrs">{{this.example.name}}</component>
+      <component v-if="example.slot" :is="componentName" v-bind="example.attrs" v-html="example.slot"/>
+      <component v-else :is="componentName" v-bind="example.attrs">{{this.example.name}}</component>
     </td>
 
   </tr>

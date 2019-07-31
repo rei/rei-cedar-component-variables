@@ -8,13 +8,17 @@
     {
       "name": "default-label",
       "tag": "label",
-      "styles": ["@include cdr-select-base-label-mixin;"]
+      "styles": ["@include cdr-select-base-label-mixin;"],
+      "attrs": {
+      }
     },
     {
       "name": "default-input",
       "tag": "select",
       "styles": ["@include cdr-select-base-mixin;"],
-      "preContent": "<option>default-input</option>"
+      "preContent": "<option>default-input</option>",
+      "attrs": {
+      }
     }
   ]
 }

@@ -8,16 +8,15 @@
     {
       "name": "default-label",
       "tag": "label",
-      "styles": ["@include cdr-input-base-label-mixin;"]
+      "styles": ["@include cdr-input-base-label-mixin;"],
+      "attrs": {
+      }
     },
     {
       "name": "default-input",
       "tag": "input",
       "styles": ["@include cdr-input-base-mixin;"],
-      "props": {
-        "type": "text",
-        "placeholder": "placeholder",
-        "value": "default-input"
+      "attrs": {
       }
     }
   ]
