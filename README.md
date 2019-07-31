@@ -73,3 +73,31 @@ Update steps:
 - Update `/examples` as needed. Note that you will need to re-start the `serve` script any time the example SCSS code changes.
 - Bump the version of this package
 - Run the `build:docs` script in this project
+
+
+### generating new examples/docs
+
+
+"CV example":
+"Vue example":
+
+```
+{
+  "name": "Example Name (i.e, default, primary, secondary).",
+  "tag": "HTML tag to use for CV example",
+  "styles": [
+    "SCSS code to use to build CV example CSS",
+    "another line of SCSS"
+  ],
+  "preContent": "HTML to append before the `name` inside of the CV example",
+  "postContent": "HTML to append after the `name` inside of the CV example",
+  "props": {
+    "value": "default-input"
+  },
+  "slot": "used to set v-html on the Vue example.",
+  "attrs": {
+    "property": "value",
+    "used to set arbitary"
+  }
+}
+```
