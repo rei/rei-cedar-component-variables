@@ -323,61 +323,6 @@
   font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: normal;
 }
-
-/* ---------------------
-* Color
-* ------------------- */
-@center-of-attention: #e86868;
-@golden-face: #f8b877;
-@pick-your-potion: #faecec;
-@to-the-rescue: #b5292b;
-@text-color-secondary-on-dark: #999999;
-@high-stakes: #b5292b;
-@moon-shot: #fafafa;
-@lost-in-space: #1a1a1a;
-@crowd-pleaser: #3278ae;
-@hissing-llamas: #f1efe4;
-@instant-winner: #367c3c;
-@text-color-secondary-on-light: #616161;
-@easily-excited: #3278ae;
-@the-tooth: #f7f7f7;
-@background-color-darker: #1a1a1a;
-@threat-level-midnight: #434343;
-@background-color-light: #f7f7f7;
-@old-growth: #46522e;
-@interactive-color-primary: #3278ae;
-@grey-matter: #b8b8b8;
-@text-color-primary-on-dark: #fafafa;
-@hunky-dory: #5197cd;
-@quick-fixe: #a12024;
-@partly-cloudy: #dadada;
-@coal-train: #7a7a7a;
-@attention-grabber: #c83232;
-@text-color-form-placeholder: #7a7a7a;
-@clean-slate: #ffffff;
-@text-color-form-label: #292929;
-@text-color-error-on-dark: #e86868;
-@thin-mint: #edf7ee;
-@holy-smoke: #999999;
-@text-color-error-on-light: #b5292b;
-@taken-for-granite: #616161;
-@dehydrated-lemon: #c77523;
-@go-van-gogh: #1e4e72;
-@background-color-lightest: #ffffff;
-@background-color-lighter: #fafafa;
-@moose-tooth: #faf9f5;
-@interactive-color-primary-selected: #3278ae;
-@light-tension: #fff5eb;
-@interactive-color-primary-hover: #2b6692;
-@heart-of-darkness: #292929;
-@text-color-primary-on-light: #292929;
-@closed-on-monday: #2b6692;
-@ice-age: #ecf2f7;
-@crimp-son-and-clover: #6c9f71;
-@background-color-dark: #292929;
-@suede-shoes: #5197cd;
-@snap-decision: #e86868;
-
 /* ---------------------
 * Outline
 * ------------------- */
@@ -1146,9 +1091,8 @@
 @cdr-input-base-box-shadow-disabled-hover: inset 0 0 0 1px @cdr-color-border-disabled-lightmode;
 @cdr-input-base-placeholder-color-disabled: @cdr-color-text-form-disabled-lightmode;
 
-// TODO: easily-excited is #3278ae / cdr-color-text-link-lightmode... cdr-color-border-selected-lightmode at 	#2b6692 seems appropriate here?
-@cdr-input-base-box-shadow-active: inset 0 0 0 1px @easily-excited;
-@cdr-input-base-box-shadow-focus: inset 0 0 0 1px @easily-excited;
+@cdr-input-base-box-shadow-active: inset 0 0 0 1px @cdr-color-border-selected-lightmode;
+@cdr-input-base-box-shadow-focus: inset 0 0 0 1px @cdr-color-border-selected-lightmode;
 
 .cdr-input-base-placeholder-text-mixin() {
   // TODO: typography token
@@ -1159,7 +1103,6 @@
 
 .cdr-input-base-mixin() {
   .cdr-input-base-text-mixin;
-  
 
   color: @cdr-input-base-color;
   box-shadow: @cdr-input-base-box-shadow;
@@ -1171,13 +1114,13 @@
   width: @cdr-input-base-width;
   overflow: @cdr-input-base-overflow;
   margin: @cdr-input-base-margin;
-  
+
   /* Prevent iOS from altering border and box-shadow */
   @supports (-webkit-overflow-scrolling: touch) {
     /* CSS specific to iOS devices */
     -webkit-appearance: none;
   }
-  
+
   &[type=number]::-webkit-inner-spin-button,
   &[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -1185,7 +1128,7 @@
     appearance: none;
     margin: 0;
   }
-  
+
   &[disabled] {
     background-color: @cdr-input-base-background-color-disabled;
     color: @cdr-input-base-color-disabled;
@@ -1233,7 +1176,7 @@
 }
 
 /* required label */
-@cdr-input-required-label-color: @taken-for-granite;
+@cdr-input-required-label-color: @cdr-color-text-secondary-lightmode;
 
 .cdr-input-required-label-mixin() {
   color: @cdr-input-required-label-color;
@@ -1257,7 +1200,7 @@
   // TODO: typography token
   .redwood-display-20;
 }
-@cdr-input-helper-text-color: @taken-for-granite;
+@cdr-input-helper-text-color: @cdr-color-text-secondary-lightmode;
 @cdr-input-helper-text-pl: @cdr-space-half-x;
 @cdr-input-helper-text-pt: @cdr-space-quarter-x;
 
@@ -1339,28 +1282,11 @@
   margin: @cdr-select-base-label-margin;
 }
 
-/* Private variables, for internal use only */
-@cta-dark-background-color: #292929;
-@cta-dark-box-shadow: inset 0 0 0 1px #434343;
-@cta-dark-color: #ffffff;
-@cta-dark-hover-background-color: #434343;
-@cta-dark-hover-color: #ffffff;
-@cta-light-background-color: #ffffff;
-@cta-light-box-shadow: inset 0 0 0 1px #616161;
-@cta-light-color: #292929;
-@cta-light-hover-background-color: #f7f7f7;
-@cta-light-hover-color: #292929;
-/* End of Private variables */
-
-
 .cdr-cta-base-text-mixin() {
   .maple-utility-40;
 }
 
-@cdr-cta-base-background-color: #3278ae;
 @cdr-cta-base-border-radius: @cdr-radius-softer;
-@cdr-cta-base-box-shadow: inset 0 0 0 1px #2b6692;
-@cdr-cta-base-color: #ffffff;
 @cdr-cta-base-border: none;
 @cdr-cta-base-cursor: pointer;
 @cdr-cta-base-display: inline-flex;
@@ -1379,11 +1305,8 @@
 .cdr-cta-base-mixin() {
   .cdr-cta-base-text-mixin;
 
-  background-color: @cdr-cta-base-background-color;
-  box-shadow: @cdr-cta-base-box-shadow;
   border: @cdr-cta-base-border;
   border-radius: @cdr-cta-base-border-radius;
-  color: @cdr-cta-base-color;
   cursor: @cdr-cta-base-cursor;
   display: @cdr-cta-base-display;
   outline: @cdr-cta-base-outline;
@@ -1485,6 +1408,129 @@
     box-shadow: @cdr-cta-brand-box-shadow-focus;
     color: @cdr-cta-brand-color-focus;
     fill: @cdr-cta-brand-fill-focus;
+  }
+}
+
+@cdr-cta-dark-background-color: #292929;
+@cdr-cta-dark-box-shadow: inset 0 0 0 1px #434343;
+@cdr-cta-dark-color: #ffffff;
+@cdr-cta-dark-fill: #ffffff;
+
+@cdr-cta-dark-background-color-hover: #434343;
+@cdr-cta-dark-box-shadow-hover: inset 0 0 0 1px #434343;
+@cdr-cta-dark-color-hover: #ffffff;
+@cdr-cta-dark-fill-hover: #ffffff;
+
+@cdr-cta-dark-background-color-active: #434343;
+@cdr-cta-dark-box-shadow-active: inset 0 0 0 1px #434343;
+@cdr-cta-dark-color-active: #ffffff;
+@cdr-cta-dark-fill-active: #ffffff;
+
+@cdr-cta-dark-background-color-focus: #434343;
+@cdr-cta-dark-box-shadow-focus: inset 0 0 0 1px #434343;
+@cdr-cta-dark-color-focus: #ffffff;
+@cdr-cta-dark-fill-focus: #ffffff;
+
+// &--dark {
+.cdr-cta-dark-mixin() {
+  background-color: @cdr-cta-dark-background-color;
+  box-shadow: @cdr-cta-dark-box-shadow;
+  color: @cdr-cta-dark-color;
+  fill: @cdr-cta-dark-fill;
+
+  &:hover {
+    background-color: @cdr-cta-dark-background-color-hover;
+    box-shadow: @cdr-cta-dark-box-shadow-hover;
+    color: @cdr-cta-dark-color-hover;
+
+    & > .cdr-cta__icon {
+      fill: @cdr-cta-dark-fill-hover;
+    }
+  }
+
+  &:active {
+    background-color: @cdr-cta-dark-background-color-active;
+    box-shadow: @cdr-cta-dark-box-shadow-active;
+    color: @cdr-cta-dark-color-active;
+
+    & > .cdr-cta__icon {
+      fill: @cdr-cta-dark-fill-active;
+    }
+  }
+
+  &:focus {
+    background-color: @cdr-cta-dark-background-color-focus;
+    box-shadow: @cdr-cta-dark-box-shadow-focus;
+    color: @cdr-cta-dark-color-focus;
+
+    & > .cdr-cta__icon {
+      fill: @cdr-cta-dark-fill-focus;
+    }
+  }
+}
+
+@cdr-cta-light-background-color: #ffffff;
+@cdr-cta-light-box-shadow: inset 0 0 0 1px #616161;
+@cdr-cta-light-color: #292929;
+@cdr-cta-light-fill: #292929;
+
+@cdr-cta-light-background-color-hover: #f7f7f7;
+@cdr-cta-light-box-shadow-hover: inset 0 0 0 1px #616161;
+@cdr-cta-light-color-hover: #292929;
+@cdr-cta-light-fill-hover: #292929;
+
+@cdr-cta-light-background-color-active: #f7f7f7;
+@cdr-cta-light-box-shadow-active: inset 0 0 0 1px #616161;
+@cdr-cta-light-color-active: #292929;
+@cdr-cta-light-fill-active: #292929;
+
+@cdr-cta-light-background-color-focus: #f7f7f7;
+@cdr-cta-light-box-shadow-focus: inset 0 0 0 1px #616161;
+@cdr-cta-light-color-focus: #292929;
+@cdr-cta-light-fill-focus: #292929;
+
+// &--light {
+.cdr-cta-light-mixin() {
+  background-color: @cdr-cta-light-background-color;
+  box-shadow: @cdr-cta-light-box-shadow;
+  color: @cdr-cta-light-color;
+  fill: @cdr-cta-light-fill;
+
+  &:hover {
+    background-color: @cdr-cta-light-background-color-hover;
+    box-shadow: @cdr-cta-light-box-shadow-hover;
+    color: @cdr-cta-light-color-hover;
+    fill: @cdr-cta-light-fill-hover;
+  }
+
+  &:active {
+    background-color: @cdr-cta-light-background-color-active;
+    box-shadow: @cdr-cta-light-box-shadow-active;
+    color: @cdr-cta-light-color-active;
+    fill: @cdr-cta-light-fill-active;
+  }
+
+  &:focus {
+    background-color: @cdr-cta-light-background-color-focus;
+    box-shadow: @cdr-cta-light-box-shadow-focus;
+    color: @cdr-cta-light-color-focus;
+    fill: @cdr-cta-light-fill-focus;
+  }
+}
+
+.cdr-cta-light-elevated-mixin() {
+  box-shadow: @cdr-cta-light-box-shadow, @cdr-prominence-elevated;
+
+  &:hover {
+    box-shadow: @cdr-cta-light-box-shadow-hover, @cdr-prominence-elevated;
+  }
+
+  &:active {
+    box-shadow: @cdr-cta-light-box-shadow-active, @cdr-prominence-elevated;
+  }
+
+  &:focus {
+    box-shadow: @cdr-cta-light-box-shadow-focus, @cdr-prominence-elevated;
   }
 }
 
