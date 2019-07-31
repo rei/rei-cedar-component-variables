@@ -14,8 +14,7 @@ export default {
       // transforms example code to add github search queries to all mixins/variables
       return this.example.styles.map(line => {
         const varName = line.match(/(cdr-[a-z-]+)/)[0];
-        // TODO: once vars get merged into cedar, update this query to point at that repo
-        const link = `<a href="https://github.com/rei/rei-cedar-component-variables/search?q=${varName}+path%3A%2Fdist%2Fscss+filename%3A%2A.vars.scss" target="_blank">${varName}</a>`;
+        const link = `<a href="https://github.com/rei/rei-cedar/search?q=${varName}+filename%3A%2A.vars.scss" target="_blank">${varName}</a>`;
 
         return line.replace(varName, link);
       }).join("\n")
