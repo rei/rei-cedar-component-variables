@@ -2,7 +2,6 @@
   "name": "cdr-list",
   "notes": [
     "Styles for the `inline` variations are not currently supported.",
-    "TODO: note about base + (ul || ol) + (compact)",
     "CdrList mixins assume that you are using <li> tags for the list items. See the mixin source in `/dist` if you need to customize that."
   ],
   "docs": "https://rei.github.io/rei-cedar-docs/components/list/",
@@ -11,31 +10,20 @@
       "name": "ordered",
       "tag": "ol",
       "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-ordered-mixin;"],
-      "postContent": "<li>one</li><li>two</li><li>three</li>"
+      "slot": "<li>one</li><li>two</li><li>three</li>",
+      "attrs": {
+        "modifier": "ordered",
+        "tag": "ol"
+      }
     },
     {
       "name": "unordered",
       "tag": "ul",
       "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-unordered-mixin;"],
-      "postContent": "<li>one</li><li>two</li><li>three</li>"
-    },
-    {
-      "name": "ordered-compact",
-      "tag": "ol",
-      "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-ordered-mixin;", "@include cdr-list-compact-mixin;"],
-      "postContent": "<li>one</li><li>two</li><li>three</li>"
-    },
-    {
-      "name": "ordered-nested",
-      "tag": "ol",
-      "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-ordered-mixin;", "& li > & { @include cdr-list-base-mixin; }", "& li > & { @include cdr-list-ordered-nested-mixin; }"],
-      "postContent": "<li>one</li><li>two</li><li>three<ol class=\"cdr-list-ordered-nested\"><li>nested</li></ol></li>"
-    },
-    {
-      "name": "unordered-nested",
-      "tag": "ul",
-      "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-unordered-mixin;", "& li > & { @include cdr-list-base-mixin; }", "& li > & { @include cdr-list-unordered-nested-mixin; }"],
-      "postContent": "<li>one</li><li>two</li><li>three<ol class=\"cdr-list-unordered-nested\"><li>nested</li></ol></li>"
+      "slot": "<li>one</li><li>two</li><li>three</li>",
+      "attrs": {
+        "modifier": "unordered"
+      }
     }
   ]
 }

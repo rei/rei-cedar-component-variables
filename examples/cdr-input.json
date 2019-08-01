@@ -14,9 +14,11 @@
       "name": "default-input",
       "tag": "input",
       "styles": ["@include cdr-input-base-mixin;"],
+      "attrs": {
+        "value": "default-input",
+        "label": "default-label"
+      },
       "props": {
-        "type": "text",
-        "placeholder": "placeholder",
         "value": "default-input"
       }
     }

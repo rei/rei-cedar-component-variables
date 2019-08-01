@@ -21,8 +21,7 @@ export default {
       return packageJson.peerDependencies['@rei/cdr-tokens'];
     },
     cedarVersion() {
-      // TODO: how to do this?
-      return 'absolute-unit';
+      return packageJson.peerDependencies['@rei/cedar'];
     }
   }
 }
@@ -32,12 +31,14 @@ export default {
   <div class="cdr-container-fluid">
     <h2 class="heading">rei-cedar-component-variables@{{ packageVersion }} examples</h2>
     <ul class="sub-heading">
-      <!--<li>Exported from rei-cedar@{{ cedarVersion }}.</li>-->
+      <li>
+        Exported from rei-cedar@{{ cedarVersion }}.
+      </li>
       <li>
         Depends on rei-cedar-tokens@{{ tokensVersion }}.
       </li>
       <li>
-        Component variables are currently only exported in SCSS format.
+        All examples on this page are written in SCSS, but component variables are available in SCSS or LESS
       </li>
       <li>
         Example code on this page is intended to be added to a class that targets the HTML tag for that example.

@@ -11,10 +11,15 @@
       "styles": ["@include cdr-select-base-label-mixin;"]
     },
     {
-      "name": "default-input",
+      "name": "default-select",
       "tag": "select",
       "styles": ["@include cdr-select-base-mixin;"],
-      "preContent": "<option>default-input</option>"
+      "preContent": "<option>default-select</option>",
+      "attrs": {
+        "label": "default-label",
+        "options": ["default-select"],
+        "extVal": "default-select"
+      }
     }
   ]
 }
