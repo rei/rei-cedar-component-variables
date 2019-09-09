@@ -25,12 +25,12 @@
   "author": "REI Software Engineering",
   "license": "MIT",
   "peerDependencies": {
-    "@rei/cedar": "2.0.2",
-    "@rei/cdr-tokens": "1.0.0"
+    "@rei/cedar": "3.0.0-beta.3",
+    "@rei/cdr-tokens": "1.2.0-alpha.7"
   },
   "devDependencies": {
-    "@rei/cedar": "^2.0.2",
-    "@rei/cdr-tokens": "^1.0.0",
+    "@rei/cedar": "^3.0.0-beta.3",
+    "@rei/cdr-tokens": "^1.2.0-alpha.7",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
     "@vue/cli-service": "^3.4.0",

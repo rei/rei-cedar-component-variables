@@ -18,7 +18,7 @@
       "attrs": {
         "label": "default-label",
         "options": ["default-select"],
-        "extVal": "default-select"
+        "value": "default-select"
       }
     }
   ]
