@@ -1,3 +1,10 @@
-@import '@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+// Cedar css
+@import '../node_modules/@rei/cedar/dist/cedar.css';
+@import '../node_modules/@rei/cedar/dist/cdr-fonts.css';
+
+// Component Variables
+@import '../node_modules/@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
 @import '../dist/scss/index.scss';
+
+// Example styling
 @import '../examples/index.scss';

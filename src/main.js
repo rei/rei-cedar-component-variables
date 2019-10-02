@@ -12,10 +12,6 @@ import {
   CdrList,
 } from '@rei/cedar';
 
-// Cedar css
-import '@rei/cedar/dist/cedar.css';
-import '@rei/cedar/dist/cdr-fonts.css';
-
 import './index.scss';
 
 Vue.config.productionTip = false

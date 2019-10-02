@@ -11,6 +11,8 @@
     "build:stylesheet": "node ./build/build-stylesheet.js",
     "build:less": "sass2less dist/scss/*.scss 'dist/less/{name}.less' && node ./build/build-less.js",
     "lint": "vue-cli-service lint",
+    "prepublishOnly": "npm run build:less",
+    "postpublish": "npm run build:docs",
     "dev": "npm run build:stylesheet && vue-cli-service serve"
   },
   "private": false,
@@ -33,7 +35,7 @@
     "@rei/cedar": "^3.0.0",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
-    "@vue/cli-service": "^3.4.0",
+    "@vue/cli-service": "^3.11.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
