@@ -69,7 +69,7 @@ export default {
 @import "~@rei/cdr-tokens/dist/scss/cdr-tokens.scss";
 
 .heading {
-  @include cdr-text-header-2;
+  @include cdr-text-display-900;
 }
 
 .sub-heading {
