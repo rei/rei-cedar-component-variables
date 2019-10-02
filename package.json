@@ -11,6 +11,8 @@
     "build:stylesheet": "node ./build/build-stylesheet.js",
     "build:less": "sass2less dist/scss/*.scss 'dist/less/{name}.less' && node ./build/build-less.js",
     "lint": "vue-cli-service lint",
+    "prepublishOnly": "npm run build:less",
+    "postpublish": "npm run build:docs",
     "dev": "npm run build:stylesheet && vue-cli-service serve"
   },
   "private": false,
