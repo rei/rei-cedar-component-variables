@@ -1,7 +1,7 @@
 {
   "name": "cdr-input",
   "notes": [
-    "see cedar component documentation for examples of how to arrange the labels and inputs"
+    "note that the vue component is a combination of the label and input examples"
   ],
   "docs": "https://rei.github.io/rei-cedar-docs/components/input/",
   "examples": [

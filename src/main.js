@@ -4,7 +4,6 @@ import App from './App.vue'
 import {
   CdrButton,
   CdrLink,
-  CdrText,
   CdrCheckbox,
   CdrRadio,
   CdrSelect,
@@ -23,10 +22,8 @@ Vue.config.productionTip = false
 
 
 Vue.component('cdr-button', CdrButton);
-Vue.component('cdr-text', CdrText);
 Vue.component('cdr-link', CdrLink);
 Vue.component('cdr-cta', CdrCta);
-Vue.component('cdr-text', CdrText);
 Vue.component('cdr-checkbox', CdrCheckbox);
 Vue.component('cdr-radio', CdrRadio);
 Vue.component('cdr-select', CdrSelect);
