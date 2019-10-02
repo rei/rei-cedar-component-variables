@@ -1,7 +1,7 @@
 {
   "name": "cdr-select",
   "notes": [
-
+    "note that the vue component is a combination of the label and select examples"
   ],
   "docs": "https://rei.github.io/rei-cedar-docs/components/select/",
   "examples": [
