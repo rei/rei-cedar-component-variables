@@ -1,6 +1,6 @@
 {
   "name": "@rei/cdr-component-variables",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Style variables exported from Cedar components",
   "style": "dist/scss/index.scss",
   "files": [
@@ -11,6 +11,8 @@
     "build:stylesheet": "node ./build/build-stylesheet.js",
     "build:less": "sass2less dist/scss/*.scss 'dist/less/{name}.less' && node ./build/build-less.js",
     "lint": "vue-cli-service lint",
+    "prepublishOnly": "npm run build:less",
+    "postpublish": "npm run build:docs",
     "dev": "npm run build:stylesheet && vue-cli-service serve"
   },
   "private": false,
@@ -25,22 +27,22 @@
   "author": "REI Software Engineering",
   "license": "MIT",
   "peerDependencies": {
-    "@rei/cedar": "2.0.2",
-    "@rei/cdr-tokens": "1.0.0"
+    "@rei/cedar": "3.0.0",
+    "@rei/cdr-tokens": "2.0.0"
   },
   "devDependencies": {
-    "@rei/cedar": "^2.0.2",
-    "@rei/cdr-tokens": "^1.0.0",
+    "@rei/cdr-tokens": "^2.0.0",
+    "@rei/cedar": "^3.0.0",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
-    "@vue/cli-service": "^3.4.0",
+    "@vue/cli-service": "^3.11.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "fs-extra": "^7.0.1",
     "gh-pages": "^2.0.1",
     "less-plugin-sass2less": "^1.2.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "vue": "^2.5.22",
