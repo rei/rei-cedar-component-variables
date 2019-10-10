@@ -18,10 +18,10 @@ export default {
       return packageJson.version;
     },
     tokensVersion() {
-      return packageJson.peerDependencies['@rei/cdr-tokens'];
+      return packageJson.dependencies['@rei/cdr-tokens'];
     },
     cedarVersion() {
-      return packageJson.peerDependencies['@rei/cedar'];
+      return packageJson.dependencies['@rei/cedar'];
     }
   }
 }

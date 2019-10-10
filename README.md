@@ -13,7 +13,7 @@ If you are trying to build a component that is not in Cedar, you should instead 
 
 The component variables inherit values from the design tokens, so you will need to install both packages:
 
-`npm install --save-dev @rei/cdr-tokens@1.0.0 @rei/cdr-component-variables`
+`npm install --save-dev @rei/cdr-tokens @rei/cdr-component-variables`
 
 Your project must be able to compile SCSS or LESS in order to make use of this package.
 
