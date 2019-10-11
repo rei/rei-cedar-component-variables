@@ -36,7 +36,7 @@ export default {
         <th>vue component</th>
       </tr>
       <example
-        v-for="example in compData.examples" 
+        v-for="example in compData.examples"
         :key="`${compData.name}-${example.name}`"
         :example="example"
         :name="compData.name"
@@ -49,7 +49,7 @@ export default {
 @import "~@rei/cdr-tokens/dist/scss/cdr-tokens.scss";
 
 .heading {
-  @include cdr-text-header-3;
+  @include cdr-text-heading-700;
   margin: $cdr-space-one-x;
 }
 
