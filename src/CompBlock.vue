@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <div class="comp-block">
+  <div class="comp-block" data-backstop="capture">
     <h3 class="heading">
       <a :id="compData.name" :href="`#${compData.name}`">
         {{ compData.name }}
@@ -36,7 +36,7 @@ export default {
         <th>vue component</th>
       </tr>
       <example
-        v-for="example in compData.examples" 
+        v-for="example in compData.examples"
         :key="`${compData.name}-${example.name}`"
         :example="example"
         :name="compData.name"
