@@ -49,7 +49,7 @@ export default {
 @import "~@rei/cdr-tokens/dist/scss/cdr-tokens.scss";
 
 .heading {
-  @include cdr-text-header-3;
+  @include cdr-text-heading-700;
   margin: $cdr-space-one-x;
 }
 
