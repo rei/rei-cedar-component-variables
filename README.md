@@ -70,7 +70,7 @@ Update steps:
 - Run the `build:variables` script in `rei-cedar` to copy the variable files for all supported components into this repository. If you are adding support for a component, you will need to update that build script. If there are no changes to the `/dist` directory, then there is no need to do anything else.
 - Run the `build:less` script inside this repository to create a LESS copy of the previous SASS export
 - Update the `cdr-tokens` dependencies in this project's `package.json` so that the version exactly matches the version currently being used in `rei-cedar`
-- Update `/examples` as needed. Note that you will need to re-start the `serve` script any time the example SCSS code changes.
+- Update `/examples` as needed. Note that you will need to re-start the `dev` script any time the example SCSS code changes.
 - Bump the version of this package
 - Run the `build:docs` script in this project
 
