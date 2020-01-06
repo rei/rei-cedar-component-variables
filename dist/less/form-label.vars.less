@@ -1,13 +1,13 @@
 @cdr-label-base-spacing: @cdr-space-half-x;
 
 .cdr-label-base-text-mixin() {
-  // TODO: typography token
-  .redwood-display-30;
+  .cdr-text-utility-300;
 }
 
 @cdr-label-base-color: @cdr-color-text-form-label-lightmode;
 @cdr-label-base-display: inline-block;
 @cdr-label-base-margin: 0;
+
 .cdr-label-base-mixin() {
   .cdr-label-base-text-mixin;
 
@@ -30,11 +30,10 @@
   cursor: @cdr-label-base-cursor-disabled;
 }
 
-
 .cdr-label-compact-text-mixin() {
-  // TODO: typography token
-  .redwood-display-20;
+  .cdr-text-utility-200;
 }
+
 .cdr-label-compact-mixin() {
   .cdr-label-compact-text-mixin;
 }
