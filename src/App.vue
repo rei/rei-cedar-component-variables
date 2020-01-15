@@ -18,10 +18,10 @@ export default {
       return packageJson.version;
     },
     tokensVersion() {
-      return packageJson.peerDependencies['@rei/cdr-tokens'];
+      return packageJson.dependencies['@rei/cdr-tokens'];
     },
     cedarVersion() {
-      return packageJson.peerDependencies['@rei/cedar'];
+      return packageJson.dependencies['@rei/cedar'];
     }
   }
 }
@@ -69,7 +69,7 @@ export default {
 @import "~@rei/cdr-tokens/dist/scss/cdr-tokens.scss";
 
 .heading {
-  @include cdr-text-display-900;
+  @include cdr-text-heading-serif-900;
 }
 
 .sub-heading {

@@ -1,6 +1,6 @@
 {
   "name": "@rei/cdr-component-variables",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Style variables exported from Cedar components",
   "style": "dist/scss/index.scss",
   "files": [
@@ -13,7 +13,10 @@
     "lint": "vue-cli-service lint",
     "prepublishOnly": "npm run build:less",
     "postpublish": "npm run build:docs",
-    "dev": "npm run build:stylesheet && vue-cli-service serve"
+    "dev": "npm run build:stylesheet && vue-cli-service serve",
+    "reference": "backstop reference",
+    "compare": "backstop test",
+    "approve": "backstop approve"
   },
   "private": false,
   "publishConfig": {
@@ -26,17 +29,16 @@
   "homepage": "https://rei.github.io/rei-cedar-component-variables/#/",
   "author": "REI Software Engineering",
   "license": "MIT",
-  "peerDependencies": {
-    "@rei/cedar": "3.0.0",
-    "@rei/cdr-tokens": "2.0.0"
+  "dependencies": {
+    "@rei/cedar": "^4.0.0",
+    "@rei/cdr-tokens": "^3.0.0"
   },
   "devDependencies": {
-    "@rei/cdr-tokens": "^2.0.0",
-    "@rei/cedar": "^3.0.0",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
     "@vue/cli-service": "^3.11.0",
     "babel-eslint": "^10.0.1",
+    "backstopjs": "^4.3.2",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "fs-extra": "^7.0.1",

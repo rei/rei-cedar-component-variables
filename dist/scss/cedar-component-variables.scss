@@ -8,325 +8,11 @@
 =============================================================== */
 
 /* ---------------------
-* Text
-* ------------------- */
-
-/* Redwood */
-@mixin redwood-display-70() {
-  font-style: normal;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 36px;
-  letter-spacing: normal;
-}
-
-@mixin redwood-display-60() {
-  font-style: normal;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: normal;
-}
-
-@mixin redwood-display-50() {
-  font-style: normal;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: normal;
-}
-
-@mixin redwood-display-40() {
-  font-style: normal;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: normal;
-}
-
-@mixin redwood-display-30() {
-  font-style: normal;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: normal;
-}
-
-@mixin redwood-display-20() {
-  font-style: normal;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: normal;
-}
-
-@mixin redwood-body-40() {
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: normal;
-}
-
-@mixin redwood-display-10() {
-  font-style: normal;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: normal;
-}
-
-@mixin redwood-body-30() {
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: normal;
-}
-
-@mixin redwood-body-20() {
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: normal;
-}
-
-@mixin redwood-body-10() {
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: normal;
-}
-
-/* Maple */
-@mixin maple-utility-70() {
-  font-style: normal;
-  font-family: Roboto Condensed, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 36px;
-  letter-spacing: normal;
-}
-
-@mixin maple-utility-60() {
-  font-style: normal;
-  font-family: Roboto Condensed, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: normal;
-}
-
-@mixin maple-utility-50() {
-  font-style: normal;
-  font-family: Roboto Condensed, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: normal;
-}
-
-@mixin maple-utility-40() {
-  font-style: normal;
-  font-family: Roboto Condensed, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: normal;
-}
-
-@mixin maple-utility-30() {
-  font-style: normal;
-  font-family: Roboto Condensed, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: normal;
-}
-
-@mixin maple-utility-20() {
-  font-style: normal;
-  font-family: Roboto Condensed, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: normal;
-}
-
-@mixin maple-utility-10() {
-  font-style: normal;
-  font-family: Roboto Condensed, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: normal;
-}
-
-/* Spruce */
-@mixin spruce-display-90() {
-  font-style: normal;
-  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 600;
-  font-size: 76px;
-  line-height: 84px;
-  letter-spacing: 0.2px;
-}
-
-@mixin spruce-display-80() {
-  font-style: normal;
-  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 600;
-  font-size: 56px;
-  line-height: 60px;
-  letter-spacing: 0.2px;
-}
-
-@mixin spruce-display-70() {
-  font-style: normal;
-  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 48px;
-  letter-spacing: 0.2px;
-}
-
-@mixin spruce-display-60() {
-  font-style: normal;
-  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 40px;
-  letter-spacing: 0.2px;
-}
-
-@mixin spruce-display-50() {
-  font-style: normal;
-  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 36px;
-  letter-spacing: 0.2px;
-}
-
-@mixin spruce-display-40() {
-  font-style: normal;
-  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: 0.2px;
-}
-
-@mixin spruce-display-30() {
-  font-style: normal;
-  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: 0.2px;
-}
-
-@mixin spruce-display-20() {
-  font-style: normal;
-  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.2px;
-}
-
-@mixin spruce-display-10() {
-  font-style: normal;
-  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.2px;
-}
-
-@mixin spruce-display-00() {
-  font-style: normal;
-  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.2px;
-}
-
-@mixin spruce-display-100() {
-  font-style: normal;
-  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-variant: normal;
-  font-weight: 600;
-  font-size: 96px;
-  line-height: 104px;
-  letter-spacing: 0.2px;
-}
-
-@mixin spruce-body-30() {
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: normal;
-}
-
-@mixin spruce-body-20() {
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: normal;
-}
-/* ---------------------
 * Outline
 * ------------------- */
 $default-outline: 0.2rem solid Highlight;
+
+$cdr-button-font-family: $cdr-font-family-sans;
 
 $cdr-button-base-border: none;
 $cdr-button-base-outline: none;
@@ -425,47 +111,62 @@ $cdr-button-full-width-justify-content: center;
 
 $cdr-button-icon-only-background-color: none;
 $cdr-button-icon-only-border: none;
+$cdr-button-icon-only-radius: 50%;
 $cdr-button-icon-only-box-shadow: none;
 $cdr-button-icon-only-display: inline-block;
 
-
 $cdr-button-icon-only-padding: $cdr-space-inset-half-x;
-$cdr-button-icon-only-pr: calc(#{$cdr-space-inset-half-x} - #{$cdr-space-quarter-x}); // note that this overrides the previous padding variable
+$cdr-button-icon-only-margin: 0;
 
 $cdr-button-icon-only-fill: $cdr-color-icon-emphasis-lightmode;
 
-$cdr-button-icon-only-background-color-hover: none;
+$cdr-button-icon-only-background-color-hover: $cdr-color-background-light;
 $cdr-button-icon-only-fill-hover: $cdr-color-icon-emphasis-lightmode;
 $cdr-button-icon-only-box-shadow-hover: none;
 
-$cdr-button-icon-only-background-color-active: none;
+$cdr-button-icon-only-background-color-active: $cdr-color-background-light;
 $cdr-button-icon-only-fill-active: $cdr-color-icon-emphasis-lightmode;
 $cdr-button-icon-only-box-shadow-active: none;
 
-$cdr-button-icon-only-background-color-focus: none;
+$cdr-button-icon-only-background-color-focus: $cdr-color-background-light;
 $cdr-button-icon-only-fill-focus: $cdr-color-icon-emphasis-lightmode;
 $cdr-button-icon-only-box-shadow-focus: none;
+
+$cdr-button-icon-only-background-color-disabled: transparent;
+$cdr-button-icon-only-box-shadow-disabled: none;
+$cdr-button-icon-only-fill-disabled: $cdr-color-text-disabled-lightmode;
 
 $cdr-button-icon-only-fill-darkmode: $cdr-color-icon-emphasis-darkmode;
 
 @mixin cdr-button-base-text-mixin() {
-  // TODO: typography token
-  @include redwood-display-30
+  @include cdr-button-base-text-mixin-medium;
 }
 
 @mixin cdr-button-base-text-mixin-small() {
-  // TODO: typography token
-  @include redwood-display-20;
+  font-family: $cdr-button-font-family;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -.08px;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 @mixin cdr-button-base-text-mixin-medium() {
-  // TODO: typography token
-  @include redwood-display-30;
+  font-family: $cdr-button-font-family;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -.08px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 @mixin cdr-button-base-text-mixin-large() {
-  // TODO: typography token
-  @include redwood-display-40;
+  font-family: $cdr-button-font-family;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -.08px;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 /* start of mixin land */
@@ -551,6 +252,7 @@ $cdr-button-icon-only-fill-darkmode: $cdr-color-icon-emphasis-darkmode;
     background-color: $cdr-button-primary-background-color-disabled;
     box-shadow: $cdr-button-primary-box-shadow-disabled;
     color: $cdr-button-primary-color-disabled;
+    fill: $cdr-button-primary-color-disabled;
   }
 }
 
@@ -600,10 +302,10 @@ $cdr-button-icon-only-fill-darkmode: $cdr-color-icon-emphasis-darkmode;
 @mixin cdr-button-icon-only-mixin() {
   background: $cdr-button-icon-only-background-color;
   border: $cdr-button-icon-only-border;
+  border-radius: $cdr-button-icon-only-radius;
   box-shadow: $cdr-button-icon-only-box-shadow;
   display: $cdr-button-icon-only-display;
   padding: $cdr-button-icon-only-padding;
-  padding-right: $cdr-button-icon-only-pr;
   fill: $cdr-button-icon-only-fill;
 
   &:hover {
@@ -622,6 +324,12 @@ $cdr-button-icon-only-fill-darkmode: $cdr-color-icon-emphasis-darkmode;
     background: $cdr-button-icon-only-background-color-focus;
     box-shadow: $cdr-button-icon-only-box-shadow-focus;
     fill: $cdr-button-icon-only-fill-focus;
+  }
+  
+  &[disabled] {
+    background: $cdr-button-icon-only-background-color-disabled;
+    box-shadow: $cdr-button-icon-only-box-shadow-disabled;
+    fill: $cdr-button-icon-only-fill-disabled;
   }
 }
 
@@ -825,13 +533,13 @@ $cdr-link-base-fill-darkmode: $cdr-color-text-link-darkmode;
 $cdr-label-base-spacing: $cdr-space-half-x;
 
 @mixin cdr-label-base-text-mixin() {
-  // TODO: typography token
-  @include redwood-display-30;
+  @include cdr-text-utility-300;
 }
 
 $cdr-label-base-color: $cdr-color-text-form-label-lightmode;
 $cdr-label-base-display: inline-block;
 $cdr-label-base-margin: 0;
+
 @mixin cdr-label-base-mixin() {
   @include cdr-label-base-text-mixin;
 
@@ -854,11 +562,10 @@ $cdr-label-color-disabled: #b8b8b8;
   cursor: $cdr-label-base-cursor-disabled;
 }
 
-
 @mixin cdr-label-compact-text-mixin() {
-  // TODO: typography token
-  @include redwood-display-20;
+  @include cdr-text-utility-200;
 }
+
 @mixin cdr-label-compact-mixin() {
   @include cdr-label-compact-text-mixin;
 }
@@ -869,63 +576,112 @@ $cdr-label-color-disabled: #b8b8b8;
 $input-pre-icon-default-width: 25px;
 /* PRIVATE */
 
-/* input label */
-@mixin cdr-input-base-label-text-mixin() {
-  // TODO: typography token
-  @include maple-utility-20;
-}
+
+/*--------------------------------------------------------------------------------------------------
+// input Variables
+--------------------------------------------------------------------------------------------------*/
+
+/*----------------------------
+// Color
+//---------------------------*/
+
+
+$cdr-input-base-box-shadow: inset 0 0 0 1px $cdr-color-border-primary-lightmode;
+$cdr-input-base-box-shadow-disabled: inset 0 0 0 1px $cdr-color-border-disabled-lightmode;
+$cdr-input-base-box-shadow-disabled-hover: inset 0 0 0 1px $cdr-color-border-disabled-lightmode;
+$cdr-input-base-box-shadow-active: inset 0 0 0 1px $cdr-color-border-selected-lightmode;
+$cdr-input-base-box-shadow-focus: inset 0 0 0 1px $cdr-color-border-selected-lightmode;
+
+$cdr-input-base-color: $cdr-color-text-form-label-lightmode;
+$cdr-input-base-color-disabled: $cdr-color-text-form-disabled-lightmode;
+
 $cdr-input-base-label-color: $cdr-color-text-form-label-lightmode;
+$cdr-input-base-label-color-disabled: $cdr-color-text-disabled-lightmode;
+
+$cdr-input-base-placeholder-color: $cdr-color-text-form-placeholder-lightmode;
+$cdr-input-base-placeholder-color-disabled: $cdr-color-text-form-disabled-lightmode;
+
+// Helper text color
+$cdr-input-helper-text-color: $cdr-color-text-secondary-lightmode;
+
+// Required text color
+$cdr-input-required-label-color: $cdr-color-text-secondary-lightmode;
+
+/*----------------------------
+// Display
+//---------------------------*/
+
+// Input: Base
+$cdr-input-base-border: 0;
+$cdr-input-base-border-radius: $cdr-radius-softer;
+$cdr-input-base-display: block;
+$cdr-input-base-height: 40px;
+$cdr-input-base-overflow: visible;
+$cdr-input-base-padding: $cdr-space-inset-half-x;
+$cdr-input-base-margin: 0;
+$cdr-input-base-width: 100%;
+
+// Input: Large
+$cdr-input-pt-large: $cdr-space-one-x;
+$cdr-input-pb-large: $cdr-space-one-x;
+$cdr-input-height-large: 48px;
+
+//Input:  Multiline
+$cdr-input-base-multiline-height: auto;
+
+//Info
+$cdr-input-info-container-float: right;
+
+// Label: Base
 $cdr-input-base-label-display: inline-block;
 $cdr-input-base-label-margin: 0;
 $cdr-input-base-label-mb: $cdr-space-quarter-x;
 $cdr-input-base-label-mr: $cdr-space-inset-quarter-x;
-@mixin cdr-input-base-label-mixin() {
-  @include cdr-input-base-label-text-mixin;
 
-  color: $cdr-input-base-label-color;
-  display: $cdr-input-base-label-display;
-  margin: $cdr-input-base-label-margin;
-  margin-bottom: $cdr-input-base-label-mb;
-  margin-right: $cdr-input-base-label-mr;
-}
+// Label: Required
+$cdr-input-required-label-ml: $cdr-space-inset-quarter-x;
 
-/* input label disabled */
-$cdr-input-base-label-color-disabled: $cdr-color-text-disabled-lightmode;
+/***************************************************************************************************
+// Simple mixins
+//*************************************************************************************************/
+
+// Clolor
 @mixin cdr-input-base-label-disabled-mixin() {
   color: $cdr-input-base-label-color-disabled;
 }
 
-/* input base */
+// Typography
 @mixin cdr-input-base-text-mixin() {
-  // TODO: typography token
-  @include redwood-display-30;
+  @include cdr-text-utility-300;
 }
-$cdr-input-base-color: $cdr-color-text-form-label-lightmode;
-$cdr-input-base-box-shadow: inset 0 0 0 1px $cdr-color-border-primary-lightmode;
-$cdr-input-base-border: 0;
-$cdr-input-base-border-radius: $cdr-radius-softer;
-$cdr-input-base-padding: $cdr-space-inset-half-x;
-$cdr-input-base-height: 40px;
-$cdr-input-base-display: block;
-$cdr-input-base-width: 100%;
-$cdr-input-base-overflow: visible;
-$cdr-input-base-margin: 0;
-
-$cdr-input-base-background-color-disabled: $cdr-color-background-lighter;
-$cdr-input-base-color-disabled: $cdr-color-text-form-disabled-lightmode;
-$cdr-input-base-box-shadow-disabled: inset 0 0 0 1px $cdr-color-border-disabled-lightmode;
-$cdr-input-base-box-shadow-disabled-hover: inset 0 0 0 1px $cdr-color-border-disabled-lightmode;
-$cdr-input-base-placeholder-color-disabled: $cdr-color-text-form-disabled-lightmode;
-
-$cdr-input-base-box-shadow-active: inset 0 0 0 1px $cdr-color-border-selected-lightmode;
-$cdr-input-base-box-shadow-focus: inset 0 0 0 1px $cdr-color-border-selected-lightmode;
 
 @mixin cdr-input-base-placeholder-text-mixin() {
-  // TODO: typography token
-  @include redwood-display-30;
+  @include cdr-text-utility-300;
 }
-$cdr-input-base-placeholder-font-style: italic;
-$cdr-input-base-placeholder-color: $cdr-color-text-form-placeholder-lightmode;
+
+@mixin cdr-input-base-label-text-mixin() {
+  @include cdr-text-utility-200;
+}
+
+@mixin cdr-input-helper-text-text-mixin() {
+  font-family: $cdr-font-family-sans;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: -0.016rem;  
+}
+
+@mixin cdr-input-info-container-text-mixin() {
+  @include cdr-text-utility-200;
+}
+
+@mixin cdr-input-large-text-mixin() {
+  @include cdr-text-utility-400;
+}
+
+/***************************************************************************************************
+// Component mixins
+//*************************************************************************************************/
+
 
 @mixin cdr-input-base-mixin() {
   @include cdr-input-base-text-mixin;
@@ -956,7 +712,7 @@ $cdr-input-base-placeholder-color: $cdr-color-text-form-placeholder-lightmode;
   }
 
   &[disabled] {
-    background-color: $cdr-input-base-background-color-disabled;
+    background-color: $cdr-color-background-lighter;
     color: $cdr-input-base-color-disabled;
     box-shadow: $cdr-input-base-box-shadow-disabled;
 
@@ -980,41 +736,38 @@ $cdr-input-base-placeholder-color: $cdr-color-text-form-placeholder-lightmode;
   &::placeholder {
     @include cdr-input-base-placeholder-text-mixin;
 
-    font-style: $cdr-input-base-placeholder-font-style;
     color: $cdr-input-base-placeholder-color;
   }
 }
 
-/* --multiline */
-$cdr-input-multiline-height: auto;
-@mixin cdr-input-multiline-mixin() {
-  height: auto;
+@mixin cdr-input-base-label-mixin() {
+  @include cdr-input-base-label-text-mixin;
+
+  color: $cdr-input-base-label-color;
+  display: $cdr-input-base-label-display;
+  margin: $cdr-input-base-label-margin;
+  margin-bottom: $cdr-input-base-label-mb;
+  margin-right: $cdr-input-base-label-mr;
 }
 
-/* --large */
-$cdr-input-pt-large: $cdr-space-one-x;
-$cdr-input-pb-large: $cdr-space-one-x;
-$cdr-input-height-large: 48px;
 @mixin cdr-input-large-mixin() {
+  @include cdr-input-large-text-mixin;
+
   padding-top: $cdr-input-pt-large;
   padding-bottom: $cdr-input-pb-large;
   height: $cdr-input-height-large;
 }
 
-/* required label */
-$cdr-input-required-label-color: $cdr-color-text-secondary-lightmode;
-$cdr-input-required-label-ml: $cdr-space-inset-quarter-x;
-@mixin cdr-input-required-label-mixin() {
-  color: $cdr-input-required-label-color;
-  margin-left: $cdr-input-required-label-ml
+@mixin cdr-input-multiline-mixin() {
+  height: $cdr-input-base-multiline-height;
 }
 
-/* info link */
-@mixin cdr-input-info-container-text-mixin() {
-  // TODO: typography token
-  @include maple-utility-20;
+@mixin cdr-input-helper-text-mixin() {
+  @include cdr-input-helper-text-text-mixin;
+
+  color: $cdr-input-helper-text-color;
+  display: block;
 }
-$cdr-input-info-container-float: right;
 
 @mixin cdr-input-info-container-mixin() {
   @include cdr-input-info-container-text-mixin;
@@ -1022,33 +775,16 @@ $cdr-input-info-container-float: right;
   float: $cdr-input-info-container-float;
 }
 
-/* helper text */
-@mixin cdr-input-helper-text-text-mixin() {
-  // TODO: typography token
-  @include redwood-display-20;
+@mixin cdr-input-required-label-mixin() {
+  color: $cdr-input-required-label-color;
+  margin-left: $cdr-input-required-label-ml
 }
-$cdr-input-helper-text-color: $cdr-color-text-secondary-lightmode;
-$cdr-input-helper-text-pl: $cdr-space-half-x;
-$cdr-input-helper-text-pt: $cdr-space-quarter-x;
-
-@mixin cdr-input-helper-text-mixin() {
-  @include cdr-input-helper-text-text-mixin;
-
-  color: $cdr-input-helper-text-color;
-  padding-left: $cdr-input-helper-text-pl;
-  padding-top: $cdr-input-helper-text-pt;
-}
-
-
-
-
 
 
 
 /* select label */
 @mixin cdr-select-base-label-text-mixin() {
-  // TODO: typography token
-  @include maple-utility-20;
+  @include cdr-text-utility-200;
 }
 $cdr-select-base-label-color: $cdr-color-text-form-label-lightmode;
 $cdr-select-base-label-display: inline-block;
@@ -1073,8 +809,7 @@ $cdr-select-base-label-color-disabled: $cdr-color-text-disabled-lightmode;
 
 /* select base */
 @mixin cdr-select-base-text-mixin() {
-  // TODO: typography token
-  @include redwood-display-30;
+  @include cdr-text-utility-300;
 }
 $cdr-select-base-color: $cdr-color-text-form-label-lightmode;
 $cdr-select-base-box-shadow: inset 0 0 0 1px $cdr-color-border-primary-lightmode;
@@ -1099,10 +834,9 @@ $cdr-select-base-box-shadow-active: inset 0 0 0 1px $cdr-color-border-selected-l
 $cdr-select-base-box-shadow-focus: inset 0 0 0 1px $cdr-color-border-selected-lightmode;
 
 @mixin cdr-select-base-prompt-text-mixin() {
-  // TODO: typography token
-  @include redwood-display-30;
+  @include cdr-text-utility-300;
 }
-$cdr-select-base-prompt-font-style: italic;
+$cdr-select-base-prompt-font-style: normal;
 $cdr-select-base-prompt-color: $cdr-color-text-form-placeholder-lightmode;
 
 @mixin cdr-select-base-mixin() {
@@ -1182,8 +916,7 @@ $cdr-select-required-label-color: $cdr-color-text-secondary-lightmode;
 
 /* info container */
 @mixin cdr-select-info-container-text-mixin() {
-  // TODO: typography token
-  @include redwood-display-20;
+  @include cdr-text-utility-200;
 }
 $cdr-select-info-container-float: right;
 
@@ -1195,22 +928,47 @@ $cdr-select-info-container-float: right;
 
 /* helper text */
 @mixin cdr-select-helper-text-text-mixin() {
-  @include redwood-display-20;
+  @include cdr-text-utility-200;
 }
 $cdr-select-helper-text-color: $cdr-color-text-secondary-lightmode;
-$cdr-select-helper-text-pl: $cdr-space-half-x;
-$cdr-select-helper-text-pt: $cdr-space-quarter-x;
 
 @mixin cdr-select-helper-text-mixin() {
   @include cdr-select-helper-text-text-mixin;
 
   color: $cdr-select-helper-text-color;
-  padding-left: $cdr-select-helper-text-pl;
-  padding-top: $cdr-select-helper-text-pt;
+}
+
+/* caret */
+$cdr-select-base-caret-fill: $cdr-color-icon-primary-lightmode;
+$cdr-select-base-caret-position: absolute;
+$cdr-select-base-caret-top: 50%;
+$cdr-select-base-caret-right: $cdr-space-half-x;
+$cdr-select-base-caret-transform: translateY(-50%);
+$cdr-select-base-caret-pointer-events: none;
+
+@mixin cdr-select-base-caret-mixin() {
+  fill: $cdr-select-base-caret-fill;
+  position: $cdr-select-base-caret-position;
+  top: $cdr-select-base-caret-top;
+  right: $cdr-select-base-caret-right;
+  transform: $cdr-select-base-caret-transform;
+  pointer-events: $cdr-select-base-caret-pointer-events;
+}
+
+/* caret disabled */
+$cdr-select-base-caret-color-disabled: $cdr-color-text-disabled-lightmode;
+
+@mixin cdr-select-base-caret-disabled-mixin() {
+  fill: $cdr-select-base-caret-color-disabled;
 }
 
 @mixin cdr-cta-base-text-mixin() {
-  @include maple-utility-40;
+  font-family: $cdr-font-family-sans;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -.08px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 $cdr-cta-base-border-radius: $cdr-radius-softer;
@@ -1221,7 +979,7 @@ $cdr-cta-base-outline: none;
 $cdr-cta-base-padding: $cdr-space-inset-one-and-a-half-x-squish;
 $cdr-cta-base-pr: calc(#{$cdr-space-one-and-a-half-x} - #{$cdr-space-half-x});
 $cdr-cta-base-text-align: left;
-$cdr-cta-base-text-transform: uppercase;
+$cdr-cta-base-text-transform: none;
 $cdr-cta-base-text-decoration: none;
 $cdr-cta-base-text-decoration-hover: none;
 $cdr-cta-base-text-decoration-active: none;
@@ -1650,9 +1408,11 @@ $cdr-list-unordered-item-left-before: 0;
   padding-left: $cdr-list-unordered-pl;
 
   & > li::before {
-    content: $cdr-list-unordered-item-content-before;
-    position: $cdr-list-unordered-item-position-before;
-    left: $cdr-list-unordered-item-left-before;
+    content: "\2022";
+    position: relative;
+    margin-left: -1em;
+    padding-right: $cdr-space-half-x;
+ 
   }
 }
 
@@ -1671,8 +1431,9 @@ $cdr-list-unordered-nested-item-left-before: 0;
   & > li {
     &::before {
       content: $cdr-list-unordered-nested-item-content-before;
-      position: $cdr-list-unordered-nested-item-position-before;
-      left: $cdr-list-unordered-nested-item-left-before;
+      position: relative;
+      margin-left: -1em;
+      padding-right: $cdr-space-half-x;
     }
   }
 }
