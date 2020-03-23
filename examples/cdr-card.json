@@ -1,0 +1,14 @@
+{
+  "name": "cdr-card",
+  "notes": [],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/card/",
+  "examples": [
+    {
+      "name": "default",
+      "tag": "div",
+      "styles": ["@include cdr-card-base-mixin;"],
+      "attrs": {
+      }
+    }
+  ]
+}

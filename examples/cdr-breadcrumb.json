@@ -1,0 +1,38 @@
+{
+  "name": "cdr-breadcrumb",
+  "notes": [
+    "current page should be rendered as a non-link element"
+  ],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/breadcrumb/",
+  "examples": [
+    {
+      "name": "ancestor",
+      "tag": "a",
+      "styles": [
+        "@include cdr-breadcrumb-item-mixin;",
+        "@include cdr-breadcrumb-item-linked-mixin;",
+        "@include cdr-breadcrumb-base-text-mixin;"
+      ],
+      "attrs": {
+        "items": [
+            { "item": {"url": "rei.com", "name": "ancestor"} },
+            { "item": {"url": "", "name": "current"} }
+        ]
+      }
+    },
+    {
+      "name": "current",
+      "tag": "span",
+      "styles": [
+        "@include cdr-breadcrumb-item-mixin;",
+        "@include cdr-breadcrumb-base-text-mixin;"
+      ],
+      "attrs": {
+        "items": [
+            { "item": {"url": "rei.com", "name": "ancestor"} },
+            { "item": {"url": "", "name": "current"} }
+        ]
+      }
+    }
+  ]
+}
