@@ -1,0 +1,24 @@
+@mixin cdr-breadcrumb-item-mixin() {
+  // @include cdr-text-utility-sans-200;
+  color: $cdr-color-text-secondary;
+  fill: $cdr-color-text-secondary;
+}
+
+@mixin cdr-breadcrumb-item-linked-mixin() {
+  text-decoration: none;
+  color: inherit;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $cdr-color-text-link-active;
+    fill: $cdr-color-text-link-active;
+  }
+}
+
+@mixin cdr-breadcrumb-xs-text-mixin() {
+  @include cdr-text-utility-sans-100;
+}
+
+@mixin cdr-breadcrumb-base-text-mixin() {
+  @include cdr-text-utility-sans-200;
+}

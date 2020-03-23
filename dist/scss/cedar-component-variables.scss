@@ -12,138 +12,8 @@
 * ------------------- */
 $default-outline: 0.2rem solid Highlight;
 
-$cdr-button-font-family: $cdr-font-family-sans;
-
-$cdr-button-base-border: none;
-$cdr-button-base-outline: none;
-$cdr-button-base-border-radius: $cdr-radius-softer;
-$cdr-button-base-display: inline-flex;
-$cdr-button-base-overflow: visible;
-$cdr-button-base-padding: $cdr-space-inset-one-x-squish;
-$cdr-button-base-text-align: left;
-$cdr-button-base-text-decoration: none;
-$cdr-button-base-text-transform: none;
-$cdr-button-base-cursor: pointer;
-
-$cdr-button-primary-background-color: #3278ae;
-$cdr-button-primary-box-shadow: inset 0 0 0 1px #2b6692;
-$cdr-button-primary-fill: #ffffff;
-$cdr-button-primary-color: #ffffff;
-
-$cdr-button-base-icon-align-self: center;
-$cdr-button-base-icon-fill: inherit;
-$cdr-button-base-icon-mr: $cdr-space-quarter-x;
-
-$cdr-button-primary-background-color-hover: #2b6692;
-$cdr-button-primary-fill-hover: #ffffff;
-$cdr-button-primary-color-hover: #ffffff;
-$cdr-button-primary-box-shadow-hover: inset 0 0 0 1px #2b6692;
-$cdr-button-base-outline-hover: none;
-$cdr-button-base-outline-offset-hover: 0;
-$cdr-button-base-text-decoration-hover: none;
-
-$cdr-button-primary-background-color-active: #2b6692;
-$cdr-button-primary-fill-active: #ffffff;
-$cdr-button-primary-color-active: #ffffff;
-$cdr-button-primary-box-shadow-active: inset 0 0 0 1px #2b6692;
-$cdr-button-base-outline-active: none;
-$cdr-button-base-outline-offset-active: 0;
-$cdr-button-base-text-decoration-active: none;
-
-$cdr-button-primary-background-color-focus: #2b6692;
-$cdr-button-primary-fill-focus: #ffffff;
-$cdr-button-primary-color-focus: #ffffff;
-$cdr-button-primary-box-shadow-focus: inset 0 0 0 1px #2b6692;
-$cdr-button-base-outline-focus: $default-outline;
-$cdr-button-base-outline-color-focus: -webkit-focus-ring-color;
-$cdr-button-base-outline-offset-focus: 0;
-$cdr-button-base-text-decoration-focus: none;
-
-$cdr-button-primary-background-color-disabled: #dadada;
-$cdr-button-primary-color-disabled: #ffffff;
-$cdr-button-primary-box-shadow-disabled: inset 0 0 0 1px #b8b8b8;
-
-$cdr-button-base-cursor-disabled: not-allowed;
-
-$cdr-button-secondary-background-color: #ffffff;
-$cdr-button-secondary-color: #292929;
-$cdr-button-secondary-fill: #292929;
-$cdr-button-secondary-box-shadow: inset 0 0 0 1px #616161;
-
-$cdr-button-secondary-background-color-hover: #f7f7f7;
-$cdr-button-secondary-color-hover: #292929;
-$cdr-button-secondary-fill-hover: #292929;
-$cdr-button-secondary-box-shadow-hover: inset 0 0 0 1px #616161;
-
-$cdr-button-secondary-background-color-active: #f7f7f7;
-$cdr-button-secondary-color-active: #292929;
-$cdr-button-secondary-fill-active: #292929;
-$cdr-button-secondary-box-shadow-active: inset 0 0 0 1px #616161;
-
-$cdr-button-secondary-background-color-focus: #f7f7f7;
-$cdr-button-secondary-color-focus: #292929;
-$cdr-button-secondary-fill-focus: #292929;
-$cdr-button-secondary-box-shadow-focus: inset 0 0 0 1px #616161;
-
-$cdr-button-secondary-background-color-disabled: #ffffff;
-$cdr-button-secondary-color-disabled: #b8b8b8;
-$cdr-button-secondary-fill-disabled: #b8b8b8;
-$cdr-button-secondary-box-shadow-disabled: inset 0 0 0 1px #dadada;
-
-$cdr-button-base-padding-large: $cdr-space-inset-one-and-a-half-x-squish;
-$cdr-button-has-icon-pl-large: calc(#{$cdr-space-one-and-a-half-x} - #{$cdr-space-quarter-x});
-
-$cdr-button-base-padding-medium: $cdr-space-inset-one-x-squish;
-$cdr-button-has-icon-pl-medium: calc(#{$cdr-space-one-x} - #{$cdr-space-quarter-x});
-
-$cdr-button-base-padding-small: $cdr-space-inset-three-quarter-x-squish;
-$cdr-button-has-icon-pl-small: calc(#{$cdr-space-three-quarter-x} - #{$cdr-space-quarter-x});
-
-$cdr-button-base-icon-width-small: 20px;
-$cdr-button-base-icon-height-small: 20px;
-$cdr-button-base-icon-width-medium: $cdr-icon-size;
-$cdr-button-base-icon-height-medium: $cdr-icon-size;
-$cdr-button-base-icon-width-large: $cdr-icon-size;
-$cdr-button-base-icon-height-large: $cdr-icon-size;
-
-$cdr-button-full-width-width: 100%;
-$cdr-button-full-width-justify-content: center;
-
-$cdr-button-icon-only-background-color: none;
-$cdr-button-icon-only-border: none;
-$cdr-button-icon-only-radius: 50%;
-$cdr-button-icon-only-box-shadow: none;
-$cdr-button-icon-only-display: inline-block;
-
-$cdr-button-icon-only-padding: $cdr-space-inset-half-x;
-$cdr-button-icon-only-margin: 0;
-
-$cdr-button-icon-only-fill: $cdr-color-icon-emphasis-lightmode;
-
-$cdr-button-icon-only-background-color-hover: $cdr-color-background-light;
-$cdr-button-icon-only-fill-hover: $cdr-color-icon-emphasis-lightmode;
-$cdr-button-icon-only-box-shadow-hover: none;
-
-$cdr-button-icon-only-background-color-active: $cdr-color-background-light;
-$cdr-button-icon-only-fill-active: $cdr-color-icon-emphasis-lightmode;
-$cdr-button-icon-only-box-shadow-active: none;
-
-$cdr-button-icon-only-background-color-focus: $cdr-color-background-light;
-$cdr-button-icon-only-fill-focus: $cdr-color-icon-emphasis-lightmode;
-$cdr-button-icon-only-box-shadow-focus: none;
-
-$cdr-button-icon-only-background-color-disabled: transparent;
-$cdr-button-icon-only-box-shadow-disabled: none;
-$cdr-button-icon-only-fill-disabled: $cdr-color-text-disabled-lightmode;
-
-$cdr-button-icon-only-fill-darkmode: $cdr-color-icon-emphasis-darkmode;
-
-@mixin cdr-button-base-text-mixin() {
-  @include cdr-button-base-text-mixin-medium;
-}
-
 @mixin cdr-button-base-text-mixin-small() {
-  font-family: $cdr-button-font-family;
+  font-family: $cdr-font-family-sans;
   font-style: normal;
   font-weight: 500;
   letter-spacing: -.08px;
@@ -152,7 +22,7 @@ $cdr-button-icon-only-fill-darkmode: $cdr-color-icon-emphasis-darkmode;
 }
 
 @mixin cdr-button-base-text-mixin-medium() {
-  font-family: $cdr-button-font-family;
+  font-family: $cdr-font-family-sans;
   font-style: normal;
   font-weight: 500;
   letter-spacing: -.08px;
@@ -161,7 +31,7 @@ $cdr-button-icon-only-fill-darkmode: $cdr-color-icon-emphasis-darkmode;
 }
 
 @mixin cdr-button-base-text-mixin-large() {
-  font-family: $cdr-button-font-family;
+  font-family: $cdr-font-family-sans;
   font-style: normal;
   font-weight: 500;
   letter-spacing: -.08px;
@@ -169,533 +39,361 @@ $cdr-button-icon-only-fill-darkmode: $cdr-color-icon-emphasis-darkmode;
   line-height: 24px;
 }
 
-/* start of mixin land */
+/* start of mixins/component variables*/
 
 @mixin cdr-button-base-mixin() {
-  @include cdr-button-base-text-mixin;
+  @include cdr-button-base-text-mixin-medium;
 
-  border: $cdr-button-base-border;
-  border-radius: $cdr-button-base-border-radius;
-  cursor: $cdr-button-base-cursor;
-  display: $cdr-button-base-display;
-  outline: $cdr-button-base-outline;
-  overflow: $cdr-button-base-overflow;
-  padding: $cdr-button-base-padding;
-  text-align: $cdr-button-base-text-align;
-  text-decoration: $cdr-button-base-text-decoration;
-  text-transform: $cdr-button-base-text-transform;
+  border: none;
+  border-radius: $cdr-radius-softer;
+  cursor: pointer;
+  display: inline-flex;
+  outline: none;
+  overflow: visible;
+  padding: $cdr-space-inset-one-x-squish;
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
 
   /* States
     ---------- */
-
-  &:hover {
-    outline: $cdr-button-base-outline-hover;
-    outline-offset: $cdr-button-base-outline-offset-hover;
-    text-decoration: $cdr-button-base-text-decoration-hover;
-  }
-
-  &:active {
-    outline: $cdr-button-base-outline-active;
-    outline-offset: $cdr-button-base-outline-offset-active;
-    text-decoration: $cdr-button-base-text-decoration-active;
+  &:hover, &:active, &:focus {
+    outline: none;
+    outline-offset: 0;
+    text-decoration: none;
   }
 
   &:focus {
-    outline: $cdr-button-base-outline-focus;
-    outline-color: $cdr-button-base-outline-color-focus;
-    outline-offset: $cdr-button-base-outline-offset-focus;
-    text-decoration: $cdr-button-base-text-decoration-focus;
+    outline: $default-outline;
+    outline-color: -webkit-focus-ring-color;
   }
 
   &[disabled] {
-    cursor: $cdr-button-base-cursor-disabled;
+    cursor: not-allowed;
   }
 }
 
 @mixin cdr-button-base-icon-mixin() {
-  align-self: $cdr-button-base-icon-align-self;
-  margin-right: $cdr-button-base-icon-mr;
-  fill: $cdr-button-base-icon-fill;
+  align-self: center;
+  margin-right: $cdr-space-quarter-x;
+  fill: inherit;
 }
 
 @mixin cdr-button-primary-mixin() {
-  background-color: $cdr-button-primary-background-color;
-  box-shadow: $cdr-button-primary-box-shadow;
-  color: $cdr-button-primary-color;
-  fill: $cdr-button-primary-fill;
+  background-color: $cdr-color-background-button-primary-rest;
+  box-shadow: inset 0 0 0 1px $cdr-color-border-button-primary-rest;
+  color: $cdr-color-text-button-primary;
+  fill: $cdr-color-text-button-primary;
 
   /* States
     ---------- */
 
   &:hover {
-    background-color: $cdr-button-primary-background-color-hover;
-    color: $cdr-button-primary-color-hover;
-    box-shadow: $cdr-button-primary-box-shadow-hover;
-    fill: $cdr-button-primary-fill-hover;
+    background-color: $cdr-color-background-button-primary-hover;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-button-primary-hover;
   }
 
-  &:active {
-    background-color: $cdr-button-primary-background-color-active;
-    color: $cdr-button-primary-color-active;
-    box-shadow: $cdr-button-primary-box-shadow-active;
-    fill: $cdr-button-primary-fill-active;
-  }
-
+  &:active,
   &:focus {
-    background-color: $cdr-button-primary-background-color-focus;
-    color: $cdr-button-primary-color-focus;
-    box-shadow: $cdr-button-primary-box-shadow-focus;
-    fill: $cdr-button-primary-fill-focus;
+    background-color: $cdr-color-background-button-primary-active;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-button-primary-active;
   }
 
   &[disabled] {
-    background-color: $cdr-button-primary-background-color-disabled;
-    box-shadow: $cdr-button-primary-box-shadow-disabled;
-    color: $cdr-button-primary-color-disabled;
-    fill: $cdr-button-primary-color-disabled;
+    background-color: $cdr-color-background-button-default-disabled;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-button-default-disabled;
+    color: $cdr-color-text-button-primary-disabled;
+    fill: $cdr-color-text-button-primary-disabled;
   }
 }
 
 @mixin cdr-button-secondary-mixin() {
-  background-color: $cdr-button-secondary-background-color;
-  box-shadow: $cdr-button-secondary-box-shadow;
-  color: $cdr-button-secondary-color;
-  fill: $cdr-button-secondary-fill;
+  background-color: $cdr-color-background-button-secondary-rest;
+  box-shadow: inset 0 0 0 1px $cdr-color-border-button-secondary-rest;
+  color: $cdr-color-text-button-secondary;
+  fill: $cdr-color-icon-default;
 
   /* States
   ---------- */
 
   &:hover {
-    background-color: $cdr-button-secondary-background-color-hover;
-    box-shadow: $cdr-button-secondary-box-shadow-hover;
-    color: $cdr-button-secondary-color-hover;
-    fill: $cdr-button-secondary-fill-hover;
+    background-color: $cdr-color-background-button-secondary-hover;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-button-secondary-hover;
   }
 
-  &:active {
-    background-color: $cdr-button-secondary-background-color-active;
-    box-shadow: $cdr-button-secondary-box-shadow-active;
-    color: $cdr-button-secondary-color-active;
-    fill: $cdr-button-secondary-fill-active;
-  }
-
+  &:active,
   &:focus {
-    background-color: $cdr-button-secondary-background-color-focus;
-    box-shadow: $cdr-button-secondary-box-shadow-focus;
-    color: $cdr-button-secondary-color-focus;
-    fill: $cdr-button-secondary-fill-focus;
+    background-color: $cdr-color-background-button-secondary-active;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-button-secondary-active;
   }
 
   &[disabled] {
-    background-color: $cdr-button-secondary-background-color-disabled;
-    box-shadow: $cdr-button-secondary-box-shadow-disabled;
-    color: $cdr-button-secondary-color-disabled;
-    fill: $cdr-button-secondary-fill-disabled;
+    background-color: $cdr-color-background-button-default-disabled;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-button-default-disabled;
+    color: $cdr-color-text-button-secondary-disabled;
+    fill: $cdr-color-text-button-secondary-disabled;
   }
 }
 
 @mixin cdr-button-full-width-mixin() {
-  width: $cdr-button-full-width-width !important;
-  justify-content: $cdr-button-full-width-justify-content;
+  width: 100% !important;
+  justify-content: center;
 }
 
 @mixin cdr-button-icon-only-mixin() {
-  background: $cdr-button-icon-only-background-color;
-  border: $cdr-button-icon-only-border;
-  border-radius: $cdr-button-icon-only-radius;
-  box-shadow: $cdr-button-icon-only-box-shadow;
-  display: $cdr-button-icon-only-display;
-  padding: $cdr-button-icon-only-padding;
-  fill: $cdr-button-icon-only-fill;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  box-shadow: none;
+  display: inline-block;
+  line-height: normal;
+  padding: $cdr-space-inset-half-x;
+  fill: $cdr-color-icon-default;
+
+  &:hover, &:active, &:focus {
+    background: $cdr-color-background-button-icon-alt-hover;
+    box-shadow: none;
+    border: none;
+  }
+
+  &[disabled] {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    fill: $cdr-color-icon-disabled;
+  }
+}
+
+@mixin cdr-button-with-background-mixin() {
+  fill: $cdr-color-icon-default;
+  background-color: $cdr-color-background-button-secondary-rest;
+  box-shadow: inset 0 0 0 1px $cdr-color-border-button-secondary-rest;
 
   &:hover {
-    background: $cdr-button-icon-only-background-color-hover;
-    box-shadow: $cdr-button-icon-only-box-shadow-hover;
-    fill: $cdr-button-icon-only-fill-hover;
+    background-color: $cdr-color-background-button-secondary-hover;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-button-secondary-hover;
   }
-
-  &:active {
-    background: $cdr-button-icon-only-background-color-active;
-    box-shadow: $cdr-button-icon-only-box-shadow-active;
-    fill: $cdr-button-icon-only-fill-active;
-  }
-
+  &:active,
   &:focus {
-    background: $cdr-button-icon-only-background-color-focus;
-    box-shadow: $cdr-button-icon-only-box-shadow-focus;
-    fill: $cdr-button-icon-only-fill-focus;
+    background-color: $cdr-color-background-button-secondary-active;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-button-secondary-active;
   }
-  
+
   &[disabled] {
-    background: $cdr-button-icon-only-background-color-disabled;
-    box-shadow: $cdr-button-icon-only-box-shadow-disabled;
-    fill: $cdr-button-icon-only-fill-disabled;
+    background-color: $cdr-color-background-button-secondary-disabled;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-button-default-disabled;
+    fill: $cdr-color-text-button-secondary-disabled;
   }
 }
 
 @mixin cdr-button-small-mixin() {
   @include cdr-button-base-text-mixin-small;
-  padding: $cdr-button-base-padding-small;
+  padding: $cdr-space-inset-three-quarter-x-squish;
   width: auto;
 }
 
 @mixin cdr-button-has-icon-small-mixin {
-  padding-left: $cdr-button-has-icon-pl-small;
+  padding-left: calc(#{$cdr-space-three-quarter-x} - #{$cdr-space-quarter-x});
 }
 
 @mixin cdr-button-icon-small-mixin {
   /* This is to correct icon size vs line height */
-  width: $cdr-button-base-icon-width-small;
-  height: $cdr-button-base-icon-height-small;
+  width: 20px;
+  height: 20px;
 }
 
 @mixin cdr-button-medium-mixin() {
   @include cdr-button-base-text-mixin-medium;
-  padding: $cdr-button-base-padding-medium;
+  padding: $cdr-space-inset-one-x-squish;
   width: auto;
 }
 
 @mixin cdr-button-has-icon-medium-mixin {
-  padding-left: $cdr-button-has-icon-pl-medium;
+  padding-left: calc(#{$cdr-space-one-x} - #{$cdr-space-quarter-x});
 }
 
 @mixin cdr-button-icon-medium-mixin {
   /* This is to correct icon size vs line height */
-  width: $cdr-button-base-icon-width-medium;
-  height: $cdr-button-base-icon-height-medium;
+  width: $cdr-icon-size;
+  height: $cdr-icon-size;
 }
 
 @mixin cdr-button-large-mixin() {
   @include cdr-button-base-text-mixin-large;
-  padding: $cdr-button-base-padding-large;
+  padding: $cdr-space-inset-one-and-a-half-x-squish;
   width: auto;
 }
 
 @mixin cdr-button-has-icon-large-mixin {
-  padding-left: $cdr-button-has-icon-pl-large;
+  padding-left: calc(#{$cdr-space-one-and-a-half-x} - #{$cdr-space-quarter-x});
 }
 
 @mixin cdr-button-icon-large-mixin {
   /* This is to correct icon size vs line height */
-  width: $cdr-button-base-icon-width-large;
-  height: $cdr-button-base-icon-height-large;
+  width: $cdr-icon-size;
+  height: $cdr-icon-size;
 }
 
-$cdr-link-base-font-family: inherit;
-$cdr-link-base-font-size: inherit;
-$cdr-link-base-line-height: inherit;
-$cdr-link-base-align-items: center;
-$cdr-link-base-background-color: transparent;
-$cdr-link-base-border: 0;
-$cdr-link-base-margin: 0;
-$cdr-link-base-color: $cdr-color-text-link-lightmode;
-$cdr-link-base-cursor: pointer;
-$cdr-link-base-display: inline-flex;
-$cdr-link-base-fill: $cdr-color-text-link-lightmode;
-$cdr-link-base-outline: none;
-$cdr-link-base-padding: 0;
-$cdr-link-base-text-decoration: underline;
-$cdr-link-base-vertical-align: top;
+@mixin cdr-card-base-mixin() {
+  position: relative;
+  background-color: $cdr-color-background-primary;
+  border-radius: $cdr-radius-soft;
+  box-shadow: $cdr-prominence-raised;
+  color: $cdr-color-text-primary;
+  width: 100%;
+}
 
-$cdr-link-base-color-hover: $cdr-color-text-link-lightmode;
-$cdr-link-base-outline-hover: none;
-$cdr-link-base-text-decoration-hover: underline;
+@mixin cdr-breadcrumb-item-mixin() {
+  // @include cdr-text-utility-sans-200;
+  color: $cdr-color-text-secondary;
+  fill: $cdr-color-text-secondary;
+}
 
-$cdr-link-base-color-active: $cdr-color-text-link-lightmode;
-$cdr-link-base-outline-active: none;
-$cdr-link-base-text-decoration-active: underline;
+@mixin cdr-breadcrumb-item-linked-mixin() {
+  text-decoration: none;
+  color: inherit;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $cdr-color-text-link-active;
+    fill: $cdr-color-text-link-active;
+  }
+}
 
-$cdr-link-base-color-focus: $cdr-color-text-link-lightmode;
-$cdr-link-base-outline-focus: $default-outline;
-$cdr-link-base-outline-color-focus: -webkit-focus-ring-color;
-$cdr-link-base-outline-offset-focus: 0;
-$cdr-link-base-text-decoration-focus: underline;
+@mixin cdr-breadcrumb-xs-text-mixin() {
+  @include cdr-text-utility-sans-100;
+}
 
-$cdr-link-standalone-text-decoration: none;
-$cdr-link-standalone-text-decoration-hover: underline;
-$cdr-link-standalone-text-decoration-active: underline;
-$cdr-link-standalone-text-decoration-focus: underline;
-$cdr-link-standalone-text-decoration-visited: underline;
-
-$cdr-link-base-color-lightmode: $cdr-color-text-link-lightmode;
-$cdr-link-base-color-hover-lightmode: $cdr-color-text-link-lightmode;
-$cdr-link-base-color-active-lightmode: $cdr-color-text-link-lightmode;
-$cdr-link-base-color-focus-lightmode: $cdr-color-text-link-lightmode;
-$cdr-link-base-fill-lightmode: $cdr-color-text-link-lightmode;
-
-$cdr-link-base-color-darkmode: $cdr-color-text-link-darkmode;
-$cdr-link-base-color-hover-darkmode: $cdr-color-text-link-darkmode;
-$cdr-link-base-color-active-darkmode: $cdr-color-text-link-darkmode;
-$cdr-link-base-color-focus-darkmode: $cdr-color-text-link-darkmode;
-$cdr-link-base-fill-darkmode: $cdr-color-text-link-darkmode;
+@mixin cdr-breadcrumb-base-text-mixin() {
+  @include cdr-text-utility-sans-200;
+}
 
 @mixin cdr-link-base-mixin() {
-  font-family: $cdr-link-base-font-family;
-  font-size: $cdr-link-base-font-size;
-  line-height: $cdr-link-base-line-height;
-  align-items: $cdr-link-base-align-items;
-  background-color: $cdr-link-base-background-color;
-  border: $cdr-link-base-border;
-  margin: $cdr-link-base-margin;
-  color: $cdr-link-base-color;
-  cursor: $cdr-link-base-cursor;
-  display: $cdr-link-base-display;
-  fill: $cdr-link-base-fill;
-  outline: $cdr-link-base-outline;
-  padding: $cdr-link-base-padding;
-  text-decoration: $cdr-link-base-text-decoration;
-  vertical-align: $cdr-link-base-vertical-align;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  color: $cdr-color-text-link-rest;
+  fill: $cdr-color-text-link-rest;
+  cursor: pointer;
+  display: inline-flex;
+  outline: none;
+  padding: 0;
+  text-decoration: underline;
+  vertical-align: top;
 
   /* States
     ---------- */
 
-  &:hover {
-    color: $cdr-link-base-color-hover;
-    outline: $cdr-link-base-outline-hover;
-    text-decoration: $cdr-link-base-text-decoration-hover;
-  }
-
-  &:active {
-    color: $cdr-link-base-color-active;
-    outline: $cdr-link-base-outline-active;
-    text-decoration: $cdr-link-base-text-decoration-active;
-  }
-
+  &:hover,
+  &:active,
   &:focus {
-    color: $cdr-link-base-color-focus;
-    outline: $cdr-link-base-outline-focus;
-    outline-color: $cdr-link-base-outline-color-focus;
-    outline-offset: $cdr-link-base-outline-offset-focus;
-    text-decoration: $cdr-link-base-text-decoration-focus;
-  }
-}
-
-@mixin cdr-link-standalone-mixin() {
-  text-decoration: $cdr-link-standalone-text-decoration;
-
-  &:hover {
-    text-decoration: $cdr-link-standalone-text-decoration-hover;
-  }
-
-  &:active {
-    text-decoration: $cdr-link-standalone-text-decoration-active;
-  }
-
-  &:focus {
-    text-decoration: $cdr-link-standalone-text-decoration-focus;
+    outline: none;
+    text-decoration: underline;
   }
 
   &:visited {
-    text-decoration: $cdr-link-standalone-text-decoration-visited;
+    color: $cdr-color-text-link-visited;
   }
-}
-
-@mixin cdr-link-lightmode-mixin() {
-  color: $cdr-link-base-color-lightmode;
-  fill: $cdr-link-base-fill-lightmode;
-
-  /* States
-    ---------- */
 
   &:hover {
-    color: $cdr-link-base-color-hover-lightmode;
+    color: $cdr-color-text-link-hover;
   }
 
   &:active {
-    color: $cdr-link-base-color-active-lightmode;
+    color: $cdr-color-text-link-active;
   }
 
   &:focus {
-    color: $cdr-link-base-color-focus-lightmode;
+    color: $cdr-color-text-link-active;
+    outline: $default-outline;
+    outline-color: -webkit-focus-ring-color;
+    outline-offset: 0;
+  }
+
+}
+
+@mixin cdr-link-standalone-mixin() {
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    text-decoration: underline;
   }
 }
 
-@mixin cdr-link-darkmode-mixin() {
-  color: $cdr-link-base-color-darkmode;
-  fill: $cdr-link-base-fill-darkmode;
-
-  /* States
-    ---------- */
-
-  &:hover {
-    color: $cdr-link-base-color-hover-darkmode;
-  }
-
-  &:active {
-    color: $cdr-link-base-color-active-darkmode;
-  }
-
-  &:focus {
-    color: $cdr-link-base-color-focus-darkmode;
-  }
-}
-
+// variables shared between checkbox and radio
 $cdr-label-base-spacing: $cdr-space-half-x;
 
-@mixin cdr-label-base-text-mixin() {
-  @include cdr-text-utility-300;
-}
+$cdr-label-figure-size-small: 16px;
+$cdr-label-figure-size-medium: 16px;
+$cdr-label-figure-size-large: 20px;
+$cdr-label-figure-box-shadow: 0 0 8px 0 $cdr-color-border-input-default-active;
 
-$cdr-label-base-color: $cdr-color-text-form-label-lightmode;
-$cdr-label-base-display: inline-block;
-$cdr-label-base-margin: 0;
-
+$cdr-label-height-medium: $cdr-text-utility-sans-300-height;
 @mixin cdr-label-base-mixin() {
-  @include cdr-label-base-text-mixin;
-
-  color: $cdr-label-base-color;
-  display: $cdr-label-base-display;
-  margin: $cdr-label-base-margin;
+  @include cdr-text-utility-sans-300;
+  padding-left: calc(#{$cdr-label-figure-size-medium} + #{$cdr-label-base-spacing});
+  color: $cdr-color-text-form-label-lightmode;
 }
-
-$cdr-label-base-cursor-hover: pointer;
 
 @mixin cdr-label-hover-mixin() {
-  cursor: $cdr-label-base-cursor-hover;
+  cursor: pointer;
 }
-
-$cdr-label-base-cursor-disabled: default;
-$cdr-label-color-disabled: #b8b8b8;
 
 @mixin cdr-label-disabled-mixin() {
-  color: $cdr-label-color-disabled !important;
-  cursor: $cdr-label-base-cursor-disabled;
+  color: $cdr-color-text-disabled-lightmode !important;
+  cursor: default;
 }
 
-@mixin cdr-label-compact-text-mixin() {
-  @include cdr-text-utility-200;
+$cdr-label-height-small: $cdr-text-utility-sans-200-height;
+@mixin cdr-label-small-mixin() {
+  @include cdr-text-utility-sans-200;
+  padding-left: calc(#{$cdr-label-figure-size-small} + #{$cdr-label-base-spacing});
 }
 
-@mixin cdr-label-compact-mixin() {
-  @include cdr-label-compact-text-mixin;
+$cdr-label-height-large: $cdr-text-utility-sans-300-height;
+@mixin cdr-label-large-mixin() {
+  @include cdr-text-utility-sans-300;
+  padding-left: calc(#{$cdr-label-figure-size-large} + #{$cdr-label-base-spacing});
 }
 
-/* PRIVATE */
-/* Assumed icon width of slot provided icon.  We may want to add a user provided
-  width option in the future.  */
-$input-pre-icon-default-width: 25px;
-/* PRIVATE */
-
-
-/*--------------------------------------------------------------------------------------------------
-// input Variables
---------------------------------------------------------------------------------------------------*/
-
-/*----------------------------
-// Color
-//---------------------------*/
-
-
-$cdr-input-base-box-shadow: inset 0 0 0 1px $cdr-color-border-primary-lightmode;
-$cdr-input-base-box-shadow-disabled: inset 0 0 0 1px $cdr-color-border-disabled-lightmode;
-$cdr-input-base-box-shadow-disabled-hover: inset 0 0 0 1px $cdr-color-border-disabled-lightmode;
-$cdr-input-base-box-shadow-active: inset 0 0 0 1px $cdr-color-border-selected-lightmode;
-$cdr-input-base-box-shadow-focus: inset 0 0 0 1px $cdr-color-border-selected-lightmode;
-
-$cdr-input-base-color: $cdr-color-text-form-label-lightmode;
-$cdr-input-base-color-disabled: $cdr-color-text-form-disabled-lightmode;
-
-$cdr-input-base-label-color: $cdr-color-text-form-label-lightmode;
-$cdr-input-base-label-color-disabled: $cdr-color-text-disabled-lightmode;
-
-$cdr-input-base-placeholder-color: $cdr-color-text-form-placeholder-lightmode;
-$cdr-input-base-placeholder-color-disabled: $cdr-color-text-form-disabled-lightmode;
-
-// Helper text color
-$cdr-input-helper-text-color: $cdr-color-text-secondary-lightmode;
-
-// Required text color
-$cdr-input-required-label-color: $cdr-color-text-secondary-lightmode;
-
-/*----------------------------
-// Display
-//---------------------------*/
-
-// Input: Base
-$cdr-input-base-border: 0;
-$cdr-input-base-border-radius: $cdr-radius-softer;
-$cdr-input-base-display: block;
-$cdr-input-base-height: 40px;
-$cdr-input-base-overflow: visible;
-$cdr-input-base-padding: $cdr-space-inset-half-x;
-$cdr-input-base-margin: 0;
-$cdr-input-base-width: 100%;
-
-// Input: Large
-$cdr-input-pt-large: $cdr-space-one-x;
-$cdr-input-pb-large: $cdr-space-one-x;
-$cdr-input-height-large: 48px;
-
-//Input:  Multiline
-$cdr-input-base-multiline-height: auto;
-
-//Info
-$cdr-input-info-container-float: right;
-
-// Label: Base
-$cdr-input-base-label-display: inline-block;
-$cdr-input-base-label-margin: 0;
-$cdr-input-base-label-mb: $cdr-space-quarter-x;
-$cdr-input-base-label-mr: $cdr-space-inset-quarter-x;
-
-// Label: Required
-$cdr-input-required-label-ml: $cdr-space-inset-quarter-x;
-
-/***************************************************************************************************
-// Simple mixins
-//*************************************************************************************************/
-
-// Clolor
-@mixin cdr-input-base-label-disabled-mixin() {
-  color: $cdr-input-base-label-color-disabled;
+@mixin cdr-label-figure-small-mixin() {
+  top: calc((#{$cdr-label-height-small} - #{$cdr-label-figure-size-small}) / 2);
+  width: $cdr-label-figure-size-small;
+  height: $cdr-label-figure-size-small;
 }
 
-// Typography
-@mixin cdr-input-base-text-mixin() {
-  @include cdr-text-utility-300;
+@mixin cdr-label-figure-medium-mixin() {
+  top: calc((#{$cdr-label-height-medium} - #{$cdr-label-figure-size-medium}) / 2);
+  width: $cdr-label-figure-size-medium;
+  height: $cdr-label-figure-size-medium;
 }
 
-@mixin cdr-input-base-placeholder-text-mixin() {
-  @include cdr-text-utility-300;
+@mixin cdr-label-figure-large-mixin() {
+  top: calc((#{$cdr-label-height-large} - #{$cdr-label-figure-size-large}) / 2);
+  width: $cdr-label-figure-size-large;
+  height: $cdr-label-figure-size-large;
 }
-
-@mixin cdr-input-base-label-text-mixin() {
-  @include cdr-text-utility-200;
-}
-
-@mixin cdr-input-helper-text-text-mixin() {
-  font-family: $cdr-font-family-sans;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
-  letter-spacing: -0.016rem;  
-}
-
-@mixin cdr-input-info-container-text-mixin() {
-  @include cdr-text-utility-200;
-}
-
-@mixin cdr-input-large-text-mixin() {
-  @include cdr-text-utility-400;
-}
-
-/***************************************************************************************************
-// Component mixins
-//*************************************************************************************************/
-
 
 @mixin cdr-input-base-mixin() {
-  @include cdr-input-base-text-mixin;
+  @include cdr-text-utility-sans-300;
 
-  color: $cdr-input-base-color;
-  box-shadow: $cdr-input-base-box-shadow;
-  border: $cdr-input-base-border;
-  border-radius: $cdr-input-base-border-radius;
-  padding: $cdr-input-base-padding;
-  height: $cdr-input-base-height;
-  display: $cdr-input-base-display;
-  width: $cdr-input-base-width;
-  overflow: $cdr-input-base-overflow;
-  margin: $cdr-input-base-margin;
+  color: $cdr-color-text-input-default;
+  box-shadow: inset 0 0 0 1px $cdr-color-border-input-default;
+  border: 0;
+  border-radius: $cdr-radius-softer;
+  padding: $cdr-space-inset-half-x;
+  height: 40px;
+  display: block;
+  width: 100%;
+  overflow: visible;
+  margin: 0;
 
   /* Prevent iOS from altering border and box-shadow */
   @supports (-webkit-overflow-scrolling: touch) {
@@ -711,149 +409,106 @@ $cdr-input-required-label-ml: $cdr-space-inset-quarter-x;
     margin: 0;
   }
 
-  &[disabled] {
-    background-color: $cdr-color-background-lighter;
-    color: $cdr-input-base-color-disabled;
-    box-shadow: $cdr-input-base-box-shadow-disabled;
-
-    &:hover {
-      box-shadow: $cdr-input-base-box-shadow-disabled-hover;
-    }
-
-    &::placeholder {
-      color: $cdr-input-base-placeholder-color-disabled;
-    }
-  }
-
-  &:active {
-    box-shadow: $cdr-input-base-box-shadow-active;
-  }
-
+  &:active,
   &:focus {
-    box-shadow: $cdr-input-base-box-shadow-active;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-input-default-active;
   }
 
   &::placeholder {
-    @include cdr-input-base-placeholder-text-mixin;
+    @include cdr-text-utility-sans-300;
 
-    color: $cdr-input-base-placeholder-color;
+    color: $cdr-color-text-input-placeholder;
+  }
+
+  &[disabled] {
+    background-color: $cdr-color-background-input-default-disabled;
+    color: $cdr-color-text-input-disabled;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-input-default-disabled;
+
+    &:hover {
+      box-shadow: inset 0 0 0 1px $cdr-color-border-input-default-disabled;
+      cursor: not-allowed;
+    }
+
+    &::placeholder {
+      color: $cdr-color-text-input-disabled;
+    }
   }
 }
 
 @mixin cdr-input-base-label-mixin() {
-  @include cdr-input-base-label-text-mixin;
-
-  color: $cdr-input-base-label-color;
-  display: $cdr-input-base-label-display;
-  margin: $cdr-input-base-label-margin;
-  margin-bottom: $cdr-input-base-label-mb;
-  margin-right: $cdr-input-base-label-mr;
+  @include cdr-text-utility-sans-200;
+  font-weight: 600;
+  color: $cdr-color-text-input-label;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: $cdr-space-quarter-x;
+  margin-right: $cdr-space-inset-quarter-x;
 }
 
 @mixin cdr-input-large-mixin() {
-  @include cdr-input-large-text-mixin;
+  @include cdr-text-utility-sans-400;
 
-  padding-top: $cdr-input-pt-large;
-  padding-bottom: $cdr-input-pb-large;
-  height: $cdr-input-height-large;
-}
-
-@mixin cdr-input-multiline-mixin() {
-  height: $cdr-input-base-multiline-height;
+  padding-top: $cdr-space-half-x;
+  padding-left: $cdr-space-half-x;
+  height: 48px;
 }
 
 @mixin cdr-input-helper-text-mixin() {
-  @include cdr-input-helper-text-text-mixin;
+  // TODO: possible custom font token
+  font-family: $cdr-font-family-sans;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: -0.016rem;
 
-  color: $cdr-input-helper-text-color;
+  color: $cdr-color-text-input-help;
   display: block;
 }
 
 @mixin cdr-input-info-container-mixin() {
-  @include cdr-input-info-container-text-mixin;
+  @include cdr-text-utility-sans-200;
 
-  float: $cdr-input-info-container-float;
+  float: right;
 }
 
 @mixin cdr-input-required-label-mixin() {
-  color: $cdr-input-required-label-color;
-  margin-left: $cdr-input-required-label-ml
+  color: $cdr-color-text-input-required;
+  margin-left: $cdr-space-inset-quarter-x;
+  font-weight: 400;
 }
 
-
-
-/* select label */
-@mixin cdr-select-base-label-text-mixin() {
-  @include cdr-text-utility-200;
-}
-$cdr-select-base-label-color: $cdr-color-text-form-label-lightmode;
-$cdr-select-base-label-display: inline-block;
-$cdr-select-base-label-margin: 0;
-$cdr-select-base-label-mb: $cdr-space-quarter-x;
-$cdr-select-base-label-mr: $cdr-space-inset-quarter-x;
 @mixin cdr-select-base-label-mixin() {
-  @include cdr-select-base-label-text-mixin;
-
-  color: $cdr-select-base-label-color;
-  display: $cdr-select-base-label-display;
-  margin: $cdr-select-base-label-margin;
-  margin-bottom: $cdr-select-base-label-mb;
-  margin-right: $cdr-select-base-label-mr;
+  @include cdr-text-utility-sans-200;
+  font-weight: 600;
+  color: $cdr-color-text-input-label;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: $cdr-space-quarter-x;
+  margin-right: $cdr-space-inset-quarter-x;
 }
 
 /* input label disabled */
-$cdr-select-base-label-color-disabled: $cdr-color-text-disabled-lightmode;
 @mixin cdr-select-base-label-disabled-mixin() {
-  color: $cdr-select-base-label-color-disabled;
+  color: $cdr-color-text-input-disabled;
 }
 
 /* select base */
-@mixin cdr-select-base-text-mixin() {
-  @include cdr-text-utility-300;
-}
-$cdr-select-base-color: $cdr-color-text-form-label-lightmode;
-$cdr-select-base-box-shadow: inset 0 0 0 1px $cdr-color-border-primary-lightmode;
-$cdr-select-base-border: 0;
-$cdr-select-base-border-radius: $cdr-radius-softer;
-$cdr-select-base-padding-left: $cdr-space-half-x;
-$cdr-select-base-padding-right: $cdr-space-two-x;
-$cdr-select-base-height: 40px;
-$cdr-select-base-display: block;
-$cdr-select-base-width: 100%;
-$cdr-select-base-overflow: auto;
-$cdr-select-base-margin: 0;
-
-$cdr-select-base-background-color: $cdr-color-background-lightest;
-$cdr-select-base-background-color-disabled: $cdr-color-background-lighter;
-$cdr-select-base-color-disabled: $cdr-color-text-form-disabled-lightmode;
-$cdr-select-base-box-shadow-disabled: inset 0 0 0 1px $cdr-color-border-disabled-lightmode;
-$cdr-select-base-box-shadow-disabled-hover: inset 0 0 0 1px $cdr-color-border-disabled-lightmode;
-$cdr-select-base-prompt-color-disabled: $cdr-color-text-form-disabled-lightmode;
-
-$cdr-select-base-box-shadow-active: inset 0 0 0 1px $cdr-color-border-selected-lightmode;
-$cdr-select-base-box-shadow-focus: inset 0 0 0 1px $cdr-color-border-selected-lightmode;
-
-@mixin cdr-select-base-prompt-text-mixin() {
-  @include cdr-text-utility-300;
-}
-$cdr-select-base-prompt-font-style: normal;
-$cdr-select-base-prompt-color: $cdr-color-text-form-placeholder-lightmode;
 
 @mixin cdr-select-base-mixin() {
-  @include cdr-select-base-text-mixin;
+  @include cdr-text-utility-sans-300;
 
-  color: $cdr-select-base-color;
-  box-shadow: $cdr-select-base-box-shadow;
-  border: $cdr-select-base-border;
-  border-radius: $cdr-select-base-border-radius;
-  padding-left: $cdr-select-base-padding-left;
-  padding-right: $cdr-select-base-padding-right;
-  height: $cdr-select-base-height;
-  display: $cdr-select-base-display;
-  width: $cdr-select-base-width;
-  overflow: $cdr-select-base-overflow;
-  margin: $cdr-select-base-margin;
-  background: $cdr-select-base-background-color;
+  color: $cdr-color-text-input-default;
+  box-shadow: inset 0 0 0 1px $cdr-color-border-input-default;
+  border: 0;
+  border-radius: $cdr-radius-softer;
+  padding-left: $cdr-space-half-x;
+  padding-right: $cdr-space-two-x;
+  height: 40px;
+  display: block;
+  width: 100%;
+  overflow: auto;
+  margin: 0;
+  background: $cdr-color-background-input-default;
 
   /* Hide Browser Styled Drowpdown Arrow */
   -webkit-appearance: none;
@@ -871,569 +526,304 @@ $cdr-select-base-prompt-color: $cdr-color-text-form-placeholder-lightmode;
   }
 
   &[disabled] {
-    background-color: $cdr-select-base-background-color-disabled;
-    color: $cdr-select-base-color-disabled;
-    box-shadow: $cdr-select-base-box-shadow-disabled;
+    background-color: $cdr-color-background-input-default-disabled;
+    color: $cdr-color-text-input-disabled;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-input-default-disabled;
 
     &:hover {
-      box-shadow: $cdr-select-base-box-shadow-disabled-hover;
-    }
-
-    &__prompt {
-      color: $cdr-select-base-prompt-color-disabled;
+      box-shadow: inset 0 0 0 1px $cdr-color-border-input-default-disabled;
+      cursor: not-allowed;
     }
   }
 
-  &:active {
-    box-shadow: $cdr-select-base-box-shadow-active;
-  }
-
+  &:active,
   &:focus {
-    box-shadow: $cdr-select-base-box-shadow-active;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-input-default-active;
   }
+}
 
-  &__prompt {
-    @include cdr-select-base-prompt-text-mixin;
+@mixin cdr-select-prompt-mixin() {
+  @include cdr-text-utility-sans-300;
 
-    font-style: $cdr-select-base-prompt-font-style;
-    color: $cdr-select-base-prompt-color;
+  font-style: normal;
+  color: $cdr-color-text-primary;
+
+  &[disabled] {
+    color: $cdr-color-text-input-disabled;
   }
 }
 
 /* --large */
-$cdr-select-height-large: 48px;
 @mixin cdr-select-large-mixin() {
-  height: $cdr-select-height-large;
+  height: 48px;
 }
 
-
 /* required label */
-$cdr-select-required-label-color: $cdr-color-text-secondary-lightmode;
-
 @mixin cdr-select-required-label-mixin() {
-  color: $cdr-select-required-label-color;
+  color: $cdr-color-text-input-required;
+  font-weight: 400;
 }
 
 /* info container */
-@mixin cdr-select-info-container-text-mixin() {
-  @include cdr-text-utility-200;
-}
-$cdr-select-info-container-float: right;
-
 @mixin cdr-select-info-container-mixin() {
-  @include cdr-select-info-container-text-mixin;
+  @include cdr-text-utility-sans-200;
 
-  float: $cdr-select-info-container-float;
+  float: right;
 }
 
 /* helper text */
-@mixin cdr-select-helper-text-text-mixin() {
-  @include cdr-text-utility-200;
-}
-$cdr-select-helper-text-color: $cdr-color-text-secondary-lightmode;
-
 @mixin cdr-select-helper-text-mixin() {
-  @include cdr-select-helper-text-text-mixin;
+  @include cdr-text-utility-sans-200;
 
-  color: $cdr-select-helper-text-color;
+  color: $cdr-color-text-input-help;
 }
 
 /* caret */
-$cdr-select-base-caret-fill: $cdr-color-icon-primary-lightmode;
-$cdr-select-base-caret-position: absolute;
-$cdr-select-base-caret-top: 50%;
-$cdr-select-base-caret-right: $cdr-space-half-x;
-$cdr-select-base-caret-transform: translateY(-50%);
-$cdr-select-base-caret-pointer-events: none;
-
 @mixin cdr-select-base-caret-mixin() {
-  fill: $cdr-select-base-caret-fill;
-  position: $cdr-select-base-caret-position;
-  top: $cdr-select-base-caret-top;
-  right: $cdr-select-base-caret-right;
-  transform: $cdr-select-base-caret-transform;
-  pointer-events: $cdr-select-base-caret-pointer-events;
+  fill: $cdr-color-icon-default;
+  position: absolute;
+  top: 50%;
+  right: $cdr-space-half-x;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
-
-/* caret disabled */
-$cdr-select-base-caret-color-disabled: $cdr-color-text-disabled-lightmode;
 
 @mixin cdr-select-base-caret-disabled-mixin() {
-  fill: $cdr-select-base-caret-color-disabled;
+  fill: $cdr-color-icon-disabled;
 }
 
-@mixin cdr-cta-base-text-mixin() {
+@mixin cdr-cta-base-mixin() {
+  // TODO: custom type token? use button type token?
   font-family: $cdr-font-family-sans;
   font-style: normal;
   font-weight: 500;
   letter-spacing: -.08px;
   font-size: 16px;
   line-height: 22px;
-}
 
-$cdr-cta-base-border-radius: $cdr-radius-softer;
-$cdr-cta-base-border: none;
-$cdr-cta-base-cursor: pointer;
-$cdr-cta-base-display: inline-flex;
-$cdr-cta-base-outline: none;
-$cdr-cta-base-padding: $cdr-space-inset-one-and-a-half-x-squish;
-$cdr-cta-base-pr: calc(#{$cdr-space-one-and-a-half-x} - #{$cdr-space-half-x});
-$cdr-cta-base-text-align: left;
-$cdr-cta-base-text-transform: none;
-$cdr-cta-base-text-decoration: none;
-$cdr-cta-base-text-decoration-hover: none;
-$cdr-cta-base-text-decoration-active: none;
-$cdr-cta-base-text-decoration-focus: none;
-$cdr-cta-base-outline-focus: $default-outline;
-$cdr-cta-base-outline-color-focus: -webkit-focus-ring-color;
-$cdr-cta-base-outline-offset-focus: 0;
+  border: none;
+  border-radius: $cdr-radius-softer;
+  cursor: pointer;
+  display: inline-flex;
+  outline: none;
+  padding: $cdr-space-inset-one-and-a-half-x-squish;
+  padding-right: $cdr-space-one-x;
+  text-align: left;
+  text-transform: none;
+  text-decoration: none;
 
-@mixin cdr-cta-base-mixin() {
-  @include cdr-cta-base-text-mixin;
-
-  border: $cdr-cta-base-border;
-  border-radius: $cdr-cta-base-border-radius;
-  cursor: $cdr-cta-base-cursor;
-  display: $cdr-cta-base-display;
-  outline: $cdr-cta-base-outline;
-  padding: $cdr-cta-base-padding;
-  padding-right: $cdr-cta-base-pr;
-  text-align: $cdr-cta-base-text-align;
-  text-transform: $cdr-cta-base-text-transform;
-  text-decoration: $cdr-cta-base-text-decoration;
-
-  &:hover {
-    text-decoration: $cdr-cta-base-text-decoration-hover;
-  }
-
-  &:active {
-    text-decoration: $cdr-cta-base-text-decoration-active;
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
   }
 
   &:focus {
-    text-decoration: $cdr-cta-base-text-decoration-focus;
-    outline: $cdr-cta-base-outline-focus;
-    outline-color: $cdr-cta-base-outline-color-focus;
-    outline-offset: $cdr-cta-base-outline-offset-focus;
+    outline: $default-outline;
+    outline-color: -webkit-focus-ring-color;
+    outline-offset: 0;
   }
 }
-
-$cdr-cta-base-icon-align-self: center;
-$cdr-cta-base-icon-display: inline-block;
-$cdr-cta-base-icon-fill: inherit;
-$cdr-cta-base-icon-height: $cdr-icon-size;
-$cdr-cta-base-icon-ml: $cdr-space-quarter-x;
-$cdr-cta-base-icon-vertical-align: middle;
-$cdr-cta-base-icon-flex: 0 0 auto;
-$cdr-cta-base-icon-width: $cdr-icon-size;
 
 @mixin cdr-cta-base-icon-mixin() {
-  align-self: $cdr-cta-base-icon-align-self;
-  display: $cdr-cta-base-icon-display;
-  fill: $cdr-cta-base-icon-fill;
-  height: $cdr-cta-base-icon-height;
-  margin-left: $cdr-cta-base-icon-ml;
-  vertical-align: $cdr-cta-base-icon-vertical-align;
-  flex: $cdr-cta-base-icon-flex;
-  width: $cdr-cta-base-icon-width;
+  align-self: center;
+  display: inline-block;
+  fill: inherit;
+  height: $cdr-icon-size;
+  width: $cdr-icon-size;
+  margin-left: $cdr-space-quarter-x;
+  vertical-align: middle;
+  flex: 0 0 auto;
 }
 
-/* Full Width
-   ========== */
-$cdr-cta-full-width-justify-content: center;
-$cdr-cta-full-width-width: 100%;
 
 @mixin cdr-cta-full-width-mixin() {
-  justify-content: $cdr-cta-full-width-justify-content;
-  width: $cdr-cta-full-width-width;
+  justify-content: center;
+  width: 100%;
 }
 
-/* brand */
-
-$cdr-cta-brand-background-color: #3278ae;
-$cdr-cta-brand-box-shadow: inset 0 0 0 1px #2b6692;
-$cdr-cta-brand-color: #ffffff;
-$cdr-cta-brand-fill: #ffffff;
-
-$cdr-cta-brand-background-color-hover: #2b6692;
-$cdr-cta-brand-box-shadow-hover: inset 0 0 0 1px #2b6692;
-$cdr-cta-brand-color-hover: #ffffff;
-$cdr-cta-brand-fill-hover: #ffffff;
-
-$cdr-cta-brand-background-color-active: #2b6692;
-$cdr-cta-brand-box-shadow-active: inset 0 0 0 1px #2b6692;
-$cdr-cta-brand-color-active: #ffffff;
-$cdr-cta-brand-fill-active: #ffffff;
-
-$cdr-cta-brand-background-color-focus: #2b6692;
-$cdr-cta-brand-box-shadow-focus: inset 0 0 0 1px #2b6692;
-$cdr-cta-brand-color-focus: #ffffff;
-$cdr-cta-brand-fill-focus: #ffffff;
 
 @mixin cdr-cta-brand-mixin() {
-  background-color: $cdr-cta-brand-background-color;
-  box-shadow: $cdr-cta-brand-box-shadow;
-  color: $cdr-cta-brand-color;
-  fill: $cdr-cta-brand-color;
+  background-color: $cdr-color-background-cta-brand-rest;
+  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-brand-rest;
+  color: $cdr-color-text-cta-brand;
+  fill: $cdr-color-text-cta-brand;
+
+  &:active,
+  &:focus {
+    background-color: $cdr-color-background-cta-brand-active;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-brand-active;
+  }
 
   &:hover {
-    background-color: $cdr-cta-brand-background-color-hover;
-    box-shadow: $cdr-cta-brand-box-shadow-hover;
-    color: $cdr-cta-brand-color-hover;
-    fill: $cdr-cta-brand-fill-hover;
-  }
-
-  &:active {
-    background-color: $cdr-cta-brand-background-color-active;
-    box-shadow: $cdr-cta-brand-box-shadow-active;
-    color: $cdr-cta-brand-color-active;
-    fill: $cdr-cta-brand-fill-active;
-  }
-
-  &:focus {
-    background-color: $cdr-cta-brand-background-color-focus;
-    box-shadow: $cdr-cta-brand-box-shadow-focus;
-    color: $cdr-cta-brand-color-focus;
-    fill: $cdr-cta-brand-fill-focus;
+    background-color: $cdr-color-background-cta-brand-hover;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-brand-hover;
   }
 }
 
-$cdr-cta-dark-background-color: #292929;
-$cdr-cta-dark-box-shadow: inset 0 0 0 1px #434343;
-$cdr-cta-dark-color: #ffffff;
-$cdr-cta-dark-fill: #ffffff;
-
-$cdr-cta-dark-background-color-hover: #434343;
-$cdr-cta-dark-box-shadow-hover: inset 0 0 0 1px #434343;
-$cdr-cta-dark-color-hover: #ffffff;
-$cdr-cta-dark-fill-hover: #ffffff;
-
-$cdr-cta-dark-background-color-active: #434343;
-$cdr-cta-dark-box-shadow-active: inset 0 0 0 1px #434343;
-$cdr-cta-dark-color-active: #ffffff;
-$cdr-cta-dark-fill-active: #ffffff;
-
-$cdr-cta-dark-background-color-focus: #434343;
-$cdr-cta-dark-box-shadow-focus: inset 0 0 0 1px #434343;
-$cdr-cta-dark-color-focus: #ffffff;
-$cdr-cta-dark-fill-focus: #ffffff;
-
-// &--dark {
 @mixin cdr-cta-dark-mixin() {
-  background-color: $cdr-cta-dark-background-color;
-  box-shadow: $cdr-cta-dark-box-shadow;
-  color: $cdr-cta-dark-color;
-  fill: $cdr-cta-dark-fill;
+  background-color: $cdr-color-background-cta-dark-rest;
+  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-dark-rest;
+  color: $cdr-color-text-cta-dark;
+  fill: $cdr-color-text-cta-dark;
+
+  &:active,
+  &:focus {
+    background-color: $cdr-color-background-cta-dark-active;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-dark-active;
+  }
 
   &:hover {
-    background-color: $cdr-cta-dark-background-color-hover;
-    box-shadow: $cdr-cta-dark-box-shadow-hover;
-    color: $cdr-cta-dark-color-hover;
-
-    & > .cdr-cta__icon {
-      fill: $cdr-cta-dark-fill-hover;
-    }
-  }
-
-  &:active {
-    background-color: $cdr-cta-dark-background-color-active;
-    box-shadow: $cdr-cta-dark-box-shadow-active;
-    color: $cdr-cta-dark-color-active;
-
-    & > .cdr-cta__icon {
-      fill: $cdr-cta-dark-fill-active;
-    }
-  }
-
-  &:focus {
-    background-color: $cdr-cta-dark-background-color-focus;
-    box-shadow: $cdr-cta-dark-box-shadow-focus;
-    color: $cdr-cta-dark-color-focus;
-
-    & > .cdr-cta__icon {
-      fill: $cdr-cta-dark-fill-focus;
-    }
+    background-color: $cdr-color-background-cta-dark-hover;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-dark-hover;
   }
 }
 
-$cdr-cta-light-background-color: #ffffff;
-$cdr-cta-light-box-shadow: inset 0 0 0 1px #616161;
-$cdr-cta-light-color: #292929;
-$cdr-cta-light-fill: #292929;
-
-$cdr-cta-light-background-color-hover: #f7f7f7;
-$cdr-cta-light-box-shadow-hover: inset 0 0 0 1px #616161;
-$cdr-cta-light-color-hover: #292929;
-$cdr-cta-light-fill-hover: #292929;
-
-$cdr-cta-light-background-color-active: #f7f7f7;
-$cdr-cta-light-box-shadow-active: inset 0 0 0 1px #616161;
-$cdr-cta-light-color-active: #292929;
-$cdr-cta-light-fill-active: #292929;
-
-$cdr-cta-light-background-color-focus: #f7f7f7;
-$cdr-cta-light-box-shadow-focus: inset 0 0 0 1px #616161;
-$cdr-cta-light-color-focus: #292929;
-$cdr-cta-light-fill-focus: #292929;
-
-// &--light {
 @mixin cdr-cta-light-mixin() {
-  background-color: $cdr-cta-light-background-color;
-  box-shadow: $cdr-cta-light-box-shadow;
-  color: $cdr-cta-light-color;
-  fill: $cdr-cta-light-fill;
+  background-color: $cdr-color-background-cta-light-rest;
+  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-rest;
+  color: $cdr-color-text-cta-light;
+  fill: $cdr-color-text-cta-light;
+
+  &:active,
+  &:focus {
+    background-color: $cdr-color-background-cta-light-active;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-active;
+  }
 
   &:hover {
-    background-color: $cdr-cta-light-background-color-hover;
-    box-shadow: $cdr-cta-light-box-shadow-hover;
-    color: $cdr-cta-light-color-hover;
-    fill: $cdr-cta-light-fill-hover;
-  }
-
-  &:active {
-    background-color: $cdr-cta-light-background-color-active;
-    box-shadow: $cdr-cta-light-box-shadow-active;
-    color: $cdr-cta-light-color-active;
-    fill: $cdr-cta-light-fill-active;
-  }
-
-  &:focus {
-    background-color: $cdr-cta-light-background-color-focus;
-    box-shadow: $cdr-cta-light-box-shadow-focus;
-    color: $cdr-cta-light-color-focus;
-    fill: $cdr-cta-light-fill-focus;
+    background-color: $cdr-color-background-cta-light-hover;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-hover;
   }
 }
 
 @mixin cdr-cta-light-elevated-mixin() {
-  box-shadow: $cdr-cta-light-box-shadow, $cdr-prominence-elevated;
+  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-rest, $cdr-prominence-elevated;
 
-  &:hover {
-    box-shadow: $cdr-cta-light-box-shadow-hover, $cdr-prominence-elevated;
-  }
-
-  &:active {
-    box-shadow: $cdr-cta-light-box-shadow-active, $cdr-prominence-elevated;
-  }
-
+  &:active,
   &:focus {
-    box-shadow: $cdr-cta-light-box-shadow-focus, $cdr-prominence-elevated;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-active, $cdr-prominence-raised;
+  }
+  &:hover {
+    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-hover, $cdr-prominence-floating;
   }
 }
-
-$cdr-cta-sale-background-color: #b5292b;
-$cdr-cta-sale-box-shadow: inset 0 0 0 1px #a12024;
-$cdr-cta-sale-color: #ffffff;
-$cdr-cta-sale-fill: #ffffff;
-
-$cdr-cta-sale-background-color-hover: #a12024;
-$cdr-cta-sale-box-shadow-hover: inset 0 0 0 1px #a12024;
-$cdr-cta-sale-color-hover: #ffffff;
-$cdr-cta-sale-fill-hover: #ffffff;
-
-$cdr-cta-sale-background-color-active: #a12024;
-$cdr-cta-sale-box-shadow-active: inset 0 0 0 1px #a12024;
-$cdr-cta-sale-color-active: #ffffff;
-$cdr-cta-sale-fill-active: #ffffff;
-
-$cdr-cta-sale-background-color-focus: #a12024;
-$cdr-cta-sale-box-shadow-focus: inset 0 0 0 1px #a12024;
-$cdr-cta-sale-color-focus: #ffffff;
-$cdr-cta-sale-fill-focus: #ffffff;
 
 @mixin cdr-cta-sale-mixin() {
-  background-color: $cdr-cta-sale-background-color;
-  box-shadow: $cdr-cta-sale-box-shadow;
-  color: $cdr-cta-sale-color;
-  fill: $cdr-cta-sale-fill;
+  background-color: $cdr-color-background-cta-sale-rest;
+  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-sale-rest;
+  color: $cdr-color-text-cta-sale;
+  fill: $cdr-color-text-cta-sale;
+
+  &:active,
+  &:focus {
+    background-color: $cdr-color-background-cta-sale-active;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-sale-active;
+  }
 
   &:hover {
-    background-color: $cdr-cta-sale-background-color-hover;
-    box-shadow: $cdr-cta-sale-box-shadow-hover;
-    color: $cdr-cta-sale-color-hover;
-    fill: $cdr-cta-sale-fill-hover;
-  }
-
-  &:active {
-    background-color: $cdr-cta-sale-background-color-active;
-    box-shadow: $cdr-cta-sale-box-shadow-active;
-    color: $cdr-cta-sale-color-active;
-    fill: $cdr-cta-sale-fill-active;
-  }
-
-  &:focus {
-    background-color: $cdr-cta-sale-background-color-focus;
-    box-shadow: $cdr-cta-sale-box-shadow-focus;
-    color: $cdr-cta-sale-color-focus;
-    fill: $cdr-cta-sale-fill-focus;
+    background-color: $cdr-color-background-cta-sale-hover;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-sale-hover;
   }
 }
-
-$cdr-cta-elevated-box-shadow: $cdr-prominence-elevated;
-$cdr-cta-elevated-box-shadow-hover: $cdr-prominence-elevated;
-$cdr-cta-elevated-box-shadow-active: $cdr-prominence-elevated;
-$cdr-cta-elevated-box-shadow-focus: $cdr-prominence-elevated;
 
 @mixin cdr-cta-elevated-mixin() {
-  box-shadow: $cdr-cta-elevated-box-shadow;
+  box-shadow: $cdr-prominence-elevated;
+
+  &:active,
+  &:focus {
+    box-shadow: $cdr-prominence-raised;
+  }
 
   &:hover {
-    box-shadow: $cdr-cta-elevated-box-shadow-hover;
-  }
-
-  &:active {
-    box-shadow: $cdr-cta-elevated-box-shadow-hover;
-  }
-
-  &:focus {
-    box-shadow: $cdr-cta-elevated-box-shadow-hover;
+    box-shadow: $cdr-prominence-floating;
   }
 }
 
-/* Private variables, do not use */
-$compact-list-item-space: 4px;
-$inline-compact-list-item-indentation-space: 0.5em;
-$inline-list-item-indentation-space: 1em;
-$inline-list-space: 0;
-$inline-unordered-list-item-indentation-space: 1.5em;
-$list-item-space: 8px;
-$nested-ordered-list-item-decorator: '\2013';
-$nested-unordered-list-item-decorator: '\2013';
-$ordered-list-indentation-space: 1.5em;
-$unordered-list-indentation-space: 1em;
-$unordered-list-item-decorator: '\2022';
-/* End of Private variables*/
-
-
-$cdr-list-base-list-style-type: none;
-$cdr-list-base-padding: 0;
-$cdr-list-base-margin: 0;
-$cdr-list-base-item-mt: 8px;
-
 @mixin cdr-list-base-mixin() {
-  list-style-type: $cdr-list-base-list-style-type;
-  padding: $cdr-list-base-padding;
-  margin: $cdr-list-base-margin;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 
   /* spacing
     ---------- */
   & > li + li {
-    margin-top: $cdr-list-base-item-mt;
+    margin-top: $cdr-space-half-x;
   }
 }
 
-/* base nested */
-$cdr-list-base-nested-mt: 8px;
-$cdr-list-base-nested-pl: 1em;
-$cdr-list-base-nested-list-style-type: none;
 @mixin cdr-list-base-nested-mixin() {
-  margin-top: $cdr-list-base-nested-mt;
-  padding-left: $cdr-list-base-nested-pl;
-  list-style-type: $cdr-list-base-nested-list-style-type;
+  margin-top: $cdr-space-half-x;
+  padding-left: 1em; // TODO: is em correct?
+  list-style-type: none;
 }
 
 
 /* compact */
-$cdr-list-compact-item-mt: $cdr-space-quarter-x;
 @mixin cdr-list-compact-mixin() {
   & > li + li {
-    margin-top: $cdr-list-compact-item-mt;
+    margin-top: $cdr-space-quarter-x;
   }
 }
 
 /* compact nested */
-$cdr-list-compact-nested-mt: $cdr-space-quarter-x;
 @mixin cdr-list-compact-nested-mixin() {
   margin-top: $cdr-space-quarter-x;
 }
 
 
 /* ordered */
-$cdr-list-ordered-list-style-type: decimal;
-$cdr-list-ordered-pl: 1.5em;
-$cdr-list-ordered-list-style-position: outside;
-
-$cdr-list-ordered-item-pl: $cdr-space-quarter-x;
-$cdr-list-ordered-item-pb: 0;
-$cdr-list-ordered-item-pr: 0;
-$cdr-list-ordered-item-pt: 0;
-
 @mixin cdr-list-ordered-mixin() {
-  list-style-type: $cdr-list-ordered-list-style-type;
-  padding-left: $cdr-list-ordered-pl;
-  list-style-position: $cdr-list-ordered-list-style-position;
+  list-style-type: decimal;
+  padding-left: 1.5em;
+  list-style-position: outside;
 
   & li {
-    padding-left: $cdr-list-ordered-item-pl;
-    padding-bottom: $cdr-list-ordered-item-pb;
-    padding-right: $cdr-list-ordered-item-pr;
-    padding-top: $cdr-list-ordered-item-pt;
+    padding: 0 0 0 $cdr-space-quarter-x;
   }
 }
 
-/* ordered nested */
-$cdr-list-ordered-nested-position: relative;
-$cdr-list-ordered-nested-pl: 1em;
-
-$cdr-list-ordered-nested-item-pl: 0;
-$cdr-list-ordered-nested-item-content-before: '\2013';
-$cdr-list-ordered-nested-item-position-before: absolute;
-$cdr-list-ordered-nested-item-left-before: 0;
-
 @mixin cdr-list-ordered-nested-mixin() {
-  position: $cdr-list-ordered-nested-position;
-  padding-left: $cdr-list-ordered-nested-pl;
+  position: relative;
+  padding-left: 1em;
 
   & > li {
-    padding-left: $cdr-list-ordered-nested-item-pl;
+    padding-left: 0;
 
     &::before {
-      content: $cdr-list-ordered-nested-item-content-before;
-      position: $cdr-list-ordered-nested-item-position-before;
-      left: $cdr-list-ordered-nested-item-left-before;
+      content: '\2013';
+      position: absolute;
+      color: $cdr-color-text-secondary;
+      left: 0;
     }
   }
 }
 
-/* unordered */
-$cdr-list-unordered-position: relative;
-$cdr-list-unordered-pl: 1em;
-
-$cdr-list-unordered-item-content-before: '\2022';
-$cdr-list-unordered-item-position-before: absolute;
-$cdr-list-unordered-item-left-before: 0;
-
 @mixin cdr-list-unordered-mixin() {
-  position: $cdr-list-unordered-position;
-  padding-left: $cdr-list-unordered-pl;
+  position: relative;
+  padding-left: 1em;
 
   & > li::before {
-    content: "\2022";
+    content: '\2022';
     position: relative;
     margin-left: -1em;
     padding-right: $cdr-space-half-x;
- 
+    color: $cdr-color-text-secondary;
   }
 }
 
 /* unordered nested */
-$cdr-list-unordered-nested-position: relative;
-$cdr-list-unordered-nested-pl: 1em;
-
-$cdr-list-unordered-nested-item-content-before: '\2013';
-$cdr-list-unordered-nested-item-position-before: absolute;
-$cdr-list-unordered-nested-item-left-before: 0;
-
 @mixin cdr-list-unordered-nested-mixin() {
-  position: $cdr-list-unordered-nested-position;
-  padding-left: $cdr-list-unordered-nested-pl;
+  position: relative;
+  padding-left: 1em;
 
   & > li {
     &::before {
-      content: $cdr-list-unordered-nested-item-content-before;
+      content: '\2013';
       position: relative;
       margin-left: -1em;
       padding-right: $cdr-space-half-x;
+      color: $cdr-color-text-secondary;
     }
   }
 }
