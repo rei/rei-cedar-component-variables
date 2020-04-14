@@ -1,0 +1,17 @@
+{
+  "name": "cdr-table",
+  "notes": [
+    "CdrTable is a simple wrapper component that applies styles to HTML tables"
+  ],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/table/",
+  "examples": [
+    {
+      "name": "default",
+      "tag": "table",
+      "slot": "<div><thead><tr><th>Test head</th></tr></thead><tbody><tr><td>Test content</td></tr></tbody></div>",
+      "styles": ["@include cdr-table-base-mixin;"],
+
+      "attrs": {}
+    }
+  ]
+}

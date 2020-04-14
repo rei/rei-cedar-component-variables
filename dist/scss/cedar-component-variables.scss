@@ -55,6 +55,9 @@ $default-outline: 0.2rem solid Highlight;
   text-decoration: none;
   text-transform: none;
 
+  transition: box-shadow $cdr-duration-2-x $cdr-timing-function-ease, background-color $cdr-duration-2-x $cdr-timing-function-ease, color $cdr-duration-2-x $cdr-timing-function-ease;
+
+
   /* States
     ---------- */
   &:hover, &:active, &:focus {
@@ -88,15 +91,19 @@ $default-outline: 0.2rem solid Highlight;
   /* States
     ---------- */
 
-  &:hover {
+  &:hover,
+  &:focus {
+    color: $cdr-color-text-button-primary-hover;
+    fill: $cdr-color-text-button-primary-hover;
     background-color: $cdr-color-background-button-primary-hover;
-    box-shadow: inset 0 0 0 1px $cdr-color-border-button-primary-hover;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-button-primary-hover, $cdr-prominence-raised;
   }
 
-  &:active,
-  &:focus {
+  &:active {
+    color: $cdr-color-text-button-primary-active;
+    fill: $cdr-color-text-button-primary-active;
     background-color: $cdr-color-background-button-primary-active;
-    box-shadow: inset 0 0 0 1px $cdr-color-border-button-primary-active;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-button-primary-active, inset 0 0 0 5px $cdr-color-border-button-primary-active-inset;
   }
 
   &[disabled] {
@@ -116,19 +123,23 @@ $default-outline: 0.2rem solid Highlight;
   /* States
   ---------- */
 
-  &:hover {
+  &:hover,
+  &:focus {
+    color: $cdr-color-text-button-secondary-hover;
+    fill: $cdr-color-text-button-secondary-hover;
     background-color: $cdr-color-background-button-secondary-hover;
-    box-shadow: inset 0 0 0 1px $cdr-color-border-button-secondary-hover;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-button-secondary-hover, $cdr-prominence-raised;
   }
 
-  &:active,
-  &:focus {
+  &:active {
+    color: $cdr-color-text-button-secondary-active;
+    fill: $cdr-color-text-button-secondary-active;
     background-color: $cdr-color-background-button-secondary-active;
-    box-shadow: inset 0 0 0 1px $cdr-color-border-button-secondary-active;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-button-secondary-active, inset 0 0 0 5px $cdr-color-border-button-secondary-active-inset;
   }
 
   &[disabled] {
-    background-color: $cdr-color-background-button-default-disabled;
+    background-color: $cdr-color-background-button-secondary-disabled;
     box-shadow: inset 0 0 0 1px $cdr-color-border-button-default-disabled;
     color: $cdr-color-text-button-secondary-disabled;
     fill: $cdr-color-text-button-secondary-disabled;
@@ -143,17 +154,29 @@ $default-outline: 0.2rem solid Highlight;
 @mixin cdr-button-icon-only-mixin() {
   background: none;
   border: none;
-  border-radius: 50%;
+  border-radius: $cdr-radius-soft;
   box-shadow: none;
   display: inline-block;
   line-height: normal;
   padding: $cdr-space-inset-half-x;
   fill: $cdr-color-icon-default;
 
-  &:hover, &:active, &:focus {
-    background: $cdr-color-background-button-icon-alt-hover;
+  &:hover{
+    background: none;
     box-shadow: none;
     border: none;
+    fill: $cdr-color-icon-default;
+  }
+
+  &:active, &:focus {
+    background: none;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    fill: $cdr-color-icon-default;
+    svg {
+      box-shadow: inset 0 0 0 1px $cdr-color-border-button-secondary-active;
+    }
   }
 
   &[disabled] {
@@ -165,18 +188,28 @@ $default-outline: 0.2rem solid Highlight;
 }
 
 @mixin cdr-button-with-background-mixin() {
+  border-radius: 50%;
   fill: $cdr-color-icon-default;
   background-color: $cdr-color-background-button-secondary-rest;
   box-shadow: inset 0 0 0 1px $cdr-color-border-button-secondary-rest;
 
-  &:hover {
-    background-color: $cdr-color-background-button-secondary-hover;
-    box-shadow: inset 0 0 0 1px $cdr-color-border-button-secondary-hover;
-  }
-  &:active,
+  &:hover,
   &:focus {
+    fill: $cdr-color-icon-default;
+    background-color: $cdr-color-background-button-secondary-hover;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-button-secondary-hover, $cdr-prominence-raised;
+    svg {
+      box-shadow: none;
+    }
+  }
+  &:active {
+    color: $cdr-color-text-button-secondary-active;
+    fill: $cdr-color-text-button-secondary-active;
     background-color: $cdr-color-background-button-secondary-active;
-    box-shadow: inset 0 0 0 1px $cdr-color-border-button-secondary-active;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-button-secondary-active, inset 0 0 0 5px $cdr-color-border-button-secondary-active-inset;
+    svg {
+      box-shadow: none;
+    }
   }
 
   &[disabled] {
@@ -241,10 +274,15 @@ $default-outline: 0.2rem solid Highlight;
   box-shadow: $cdr-prominence-raised;
   color: $cdr-color-text-primary;
   width: 100%;
+
+  transition: box-shadow $cdr-duration-1-x $cdr-timing-function-ease;
+
+  &:active, &:hover {
+    box-shadow: $cdr-prominence-floating;
+  }
 }
 
 @mixin cdr-breadcrumb-item-mixin() {
-  // @include cdr-text-utility-sans-200;
   color: $cdr-color-text-secondary;
   fill: $cdr-color-text-secondary;
 }
@@ -288,27 +326,17 @@ $default-outline: 0.2rem solid Highlight;
   /* States
     ---------- */
 
-  &:hover,
   &:active,
   &:focus {
-    outline: none;
-    text-decoration: underline;
-  }
-
-  &:visited {
-    color: $cdr-color-text-link-visited;
+    color: $cdr-color-text-link-active;
   }
 
   &:hover {
     color: $cdr-color-text-link-hover;
-  }
-
-  &:active {
-    color: $cdr-color-text-link-active;
+    text-decoration: none;
   }
 
   &:focus {
-    color: $cdr-color-text-link-active;
     outline: $default-outline;
     outline-color: -webkit-focus-ring-color;
     outline-offset: 0;
@@ -411,7 +439,8 @@ $cdr-label-height-large: $cdr-text-utility-sans-300-height;
 
   &:active,
   &:focus {
-    box-shadow: inset 0 0 0 1px $cdr-color-border-input-default-active;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-input-default-active;
+    outline: none;
   }
 
   &::placeholder {
@@ -448,10 +477,12 @@ $cdr-label-height-large: $cdr-text-utility-sans-300-height;
 
 @mixin cdr-input-large-mixin() {
   @include cdr-text-utility-sans-400;
-
-  padding-top: $cdr-space-half-x;
+  line-height: $cdr-space-half-x + $cdr-text-utility-sans-400-height;
   padding-left: $cdr-space-half-x;
   height: 48px;
+  &::placeholder {
+    line-height: $cdr-space-half-x + $cdr-text-utility-sans-400-height;
+  }
 }
 
 @mixin cdr-input-helper-text-mixin() {
@@ -538,7 +569,8 @@ $cdr-label-height-large: $cdr-text-utility-sans-300-height;
 
   &:active,
   &:focus {
-    box-shadow: inset 0 0 0 1px $cdr-color-border-input-default-active;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-input-default-active;
+    outline: none;
   }
 }
 
@@ -612,6 +644,8 @@ $cdr-label-height-large: $cdr-text-utility-sans-300-height;
   text-transform: none;
   text-decoration: none;
 
+  transition: box-shadow $cdr-duration-2-x $cdr-timing-function-ease, background-color $cdr-duration-2-x $cdr-timing-function-ease, color $cdr-duration-2-x $cdr-timing-function-ease;
+
   &:hover,
   &:active,
   &:focus {
@@ -649,15 +683,19 @@ $cdr-label-height-large: $cdr-text-utility-sans-300-height;
   color: $cdr-color-text-cta-brand;
   fill: $cdr-color-text-cta-brand;
 
-  &:active,
+  &:hover,
   &:focus {
-    background-color: $cdr-color-background-cta-brand-active;
-    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-brand-active;
+    color: $cdr-color-text-cta-brand-hover;
+    fill: $cdr-color-text-cta-brand-hover;
+    background-color: $cdr-color-background-cta-brand-hover;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-brand-hover, $cdr-prominence-raised;
   }
 
-  &:hover {
-    background-color: $cdr-color-background-cta-brand-hover;
-    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-brand-hover;
+  &:active {
+    color: $cdr-color-text-cta-brand-active;
+    fill: $cdr-color-text-cta-brand-active;
+    background-color: $cdr-color-background-cta-brand-active;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-brand-active,  inset 0 0 0 5px $cdr-color-border-cta-brand-active-inset;
   }
 }
 
@@ -667,45 +705,19 @@ $cdr-label-height-large: $cdr-text-utility-sans-300-height;
   color: $cdr-color-text-cta-dark;
   fill: $cdr-color-text-cta-dark;
 
-  &:active,
+  &:hover,
   &:focus {
-    background-color: $cdr-color-background-cta-dark-active;
-    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-dark-active;
-  }
-
-  &:hover {
+    color: $cdr-color-text-cta-dark-hover;
+    fill: $cdr-color-text-cta-dark-hover;
     background-color: $cdr-color-background-cta-dark-hover;
-    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-dark-hover;
-  }
-}
-
-@mixin cdr-cta-light-mixin() {
-  background-color: $cdr-color-background-cta-light-rest;
-  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-rest;
-  color: $cdr-color-text-cta-light;
-  fill: $cdr-color-text-cta-light;
-
-  &:active,
-  &:focus {
-    background-color: $cdr-color-background-cta-light-active;
-    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-active;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-dark-hover, $cdr-prominence-raised;
   }
 
-  &:hover {
-    background-color: $cdr-color-background-cta-light-hover;
-    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-hover;
-  }
-}
-
-@mixin cdr-cta-light-elevated-mixin() {
-  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-rest, $cdr-prominence-elevated;
-
-  &:active,
-  &:focus {
-    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-active, $cdr-prominence-raised;
-  }
-  &:hover {
-    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-hover, $cdr-prominence-floating;
+  &:active {
+    color: $cdr-color-text-cta-dark-active;
+    fill: $cdr-color-text-cta-dark-active;
+    background-color: $cdr-color-background-cta-dark-active;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-dark-active,  inset 0 0 0 5px $cdr-color-border-cta-dark-active-inset;
   }
 }
 
@@ -715,28 +727,95 @@ $cdr-label-height-large: $cdr-text-utility-sans-300-height;
   color: $cdr-color-text-cta-sale;
   fill: $cdr-color-text-cta-sale;
 
-  &:active,
+
+  &:hover,
   &:focus {
-    background-color: $cdr-color-background-cta-sale-active;
-    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-sale-active;
+    color: $cdr-color-text-cta-sale-hover;
+    fill: $cdr-color-text-cta-sale-hover;
+    background-color: $cdr-color-background-cta-sale-hover;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-sale-hover, $cdr-prominence-raised;
   }
 
-  &:hover {
-    background-color: $cdr-color-background-cta-sale-hover;
-    box-shadow: inset 0 0 0 1px $cdr-color-border-cta-sale-hover;
+  &:active {
+    color: $cdr-color-text-cta-sale-active;
+    fill: $cdr-color-text-cta-sale-active;
+    background-color: $cdr-color-background-cta-sale-active;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-sale-active,  inset 0 0 0 5px $cdr-color-border-cta-sale-active-inset;
   }
 }
 
-@mixin cdr-cta-elevated-mixin() {
-  box-shadow: $cdr-prominence-elevated;
 
-  &:active,
+@mixin cdr-cta-light-mixin() {
+  background-color: $cdr-color-background-cta-light-rest;
+  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-rest;
+  color: $cdr-color-text-cta-light;
+  fill: $cdr-color-text-cta-light;
+
+  &:hover,
   &:focus {
-    box-shadow: $cdr-prominence-raised;
+    color: $cdr-color-text-cta-light-hover;
+    fill: $cdr-color-text-cta-light-hover;
+    background-color: $cdr-color-background-cta-light-hover;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-light-hover, $cdr-prominence-raised;
   }
 
-  &:hover {
-    box-shadow: $cdr-prominence-floating;
+  &:active {
+    color: $cdr-color-text-cta-light-active;
+    fill: $cdr-color-text-cta-light-active;
+    background-color: $cdr-color-background-cta-light-active;
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-light-active, inset 0 0 0 5px $cdr-color-border-cta-light-active-inset;
+  }
+}
+
+@mixin cdr-cta-light-elevated-mixin() {
+  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-rest, $cdr-prominence-elevated;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-light-hover, $cdr-prominence-floating;
+  }
+
+  &:active {
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-light-active, inset 0 0 0 5px $cdr-color-border-cta-light-active-inset, $cdr-prominence-raised;
+  }
+}
+
+@mixin cdr-cta-brand-elevated-mixin() {
+  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-brand-rest, $cdr-prominence-elevated;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-brand-hover, $cdr-prominence-floating;
+  }
+
+  &:active {
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-brand-active, inset 0 0 0 5px $cdr-color-border-cta-brand-active-inset, $cdr-prominence-raised;
+  }
+}
+
+@mixin cdr-cta-dark-elevated-mixin() {
+  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-dark-rest, $cdr-prominence-elevated;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-dark-hover, $cdr-prominence-floating;
+  }
+
+  &:active {
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-dark-active, inset 0 0 0 5px $cdr-color-border-cta-dark-active-inset, $cdr-prominence-raised;
+  }
+}
+
+@mixin cdr-cta-sale-elevated-mixin() {
+  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-sale-rest, $cdr-prominence-elevated;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-sale-hover, $cdr-prominence-floating;
+  }
+
+  &:active {
+    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-sale-active, inset 0 0 0 5px $cdr-color-border-cta-sale-active-inset, $cdr-prominence-raised;
   }
 }
 
@@ -825,5 +904,135 @@ $cdr-label-height-large: $cdr-text-utility-sans-300-height;
       padding-right: $cdr-space-half-x;
       color: $cdr-color-text-secondary;
     }
+  }
+}
+
+@mixin cdr-table-base-text-mixin() {
+  @include cdr-text-utility-200;
+  color: $cdr-color-text-primary;
+}
+
+@mixin cdr-table-base-mixin() {
+  @include cdr-table-base-text-mixin();
+
+  border: none;
+  border-collapse: collapse;
+
+  tr {
+    background-color: $cdr-color-background-table-row;
+  }
+
+  thead tr {
+    background-color: $cdr-color-background-table-header;
+  }
+
+  th,
+  td {
+    min-height: 48px;
+    color: $cdr-color-text-primary;
+    padding: $cdr-space-inset-one-x-squish;
+    text-align: left;
+  }
+
+  th {
+    @include cdr-text-utility-strong-200;
+  }
+
+
+  caption {
+    @include cdr-text-utility-strong-300;
+    text-align: left;
+    margin-bottom: $cdr-space-half-x;
+  }
+}
+
+@mixin cdr-table-small-mixin {
+  th, td {
+    padding: 0.4rem 1.6rem;
+  }
+}
+
+@mixin cdr-table-medium-mixin {
+  th, td {
+    padding: $cdr-space-inset-one-x-squish;
+  }
+}
+
+@mixin cdr-table-large-mixin {
+  th, td {
+    padding: $cdr-space-inset-one-x;
+  }
+}
+
+@mixin cdr-table-border-mixin() {
+  $table-border-default: 1px solid $cdr-color-border-table-default;
+  $table-border-head: 1px solid $cdr-color-border-table-head;
+
+  tr + tr > * {
+    border-top: $table-border-default;
+  }
+
+  thead {
+    tr + tr > * {
+      border-top: $table-border-head;
+    }
+  }
+
+  tbody, tfoot {
+    tr + tr > * {
+      border-top: $table-border-default;
+    }
+  }
+
+  thead + tbody,
+  tbody + tfoot {
+    border-top: $table-border-default;
+  }
+}
+
+@mixin cdr-table-striped-mixin() {
+  tr:nth-child(odd) {
+    background-color: $cdr-color-background-table-row-alt;
+  }
+
+  thead {
+    // override body styling when head is present
+    & + tbody tr {
+      // striping rows
+      &:nth-child(even) {
+        background-color: $cdr-color-background-table-row-alt;
+      }
+
+      // disabled default
+      &:nth-child(odd) {
+        background-color: $cdr-color-background-table-row;
+      }
+    }
+  }
+
+  tbody,
+  tfoot {
+    tr {
+      // striping rows
+      &:nth-child(odd) {
+        background-color: $cdr-color-background-table-row-alt;
+      }
+    }
+  }
+}
+
+@mixin cdr-table-full-width-mixin() {
+  width: 100%;
+}
+
+@mixin cdr-table-responsive-mixin {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+@mixin cdr-table-hover-mixin {
+  tr:hover > * {
+    background-color: $cdr-color-background-table-header;
   }
 }
