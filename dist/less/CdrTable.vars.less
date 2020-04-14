@@ -37,19 +37,19 @@
   }
 }
 
-.cdr-table-small {
+.cdr-table-small-mixin {
   th, td {
     padding: 0.4rem 1.6rem;
   }
 }
 
-.cdr-table-medium {
+.cdr-table-medium-mixin {
   th, td {
     padding: @cdr-space-inset-one-x-squish;
   }
 }
 
-.cdr-table-large {
+.cdr-table-large-mixin {
   th, td {
     padding: @cdr-space-inset-one-x;
   }
@@ -116,13 +116,13 @@
   width: 100%;
 }
 
-.cdr-table-responsive {
+.cdr-table-responsive-mixin {
   display: block;
   width: 100%;
   overflow-x: auto;
 }
 
-.cdr-table-hover {
+.cdr-table-hover-mixin {
   tr:hover > * {
     background-color: @cdr-color-background-table-header;
   }
