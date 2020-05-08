@@ -5,10 +5,26 @@
   box-shadow: $cdr-prominence-raised;
   color: $cdr-color-text-primary;
   width: 100%;
-
-  transition: box-shadow $cdr-duration-1-x $cdr-timing-function-ease;
+  transition: box-shadow $cdr-duration-2-x $cdr-timing-function-ease;
+  cursor: pointer;
 
   &:active, &:hover {
     box-shadow: $cdr-prominence-floating;
+  }
+}
+
+@mixin cdr-card-link-mixin() {
+  position: static;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: transparent;
   }
 }

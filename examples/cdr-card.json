@@ -1,6 +1,9 @@
 {
   "name": "cdr-card",
-  "notes": [],
+  "notes": [
+    "CdrCard elements should always link to other content",
+    "use `@include cdr-card-link-mixin` on the linked element to make the entire card function as a click target"
+  ],
   "docs": "https://rei.github.io/rei-cedar-docs/components/card/",
   "examples": [
     {
