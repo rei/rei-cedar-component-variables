@@ -6,7 +6,7 @@
   "docs": "https://rei.github.io/rei-cedar-docs/components/breadcrumb/",
   "examples": [
     {
-      "name": "ancestor",
+      "name": "breadcrumb",
       "tag": "a",
       "styles": [
         "@include cdr-breadcrumb-item-mixin;",
@@ -15,22 +15,8 @@
       ],
       "attrs": {
         "items": [
-            { "item": {"url": "rei.com", "name": "ancestor"} },
-            { "item": {"url": "", "name": "current"} }
-        ]
-      }
-    },
-    {
-      "name": "current",
-      "tag": "span",
-      "styles": [
-        "@include cdr-breadcrumb-item-mixin;",
-        "@include cdr-breadcrumb-base-text-mixin;"
-      ],
-      "attrs": {
-        "items": [
-            { "item": {"url": "rei.com", "name": "ancestor"} },
-            { "item": {"url": "", "name": "current"} }
+            { "item": {"url": "rei.com", "name": "breadcrumb 1"} },
+            { "item": {"url": "rei.com", "name": "breadcrumb 2"} }
         ]
       }
     }
