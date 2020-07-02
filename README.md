@@ -32,10 +32,6 @@ SCSS example:
   @include cdr-button-primary-mixin;
 }
 
-.your-other-button-class {
-  /* use variables if you need to apply specific properties */
-  border-radius: $cdr-button-border-radius;
-}
 ```
 
 LESS example:
@@ -49,17 +45,13 @@ LESS example:
   .cdr-button-primary-mixin();
 }
 
-.your-other-button-class {
-  /* use variables if you need to apply specific properties */
-  border-radius: @cdr-button-border-radius;
-}
 ```
 
 The [docs page](https://rei.github.io/rei-cedar-component-variables/#/) demonstrates which mixins to use to achieve various styles for each supported component.
 
-You can find all of the exported variables and mixins in the [/dist directory](https://github.com/rei/rei-cedar-component-variables/tree/next/dist/scss).
+You can find all of the exported mixins in the [/dist directory](https://github.com/rei/rei-cedar-component-variables/tree/next/dist/scss).
 
-If you are unsure of how a variable or mixin is intended to be used, you can search for the variable name in the [Cedar component source](https://github.com/rei/rei-cedar/tree/next/src/components).
+If you are unsure of how a mixin is intended to be used, you can search for the name in the [Cedar component source](https://github.com/rei/rei-cedar/tree/next/src/components).
 
 ## Development
 
