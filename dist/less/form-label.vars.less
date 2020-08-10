@@ -1,39 +1,53 @@
+// variables shared between checkbox and radio
 @cdr-label-base-spacing: @cdr-space-half-x;
 
-.cdr-label-base-text-mixin() {
-  .cdr-text-utility-300;
-}
+@cdr-label-figure-size-small: 16px;
+@cdr-label-figure-size-medium: 16px;
+@cdr-label-figure-size-large: 20px;
+@cdr-label-figure-box-shadow: 0 0 8px 0 @cdr-color-border-input-default-active;
 
-@cdr-label-base-color: @cdr-color-text-form-label-lightmode;
-@cdr-label-base-display: inline-block;
-@cdr-label-base-margin: 0;
-
+@cdr-label-height-medium: @cdr-text-utility-sans-300-height;
 .cdr-label-base-mixin() {
-  .cdr-label-base-text-mixin;
-
-  color: @cdr-label-base-color;
-  display: @cdr-label-base-display;
-  margin: @cdr-label-base-margin;
+  .cdr-text-utility-sans-300;
+  padding-left: calc(~"@{cdr-label-figure-size-medium} + @{cdr-label-base-spacing}");
+  color: @cdr-color-text-input-label;
 }
-
-@cdr-label-base-cursor-hover: pointer;
 
 .cdr-label-hover-mixin() {
-  cursor: @cdr-label-base-cursor-hover;
+  cursor: pointer;
 }
-
-@cdr-label-base-cursor-disabled: default;
-@cdr-label-color-disabled: #b8b8b8;
 
 .cdr-label-disabled-mixin() {
-  color: @cdr-label-color-disabled !important;
-  cursor: @cdr-label-base-cursor-disabled;
+  color: @cdr-color-text-disabled !important;
+  cursor: default;
 }
 
-.cdr-label-compact-text-mixin() {
-  .cdr-text-utility-200;
+@cdr-label-height-small: @cdr-text-utility-sans-200-height;
+.cdr-label-small-mixin() {
+  .cdr-text-utility-sans-200;
+  padding-left: calc(~"@{cdr-label-figure-size-small} + @{cdr-label-base-spacing}");
 }
 
-.cdr-label-compact-mixin() {
-  .cdr-label-compact-text-mixin;
+@cdr-label-height-large: @cdr-text-utility-sans-300-height;
+.cdr-label-large-mixin() {
+  .cdr-text-utility-sans-300;
+  padding-left: calc(~"@{cdr-label-figure-size-large} + @{cdr-label-base-spacing}");
+}
+
+.cdr-label-figure-small-mixin() {
+  top: calc(~"(@{cdr-label-height-small} - @{cdr-label-figure-size-small}) / 2");
+  width: @cdr-label-figure-size-small;
+  height: @cdr-label-figure-size-small;
+}
+
+.cdr-label-figure-medium-mixin() {
+  top: calc(~"(@{cdr-label-height-medium} - @{cdr-label-figure-size-medium}) / 2");
+  width: @cdr-label-figure-size-medium;
+  height: @cdr-label-figure-size-medium;
+}
+
+.cdr-label-figure-large-mixin() {
+  top: calc(~"(@{cdr-label-height-large} - @{cdr-label-figure-size-large}) / 2");
+  width: @cdr-label-figure-size-large;
+  height: @cdr-label-figure-size-large;
 }

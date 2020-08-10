@@ -18,7 +18,7 @@
     {
       "name": "compact",
       "tag": "label",
-      "styles": ["@include cdr-label-base-mixin;", "@include cdr-label-compact-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"],
+      "styles": ["@include cdr-label-base-mixin;", "@include cdr-label-small-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"],
       "preContent": "<input type=\"radio\"/>",
       "attrs": {
         "modifier": "compact"

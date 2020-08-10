@@ -10,6 +10,9 @@ import {
   CdrCta,
   CdrInput,
   CdrList,
+  CdrCard,
+  CdrBreadcrumb,
+  CdrTable,
 } from '@rei/cedar';
 
 import './index.scss';
@@ -25,6 +28,9 @@ Vue.component('cdr-radio', CdrRadio);
 Vue.component('cdr-select', CdrSelect);
 Vue.component('cdr-input', CdrInput);
 Vue.component('cdr-list', CdrList);
+Vue.component('cdr-card', CdrCard);
+Vue.component('cdr-breadcrumb', CdrBreadcrumb);
+Vue.component('cdr-table', CdrTable);
 
 new Vue({
   render: h => h(App),

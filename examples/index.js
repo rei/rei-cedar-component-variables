@@ -6,6 +6,10 @@ const CdrInput = require('./cdr-input');
 const CdrSelect = require('./cdr-select');
 const CdrCta = require('./cdr-cta');
 const CdrList = require('./cdr-list');
+const CdrCard = require('./cdr-card');
+const CdrBreadcrumb = require('./cdr-breadcrumb');
+// TODO: need to handle tables separately
+// const CdrTable = require('./cdr-table');
 
 module.exports = {
   CdrButton,
@@ -15,5 +19,8 @@ module.exports = {
   CdrCheckbox,
   CdrRadio,
   CdrCta,
-  CdrList
+  CdrList,
+  CdrCard,
+  CdrBreadcrumb,
+  // CdrTable,
 }

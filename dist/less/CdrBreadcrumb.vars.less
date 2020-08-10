@@ -1,0 +1,21 @@
+.cdr-breadcrumb-item-mixin() {
+  color: @cdr-color-text-secondary;
+}
+
+.cdr-breadcrumb-item-linked-mixin() {
+  text-decoration: none;
+  color: inherit;
+  &:hover,
+  &:active,
+  &:focus {
+    color: @cdr-color-text-link-hover;
+  }
+}
+
+.cdr-breadcrumb-xs-text-mixin() {
+  .cdr-text-utility-sans-100;
+}
+
+.cdr-breadcrumb-base-text-mixin() {
+  .cdr-text-utility-sans-200;
+}
