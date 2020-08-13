@@ -77,6 +77,6 @@ export default {
 }
 
 a {
-  color: $cdr-color-text-link-lightmode;
+  color: $cdr-color-text-link-rest;
 }
 </style>

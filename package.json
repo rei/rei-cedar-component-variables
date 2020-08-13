@@ -31,8 +31,8 @@
   "author": "REI Software Engineering",
   "license": "MIT",
   "dependencies": {
-    "@rei/cdr-tokens": "^4.1.0",
-    "@rei/cedar": "^5.2.1"
+    "@rei/cdr-tokens": "^5.0.0-alpha.2",
+    "@rei/cedar": "^6.0.0-beta.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.3",

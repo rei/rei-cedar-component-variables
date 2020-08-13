@@ -65,7 +65,7 @@ export default {
 @import "~@rei/cdr-tokens/dist/scss/cdr-tokens.scss";
 
 .example-row td {
-  border: 1px solid $cdr-color-border-primary-lightmode;
+  border: 1px solid $cdr-color-border-primary;
   padding: $cdr-space-one-x;
   width: 25%;
 }
@@ -75,7 +75,7 @@ export default {
 }
 
 .code-block code {
-  font-size: $cdr-text-default-compact-size;
+  font-size: 1.4rem;
   user-select: all;
 }
 
