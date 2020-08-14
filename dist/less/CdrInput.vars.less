@@ -13,7 +13,10 @@
   margin: 0;
 
   /* Prevent iOS from altering border and box-shadow */
-  -webkit-appearance: none;
+  @supports (-webkit-overflow-scrolling: touch) {
+    /* CSS specific to iOS devices */
+    -webkit-appearance: none;
+  }
 
   &[type=number]::-webkit-inner-spin-button,
   &[type=number]::-webkit-outer-spin-button {
