@@ -1,0 +1,18 @@
+{
+  "name": "cdr-form-group",
+  "notes": [
+    "Form groups should wrap a `legend` element and contain a group of logically related input elements."
+  ],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/list/",
+  "examples": [
+    {
+      "name": "default",
+      "tag": "fieldset",
+      "styles": ["@include cdr-form-group-base-mixin;"],
+      "postContent": "<legend>title</legend>",
+      "attrs": {
+        "label": "title"
+      }
+    }
+  ]
+}

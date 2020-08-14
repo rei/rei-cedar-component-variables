@@ -4,10 +4,11 @@ const CdrCheckbox = require('./cdr-checkbox');
 const CdrRadio = require('./cdr-radio');
 const CdrInput = require('./cdr-input');
 const CdrSelect = require('./cdr-select');
-const CdrCta = require('./cdr-cta');
 const CdrList = require('./cdr-list');
 const CdrCard = require('./cdr-card');
 const CdrBreadcrumb = require('./cdr-breadcrumb');
+const CdrAlert = require('./cdr-alert');
+const CdrFormGroup = require('./cdr-form-group');
 // TODO: need to handle tables separately
 // const CdrTable = require('./cdr-table');
 
@@ -18,9 +19,10 @@ module.exports = {
   CdrSelect,
   CdrCheckbox,
   CdrRadio,
-  CdrCta,
   CdrList,
   CdrCard,
   CdrBreadcrumb,
+  CdrAlert,
+  CdrFormGroup,
   // CdrTable,
 }
