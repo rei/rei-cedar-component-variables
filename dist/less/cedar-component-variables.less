@@ -243,6 +243,29 @@
   }
 }
 
+.cdr-button-link-mixin() {
+  color: @cdr-color-text-link-rest;
+  fill: @cdr-color-text-link-rest;
+  background-color: transparent;
+  text-decoration: underline;
+
+  &:active,
+  &:focus {
+    color: @cdr-color-text-link-active;
+  }
+
+  &:hover {
+    color: @cdr-color-text-link-hover;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: @default-outline;
+    outline-color: -webkit-focus-ring-color;
+    outline-offset: 0;
+  }
+}
+
 .cdr-button-secondary-elevated-mixin() {
   box-shadow: inset 0 0 0 1px @cdr-color-border-button-secondary-rest, @cdr-prominence-elevated;
 
@@ -605,33 +628,6 @@
   &:visited {
     text-decoration: underline;
   }
-}
-
-.cdr-link-inset-small-mixin() {
-  padding: @cdr-space-inset-three-quarter-x-squish;
-  font-size: 14px;
-  line-height: 18px;
-}
-
-.cdr-link-inset-medium-mixin() {
-  padding: @cdr-space-inset-one-x-squish;
-  font-size: 16px;
-  line-height: 22px;
-}
-
-.cdr-link-inset-large-mixin() {
-  padding: @cdr-space-inset-one-and-a-half-x-squish;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.cdr-link-inset-base-text-mixin() {
-  font-family: @cdr-font-family-sans;
-  font-style: normal;
-  font-weight: 500;
-  letter-spacing: -.08px;
-  vertical-align: middle;
-  display: inline-flex;
 }
 
 // variables shared between checkbox and radio
