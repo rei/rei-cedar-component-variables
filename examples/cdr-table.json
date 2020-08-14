@@ -8,9 +8,8 @@
     {
       "name": "default",
       "tag": "table",
-      "slot": "<div><thead><tr><th>Test head</th></tr></thead><tbody><tr><td>Test content</td></tr></tbody></div>",
+      "slot": "<thead><tr><th>Test head</th></tr></thead><tbody><tr><td>Test content</td></tr></tbody>",
       "styles": ["@include cdr-table-base-mixin;"],
-
       "attrs": {}
     }
   ]

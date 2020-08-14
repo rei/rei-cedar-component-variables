@@ -1,0 +1,41 @@
+{
+  "name": "cdr-alert",
+  "notes": [
+    "CdrAlert should be paired with an icon preceding the text"
+  ],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/alert/",
+  "examples": [
+    {
+      "name": "success",
+      "tag": "div",
+      "styles": ["@include cdr-alert-base-mixin;", "@include cdr-alert-success-mixin;"],
+      "attrs": {
+        "type": "success"
+      }
+    },
+    {
+      "name": "info",
+      "tag": "div",
+      "styles": ["@include cdr-alert-base-mixin;", "@include cdr-alert-info-mixin;"],
+      "attrs": {
+        "type": "info"
+      }
+    },
+    {
+      "name": "warning",
+      "tag": "div",
+      "styles": ["@include cdr-alert-base-mixin;", "@include cdr-alert-warning-mixin;"],
+      "attrs": {
+        "type": "warning"
+      }
+    },
+    {
+      "name": "error",
+      "tag": "div",
+      "styles": ["@include cdr-alert-base-mixin;", "@include cdr-alert-error-mixin;"],
+      "attrs": {
+        "type": "error"
+      }
+    }
+  ]
+}
