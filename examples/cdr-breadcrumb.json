@@ -1,7 +1,7 @@
 {
   "name": "cdr-breadcrumb",
   "notes": [
-    "current page should be rendered as a non-link element"
+    "current page should not be rendered in breadcrumbs"
   ],
   "docs": "https://rei.github.io/rei-cedar-docs/components/breadcrumb/",
   "examples": [

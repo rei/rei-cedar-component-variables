@@ -23,6 +23,22 @@
       }
     },
     {
+      "name": "sale",
+      "tag": "button",
+      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-sale-mixin;"],
+      "attrs": {
+        "modifier": "sale"
+      }
+    },
+    {
+      "name": "dark",
+      "tag": "button",
+      "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-dark-mixin;"],
+      "attrs": {
+        "modifier": "dark"
+      }
+    },
+    {
       "name": "primary-small",
       "tag": "button",
       "styles": ["@include cdr-button-base-mixin;", "@include cdr-button-primary-mixin;", "@include cdr-button-small-mixin;"],
