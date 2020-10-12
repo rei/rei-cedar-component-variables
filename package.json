@@ -30,11 +30,13 @@
   "homepage": "https://rei.github.io/rei-cedar-component-variables/#/",
   "author": "REI Software Engineering",
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "@rei/cdr-tokens": "^5.0.0",
     "@rei/cedar": "^6.0.0"
   },
   "devDependencies": {
+    "@rei/cdr-tokens": "^5.0.0",
+    "@rei/cedar": "^6.0.0",
     "@vue/cli-plugin-babel": "^4.5.3",
     "@vue/cli-plugin-eslint": "^4.5.3",
     "@vue/cli-service": "^4.5.3",
