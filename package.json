@@ -7,17 +7,10 @@
     "dist"
   ],
   "scripts": {
-    "build:docs": "npm run build:stylesheet && vue-cli-service build && node ./build/deploy-docs.js",
-    "build:stylesheet": "node ./build/build-stylesheet.js",
+    "build:docs-data": "node ./build/build-docs-data.js",
     "build:less": "sass2less dist/scss/*.scss 'dist/less/{name}.less' && node ./build/build-less.js",
-    "lint": "vue-cli-service lint",
-    "prepublishOnly": "npm run build:less",
-    "postpublish": "npm run build:docs",
-    "prerelease": "npm-publish-prerelease",
-    "dev": "npm run build:stylesheet && vue-cli-service serve",
-    "reference": "backstop reference",
-    "compare": "backstop test",
-    "approve": "backstop approve"
+    "prepublishOnly": "npm run build:less && npm run build:docs-data",
+    "prerelease": "npm-publish-prerelease"
   },
   "private": false,
   "publishConfig": {
@@ -31,51 +24,12 @@
   "author": "REI Software Engineering",
   "license": "MIT",
   "peerDependencies": {
-    "@rei/cdr-tokens": "^5.0.0",
+    "@rei/cdr-tokens": "^6.0.0",
     "@rei/cedar": "^6.0.0"
   },
   "devDependencies": {
-    "@rei/cdr-tokens": "^5.0.0",
-    "@rei/cedar": "^6.0.0",
-    "@vue/cli-plugin-babel": "^4.5.3",
-    "@vue/cli-plugin-eslint": "^4.5.3",
-    "@vue/cli-service": "^4.5.3",
-    "babel-eslint": "^10.1.0",
-    "backstopjs": "^5.0.4",
-    "eslint": "^7.6.0",
-    "eslint-plugin-vue": "^6.2.2",
     "fs-extra": "^9.0.1",
-    "gh-pages": "^3.1.0",
     "less-plugin-sass2less": "^1.2.0",
-    "lodash": "^4.17.20",
-    "node-sass": "^4.14.1",
-    "npm-publish-prerelease": "^1.0.2",
-    "sass-loader": "^9.0.3",
-    "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+    "npm-publish-prerelease": "^1.0.2"
+  }
 }

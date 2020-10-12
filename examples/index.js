@@ -9,8 +9,7 @@ const CdrCard = require('./cdr-card');
 const CdrBreadcrumb = require('./cdr-breadcrumb');
 const CdrAlert = require('./cdr-alert');
 const CdrFormGroup = require('./cdr-form-group');
-// TODO: need to handle tables separately
-// const CdrTable = require('./cdr-table');
+const CdrTable = require('./cdr-table');
 
 module.exports = {
   CdrButton,
@@ -24,5 +23,5 @@ module.exports = {
   CdrBreadcrumb,
   CdrAlert,
   CdrFormGroup,
-  // CdrTable,
+  CdrTable,
 }

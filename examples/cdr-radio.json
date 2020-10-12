@@ -9,20 +9,13 @@
   "examples": [
     {
       "name": "default",
-      "tag": "label",
-      "styles": ["@include cdr-label-base-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"],
-      "preContent": "<input type=\"radio\"/>",
-      "attrs": {
-      }
+      "html": "<label class=\"cdr-radio-default\"><input type=\"radio\"/> radio default</label>",
+      "scss": ["@include cdr-label-base-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"]
     },
     {
       "name": "compact",
-      "tag": "label",
-      "styles": ["@include cdr-label-base-mixin;", "@include cdr-label-small-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"],
-      "preContent": "<input type=\"radio\"/>",
-      "attrs": {
-        "modifier": "compact"
-      }
+      "html": "<label class=\"cdr-radio-compact\"><input type=\"radio\"/> radio compact</label>",
+      "scss": ["@include cdr-label-base-mixin;", "@include cdr-label-small-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"]
     }
   ]
 }

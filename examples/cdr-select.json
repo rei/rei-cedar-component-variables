@@ -7,19 +7,13 @@
   "examples": [
     {
       "name": "default-label",
-      "tag": "label",
-      "styles": ["@include cdr-select-base-label-mixin;"]
+      "html": "<label class=\"cdr-select-default-label\">default label</label>",
+      "scss": ["@include cdr-select-base-label-mixin;"]
     },
     {
       "name": "default-select",
-      "tag": "select",
-      "styles": ["@include cdr-select-base-mixin;"],
-      "preContent": "<option>default-select</option>",
-      "attrs": {
-        "label": "default-label",
-        "options": ["default-select"],
-        "value": "default-select"
-      }
+      "html": "<select class=\"cdr-select-default-select\"><option>default-select</option></select>",
+      "scss": ["@include cdr-select-base-mixin;"]
     }
   ]
 }

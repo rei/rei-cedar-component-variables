@@ -9,20 +9,13 @@
   "examples": [
     {
       "name": "default",
-      "tag": "label",
-      "styles": ["@include cdr-label-base-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"],
-      "preContent": "<input type=\"checkbox\"/>",
-      "attrs": {
-      }
+      "html": "<label class=\"cdr-label-default\"><input type=\"checkbox\"/>default checkbox</label>",
+      "scss": ["@include cdr-label-base-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"]
     },
     {
       "name": "compact",
-      "tag": "label",
-      "styles": ["@include cdr-label-base-mixin;", "@include cdr-label-small-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"],
-      "preContent": "<input type=\"checkbox\"/>",
-      "attrs": {
-        "modifier": "compact"
-      }
+      "html": "<label class=\"cdr-label-compact\"><input type=\"checkbox\"/>compact checkbox</label>",
+      "scss": ["@include cdr-label-base-mixin;", "@include cdr-label-small-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"]
     }
   ]
 }

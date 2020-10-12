@@ -8,22 +8,13 @@
   "examples": [
     {
       "name": "ordered",
-      "tag": "ol",
-      "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-ordered-mixin;"],
-      "slot": "<li>one</li><li>two</li><li>three</li>",
-      "attrs": {
-        "modifier": "ordered",
-        "tag": "ol"
-      }
+      "html": "<ol class=\"cdr-list-ordered\"><li>one</li><li>two</li><li>three</li></ol>",
+      "scss": ["@include cdr-list-base-mixin;", "@include cdr-list-ordered-mixin;"]
     },
     {
       "name": "unordered",
-      "tag": "ul",
-      "styles": ["@include cdr-list-base-mixin;", "@include cdr-list-unordered-mixin;"],
-      "slot": "<li>one</li><li>two</li><li>three</li>",
-      "attrs": {
-        "modifier": "unordered"
-      }
+      "html": "<ul class=\"cdr-list-unordered\"><li>one</li><li>two</li><li>three</li></ul>",
+      "scss": ["@include cdr-list-base-mixin;", "@include cdr-list-unordered-mixin;"]
     }
   ]
 }

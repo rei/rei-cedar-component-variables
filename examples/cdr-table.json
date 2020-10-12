@@ -7,10 +7,8 @@
   "examples": [
     {
       "name": "default",
-      "tag": "table",
-      "slot": "<thead><tr><th>Test head</th></tr></thead><tbody><tr><td>Test content</td></tr></tbody>",
-      "styles": ["@include cdr-table-base-mixin;"],
-      "attrs": {}
+      "html": "<table class=\"cdr-table-default\"><thead><tr><th>Test head</th></tr></thead><tbody><tr><td>Test content</td></tr></tbody></table>",
+      "scss": ["@include cdr-table-base-mixin;"]
     }
   ]
 }
