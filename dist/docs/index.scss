@@ -1,4 +1,30 @@
 /* these classes are generated for documentation purposes only, they are not meant for production use. */
+.cdr-alert-success {
+  @include cdr-alert-base-mixin;
+  @include cdr-alert-success-mixin;
+}
+
+.cdr-alert-info {
+  @include cdr-alert-base-mixin;
+  @include cdr-alert-info-mixin;
+}
+
+.cdr-alert-warning {
+  @include cdr-alert-base-mixin;
+  @include cdr-alert-warning-mixin;
+}
+
+.cdr-alert-error {
+  @include cdr-alert-base-mixin;
+  @include cdr-alert-error-mixin;
+}
+
+.cdr-breadcrumb-default {
+  @include cdr-breadcrumb-item-mixin;
+  @include cdr-breadcrumb-item-linked-mixin;
+  @include cdr-breadcrumb-base-text-mixin;
+}
+
 .cdr-button-primary {
   @include cdr-button-base-mixin;
   @include cdr-button-primary-mixin;
@@ -37,13 +63,23 @@
   @include cdr-button-large-mixin;
 }
 
-.cdr-link-default {
-  @include cdr-link-base-mixin;
+.cdr-checkbox-default {
+  @include cdr-label-base-mixin;
+  & input { margin-right: $cdr-label-base-spacing; }
 }
 
-.cdr-link-standalone {
-  @include cdr-link-base-mixin;
-  @include cdr-link-standalone-mixin;
+.cdr-checkbox-compact {
+  @include cdr-label-base-mixin;
+  @include cdr-label-small-mixin;
+  & input { margin-right: $cdr-label-base-spacing; }
+}
+
+.cdr-card-default {
+  @include cdr-card-base-mixin;
+}
+
+.cdr-form-group-default {
+  @include cdr-form-group-base-mixin;
 }
 
 .cdr-input-default-label {
@@ -54,23 +90,23 @@
   @include cdr-input-base-mixin;
 }
 
-.cdr-select-default-label {
-  @include cdr-select-base-label-mixin;
+.cdr-link-default {
+  @include cdr-link-base-mixin;
 }
 
-.cdr-select-default-select {
-  @include cdr-select-base-mixin;
+.cdr-link-standalone {
+  @include cdr-link-base-mixin;
+  @include cdr-link-standalone-mixin;
 }
 
-.cdr-checkbox-default {
-  @include cdr-label-base-mixin;
-  & input { margin-right: $cdr-label-base-spacing; }
+.cdr-list-ordered {
+  @include cdr-list-base-mixin;
+  @include cdr-list-ordered-mixin;
 }
 
-.cdr-checkbox-compact {
-  @include cdr-label-base-mixin;
-  @include cdr-label-small-mixin;
-  & input { margin-right: $cdr-label-base-spacing; }
+.cdr-list-unordered {
+  @include cdr-list-base-mixin;
+  @include cdr-list-unordered-mixin;
 }
 
 .cdr-radio-default {
@@ -84,48 +120,12 @@
   & input { margin-right: $cdr-label-base-spacing; }
 }
 
-.cdr-list-ordered {
-  @include cdr-list-base-mixin;
-  @include cdr-list-ordered-mixin;
+.cdr-select-default-label {
+  @include cdr-select-base-label-mixin;
 }
 
-.cdr-list-unordered {
-  @include cdr-list-base-mixin;
-  @include cdr-list-unordered-mixin;
-}
-
-.cdr-card-default {
-  @include cdr-card-base-mixin;
-}
-
-.cdr-breadcrumb-default {
-  @include cdr-breadcrumb-item-mixin;
-  @include cdr-breadcrumb-item-linked-mixin;
-  @include cdr-breadcrumb-base-text-mixin;
-}
-
-.cdr-alert-success {
-  @include cdr-alert-base-mixin;
-  @include cdr-alert-success-mixin;
-}
-
-.cdr-alert-info {
-  @include cdr-alert-base-mixin;
-  @include cdr-alert-info-mixin;
-}
-
-.cdr-alert-warning {
-  @include cdr-alert-base-mixin;
-  @include cdr-alert-warning-mixin;
-}
-
-.cdr-alert-error {
-  @include cdr-alert-base-mixin;
-  @include cdr-alert-error-mixin;
-}
-
-.cdr-form-group-default {
-  @include cdr-form-group-base-mixin;
+.cdr-select-default-select {
+  @include cdr-select-base-mixin;
 }
 
 .cdr-table-default {

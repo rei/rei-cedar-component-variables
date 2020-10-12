@@ -12,16 +12,16 @@ const CdrFormGroup = require('./cdr-form-group');
 const CdrTable = require('./cdr-table');
 
 module.exports = {
-  CdrButton,
-  CdrLink,
-  CdrInput,
-  CdrSelect,
-  CdrCheckbox,
-  CdrRadio,
-  CdrList,
-  CdrCard,
-  CdrBreadcrumb,
   CdrAlert,
+  CdrBreadcrumb,
+  CdrButton,
+  CdrCheckbox,
+  CdrCard,
   CdrFormGroup,
+  CdrInput,
+  CdrLink,
+  CdrList,
+  CdrRadio,
+  CdrSelect,
   CdrTable,
 }
