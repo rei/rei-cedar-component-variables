@@ -127,3 +127,7 @@
 .cdr-form-group-default {
   @include cdr-form-group-base-mixin;
 }
+
+.cdr-table-default {
+  @include cdr-table-base-mixin;
+}
