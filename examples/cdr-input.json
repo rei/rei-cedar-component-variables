@@ -7,20 +7,13 @@
   "examples": [
     {
       "name": "default-label",
-      "tag": "label",
-      "styles": ["@include cdr-input-base-label-mixin;"]
+      "html": "<label class=\"cdr-input-default-label\">default label</label>",
+      "scss": ["@include cdr-input-base-label-mixin;"]
     },
     {
       "name": "default-input",
-      "tag": "input",
-      "styles": ["@include cdr-input-base-mixin;"],
-      "attrs": {
-        "value": "default-input",
-        "label": "default-label"
-      },
-      "props": {
-        "value": "default-input"
-      }
+      "html": "<input class=\"cdr-input-default-input\"/>",
+      "scss": ["@include cdr-input-base-mixin;"]
     }
   ]
 }
