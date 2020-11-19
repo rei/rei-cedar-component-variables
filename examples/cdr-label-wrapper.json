@@ -1,0 +1,23 @@
+{
+  "name": "cdr-label-wrapper",
+  "notes": [
+    "wrapper label element for radio and checkbox inputs"
+  ],
+  "examples": [
+    {
+      "name": "default",
+      "html": "<label class=\"cdr-label-wrapper-default\"><input type=\"checkbox\"/> Default label</label>",
+      "scss": ["@include cdr-label-wrapper-base-mixin;", "@include cdr-label-wrapper-primary-mixin;"]
+    },
+    {
+      "name": "secondary-bg",
+      "html": "<label class=\"cdr-label-wrapper-secondary-bg\"><input type=\"radio\"/> Label on secondary background</label>",
+      "scss": ["@include cdr-label-wrapper-base-mixin;", "@include cdr-label-wrapper-secondary-mixin;"]
+    },
+    {
+      "name": "disabled",
+      "html": "<label class=\"cdr-label-wrapper-disabled\"><input type=\"checkbox\" disabled/> Disabled label</label>",
+      "scss": ["@include cdr-label-wrapper-base-mixin;",  "@include cdr-label-wrapper-disabled-mixin;"]
+    }
+  ]
+}

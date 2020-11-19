@@ -6,14 +6,24 @@
   "docs": "https://rei.github.io/rei-cedar-docs/components/input/",
   "examples": [
     {
-      "name": "default-label",
-      "html": "<label class=\"cdr-input-default-label\">default label</label>",
-      "scss": ["@include cdr-input-base-label-mixin;"]
+      "name": "default",
+      "html": "<input class=\"cdr-input-default\"/>",
+      "scss": ["@include cdr-input-base-mixin;", "@include cdr-input-primary-mixin;"]
     },
     {
-      "name": "default-input",
-      "html": "<input class=\"cdr-input-default-input\"/>",
-      "scss": ["@include cdr-input-base-mixin;"]
+      "name": "error",
+      "html": "<input class=\"cdr-input-error\"/>",
+      "scss": ["@include cdr-input-base-mixin;", "@include cdr-input-primary-mixin;", "@include cdr-input-error-mixin;"]
+    },
+    {
+      "name": "large",
+      "html": "<input class=\"cdr-input-large\"/>",
+      "scss": ["@include cdr-input-base-mixin;", "@include cdr-input-primary-mixin;", "@include cdr-input-large-mixin;"]
+    },
+    {
+      "name": "on-secondary-bg",
+      "html": "<input class=\"cdr-input-on-secondary-bg\"/>",
+      "scss": ["@include cdr-input-base-mixin;", "@include cdr-input-secondary-mixin;"]
     }
   ]
 }

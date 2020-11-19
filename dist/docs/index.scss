@@ -1,4 +1,105 @@
 /* these classes are generated for documentation purposes only, they are not meant for production use. */
+.cdr-label-standalone-default {
+  @include cdr-label-standalone-label-mixin;
+}
+
+.cdr-label-standalone-required {
+  @include cdr-label-standalone-label-mixin;
+}
+
+.cdr-label-standalone-optional {
+  @include cdr-label-standalone-label-mixin;
+  .optional-label {
+    @include cdr-label-standalone-optional-mixin;
+  }
+}
+
+.cdr-label-standalone-disabled {
+  @include cdr-label-standalone-disabled-mixin;
+}
+
+.cdr-label-standalone-helper-text {
+  @include cdr-label-standalone-helper-mixin;
+}
+
+.cdr-label-standalone-info {
+  @include cdr-label-standalone-info-mixin;
+}
+
+.cdr-input-default {
+  @include cdr-input-base-mixin;
+  @include cdr-input-primary-mixin;
+}
+
+.cdr-input-error {
+  @include cdr-input-base-mixin;
+  @include cdr-input-primary-mixin;
+  @include cdr-input-error-mixin;
+}
+
+.cdr-input-large {
+  @include cdr-input-base-mixin;
+  @include cdr-input-primary-mixin;
+  @include cdr-input-large-mixin;
+}
+
+.cdr-input-on-secondary-bg {
+  @include cdr-input-base-mixin;
+  @include cdr-input-secondary-mixin;
+}
+
+.cdr-select-default {
+  @include cdr-select-base-mixin;
+  @include cdr-select-primary-mixin;
+}
+
+.cdr-select-error {
+  @include cdr-select-base-mixin;
+  @include cdr-select-primary-mixin;
+  @include cdr-select-error-mixin;
+}
+
+.cdr-select-large {
+  @include cdr-select-base-mixin;
+  @include cdr-select-primary-mixin;
+  @include cdr-select-large-mixin;
+}
+
+.cdr-select-on-secondary-bg {
+  @include cdr-select-base-mixin;
+  @include cdr-select-secondary-mixin;
+}
+
+.cdr-form-group-default {
+  @include cdr-form-group-base-mixin;
+  .cdr-form-group-content {
+    @include cdr-form-group-content-mixin;
+  }
+}
+
+.cdr-form-group-error {
+  @include cdr-form-group-base-mixin;
+  .cdr-form-group-content {
+    @include cdr-form-group-content-mixin;
+    @include cdr-form-group-error-mixin;
+  }
+}
+
+.cdr-label-wrapper-default {
+  @include cdr-label-wrapper-base-mixin;
+  @include cdr-label-wrapper-primary-mixin;
+}
+
+.cdr-label-wrapper-secondary-bg {
+  @include cdr-label-wrapper-base-mixin;
+  @include cdr-label-wrapper-secondary-mixin;
+}
+
+.cdr-label-wrapper-disabled {
+  @include cdr-label-wrapper-base-mixin;
+  @include cdr-label-wrapper-disabled-mixin;
+}
+
 .cdr-alert-success {
   @include cdr-alert-base-mixin;
   @include cdr-alert-success-mixin;
@@ -63,31 +164,8 @@
   @include cdr-button-large-mixin;
 }
 
-.cdr-checkbox-default {
-  @include cdr-label-base-mixin;
-  & input { margin-right: $cdr-label-base-spacing; }
-}
-
-.cdr-checkbox-compact {
-  @include cdr-label-base-mixin;
-  @include cdr-label-small-mixin;
-  & input { margin-right: $cdr-label-base-spacing; }
-}
-
 .cdr-card-default {
   @include cdr-card-base-mixin;
-}
-
-.cdr-form-group-default {
-  @include cdr-form-group-base-mixin;
-}
-
-.cdr-input-default-label {
-  @include cdr-input-base-label-mixin;
-}
-
-.cdr-input-default-input {
-  @include cdr-input-base-mixin;
 }
 
 .cdr-link-default {
@@ -107,25 +185,6 @@
 .cdr-list-unordered {
   @include cdr-list-base-mixin;
   @include cdr-list-unordered-mixin;
-}
-
-.cdr-radio-default {
-  @include cdr-label-base-mixin;
-  & input { margin-right: $cdr-label-base-spacing; }
-}
-
-.cdr-radio-compact {
-  @include cdr-label-base-mixin;
-  @include cdr-label-small-mixin;
-  & input { margin-right: $cdr-label-base-spacing; }
-}
-
-.cdr-select-default-label {
-  @include cdr-select-base-label-mixin;
-}
-
-.cdr-select-default-select {
-  @include cdr-select-base-mixin;
 }
 
 .cdr-table-default {

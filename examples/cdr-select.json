@@ -6,14 +6,24 @@
   "docs": "https://rei.github.io/rei-cedar-docs/components/select/",
   "examples": [
     {
-      "name": "default-label",
-      "html": "<label class=\"cdr-select-default-label\">default label</label>",
-      "scss": ["@include cdr-select-base-label-mixin;"]
+      "name": "default",
+      "html": "<select class=\"cdr-select-default\"/>",
+      "scss": ["@include cdr-select-base-mixin;", "@include cdr-select-primary-mixin;"]
     },
     {
-      "name": "default-select",
-      "html": "<select class=\"cdr-select-default-select\"><option>default-select</option></select>",
-      "scss": ["@include cdr-select-base-mixin;"]
+      "name": "error",
+      "html": "<select class=\"cdr-select-error\"/>",
+      "scss": ["@include cdr-select-base-mixin;", "@include cdr-select-primary-mixin;", "@include cdr-select-error-mixin;"]
+    },
+    {
+      "name": "large",
+      "html": "<select class=\"cdr-select-large\"/>",
+      "scss": ["@include cdr-select-base-mixin;", "@include cdr-select-primary-mixin;", "@include cdr-select-large-mixin;"]
+    },
+    {
+      "name": "on-secondary-bg",
+      "html": "<select class=\"cdr-select-on-secondary-bg\"/>",
+      "scss": ["@include cdr-select-base-mixin;", "@include cdr-select-secondary-mixin;"]
     }
   ]
 }
