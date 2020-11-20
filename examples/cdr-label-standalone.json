@@ -1,0 +1,38 @@
+{
+  "name": "cdr-label-standalone",
+  "notes": [
+    "label element for text inputs and selects"
+  ],
+  "examples": [
+    {
+      "name": "default",
+      "html": "<label class=\"cdr-label-standalone-default\">Default label</label>",
+      "scss": ["@include cdr-label-standalone-label-mixin;"]
+    },
+    {
+      "name": "required",
+      "html": "<label class=\"cdr-label-standalone-required\">Required label *</label>",
+      "scss": ["@include cdr-label-standalone-label-mixin;"]
+    },
+    {
+      "name": "optional",
+      "html": "<label class=\"cdr-label-standalone-optional\">Optional label <span class=\"optional-label\">(optional)</span></label>",
+      "scss": ["@include cdr-label-standalone-label-mixin;", ".optional-label {\n    @include cdr-label-standalone-optional-mixin;\n  }"]
+    },
+    {
+      "name": "disabled",
+      "html": "<label class=\"cdr-label-standalone-disabled\">Disabled label</label>",
+      "scss": ["@include cdr-label-standalone-disabled-mixin;"]
+    },
+    {
+      "name": "helper-text",
+      "html": "<div class=\"cdr-label-standalone-helper-text\">Helper text</div>",
+      "scss": ["@include cdr-label-standalone-helper-mixin;"]
+    },
+    {
+      "name": "info",
+      "html": "<div class=\"cdr-label-standalone-info\">Info text</div>",
+      "scss": ["@include cdr-label-standalone-info-mixin;"]
+    }
+  ]
+}

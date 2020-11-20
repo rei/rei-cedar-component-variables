@@ -1,6 +1,6 @@
 {
   "name": "@rei/cdr-component-variables",
-  "version": "5.0.0-alpha.0",
+  "version": "5.0.0-alpha.1",
   "description": "Style variables exported from Cedar components",
   "style": "dist/scss/index.scss",
   "files": [
@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "build:docs-data": "node ./build/build-docs-data.js",
+    "build:svg": "postcss dist/scss/*.scss -r -u postcss-inline-svg --parser postcss-scss",
     "build:less": "sass2less dist/scss/*.scss 'dist/less/{name}.less' && node ./build/build-less.js",
     "prepublishOnly": "npm run build:less && npm run build:docs-data",
     "prerelease": "npm-publish-prerelease"
@@ -28,8 +29,13 @@
     "@rei/cedar": "^6.0.0"
   },
   "devDependencies": {
+    "@rei/cedar-icons": "^2.1.0",
     "fs-extra": "^9.0.1",
     "less-plugin-sass2less": "^1.2.0",
-    "npm-publish-prerelease": "^1.0.2"
+    "npm-publish-prerelease": "^1.0.2",
+    "postcss": "^8.1.7",
+    "postcss-cli": "^8.3.0",
+    "postcss-inline-svg": "^5.0.0",
+    "postcss-scss": "^3.0.4"
   }
 }

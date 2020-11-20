@@ -1,21 +1,25 @@
 {
   "name": "cdr-radio",
   "notes": [
-    "styles/svg for the radio input are not currently exported",
-    "cdr-radio and cdr-checkbox both make use of the cdr-label mixins",
-    "examples assume that the <input/> element is inside of the <label>"
   ],
   "docs": "https://rei.github.io/rei-cedar-docs/components/radio/",
   "examples": [
     {
-      "name": "default",
-      "html": "<label class=\"cdr-radio-default\"><input type=\"radio\"/> radio default</label>",
-      "scss": ["@include cdr-label-base-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"]
-    },
-    {
-      "name": "compact",
-      "html": "<label class=\"cdr-radio-compact\"><input type=\"radio\"/> radio compact</label>",
-      "scss": ["@include cdr-label-base-mixin;", "@include cdr-label-small-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"]
+      "name": "dynamic",
+      "html": "<div class=\"cdr-radio-dynamic\"><input type=\"radio\"/><div class=\"cdr-radio-figure\"/></div>",
+      "scss": [
+        "position: relative;",
+        "input {position: absolute; opacity: 0; z-index: -1;}",
+        ".cdr-radio-figure {@include cdr-form-figure-base-mixin; @include cdr-form-figure-radio-base-mixin;}",
+        "input:checked ~ .cdr-radio-figure {@include cdr-form-figure-radio-checked-mixin;}",
+        "input:hover ~ .cdr-radio-figure {@include cdr-form-figure-radio-hover-mixin;}",
+        "input:checked:hover ~ .cdr-radio-figure {@include cdr-form-figure-radio-checked-hover-mixin;}",
+        "input:disabled ~ .cdr-radio-figure {@include cdr-form-figure-radio-disabled-mixin;}",
+        "input:checked:disabled ~ .cdr-radio-figure {@include cdr-form-figure-radio-checked-disabled-mixin;}",
+        "input:focus ~ .cdr-radio-figure {@include cdr-form-figure-radio-focus-mixin;}",
+        "input:checked:focus ~ .cdr-radio-figure {@include cdr-form-figure-radio-checked-focus-mixin;}",
+        "input:active ~ .cdr-radio-figure {@include cdr-form-figure-radio-active-mixin;}"
+      ]
     }
   ]
 }
