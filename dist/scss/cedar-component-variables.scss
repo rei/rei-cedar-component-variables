@@ -1,15 +1,3 @@
-/* ==========================================================================/*
-* Token option variables
-*
-* these are temporary variables, providing
-* cedar components mappings to previously available tokens.
-* These varables should be removed as tokens are available
-*
-=============================================================== */
-
-/* ---------------------
-* Outline
-* ------------------- */
 $default-outline: 0.2rem solid Highlight;
 
 @mixin cdr-alert-base-mixin() {
@@ -77,8 +65,6 @@ $default-outline: 0.2rem solid Highlight;
   line-height: 24px;
 }
 
-/* start of mixins/component variables*/
-
 @mixin cdr-button-base-mixin() {
   @include cdr-button-base-text-mixin-medium;
 
@@ -97,9 +83,6 @@ $default-outline: 0.2rem solid Highlight;
 
   transition: box-shadow $cdr-duration-2-x $cdr-timing-function-ease, background-color $cdr-duration-2-x $cdr-timing-function-ease, color $cdr-duration-2-x $cdr-timing-function-ease;
 
-
-  /* States
-    ---------- */
   &:hover, &:active, &:focus {
     outline: none;
     outline-offset: 0;
@@ -121,9 +104,6 @@ $default-outline: 0.2rem solid Highlight;
   box-shadow: inset 0 0 0 1px $cdr-color-border-button-primary-rest;
   color: $cdr-color-text-button-primary;
   fill: $cdr-color-text-button-primary;
-
-  /* States
-    ---------- */
 
   &:hover,
   &:focus {
@@ -153,9 +133,6 @@ $default-outline: 0.2rem solid Highlight;
   box-shadow: inset 0 0 0 1px $cdr-color-border-button-secondary-rest;
   color: $cdr-color-text-button-secondary;
   fill: $cdr-color-icon-default;
-
-  /* States
-  ---------- */
 
   &:hover,
   &:focus {
@@ -917,9 +894,6 @@ $default-outline: 0.2rem solid Highlight;
   text-decoration: underline;
   vertical-align: top;
 
-  /* States
-    ---------- */
-
   &:active,
   &:focus {
     color: $cdr-color-text-link-active;
@@ -1053,8 +1027,6 @@ $default-outline: 0.2rem solid Highlight;
   color: $cdr-color-text-input-help;
 }
 
-/* select base */
-
 @mixin cdr-select-base-mixin() {
   @include cdr-text-utility-sans-300;
   font-weight: 500;
@@ -1099,8 +1071,6 @@ $default-outline: 0.2rem solid Highlight;
     color: $cdr-color-text-input-disabled;
   }
 }
-
-/* --large */
 @mixin cdr-select-large-mixin() {
   @include cdr-text-utility-sans-400;
   height: $cdr-form-input-height-large;
@@ -1328,8 +1298,6 @@ $default-outline: 0.2rem solid Highlight;
   padding: 0;
   margin: 0;
 
-  /* spacing
-    ---------- */
   & > li + li {
     margin-top: $cdr-space-half-x;
   }
@@ -1341,21 +1309,16 @@ $default-outline: 0.2rem solid Highlight;
   list-style-type: none;
 }
 
-
-/* compact */
 @mixin cdr-list-compact-mixin() {
   & > li + li {
     margin-top: $cdr-space-quarter-x;
   }
 }
 
-/* compact nested */
 @mixin cdr-list-compact-nested-mixin() {
   margin-top: $cdr-space-quarter-x;
 }
 
-
-/* ordered */
 @mixin cdr-list-ordered-mixin() {
   list-style-type: decimal;
   padding-left: 1.5em;
@@ -1395,7 +1358,6 @@ $default-outline: 0.2rem solid Highlight;
   }
 }
 
-/* unordered nested */
 @mixin cdr-list-unordered-nested-mixin() {
   position: relative;
   padding-left: 1em;
