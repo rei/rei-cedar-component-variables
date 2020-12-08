@@ -65,6 +65,9 @@
 
 .cdr-card-default {
   @include cdr-card-base-mixin;
+  .link {
+  @include cdr-card-link-mixin;
+}
 }
 
 .cdr-form-error-default {
