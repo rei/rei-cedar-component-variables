@@ -7,12 +7,12 @@
   "examples": [
     {
       "name": "default",
-      "html": "<fieldset class=\"cdr-form-group-default\"><legend>form group title</legend><div class=\"cdr-form-group-content\"><input/><input/></div></fieldset>",
+      "html": "<fieldset class=\"cdr-form-group-default\">\n  <legend>form group title</legend>\n  <div class=\"cdr-form-group-content\"><input/><input/></div>\n</fieldset>",
       "scss": ["@include cdr-form-group-base-mixin;", ".cdr-form-group-content {\n    @include cdr-form-group-content-mixin;\n  }"]
     },
     {
       "name": "error",
-      "html": "<fieldset class=\"cdr-form-group-error\"><legend>form group title</legend><div class=\"cdr-form-group-content\"><input/><input/></div></fieldset>",
+      "html": "<fieldset class=\"cdr-form-group-error\">\n  <legend>form group title</legend>\n  <div class=\"cdr-form-group-content\"><input/><input/></div>\n</fieldset>",
       "scss": ["@include cdr-form-group-base-mixin;", ".cdr-form-group-content {\n    @include cdr-form-group-content-mixin;\n    @include cdr-form-group-error-mixin;\n  }"]
     }
   ]

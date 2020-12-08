@@ -8,12 +8,12 @@
   "examples": [
     {
       "name": "ordered",
-      "html": "<ol class=\"cdr-list-ordered\"><li>one</li><li>two</li><li>three</li></ol>",
+      "html": "<ol class=\"cdr-list-ordered\">\n  <li>one</li>\n  <li>two</li>\n  <li>three</li>\n</ol>",
       "scss": ["@include cdr-list-base-mixin;", "@include cdr-list-ordered-mixin;"]
     },
     {
       "name": "unordered",
-      "html": "<ul class=\"cdr-list-unordered\"><li>one</li><li>two</li><li>three</li></ul>",
+      "html": "<ul class=\"cdr-list-unordered\">\n  <li>one</li>\n  <li>two</li>\n  <li>three</li>\n</ul>",
       "scss": ["@include cdr-list-base-mixin;", "@include cdr-list-unordered-mixin;"]
     }
   ]

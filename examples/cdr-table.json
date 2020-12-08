@@ -7,7 +7,7 @@
   "examples": [
     {
       "name": "default",
-      "html": "<table class=\"cdr-table-default\"><tr><th>Test head</th></tr><tr><td>Test content</td></tr></table>",
+      "html": "<table class=\"cdr-table-default\">\n  <tr><th>Test head</th></tr>\n  <tr><td>Test content</td></tr>\n</table>",
       "scss": ["@include cdr-table-base-mixin;"]
     }
   ]

@@ -8,7 +8,7 @@
   "examples": [
     {
       "name": "default",
-      "html": "<div class=\"cdr-card-default\">card default</div>",
+      "html": "<div class=\"cdr-card-default\">\n  card default\n</div>",
       "scss": ["@include cdr-card-base-mixin;"]
     }
   ]

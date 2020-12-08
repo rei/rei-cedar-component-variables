@@ -7,7 +7,7 @@
   "examples": [
     {
       "name": "default",
-      "html": "<a href=\"cdr-breadcrumb-default\">breadcrumb</a>",
+      "html": "<a href=\"cdr-breadcrumb-default\">\n  breadcrumb\n</a>",
       "scss": [
         "@include cdr-breadcrumb-item-mixin;",
         "@include cdr-breadcrumb-item-linked-mixin;",

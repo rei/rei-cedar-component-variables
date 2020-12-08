@@ -18,27 +18,27 @@
     },
     {
       "name": "sale",
-      "html": "<button class=\"cdr-button-sale\">sale</button>",
+      "html": "<button class=\"cdr-button-sale\">\n  sale\n</button>",
       "scss": ["@include cdr-button-base-mixin;", "@include cdr-button-sale-mixin;"]
     },
     {
       "name": "dark",
-      "html": "<button class=\"cdr-button-dark\">dark</button>",
+      "html": "<button class=\"cdr-button-dark\">\n  dark\n</button>",
       "scss": ["@include cdr-button-base-mixin;", "@include cdr-button-dark-mixin;"]
     },
     {
       "name": "primary-small",
-      "html": "<button class=\"cdr-button-primary-small\">primary-small</button>",
+      "html": "<button class=\"cdr-button-primary-small\">\n  primary-small\n</button>",
       "scss": ["@include cdr-button-base-mixin;", "@include cdr-button-primary-mixin;", "@include cdr-button-small-mixin;"]
     },
     {
       "name": "secondary-medium",
-      "html": "<button class=\"cdr-button-secondary-medium\">secondary-medium</button>",
+      "html": "<button class=\"cdr-button-secondary-medium\">\n  secondary-medium\n</button>",
       "scss": ["@include cdr-button-base-mixin;", "@include cdr-button-secondary-mixin;", "@include cdr-button-medium-mixin;"]
     },
     {
       "name": "primary-large",
-      "html": "<button class=\"cdr-button-primary-large\">primary-large</button>",
+      "html": "<button class=\"cdr-button-primary-large\">\n  primary-large\n</button>",
       "scss": ["@include cdr-button-base-mixin;", "@include cdr-button-primary-mixin;", "@include cdr-button-large-mixin;"]
     }
   ]

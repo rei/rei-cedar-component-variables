@@ -7,22 +7,22 @@
   "examples": [
     {
       "name": "success",
-      "html": "<div class=\"cdr-alert-success\">success!</div>",
+      "html": "<div class=\"cdr-alert-success\">\n  success!\n</div>",
       "scss": ["@include cdr-alert-base-mixin;", "@include cdr-alert-success-mixin;"]
     },
     {
       "name": "info",
-      "html": "<div class=\"cdr-alert-info\">info!</div>",
+      "html": "<div class=\"cdr-alert-info\">\n  info!\n</div>",
       "scss": ["@include cdr-alert-base-mixin;", "@include cdr-alert-info-mixin;"]
     },
     {
       "name": "warning",
-      "html": "<div class=\"cdr-alert-warning\">warning!</div>",
+      "html": "<div class=\"cdr-alert-warning\">\n  warning!\n</div>",
       "scss": ["@include cdr-alert-base-mixin;", "@include cdr-alert-warning-mixin;"]
     },
     {
       "name": "error",
-      "html": "<div class=\"cdr-alert-error\">error!</div>",
+      "html": "<div class=\"cdr-alert-error\">\n  error!\n</div>",
       "scss": ["@include cdr-alert-base-mixin;", "@include cdr-alert-error-mixin;"]
     }
   ]
