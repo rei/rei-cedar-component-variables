@@ -6,17 +6,17 @@
   "examples": [
     {
       "name": "default",
-      "html": "<label class=\"cdr-label-wrapper-default\"><input type=\"checkbox\"/> Default label</label>",
+      "html": "<label class=\"cdr-label-wrapper-default\">\n  <input type=\"checkbox\"/> Default label\n</label>",
       "scss": ["@include cdr-label-wrapper-base-mixin;", "@include cdr-label-wrapper-primary-mixin;"]
     },
     {
       "name": "secondary-bg",
-      "html": "<label class=\"cdr-label-wrapper-secondary-bg\"><input type=\"radio\"/> Label on secondary background</label>",
+      "html": "<label class=\"cdr-label-wrapper-secondary-bg\">\n  <input type=\"radio\"/> Label on secondary background\n</label>",
       "scss": ["@include cdr-label-wrapper-base-mixin;", "@include cdr-label-wrapper-secondary-mixin;"]
     },
     {
       "name": "disabled",
-      "html": "<label class=\"cdr-label-wrapper-disabled\"><input type=\"checkbox\" disabled/> Disabled label</label>",
+      "html": "<label class=\"cdr-label-wrapper-disabled\">\n  <input type=\"checkbox\" disabled/> Disabled label\n</label>",
       "scss": ["@include cdr-label-wrapper-base-mixin;",  "@include cdr-label-wrapper-disabled-mixin;"]
     }
   ]

@@ -20,7 +20,7 @@ module.exports = {
   CdrButton,
   CdrCard,
   // CdrCheckbox,
-  // CdrFormError,
+  CdrFormError,
   CdrFormGroup,
   CdrInput,
   CdrLabelStandalone,

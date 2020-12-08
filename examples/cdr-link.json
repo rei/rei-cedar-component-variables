@@ -5,12 +5,12 @@
   "examples": [
     {
       "name": "default",
-      "html": "<a href=\"#\" class=\"cdr-link-default\">link default</a>",
+      "html": "<a href=\"#\" class=\"cdr-link-default\">\n  link default\n</a>",
       "scss": ["@include cdr-link-base-mixin;"]
     },
     {
       "name": "standalone",
-      "html": "<a href=\"#\" class=\"cdr-link-standalone\">link standalone</a>",
+      "html": "<a href=\"#\" class=\"cdr-link-standalone\">\n  link standalone\n</a>",
       "scss": ["@include cdr-link-base-mixin;", "@include cdr-link-standalone-mixin;"]
     }
   ]
