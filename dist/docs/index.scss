@@ -67,6 +67,10 @@
   @include cdr-card-base-mixin;
 }
 
+.cdr-form-error-default {
+  @include cdr-form-error-base-mixin;
+}
+
 .cdr-form-group-default {
   @include cdr-form-group-base-mixin;
   .cdr-form-group-content {
