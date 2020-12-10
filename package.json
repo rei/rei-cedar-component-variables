@@ -1,23 +1,17 @@
 {
   "name": "@rei/cdr-component-variables",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Style variables exported from Cedar components",
   "style": "dist/scss/index.scss",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build:docs": "npm run build:stylesheet && vue-cli-service build && node ./build/deploy-docs.js",
-    "build:stylesheet": "node ./build/build-stylesheet.js",
+    "build:docs-data": "node ./build/build-docs-data.js",
+    "build:svg": "postcss dist/scss/*.scss -r -u postcss-inline-svg --parser postcss-scss",
     "build:less": "sass2less dist/scss/*.scss 'dist/less/{name}.less' && node ./build/build-less.js",
-    "lint": "vue-cli-service lint",
-    "prepublishOnly": "npm run build:less",
-    "postpublish": "npm run build:docs",
-    "prerelease": "npm-publish-prerelease",
-    "dev": "npm run build:stylesheet && vue-cli-service serve",
-    "reference": "backstop reference",
-    "compare": "backstop test",
-    "approve": "backstop approve"
+    "prepublishOnly": "npm run build:less && npm run build:docs-data",
+    "prerelease": "npm-publish-prerelease"
   },
   "private": false,
   "publishConfig": {
@@ -30,50 +24,18 @@
   "homepage": "https://rei.github.io/rei-cedar-component-variables/#/",
   "author": "REI Software Engineering",
   "license": "MIT",
-  "dependencies": {
-    "@rei/cdr-tokens": "^5.0.0",
-    "@rei/cedar": "^6.0.0"
+  "peerDependencies": {
+    "@rei/cdr-tokens": "^7.0.1",
+    "@rei/cedar": "^7.0.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.3",
-    "@vue/cli-plugin-eslint": "^4.5.3",
-    "@vue/cli-service": "^4.5.3",
-    "babel-eslint": "^10.1.0",
-    "backstopjs": "^5.0.4",
-    "eslint": "^7.6.0",
-    "eslint-plugin-vue": "^6.2.2",
+    "@rei/cedar-icons": "^2.1.0",
     "fs-extra": "^9.0.1",
-    "gh-pages": "^3.1.0",
     "less-plugin-sass2less": "^1.2.0",
-    "lodash": "^4.17.20",
-    "node-sass": "^4.14.1",
     "npm-publish-prerelease": "^1.0.2",
-    "sass-loader": "^9.0.3",
-    "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+    "postcss": "^8.1.7",
+    "postcss-cli": "^8.3.0",
+    "postcss-inline-svg": "^5.0.0",
+    "postcss-scss": "^3.0.4"
+  }
 }

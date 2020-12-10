@@ -8,10 +8,8 @@
   "examples": [
     {
       "name": "default",
-      "tag": "div",
-      "styles": ["@include cdr-card-base-mixin;"],
-      "attrs": {
-      }
+      "html": "<div class=\"cdr-card-default\">\n  <a href=\"#\" class=\"link\">default card</a>\n</div>",
+      "scss": ["@include cdr-card-base-mixin;", ".link {\n  @include cdr-card-link-mixin;\n}"]
     }
   ]
 }

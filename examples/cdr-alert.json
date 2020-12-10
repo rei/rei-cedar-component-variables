@@ -7,35 +7,23 @@
   "examples": [
     {
       "name": "success",
-      "tag": "div",
-      "styles": ["@include cdr-alert-base-mixin;", "@include cdr-alert-success-mixin;"],
-      "attrs": {
-        "type": "success"
-      }
+      "html": "<div class=\"cdr-alert-success\">\n  success!\n</div>",
+      "scss": ["@include cdr-alert-base-mixin;", "@include cdr-alert-success-mixin;"]
     },
     {
       "name": "info",
-      "tag": "div",
-      "styles": ["@include cdr-alert-base-mixin;", "@include cdr-alert-info-mixin;"],
-      "attrs": {
-        "type": "info"
-      }
+      "html": "<div class=\"cdr-alert-info\">\n  info!\n</div>",
+      "scss": ["@include cdr-alert-base-mixin;", "@include cdr-alert-info-mixin;"]
     },
     {
       "name": "warning",
-      "tag": "div",
-      "styles": ["@include cdr-alert-base-mixin;", "@include cdr-alert-warning-mixin;"],
-      "attrs": {
-        "type": "warning"
-      }
+      "html": "<div class=\"cdr-alert-warning\">\n  warning!\n</div>",
+      "scss": ["@include cdr-alert-base-mixin;", "@include cdr-alert-warning-mixin;"]
     },
     {
       "name": "error",
-      "tag": "div",
-      "styles": ["@include cdr-alert-base-mixin;", "@include cdr-alert-error-mixin;"],
-      "attrs": {
-        "type": "error"
-      }
+      "html": "<div class=\"cdr-alert-error\">\n  error!\n</div>",
+      "scss": ["@include cdr-alert-base-mixin;", "@include cdr-alert-error-mixin;"]
     }
   ]
 }

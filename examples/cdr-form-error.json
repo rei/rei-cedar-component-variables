@@ -1,0 +1,13 @@
+{
+  "name": "cdr-form-error",
+  "notes": [
+    "Error messaging for form inputs"
+  ],
+  "examples": [
+    {
+      "name": "default",
+      "html": "<div class=\"cdr-form-error-default\">\n  Form Error\n</div>",
+      "scss": ["@include cdr-form-error-base-mixin;"]
+    }
+  ]
+}

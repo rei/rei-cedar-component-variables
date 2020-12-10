@@ -1,28 +1,25 @@
 {
   "name": "cdr-checkbox",
   "notes": [
-    "styles/svg for the checkbox input are not currently exported",
-    "cdr-radio and cdr-checkbox both make use of the cdr-label mixins",
-    "examples assume that the <input/> element is inside of the <label>"
   ],
   "docs": "https://rei.github.io/rei-cedar-docs/components/checkbox/",
   "examples": [
     {
-      "name": "default",
-      "tag": "label",
-      "styles": ["@include cdr-label-base-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"],
-      "preContent": "<input type=\"checkbox\"/>",
-      "attrs": {
-      }
-    },
-    {
-      "name": "compact",
-      "tag": "label",
-      "styles": ["@include cdr-label-base-mixin;", "@include cdr-label-small-mixin;", "& input { margin-right: $cdr-label-base-spacing; }"],
-      "preContent": "<input type=\"checkbox\"/>",
-      "attrs": {
-        "modifier": "compact"
-      }
+      "name": "dynamic",
+      "html": "<div class=\"cdr-checkbox-dynamic\"><input type=\"checkbox\"/><div class=\"cdr-checkbox-figure\"/></div>",
+      "scss": [
+        "position: relative;",
+        "input {\n  position: absolute; opacity: 0; z-index: -1;\n}",
+        ".cdr-checkbox-figure {\n  @include cdr-form-figure-base-mixin;\n}",
+        "input:checked ~ .cdr-checkbox-figure {\n  @include cdr-form-figure-checkbox-checked-mixin;\n}",
+        "input:hover ~ .cdr-checkbox-figure {\n  @include cdr-form-figure-checkbox-hover-mixin;\n}",
+        "input:checked:hover ~ .cdr-checkbox-figure {\n  @include cdr-form-figure-checkbox-checked-hover-mixin;\n}",
+        "input:disabled ~ .cdr-checkbox-figure {\n  @include cdr-form-figure-checkbox-disabled-mixin;\n}",
+        "input:checked:disabled ~ .cdr-checkbox-figure {\n  @include cdr-form-figure-checkbox-checked-disabled-mixin;\n}",
+        "input:focus ~ .cdr-checkbox-figure {\n  @include cdr-form-figure-checkbox-focus-mixin;\n}",
+        "input:checked:focus ~ .cdr-checkbox-figure {\n  @include cdr-form-figure-checkbox-checked-focus-mixin;\n}",
+        "input:active ~ .cdr-checkbox-figure {\n  @include cdr-form-figure-checkbox-active-mixin;\n}"
+      ]
     }
   ]
 }

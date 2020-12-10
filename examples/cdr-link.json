@@ -5,18 +5,13 @@
   "examples": [
     {
       "name": "default",
-      "tag": "a",
-      "styles": ["@include cdr-link-base-mixin;"],
-      "attrs": {
-      }
+      "html": "<a href=\"#\" class=\"cdr-link-default\">\n  link default\n</a>",
+      "scss": ["@include cdr-link-base-mixin;"]
     },
     {
       "name": "standalone",
-      "tag": "a",
-      "styles": ["@include cdr-link-base-mixin;", "@include cdr-link-standalone-mixin;"],
-      "attrs": {
-        "modifier": "standalone"
-      }
+      "html": "<a href=\"#\" class=\"cdr-link-standalone\">\n  link standalone\n</a>",
+      "scss": ["@include cdr-link-base-mixin;", "@include cdr-link-standalone-mixin;"]
     }
   ]
 }
