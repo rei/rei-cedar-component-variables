@@ -81,7 +81,7 @@ $default-outline: 0.2rem solid Highlight;
   text-transform: none;
   vertical-align: middle;
 
-  transition: box-shadow $cdr-duration-2-x $cdr-timing-function-ease, background-color $cdr-duration-2-x $cdr-timing-function-ease, color $cdr-duration-2-x $cdr-timing-function-ease;
+  transition: box-shadow $cdr-duration-2-x $cdr-timing-function-ease, background-color $cdr-duration-2-x $cdr-timing-function-ease, color $cdr-duration-2-x $cdr-timing-function-ease, fill $cdr-duration-2-x $cdr-timing-function-ease;
 
   &:hover, &:active, &:focus {
     outline: none;
@@ -499,6 +499,121 @@ $default-outline: 0.2rem solid Highlight;
     top: 0;
     background-color: transparent;
   }
+}
+
+@mixin cdr-chip-base-mixin() {
+  margin: $cdr-space-half-x;
+  width: max-content;
+  padding: $cdr-space-half-x $cdr-space-three-quarter-x;
+  border-radius: 30px; // TODO: cdr-radius-softest? cdr-radius-chip?
+  border: 0;
+
+  // TODO: use tokens here or make a new mixin
+  font-family: Graphik App;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: -0.08px;
+
+  transition: color $cdr-duration-2-x $cdr-timing-function-ease, fill $cdr-duration-2-x $cdr-timing-function-ease, background-color $cdr-duration-2-x $cdr-timing-function-ease, border $cdr-duration-2-x $cdr-timing-function-ease;
+  &:focus {
+    outline: none;
+    outline-offset: 0;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+@mixin cdr-chip-icon-left-mixin() {
+  margin-right: $cdr-space-eighth-x;
+}
+
+@mixin cdr-chip-icon-right-mixin() {
+  margin-left: $cdr-space-eighth-x;
+}
+
+@mixin cdr-chip-default-mixin() {
+  color: $cdr-color-text-chip-default;
+  fill: $cdr-color-text-chip-default;
+  background-color: $cdr-color-background-chip-default;
+  box-shadow: inset 0 0 0 1px $cdr-color-border-chip-default-rest;
+
+  &:hover {
+    box-shadow: inset 0 0 0 2px $cdr-color-border-chip-default-hover, $cdr-prominence-raised;
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px $cdr-color-border-chip-default-focus, $cdr-prominence-raised;
+  }
+
+  &:active {
+    background-color: $cdr-color-background-chip-default-active;
+    box-shadow: inset 0 0 0 2px $cdr-color-border-chip-default-active, inset 0 0 0 4px $cdr-color-border-chip-default-active-inset;
+    color: $cdr-color-text-chip-default-active;
+    fill: $cdr-color-text-chip-default-active;
+  }
+
+  &[aria-pressed="true"], &[aria-checked="true"] {
+    background-color: $cdr-color-background-chip-default-selected;
+    box-shadow: inset 0 0 0 2px $cdr-color-border-chip-default-selected-rest, inset 0 0 0 4px $cdr-color-border-chip-default-selected-rest-inset;
+    color: $cdr-color-text-chip-default-selected;
+    fill: $cdr-color-text-chip-default-selected;
+  }
+
+  &[aria-pressed="true"]:hover,
+  &[aria-pressed="true"]:focus,
+  &[aria-checked="true"]:hover,
+  &[aria-checked="true"]:focus  {
+    box-shadow: inset 0 0 0 2px $cdr-color-border-chip-default-selected-hover-focus, inset 0 0 0 4px $cdr-color-border-chip-default-selected-hover-focus-inset, $cdr-prominence-elevated;
+  }
+
+}
+
+@mixin cdr-chip-emphasis-mixin() {
+  color: $cdr-color-text-chip-emphasis;
+  fill: $cdr-color-text-chip-emphasis;
+  background-color: $cdr-color-background-chip-emphasis;
+  box-shadow: inset 0 0 0 1px $cdr-color-border-chip-emphasis-rest;
+
+  &:hover {
+    box-shadow: inset 0 0 0 2px $cdr-color-border-chip-emphasis-hover, $cdr-prominence-raised;
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px $cdr-color-border-chip-emphasis-focus, $cdr-prominence-raised;
+  }
+
+  &:active {
+    background-color: $cdr-color-background-chip-emphasis-active;
+    box-shadow: inset 0 0 0 2px $cdr-color-border-chip-emphasis-active;
+    color: $cdr-color-text-chip-emphasis-active;
+    fill: $cdr-color-text-chip-emphasis-active;
+  }
+
+  &[aria-pressed="true"], &[aria-checked="true"] {
+    background-color: $cdr-color-background-chip-emphasis-selected-rest;
+    box-shadow: inset 0 0 0 2px $cdr-color-border-chip-emphasis-selected-rest;
+    color: $cdr-color-text-chip-emphasis-selected;
+    fill: $cdr-color-text-chip-emphasis-selected;
+  }
+
+  &[aria-pressed="true"]:hover,
+  &[aria-pressed="true"]:focus,
+  &[aria-checked="true"]:hover,
+  &[aria-checked="true"]:focus {
+    box-shadow: inset 0 0 0 2px $cdr-color-border-chip-emphasis-selected-focus, $cdr-prominence-raised;
+    color: $cdr-color-text-chip-emphasis-selected-hover-focus;
+  }
+
+  &[aria-pressed="true"]:hover, &[aria-checked="true"]:hover {
+    box-shadow: inset 0 0 0 2px $cdr-color-border-chip-emphasis-selected-hover, $cdr-prominence-raised;
+  }
+
+  &[aria-pressed="true"]:focus, &[aria-checked="true"]:hover {
+    box-shadow: inset 0 0 0 2px $cdr-color-border-chip-emphasis-selected-focus, $cdr-prominence-raised;
+  }
+
 }
 
 @mixin cdr-breadcrumb-item-mixin() {
@@ -1096,201 +1211,6 @@ $default-outline: 0.2rem solid Highlight;
 @mixin cdr-select-error-mixin() {
   background-color: $cdr-color-background-input-error;
   box-shadow: inset 0 0 0 1px $cdr-color-border-input-error;
-}
-
-@mixin cdr-cta-base-mixin() {
-  // TODO: custom type token? use button type token?
-  font-family: $cdr-font-family-sans;
-  font-style: normal;
-  font-weight: 500;
-  letter-spacing: -.08px;
-  font-size: 16px;
-  line-height: 22px;
-
-  border: none;
-  border-radius: $cdr-radius-softer;
-  cursor: pointer;
-  display: inline-flex;
-  outline: none;
-  padding: $cdr-space-inset-one-and-a-half-x-squish;
-  padding-right: $cdr-space-one-x;
-  text-align: left;
-  text-transform: none;
-  text-decoration: none;
-
-  transition: box-shadow $cdr-duration-2-x $cdr-timing-function-ease, background-color $cdr-duration-2-x $cdr-timing-function-ease, color $cdr-duration-2-x $cdr-timing-function-ease;
-
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none;
-  }
-
-  &:focus {
-    outline: $default-outline;
-    outline-color: -webkit-focus-ring-color;
-    outline-offset: 0;
-  }
-}
-
-@mixin cdr-cta-base-icon-mixin() {
-  align-self: center;
-  display: inline-block;
-  fill: inherit;
-  height: $cdr-icon-size;
-  width: $cdr-icon-size;
-  margin-left: $cdr-space-quarter-x;
-  vertical-align: middle;
-  flex: 0 0 auto;
-}
-
-
-@mixin cdr-cta-full-width-mixin() {
-  justify-content: center;
-  width: 100%;
-}
-
-
-@mixin cdr-cta-brand-mixin() {
-  background-color: $cdr-color-background-cta-brand-rest;
-  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-brand-rest;
-  color: $cdr-color-text-cta-brand;
-  fill: $cdr-color-text-cta-brand;
-
-  &:hover,
-  &:focus {
-    color: $cdr-color-text-cta-brand-hover;
-    fill: $cdr-color-text-cta-brand-hover;
-    background-color: $cdr-color-background-cta-brand-hover;
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-brand-hover, $cdr-prominence-raised;
-  }
-
-  &:active {
-    color: $cdr-color-text-cta-brand-active;
-    fill: $cdr-color-text-cta-brand-active;
-    background-color: $cdr-color-background-cta-brand-active;
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-brand-active,  inset 0 0 0 5px $cdr-color-border-cta-brand-active-inset;
-  }
-}
-
-@mixin cdr-cta-dark-mixin() {
-  background-color: $cdr-color-background-cta-dark-rest;
-  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-dark-rest;
-  color: $cdr-color-text-cta-dark;
-  fill: $cdr-color-text-cta-dark;
-
-  &:hover,
-  &:focus {
-    color: $cdr-color-text-cta-dark-hover;
-    fill: $cdr-color-text-cta-dark-hover;
-    background-color: $cdr-color-background-cta-dark-hover;
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-dark-hover, $cdr-prominence-raised;
-  }
-
-  &:active {
-    color: $cdr-color-text-cta-dark-active;
-    fill: $cdr-color-text-cta-dark-active;
-    background-color: $cdr-color-background-cta-dark-active;
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-dark-active,  inset 0 0 0 5px $cdr-color-border-cta-dark-active-inset;
-  }
-}
-
-@mixin cdr-cta-sale-mixin() {
-  background-color: $cdr-color-background-cta-sale-rest;
-  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-sale-rest;
-  color: $cdr-color-text-cta-sale;
-  fill: $cdr-color-text-cta-sale;
-
-
-  &:hover,
-  &:focus {
-    color: $cdr-color-text-cta-sale-hover;
-    fill: $cdr-color-text-cta-sale-hover;
-    background-color: $cdr-color-background-cta-sale-hover;
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-sale-hover, $cdr-prominence-raised;
-  }
-
-  &:active {
-    color: $cdr-color-text-cta-sale-active;
-    fill: $cdr-color-text-cta-sale-active;
-    background-color: $cdr-color-background-cta-sale-active;
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-sale-active,  inset 0 0 0 5px $cdr-color-border-cta-sale-active-inset;
-  }
-}
-
-
-@mixin cdr-cta-light-mixin() {
-  background-color: $cdr-color-background-cta-light-rest;
-  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-rest;
-  color: $cdr-color-text-cta-light;
-  fill: $cdr-color-text-cta-light;
-
-  &:hover,
-  &:focus {
-    color: $cdr-color-text-cta-light-hover;
-    fill: $cdr-color-text-cta-light-hover;
-    background-color: $cdr-color-background-cta-light-hover;
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-light-hover, $cdr-prominence-raised;
-  }
-
-  &:active {
-    color: $cdr-color-text-cta-light-active;
-    fill: $cdr-color-text-cta-light-active;
-    background-color: $cdr-color-background-cta-light-active;
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-light-active, inset 0 0 0 5px $cdr-color-border-cta-light-active-inset;
-  }
-}
-
-@mixin cdr-cta-light-elevated-mixin() {
-  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-light-rest, $cdr-prominence-elevated;
-
-  &:hover,
-  &:focus {
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-light-hover, $cdr-prominence-floating;
-  }
-
-  &:active {
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-light-active, inset 0 0 0 5px $cdr-color-border-cta-light-active-inset, $cdr-prominence-raised;
-  }
-}
-
-@mixin cdr-cta-brand-elevated-mixin() {
-  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-brand-rest, $cdr-prominence-elevated;
-
-  &:hover,
-  &:focus {
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-brand-hover, $cdr-prominence-floating;
-  }
-
-  &:active {
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-brand-active, inset 0 0 0 5px $cdr-color-border-cta-brand-active-inset, $cdr-prominence-raised;
-  }
-}
-
-@mixin cdr-cta-dark-elevated-mixin() {
-  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-dark-rest, $cdr-prominence-elevated;
-
-  &:hover,
-  &:focus {
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-dark-hover, $cdr-prominence-floating;
-  }
-
-  &:active {
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-dark-active, inset 0 0 0 5px $cdr-color-border-cta-dark-active-inset, $cdr-prominence-raised;
-  }
-}
-
-@mixin cdr-cta-sale-elevated-mixin() {
-  box-shadow: inset 0 0 0 1px $cdr-color-border-cta-sale-rest, $cdr-prominence-elevated;
-
-  &:hover,
-  &:focus {
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-sale-hover, $cdr-prominence-floating;
-  }
-
-  &:active {
-    box-shadow: inset 0 0 0 3px $cdr-color-border-cta-sale-active, inset 0 0 0 5px $cdr-color-border-cta-sale-active-inset, $cdr-prominence-raised;
-  }
 }
 
 @mixin cdr-list-base-mixin() {
