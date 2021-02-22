@@ -1,0 +1,20 @@
+{
+  "name": "cdr-chip",
+  "notes": [
+    "All Cedar buttons must use the 'base' mixin as well as either the 'default' or 'emphasis' mixin.",
+    "See the CdrChip docs page for more information on accessibility requirements for chips"
+  ],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/chips/",
+  "examples": [
+    {
+      "name": "default",
+      "html": "<button class=\"cdr-chip-default\">default</button>",
+      "scss": ["@include cdr-chip-base-mixin;", "@include cdr-chip-default-mixin;"]
+    },
+    {
+      "name": "emphasis",
+      "html": "<button class=\"cdr-chip-emphasis\">emphasis</button>",
+      "scss": ["@include cdr-chip-base-mixin;", "@include cdr-chip-emphasis-mixin;"]
+    }
+  ]
+}
