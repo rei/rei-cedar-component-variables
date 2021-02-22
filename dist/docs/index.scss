@@ -89,6 +89,35 @@
   }
 }
 
+.cdr-grid-default {
+  @include cdr-grid-base-mixin;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cdr-grid-gutter-none {
+  @include cdr-grid-base-mixin;
+  @include cdr-grid-gutter-none-mixin;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cdr-grid-guttter-small {
+  @include cdr-grid-base-mixin;
+  @include cdr-grid-gutter-small-mixin;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cdr-grid-guttter-medium {
+  @include cdr-grid-base-mixin;
+  @include cdr-grid-gutter-medium-mixin;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cdr-grid-guttter-large {
+  @include cdr-grid-base-mixin;
+  @include cdr-grid-gutter-large-mixin;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .cdr-input-default {
   @include cdr-input-base-mixin;
   @include cdr-input-primary-mixin;

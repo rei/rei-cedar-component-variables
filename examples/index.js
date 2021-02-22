@@ -7,6 +7,7 @@ const CdrSelect = require('./cdr-select');
 const CdrLabelStandalone = require('./cdr-label-standalone');
 const CdrLabelWrapper = require('./cdr-label-wrapper');
 const CdrFormError = require('./cdr-form-error');
+const CdrGrid = require('./cdr-grid');
 const CdrList = require('./cdr-list');
 const CdrCard = require('./cdr-card');
 const CdrBreadcrumb = require('./cdr-breadcrumb');
@@ -22,6 +23,7 @@ module.exports = {
   // CdrCheckbox,
   CdrFormError,
   CdrFormGroup,
+  CdrGrid,
   CdrInput,
   CdrLabelStandalone,
   CdrLabelWrapper,
