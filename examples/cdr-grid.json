@@ -1,0 +1,34 @@
+{
+  "name": "cdr-grid",
+  "notes": [
+    "CdrGrid is a simple CSS grid wrapper component"
+  ],
+  "docs": "https://rei.github.io/rei-cedar-docs/components/grid/",
+  "examples": [
+    {
+      "name": "default",
+      "html": "<div class=\"cdr-grid-default\"><div>a</div><div>b</div><div>c</div></div>",
+      "scss": ["@include cdr-grid-base-mixin;", "grid-template-columns: 1fr 1fr 1fr;"]
+    },
+    {
+      "name": "gutter-none",
+      "html": "<div class=\"cdr-grid-gutter-none\"><div>a</div><div>b</div><div>c</div></div>",
+      "scss": ["@include cdr-grid-base-mixin;", "@include cdr-grid-gutter-none-mixin;", "grid-template-columns: 1fr 1fr 1fr;"]
+    },
+    {
+      "name": "guttter-small",
+      "html": "<div class=\"cdr-grid-gutter-small\"><div>a</div><div>b</div><div>c</div></div>",
+      "scss": ["@include cdr-grid-base-mixin;", "@include cdr-grid-gutter-small-mixin;", "grid-template-columns: 1fr 1fr 1fr;"]
+    },
+    {
+      "name": "guttter-medium",
+      "html": "<div class=\"cdr-grid-guttter-medium\"><div>a</div><div>b</div><div>c</div></div>",
+      "scss": ["@include cdr-grid-base-mixin;", "@include cdr-grid-gutter-medium-mixin;", "grid-template-columns: 1fr 1fr 1fr;"]
+    },
+    {
+      "name": "guttter-large",
+      "html": "<div class=\"cdr-grid-gutter-large\"><div>a</div><div>b</div><div>c</div></div>",
+      "scss": ["@include cdr-grid-base-mixin;", "@include cdr-grid-gutter-large-mixin;", "grid-template-columns: 1fr 1fr 1fr;"]
+    }
+  ]
+}
