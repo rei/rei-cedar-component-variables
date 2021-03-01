@@ -1,20 +1,24 @@
 {
   "name": "cdr-chip",
   "notes": [
-    "All Cedar buttons must use the 'base' mixin as well as either the 'default' or 'emphasis' mixin.",
     "See the CdrChip docs page for more information on accessibility requirements for chips"
   ],
   "docs": "https://rei.github.io/rei-cedar-docs/components/chips/",
   "examples": [
     {
       "name": "default",
-      "html": "<button class=\"cdr-chip-default\">default</button>",
-      "scss": ["@include cdr-chip-base-mixin;", "@include cdr-chip-default-mixin;"]
+      "html": "<button class=\"cdr-chip-default\">Default Chip</button>",
+      "scss": ["@include cdr-chip-base-mixin;"]
     },
     {
-      "name": "emphasis",
-      "html": "<button class=\"cdr-chip-emphasis\">emphasis</button>",
-      "scss": ["@include cdr-chip-base-mixin;", "@include cdr-chip-emphasis-mixin;"]
+      "name": "icon-left",
+      "html": "<button class=\"cdr-chip-icon-left\"><span class=\"cdr-chip-icon-left\">🍔</span> Chip with Icon</button>",
+      "scss": ["@include cdr-chip-base-mixin;", ".cdr-chip-icon-left { @include cdr-chip-icon-left-mixin; }"]
+    },
+    {
+      "name": "icon-right",
+      "html": "<button class=\"cdr-chip-icon-right\">Chip with Icon <span class=\"cdr-chip-icon-right\">🌮</span></button>",
+      "scss": ["@include cdr-chip-base-mixin;", ".cdr-chip-icon-right { @include cdr-chip-icon-right-mixin; }"]
     }
   ]
 }
