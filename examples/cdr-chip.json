@@ -12,13 +12,13 @@
     },
     {
       "name": "icon-left",
-      "html": "<button class=\"cdr-chip-icon-left\"><span class=\"cdr-chip-icon-left\">🍔</span> Chip with Icon</button>",
-      "scss": ["@include cdr-chip-base-mixin;", ".cdr-chip-icon-left { @include cdr-chip-icon-left-mixin; }"]
+      "html": "<button class=\"cdr-chip-icon-left\"><span class=\"cdr-chip-icon-left-icon\">🍔</span> Chip with Icon</button>",
+      "scss": ["@include cdr-chip-base-mixin;", ".cdr-chip-icon-left-icon { @include cdr-chip-icon-left-mixin; }"]
     },
     {
       "name": "icon-right",
-      "html": "<button class=\"cdr-chip-icon-right\">Chip with Icon <span class=\"cdr-chip-icon-right\">🌮</span></button>",
-      "scss": ["@include cdr-chip-base-mixin;", ".cdr-chip-icon-right { @include cdr-chip-icon-right-mixin; }"]
+      "html": "<button class=\"cdr-chip-icon-right\">Chip with Icon <span class=\"cdr-chip-icon-right-icon\">🌮</span></button>",
+      "scss": ["@include cdr-chip-base-mixin;", ".cdr-chip-icon-right-icon { @include cdr-chip-icon-right-mixin; }"]
     }
   ]
 }

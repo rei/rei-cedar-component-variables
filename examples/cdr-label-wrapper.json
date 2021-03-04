@@ -1,7 +1,8 @@
 {
   "name": "cdr-label-wrapper",
   "notes": [
-    "wrapper label element for radio and checkbox inputs"
+    "Wrapper label element for radio and checkbox inputs",
+    "See also the CdrRadio and CdrCheckbox input examples"
   ],
   "examples": [
     {

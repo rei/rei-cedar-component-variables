@@ -1,15 +1,16 @@
 {
   "name": "cdr-checkbox",
   "notes": [
+    "See also the CdrLabelWrapper examples"
   ],
   "docs": "https://rei.github.io/rei-cedar-docs/components/checkbox/",
   "examples": [
     {
       "name": "dynamic",
-      "html": "<div class=\"cdr-checkbox-dynamic\"><input type=\"checkbox\"/><div class=\"cdr-checkbox-figure\"/></div>",
+      "html": "<label class=\"cdr-checkbox-dynamic\"><input type=\"checkbox\"></input><div class=\"cdr-checkbox-figure\"></div> checkbox label</label>",
       "scss": [
-        "position: relative;",
-        "input {\n  position: absolute; opacity: 0; z-index: -1;\n}",
+        "@include cdr-label-wrapper-base-mixin;", "@include cdr-label-wrapper-primary-mixin;",
+        "input {\n  @include cdr-label-wrapper-input-mixin;\n}",
         ".cdr-checkbox-figure {\n  @include cdr-form-figure-base-mixin;\n}",
         "input:checked ~ .cdr-checkbox-figure {\n  @include cdr-form-figure-checkbox-checked-mixin;\n}",
         "input:hover ~ .cdr-checkbox-figure {\n  @include cdr-form-figure-checkbox-hover-mixin;\n}",

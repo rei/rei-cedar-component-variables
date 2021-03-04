@@ -86,14 +86,14 @@
   }
 
   thead {
-    // override body styling when head is present
+    /* override body styling when head is present*/
     & + tbody tr {
-      // striping rows
+      /* striping rows*/
       &:nth-child(even) {
         background-color: @cdr-color-background-table-row-alt;
       }
 
-      // disabled default
+      /* disabled default*/
       &:nth-child(odd) {
         background-color: @cdr-color-background-table-row;
       }
@@ -103,7 +103,7 @@
   tbody,
   tfoot {
     tr {
-      // striping rows
+      /* striping rows*/
       &:nth-child(odd) {
         background-color: @cdr-color-background-table-row-alt;
       }
