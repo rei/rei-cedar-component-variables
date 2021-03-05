@@ -1,7 +1,7 @@
 const CdrButton = require('./cdr-button');
 const CdrLink = require('./cdr-link');
-// const CdrCheckbox = require('./cdr-checkbox');
-// const CdrRadio = require('./cdr-radio');
+const CdrCheckbox = require('./cdr-checkbox');
+const CdrRadio = require('./cdr-radio');
 const CdrChip = require('./cdr-chip');
 const CdrInput = require('./cdr-input');
 const CdrSelect = require('./cdr-select');
@@ -21,7 +21,7 @@ module.exports = {
   CdrBreadcrumb,
   CdrButton,
   CdrCard,
-  // CdrCheckbox,
+  CdrCheckbox,
   CdrChip,
   CdrFormError,
   CdrFormGroup,
@@ -31,7 +31,7 @@ module.exports = {
   CdrLabelWrapper,
   CdrLink,
   CdrList,
-  // CdrRadio,
+  CdrRadio,
   CdrSelect,
   CdrTable,
 }
