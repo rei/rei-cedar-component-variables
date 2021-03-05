@@ -74,7 +74,7 @@
   @include cdr-label-wrapper-base-mixin;
   @include cdr-label-wrapper-primary-mixin;
   input {
-  @include cdr-label-wrapper-input-mixin;
+   position: absolute; opacity: 0; z-index: -1;
 }
   .cdr-checkbox-figure {
   @include cdr-form-figure-base-mixin;
@@ -257,7 +257,7 @@
   @include cdr-label-wrapper-base-mixin;
   @include cdr-label-wrapper-primary-mixin;
   input {
-  @include cdr-label-wrapper-input-mixin;
+  position: absolute; opacity: 0; z-index: -1;
 }
   .cdr-radio-figure {@include cdr-form-figure-base-mixin; @include cdr-form-figure-radio-base-mixin;}
   input:checked ~ .cdr-radio-figure {@include cdr-form-figure-radio-checked-mixin;}
