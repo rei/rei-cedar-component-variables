@@ -7,19 +7,8 @@
   background-color: $cdr-color-background-input-default;
   border-radius: $cdr-radius-softer;
   width: 100%;
+  display: inline-block;
   margin: 0;
-  display: flex;
-  align-items: flex-start;
-  flex-grow: 1;
-
-  position: relative;
-  user-select: none;
-}
-
-@mixin cdr-label-wrapper-input-mixin() {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
 }
 
 @mixin cdr-label-wrapper-primary-mixin() {
