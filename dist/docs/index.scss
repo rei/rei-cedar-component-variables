@@ -70,41 +70,6 @@
 }
 }
 
-.cdr-checkbox-dynamic {
-  @include cdr-label-wrapper-base-mixin;
-  @include cdr-label-wrapper-primary-mixin;
-  input {
-   position: absolute; opacity: 0; z-index: -1;
-}
-  .cdr-checkbox-figure {
-  @include cdr-form-figure-base-mixin;
-}
-  input:checked ~ .cdr-checkbox-figure {
-  @include cdr-form-figure-checkbox-checked-mixin;
-}
-  input:hover ~ .cdr-checkbox-figure {
-  @include cdr-form-figure-checkbox-hover-mixin;
-}
-  input:checked:hover ~ .cdr-checkbox-figure {
-  @include cdr-form-figure-checkbox-checked-hover-mixin;
-}
-  input:disabled ~ .cdr-checkbox-figure {
-  @include cdr-form-figure-checkbox-disabled-mixin;
-}
-  input:checked:disabled ~ .cdr-checkbox-figure {
-  @include cdr-form-figure-checkbox-checked-disabled-mixin;
-}
-  input:focus ~ .cdr-checkbox-figure {
-  @include cdr-form-figure-checkbox-focus-mixin;
-}
-  input:checked:focus ~ .cdr-checkbox-figure {
-  @include cdr-form-figure-checkbox-checked-focus-mixin;
-}
-  input:active ~ .cdr-checkbox-figure {
-  @include cdr-form-figure-checkbox-active-mixin;
-}
-}
-
 .cdr-chip-default {
   @include cdr-chip-base-mixin;
 }
@@ -251,23 +216,6 @@
 .cdr-list-unordered {
   @include cdr-list-base-mixin;
   @include cdr-list-unordered-mixin;
-}
-
-.cdr-radio-dynamic {
-  @include cdr-label-wrapper-base-mixin;
-  @include cdr-label-wrapper-primary-mixin;
-  input {
-  position: absolute; opacity: 0; z-index: -1;
-}
-  .cdr-radio-figure {@include cdr-form-figure-base-mixin; @include cdr-form-figure-radio-base-mixin;}
-  input:checked ~ .cdr-radio-figure {@include cdr-form-figure-radio-checked-mixin;}
-  input:hover ~ .cdr-radio-figure {@include cdr-form-figure-radio-hover-mixin;}
-  input:checked:hover ~ .cdr-radio-figure {@include cdr-form-figure-radio-checked-hover-mixin;}
-  input:disabled ~ .cdr-radio-figure {@include cdr-form-figure-radio-disabled-mixin;}
-  input:checked:disabled ~ .cdr-radio-figure {@include cdr-form-figure-radio-checked-disabled-mixin;}
-  input:focus ~ .cdr-radio-figure {@include cdr-form-figure-radio-focus-mixin;}
-  input:checked:focus ~ .cdr-radio-figure {@include cdr-form-figure-radio-checked-focus-mixin;}
-  input:active ~ .cdr-radio-figure {@include cdr-form-figure-radio-active-mixin;}
 }
 
 .cdr-select-default {
