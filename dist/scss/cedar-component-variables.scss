@@ -506,7 +506,6 @@ $default-outline: 0.2rem solid Highlight;
   align-items: center;
 
   position: relative;
-  margin: $cdr-space-quarter-x;
   width: max-content;
   padding: $cdr-space-half-x $cdr-space-three-quarter-x;
   border-radius: 30px; // TODO: cdr-radius-softest? cdr-radius-chip?
@@ -525,14 +524,14 @@ $default-outline: 0.2rem solid Highlight;
   font-weight: 400;
   letter-spacing: -0.08px;
 
-  transition: color $cdr-duration-2-x $cdr-timing-function-ease, fill $cdr-duration-2-x $cdr-timing-function-ease, background-color $cdr-duration-2-x $cdr-timing-function-ease, border $cdr-duration-2-x $cdr-timing-function-ease;
+  transition: color $cdr-duration-1-x $cdr-timing-function-ease, fill $cdr-duration-1-x $cdr-timing-function-ease, background-color $cdr-duration-1-x $cdr-timing-function-ease, box-shadow $cdr-duration-1-x $cdr-timing-function-ease;
 
 
-  &:disabled {
-    cursor: not-allowed;
-    background-color: $cdr-color-background-chip-default-disabled;
-    box-shadow: inset 0 0 0 1px $cdr-color-border-chip-default-disabled;
-    color: $cdr-color-text-chip-disabled;
+  &:disabled, &:disabled:hover, &:disabled:focus  {
+    cursor: not-allowed !important;
+    background-color: $cdr-color-background-chip-default-disabled !important;
+    box-shadow: inset 0 0 0 1px $cdr-color-border-chip-default-disabled !important;
+    color: $cdr-color-text-chip-disabled !important;
   }
 
   &:hover {
@@ -553,7 +552,7 @@ $default-outline: 0.2rem solid Highlight;
   }
 
   &[aria-pressed="true"], &[aria-checked="true"] {
-    font-weight: 500;
+    text-shadow: 0 0 1px currentColor;
     background-color: $cdr-color-background-chip-default-selected;
     box-shadow: inset 0 0 0 1px $cdr-color-border-chip-default-selected-rest;
   }
