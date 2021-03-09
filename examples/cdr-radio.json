@@ -10,7 +10,7 @@
       "html": "<label class=\"cdr-radio-dynamic\"><input type=\"radio\"></input><div class=\"cdr-radio-figure\"></div> Radio Label</label>",
       "scss": [
         "@include cdr-label-wrapper-base-mixin;", "@include cdr-label-wrapper-primary-mixin;",
-        "input {\n  @include cdr-label-wrapper-input-mixin;\n}",
+        "input {\n  position: absolute; opacity: 0; z-index: -1;\n}",
         ".cdr-radio-figure {@include cdr-form-figure-base-mixin; @include cdr-form-figure-radio-base-mixin;}",
         "input:checked ~ .cdr-radio-figure {@include cdr-form-figure-radio-checked-mixin;}",
         "input:hover ~ .cdr-radio-figure {@include cdr-form-figure-radio-hover-mixin;}",
