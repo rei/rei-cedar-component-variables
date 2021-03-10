@@ -70,8 +70,25 @@
 }
 }
 
+.cdr-chip-default {
+  @include cdr-chip-base-mixin;
+}
+
+.cdr-chip-icon-left {
+  @include cdr-chip-base-mixin;
+  .cdr-chip-icon-left-icon { @include cdr-chip-icon-left-mixin; }
+}
+
+.cdr-chip-icon-right {
+  @include cdr-chip-base-mixin;
+  .cdr-chip-icon-right-icon { @include cdr-chip-icon-right-mixin; }
+}
+
 .cdr-form-error-default {
   @include cdr-form-error-base-mixin;
+  .cdr-form-error-icon {
+  @include cdr-form-error-icon-mixin;
+}
 }
 
 .cdr-form-group-default {
@@ -87,6 +104,35 @@
     @include cdr-form-group-content-mixin;
     @include cdr-form-group-error-mixin;
   }
+}
+
+.cdr-grid-default {
+  @include cdr-grid-base-mixin;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cdr-grid-gutter-none {
+  @include cdr-grid-base-mixin;
+  @include cdr-grid-gutter-none-mixin;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cdr-grid-guttter-small {
+  @include cdr-grid-base-mixin;
+  @include cdr-grid-gutter-small-mixin;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cdr-grid-guttter-medium {
+  @include cdr-grid-base-mixin;
+  @include cdr-grid-gutter-medium-mixin;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cdr-grid-guttter-large {
+  @include cdr-grid-base-mixin;
+  @include cdr-grid-gutter-large-mixin;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .cdr-input-default {

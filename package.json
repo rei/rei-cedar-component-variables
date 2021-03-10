@@ -1,6 +1,6 @@
 {
   "name": "@rei/cdr-component-variables",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Style variables exported from Cedar components",
   "style": "dist/scss/index.scss",
   "files": [
@@ -8,9 +8,9 @@
   ],
   "scripts": {
     "build:docs-data": "node ./build/build-docs-data.js",
-    "build:svg": "postcss dist/scss/*.scss -r -u postcss-inline-svg --parser postcss-scss",
+    "build:svg": "node build/inline-svg.js && postcss dist/scss/*.vars.scss -r",
     "build:less": "sass2less dist/scss/*.scss 'dist/less/{name}.less' && node ./build/build-less.js",
-    "prepublishOnly": "npm run build:less && npm run build:docs-data",
+    "prepublishOnly": "npm run build:svg && npm run build:less && npm run build:docs-data",
     "prerelease": "npm-publish-prerelease"
   },
   "private": false,
@@ -25,17 +25,21 @@
   "author": "REI Software Engineering",
   "license": "MIT",
   "peerDependencies": {
-    "@rei/cdr-tokens": "^7.0.1",
-    "@rei/cedar": "^7.0.0"
+    "@rei/cdr-tokens": "^8.0.0",
+    "@rei/cedar": "^8.0.0"
   },
   "devDependencies": {
     "@rei/cedar-icons": "^2.1.0",
-    "fs-extra": "^9.0.1",
+    "@rei/cdr-tokens": "^8.0.0",
+    "@rei/cedar": "^8.0.0",
+    "fs-extra": "^9.1.0",
     "less-plugin-sass2less": "^1.2.0",
     "npm-publish-prerelease": "^1.0.2",
-    "postcss": "^8.1.7",
-    "postcss-cli": "^8.3.0",
+    "postcss": "^8.2.6",
+    "postcss-cli": "^8.3.1",
     "postcss-inline-svg": "^5.0.0",
-    "postcss-scss": "^3.0.4"
+    "postcss-scss": "^3.0.4",
+    "mini-svg-data-uri": "^1.2.3",
+    "replace-in-file": "^6.2.0"
   }
 }

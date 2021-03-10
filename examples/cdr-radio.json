@@ -1,15 +1,16 @@
 {
   "name": "cdr-radio",
   "notes": [
+    "See also the CdrLabelWrapper examples"
   ],
   "docs": "https://rei.github.io/rei-cedar-docs/components/radio/",
   "examples": [
     {
       "name": "dynamic",
-      "html": "<div class=\"cdr-radio-dynamic\"><input type=\"radio\"/><div class=\"cdr-radio-figure\"/></div>",
+      "html": "<label class=\"cdr-radio-dynamic\"><input type=\"radio\"></input><div class=\"cdr-radio-figure\"></div> Radio Label</label>",
       "scss": [
-        "position: relative;",
-        "input {position: absolute; opacity: 0; z-index: -1;}",
+        "@include cdr-label-wrapper-base-mixin;", "@include cdr-label-wrapper-primary-mixin;",
+        "input {\n  position: absolute; opacity: 0; z-index: -1;\n}",
         ".cdr-radio-figure {@include cdr-form-figure-base-mixin; @include cdr-form-figure-radio-base-mixin;}",
         "input:checked ~ .cdr-radio-figure {@include cdr-form-figure-radio-checked-mixin;}",
         "input:hover ~ .cdr-radio-figure {@include cdr-form-figure-radio-hover-mixin;}",
