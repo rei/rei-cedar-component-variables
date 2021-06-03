@@ -1,12 +1,12 @@
 $default-outline: 0.2rem solid Highlight;
 
-@mixin cdr-alert-base-mixin() {
+@mixin cdr-banner-base-mixin() {
   position: relative;
   padding: $cdr-space-half-x;
   @include cdr-text-default;
 }
 
-@mixin cdr-alert-info-mixin() {
+@mixin cdr-banner-info-mixin() {
   background-color: $cdr-color-background-message-info;
   border: 1px solid $cdr-color-border-info;
   svg {
@@ -14,7 +14,7 @@ $default-outline: 0.2rem solid Highlight;
   }
 }
 
-@mixin cdr-alert-success-mixin() {
+@mixin cdr-banner-success-mixin() {
   background-color: $cdr-color-background-message-success;
   border: 1px solid $cdr-color-border-success;
   svg {
@@ -22,7 +22,7 @@ $default-outline: 0.2rem solid Highlight;
   }
 }
 
-@mixin cdr-alert-warning-mixin() {
+@mixin cdr-banner-warning-mixin() {
   background-color: $cdr-color-background-message-warning;
   border: 1px solid $cdr-color-border-warning;
   svg {
@@ -30,7 +30,7 @@ $default-outline: 0.2rem solid Highlight;
   }
 }
 
-@mixin cdr-alert-error-mixin() {
+@mixin cdr-banner-error-mixin() {
   background-color: $cdr-color-background-message-error;
   border: 1px solid $cdr-color-border-error;
   svg {

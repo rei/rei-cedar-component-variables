@@ -1,22 +1,22 @@
 /* these classes are generated for documentation purposes only, they are not meant for production use. */
-.cdr-alert-success {
-  @include cdr-alert-base-mixin;
-  @include cdr-alert-success-mixin;
+.cdr-banner-success {
+  @include cdr-banner-base-mixin;
+  @include cdr-banner-success-mixin;
 }
 
-.cdr-alert-info {
-  @include cdr-alert-base-mixin;
-  @include cdr-alert-info-mixin;
+.cdr-banner-info {
+  @include cdr-banner-base-mixin;
+  @include cdr-banner-info-mixin;
 }
 
-.cdr-alert-warning {
-  @include cdr-alert-base-mixin;
-  @include cdr-alert-warning-mixin;
+.cdr-banner-warning {
+  @include cdr-banner-base-mixin;
+  @include cdr-banner-warning-mixin;
 }
 
-.cdr-alert-error {
-  @include cdr-alert-base-mixin;
-  @include cdr-alert-error-mixin;
+.cdr-banner-error {
+  @include cdr-banner-base-mixin;
+  @include cdr-banner-error-mixin;
 }
 
 .cdr-breadcrumb-default {
