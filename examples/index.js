@@ -12,12 +12,12 @@ const CdrGrid = require('./cdr-grid');
 const CdrList = require('./cdr-list');
 const CdrCard = require('./cdr-card');
 const CdrBreadcrumb = require('./cdr-breadcrumb');
-const CdrAlert = require('./cdr-alert');
+const CdrBanner = require('./cdr-banner');
 const CdrFormGroup = require('./cdr-form-group');
 const CdrTable = require('./cdr-table');
 
 module.exports = {
-  CdrAlert,
+  CdrBanner,
   CdrBreadcrumb,
   CdrButton,
   CdrCard,
