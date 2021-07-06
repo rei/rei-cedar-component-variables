@@ -76,11 +76,13 @@
 
 .cdr-chip-icon-left {
   @include cdr-chip-base-mixin;
+  .cdr-chip-content-right { @include cdr-chip-content-right-mixin; }
   .cdr-chip-icon-left-icon { @include cdr-chip-icon-left-mixin; }
 }
 
 .cdr-chip-icon-right {
   @include cdr-chip-base-mixin;
+  .cdr-chip-content-left { @include cdr-chip-content-left-mixin; }
   .cdr-chip-icon-right-icon { @include cdr-chip-icon-right-mixin; }
 }
 

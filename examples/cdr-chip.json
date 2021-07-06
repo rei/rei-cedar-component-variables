@@ -12,13 +12,13 @@
     },
     {
       "name": "icon-left",
-      "html": "<button class=\"cdr-chip-icon-left\"><span class=\"cdr-chip-icon-left-icon\">🍔</span> Chip with Icon</button>",
-      "scss": ["@include cdr-chip-base-mixin;", ".cdr-chip-icon-left-icon { @include cdr-chip-icon-left-mixin; }"]
+      "html": "<button class=\"cdr-chip-icon-left\"><span class=\"cdr-chip-icon-left-icon\">🍔</span> <span class=\"cdr-chip-content-right\">Chip with Icon Left<span></button>",
+      "scss": ["@include cdr-chip-base-mixin;", ".cdr-chip-content-right { @include cdr-chip-content-right-mixin; }", ".cdr-chip-icon-left-icon { @include cdr-chip-icon-left-mixin; }"]
     },
     {
       "name": "icon-right",
-      "html": "<button class=\"cdr-chip-icon-right\">Chip with Icon <span class=\"cdr-chip-icon-right-icon\">🌮</span></button>",
-      "scss": ["@include cdr-chip-base-mixin;", ".cdr-chip-icon-right-icon { @include cdr-chip-icon-right-mixin; }"]
+      "html": "<button class=\"cdr-chip-icon-right\"><span class=\"cdr-chip-content-left\">Chip with Icon Right<span> <span class=\"cdr-chip-icon-right-icon\">🌮</span></button>",
+      "scss": ["@include cdr-chip-base-mixin;", ".cdr-chip-content-left { @include cdr-chip-content-left-mixin; }", ".cdr-chip-icon-right-icon { @include cdr-chip-icon-right-mixin; }"]
     }
   ]
 }
