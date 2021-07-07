@@ -53,6 +53,8 @@ You can find all of the exported mixins in the [/dist directory](https://github.
 
 If you are unsure of how a mixin is intended to be used, you can search for the name in the [Cedar component source](https://github.com/rei/rei-cedar/tree/next/src/components).
 
+The [example project](https://github.com/rei/rei-cedar-component-variables-example) demonstrates how to use Cedar tokens and component variables to generate a CSS stylesheet that applies Cedar to arbitrary HTML markup.
+
 ## Development
 
 The `/dist` folder in this project should never be edited directly as it is meant to stay in sync with Cedar. This package should be updated whenever component variable support is added to a new component, or whenever the markup/styling for a supported component changes.
