@@ -1,7 +1,7 @@
 cdr-component-variables
 ------------------
 
-Component variables provide a versioned method for teams to import the exact CSS styles being used in the Cedar vue components and apply them to elements in their project. See the [Cedar docs](https://rei.github.io/rei-cedar-docs/foundation/component-variables/) for more high level information about component variables.
+Component variables provide a versioned method for teams to import the exact CSS styles being used in the Cedar vue components and apply them to elements in their project. See the [Cedar docs](https://rei.github.io/rei-cedar-docs/components/component-variables/) for more high level information about component variables.
 
 ## Supported Components
 
