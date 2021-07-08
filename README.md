@@ -1,7 +1,7 @@
 cdr-component-variables
 ------------------
 
-Component variables provide a versioned method for teams to import the exact CSS styles being used in the Cedar vue components and apply them to elements in their project. See the [Cedar docs](https://rei.github.io/rei-cedar-docs/foundation/component-variables/) for more high level information about component variables.
+Component variables provide a versioned method for teams to import the exact CSS styles being used in the Cedar vue components and apply them to elements in their project. See the [Cedar docs](https://rei.github.io/rei-cedar-docs/components/component-variables/) for more high level information about component variables.
 
 ## Supported Components
 
@@ -52,6 +52,8 @@ The [docs page](https://rei.github.io/rei-cedar-component-variables/#/) demonstr
 You can find all of the exported mixins in the [/dist directory](https://github.com/rei/rei-cedar-component-variables/tree/next/dist/scss).
 
 If you are unsure of how a mixin is intended to be used, you can search for the name in the [Cedar component source](https://github.com/rei/rei-cedar/tree/next/src/components).
+
+The [example project](https://github.com/rei/rei-cedar-component-variables-example) demonstrates how to use Cedar tokens and component variables to generate a CSS stylesheet that applies Cedar to arbitrary HTML markup.
 
 ## Development
 
