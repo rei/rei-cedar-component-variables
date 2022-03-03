@@ -25,8 +25,8 @@
   "author": "REI Software Engineering",
   "license": "MIT",
   "peerDependencies": {
-    "@rei/cdr-tokens": "^9.0.0",
-    "@rei/cedar": "^9.0.0"
+    "@rei/cdr-tokens": ">=9.0.0",
+    "@rei/cedar": ">=9.0.0"
   },
   "devDependencies": {
     "@rei/cedar-icons": "^2.1.0",
