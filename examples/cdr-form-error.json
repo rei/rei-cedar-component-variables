@@ -6,7 +6,7 @@
   "examples": [
     {
       "name": "default",
-      "html": "<div class=\"cdr-form-error-default\">\n  <div class=\"cdr-form-error-icon\"></div> Form Error\n</div>",
+      "html": "<div class=\"cdr-form-error-default\">\n  <div class=\"cdr-form-error-icon\">🦆</div> Form Error\n</div>",
       "scss": ["@include cdr-form-error-base-mixin;", ".cdr-form-error-icon {\n  @include cdr-form-error-icon-mixin;\n}"]
     }
   ]
