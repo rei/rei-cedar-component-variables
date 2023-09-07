@@ -8,9 +8,8 @@
   ],
   "scripts": {
     "build:docs-data": "node ./build/build-docs-data.js",
-    "build:svg": "node build/inline-svg.js && postcss dist/scss/*.vars.scss -r",
     "build:less": "sass2less dist/scss/*.scss 'dist/less/{name}.less' && node ./build/build-less.js",
-    "prepublishOnly": "npm run build:svg && npm run build:less && npm run build:docs-data",
+    "prepublishOnly": "npm run build:less && npm run build:docs-data",
     "prerelease": "npm-publish-prerelease"
   },
   "private": false,
@@ -36,9 +35,6 @@
     "npm-publish-prerelease": "^1.0.2",
     "postcss": "^8.2.6",
     "postcss-cli": "^8.3.1",
-    "postcss-inline-svg": "^5.0.0",
-    "postcss-scss": "^3.0.4",
-    "mini-svg-data-uri": "^1.2.3",
-    "replace-in-file": "^6.2.0"
+    "postcss-inline-svg": "^5.0.0"
   }
 }
