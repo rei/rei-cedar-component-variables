@@ -1,4 +1,4 @@
-const tokens = require('@rei/cdr-tokens/dist/rei-brand/json/web');
+const tokens = require('@rei/cdr-tokens/dist/rei-dot-com/json/web');
 const replace = require('replace-in-file');
 const files = 'dist/scss/*.vars.scss';
 

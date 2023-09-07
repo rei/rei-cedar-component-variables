@@ -23,7 +23,7 @@ This package contains `/dist/less` and `/dist/scss` folders, each of which conta
 
 SCSS example:
 ```
-@import '@rei/cdr-tokens/dist/rei-brand/scss/cdr-tokens.scss'; /* import the tokens file */
+@import '@rei/cdr-tokens/dist/rei-dot-com/scss/cdr-tokens.scss'; /* import the tokens file */
 @import '@rei/cdr-component-variables/dist/scss/index.scss'; /* import the component variables */
 
 .your-button-class {
@@ -36,7 +36,7 @@ SCSS example:
 
 LESS example:
 ```
-@import '@rei/cdr-tokens/dist/rei-brand/less/cdr-tokens.less'; /* import the tokens file */
+@import '@rei/cdr-tokens/dist/rei-dot-com/less/cdr-tokens.less'; /* import the tokens file */
 @import '@rei/cdr-component-variables/dist/less/index.less'; /* import the component variables */
 
 .your-button-class {
