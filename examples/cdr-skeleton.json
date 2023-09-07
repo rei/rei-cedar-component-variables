@@ -2,7 +2,7 @@
   "name": "cdr-skeleton",
   "notes": [
     "CdrSkeleton's must wrap 1..n CdrSkeletonBones",
-    "use `@include cdr-skeleton-shimmer-mixin` to apply the shimmer animation. It has motion preferences respect included"
+    "use `@include cdr-skeleton-shimmer-mixin` to apply the shimmer animation. It respects motion preferences by default"
   ],
   "docs": "https://cedar.rei.com/components/card/",
   "examples": [
