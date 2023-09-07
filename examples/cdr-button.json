@@ -4,7 +4,7 @@
     "All Cedar buttons must use the 'base' mixin as well as either the 'primary' or 'secondary' mixin. Additional modifiers can be added as well.",
     "Button mixins should ideally be applied to HTML 'button' elements, but may also work on other HTML tags (i.e, div, a, span, etc.)"
   ],
-  "docs": "https://rei.github.io/rei-cedar-docs/components/buttons/",
+  "docs": "https://cedar.rei.com/components/buttons/",
   "examples": [
     {
       "name": "primary",

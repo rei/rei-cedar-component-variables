@@ -225,3 +225,11 @@
 .cdr-table-default {
   @include cdr-table-base-mixin;
 }
+
+.cdr-skeleton-default {
+  @include cdr-skeleton-base-mixin;
+  .bone {
+  @include cdr-skeleton-bone-mixin;
+@include cdr-skeleton-shimmer-mixin
+}
+}

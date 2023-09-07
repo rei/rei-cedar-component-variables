@@ -12,6 +12,8 @@ const CdrCard = require('./cdr-card');
 const CdrBreadcrumb = require('./cdr-breadcrumb');
 const CdrFormGroup = require('./cdr-form-group');
 const CdrTable = require('./cdr-table');
+const CdrSkeleton = require('./cdr-skeleton');
+
 
 module.exports = {
   CdrBreadcrumb,
@@ -28,4 +30,5 @@ module.exports = {
   CdrList,
   CdrSelect,
   CdrTable,
+  CdrSkeleton
 }
