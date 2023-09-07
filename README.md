@@ -5,7 +5,7 @@ Component variables provide a versioned method for teams to import the exact CSS
 
 ## Supported Components
 
-See the [docs page](https://rei.github.io/rei-cedar-component-variables/#/) for a list of supported components and examples of how they can be used.
+See the [docs page](https://cedar.rei.com/components/component-variables) for a list of supported components and examples of how they can be used.
 If there is a component that you would like to see supported, please [open an issue here](https://github.com/rei/rei-cedar-component-variables/issues).
 If you are trying to build a component that is not in Cedar, you should instead use the [design tokens](https://github.com/rei/rei-cedar-tokens).
 
@@ -47,7 +47,7 @@ LESS example:
 
 ```
 
-The [docs page](https://rei.github.io/rei-cedar-component-variables/#/) demonstrates which mixins to use to achieve various styles for each supported component.
+The [docs page](https://cedar.rei.com/components/component-variables) demonstrates which mixins to use to achieve various styles for each supported component.
 
 You can find all of the exported mixins in the [/dist directory](https://github.com/rei/rei-cedar-component-variables/tree/next/dist/scss).
 
