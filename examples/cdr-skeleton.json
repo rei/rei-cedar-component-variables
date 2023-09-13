@@ -1,0 +1,15 @@
+{
+  "name": "cdr-skeleton",
+  "notes": [
+    "CdrSkeleton's must wrap 1..n CdrSkeletonBones",
+    "use `@include cdr-skeleton-shimmer-mixin` to apply the shimmer animation. It respects motion preferences by default"
+  ],
+  "docs": "https://cedar.rei.com/components/card/",
+  "examples": [
+    {
+      "name": "default",
+      "html": "<div class=\"cdr-skeleton-default\">\n<div class=\"cdr-skeleton-bone\"/> \n</div>",
+      "scss": ["@include cdr-skeleton-base-mixin;\n}", ".cdr-skeleton-bone {\n  @include cdr-skeleton-bone-mixin;\n  @include cdr-skeleton-shimmer-mixin;\n}"]
+    }
+  ]
+}

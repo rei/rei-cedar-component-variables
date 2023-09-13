@@ -53,196 +53,280 @@
 }
 
 .cdr-button-primary-mixin() {
-  background-color: @cdr-color-background-button-primary-rest;
-  box-shadow: inset 0 0 0 1px @cdr-color-border-button-primary-rest;
-  color: @cdr-color-text-button-primary;
-  fill: @cdr-color-text-button-primary;
+  //ITEM_DOC: Primary button's background color
+  background-color: var(--cdr-button-primary-background-color-rest, var(--cdr-color-background-button-primary-rest, @{cdr-color-background-button-primary-rest}));
+  //ITEM_DOC: Primary button's box shadow which serves as a border
+  box-shadow: inset 0 0 0 1px var(--cdr-button-primary-box-shadow-color-rest, var(--cdr-color-border-button-primary-rest, @{cdr-color-border-button-primary-rest}));
+  //ITEM_DOC: Primary button's text color
+  color: var(--cdr-button-primary-text-color, var(--cdr-color-text-button-primary, @{cdr-color-text-button-primary}));
+  //ITEM_DOC: Primary button's fill color
+  fill: var(--cdr-button-primary-fill-color, var(--cdr-color-text-button-primary, @{cdr-color-text-button-primary}));
 
   &:hover,
   &:focus {
-    color: @cdr-color-text-button-primary-hover;
-    fill: @cdr-color-text-button-primary-hover;
-    background-color: @cdr-color-background-button-primary-hover;
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-primary-hover, @cdr-prominence-raised;
+    //ITEM_DOC: Primary button's text color when hovered or focused
+    color: var(--cdr-button-primary-text-color-interaction, var(--cdr-color-text-button-primary-hover, @{cdr-color-text-button-primary-hover}));
+    //ITEM_DOC: Primary button's fill color when hovered or focused
+    fill: var(--cdr-button-primary-fill-color-interaction, var(--cdr-color-text-button-primary-hover, @{cdr-color-text-button-primary-hover}));
+    //ITEM_DOC: Primary button's background color when hovered or focused
+    background-color: var(--cdr-button-primary-background-color-interaction, var(--cdr-color-background-button-primary-hover, @{cdr-color-background-button-primary-hover}));
+    //ITEM_DOC: Primary button's box shadow when hovered or focused
+    box-shadow: inset 0 0 0 3px var(--cdr-button-primary-box-shadow-color-interaction, var(--cdr-color-border-button-primary-hover, @{cdr-color-border-button-primary-hover})), @cdr-prominence-raised;
   }
 
   &:active {
-    color: @cdr-color-text-button-primary-active;
-    fill: @cdr-color-text-button-primary-active;
-    background-color: @cdr-color-background-button-primary-active;
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-primary-active, inset 0 0 0 5px @cdr-color-border-button-primary-active-inset;
+    //ITEM_DOC: Primary button's text color when active
+    color: var(--cdr-button-primary-text-color-active, var(--cdr-color-text-button-primary-active, @{cdr-color-text-button-primary-active}));
+    //ITEM_DOC: Primary button's fill color when active
+    fill: var(--cdr-button-primary-fill-color-active, var(--cdr-color-text-button-primary-active, @{cdr-color-text-button-primary-active}));
+    //ITEM_DOC: Primary button's background color when active
+    background-color: var(--cdr-button-primary-background-color-active, var(--cdr-color-background-button-primary-active, @{cdr-color-background-button-primary-active}));
+    //ITEM_DOC: Primary button's box shadow when active. //ITEM_DOC: Primary button's inset box shadow when active
+    box-shadow: inset 0 0 0 3px var(--cdr-button-primary-box-shadow-color-active, var(--cdr-color-border-button-primary-active, @{cdr-color-border-button-primary-active})), inset 0 0 0 5px var(--cdr-button-primary-box-shadow-color-active-inset, var(--cdr-color-border-button-primary-active-inset, @{cdr-color-border-button-primary-active-inset}));
   }
 
   &[disabled] {
-    background-color: @cdr-color-background-button-default-disabled;
-    box-shadow: inset 0 0 0 1px @cdr-color-border-button-default-disabled;
-    color: @cdr-color-text-button-primary-disabled;
-    fill: @cdr-color-text-button-primary-disabled;
+    //ITEM_DOC: Primary button's background color when disabled
+    background-color: var(--cdr-button-primary-background-color-disabled, var(--cdr-color-background-button-default-disabled, @{cdr-color-background-button-default-disabled}));
+    //ITEM_DOC: Primary button's border color when disabled
+    box-shadow: inset 0 0 0 1px var(--cdr-button-primary-box-shadow-color-disabled, var(--cdr-color-border-button-default-disabled, @{cdr-color-border-button-default-disabled}));
+    //ITEM_DOC: Primary button's text color when disabled
+    color: var(--cdr-button-primary-text-color-disabled, var(--cdr-color-text-button-primary-disabled, @{cdr-color-text-button-primary-disabled}));
+    //ITEM_DOC: Primary button's fill color when disabled
+    fill: var(--cdr-button-primary-fill-color-disabled, var(--cdr-color-text-button-primary-disabled, @{cdr-color-text-button-primary-disabled}));
   }
 }
 
 .cdr-button-secondary-mixin() {
-  background-color: @cdr-color-background-button-secondary-rest;
-  box-shadow: inset 0 0 0 1px @cdr-color-border-button-secondary-rest;
-  color: @cdr-color-text-button-secondary;
-  fill: @cdr-color-icon-default;
+  //ITEM_DOC: Secondary button's background color
+  background-color: var(--cdr-button-secondary-background-color-rest, var(--cdr-color-background-button-secondary-rest, @{cdr-color-background-button-secondary-rest}));
+  //ITEM_DOC: Secondary button's box shadow which serves as a border
+  box-shadow: inset 0 0 0 1px var(--cdr-button-secondary-box-shadow-color-rest, var(--cdr-color-border-button-secondary-rest, @{cdr-color-border-button-secondary-rest}));
+  //ITEM_DOC: Secondary button's text color
+  color: var(--cdr-button-secondary-text-color, var(--cdr-color-text-button-secondary, @{cdr-color-text-button-secondary}));
+  //ITEM_DOC: Secondary button's fill color
+  fill: var(--cdr-button-secondary-fill-color, var(--cdr-color-icon-default, @{cdr-color-icon-default}));
 
   &:hover,
   &:focus {
-    color: @cdr-color-text-button-secondary-hover;
-    fill: @cdr-color-text-button-secondary-hover;
-    background-color: @cdr-color-background-button-secondary-hover;
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-secondary-hover, @cdr-prominence-raised;
+    //ITEM_DOC: Secondary button's text color when hovered or focused
+    color: var(--cdr-button-secondary-text-color-interaction, var(--cdr-color-text-button-secondary-hover, @{cdr-color-text-button-secondary-hover}));
+    //ITEM_DOC: Secondary button's fill color when hovered or focused
+    fill: var(--cdr-button-secondary-fill-color-interaction, var(--cdr-color-text-button-secondary-hover, @{cdr-color-text-button-secondary-hover}));
+    //ITEM_DOC: Secondary button's background color when hovered or focused
+    background-color: var(--cdr-button-secondary-background-color-interaction, var(--cdr-color-background-button-secondary-hover, @{cdr-color-background-button-secondary-hover}));
+    //ITEM_DOC: Secondary button's box shadow when hovered or focused
+    box-shadow: inset 0 0 0 3px var(--cdr-button-secondary-box-shadow-color-interaction, var(--cdr-color-border-button-secondary-hover, @{cdr-color-border-button-secondary-hover})), @cdr-prominence-raised;
   }
 
   &:active {
-    color: @cdr-color-text-button-secondary-active;
-    fill: @cdr-color-text-button-secondary-active;
-    background-color: @cdr-color-background-button-secondary-active;
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-secondary-active, inset 0 0 0 5px @cdr-color-border-button-secondary-active-inset;
+    //ITEM_DOC: Secondary button's text color when active
+    color: var(--cdr-button-secondary-text-color-active, var(--cdr-color-text-button-secondary-active, @{cdr-color-text-button-secondary-active}));
+    //ITEM_DOC: Secondary button's fill color when active
+    fill: var(--cdr-button-secondary-fill-color-active, var(--cdr-color-text-button-secondary-active, @{cdr-color-text-button-secondary-active}));
+    //ITEM_DOC: Secondary button's background color when active
+    background-color: var(--cdr-button-secondary-background-color-active, var(--cdr-color-background-button-secondary-active, @{cdr-color-background-button-secondary-active}));
+    //ITEM_DOC: Secondary button's box shadow when active. //ITEM_DOC: Secondary button's inset box shadow when active
+    box-shadow: inset 0 0 0 3px var(--cdr-button-secondary-box-shadow-color-active, var(--cdr-color-border-button-secondary-active, @{cdr-color-border-button-secondary-active})), inset 0 0 0 5px var(--cdr-button-secondary-border-color-active-inset, var(--cdr-color-border-button-secondary-active-inset, @{cdr-color-border-button-secondary-active-inset}));
   }
 
   &[disabled] {
-    background-color: @cdr-color-background-button-secondary-disabled;
-    box-shadow: inset 0 0 0 1px @cdr-color-border-button-default-disabled;
-    color: @cdr-color-text-button-secondary-disabled;
-    fill: @cdr-color-text-button-secondary-disabled;
+    //ITEM_DOC: Secondary button's background color when disabled
+    background-color: var(--cdr-button-secondary-background-color-disabled, var(--cdr-color-background-button-secondary-disabled, @{cdr-color-background-button-secondary-disabled}));
+    //ITEM_DOC: Secondary button's box shadow color when disabled. The box shadow serves as a border
+    box-shadow: inset 0 0 0 1px var(--cdr-button-secondary-box-shadow-color-disabled, var(--cdr-color-border-button-default-disabled, @{cdr-color-border-button-default-disabled}));
+    //ITEM_DOC: Secondary button's text color when disabled
+    color: var(--cdr-button-secondary-text-color-disabled, var(--cdr-color-text-button-secondary-disabled, @{cdr-color-text-button-secondary-disabled}));
+    //ITEM_DOC: Secondary button's fill color when disabled
+    fill: var(--cdr-button-secondary-fill-color-disabled, var(--cdr-color-text-button-secondary-disabled, @{cdr-color-text-button-secondary-disabled}));
   }
 }
 
 .cdr-button-dark-mixin() {
-  background-color: @cdr-color-background-button-dark-rest;
-  box-shadow: inset 0 0 0 1px @cdr-color-border-button-dark-rest;
-  color: @cdr-color-text-button-dark;
-  fill: @cdr-color-text-button-dark;
+  //ITEM_DOC: Dark button's background color
+  background-color: var(--cdr-button-dark-background-color-rest, var(--cdr-color-background-button-dark-rest, @{cdr-color-background-button-dark-rest}));
+  //ITEM_DOC: Dark button's box shadow which serves as a border
+  box-shadow: inset 0 0 0 1px var(--cdr-button-dark-box-shadow-color-rest, var(--cdr-color-border-button-dark-rest, @{cdr-color-border-button-dark-rest}));
+  //ITEM_DOC: Dark button's text color
+  color: var(--cdr-button-dark-text-color, var(--cdr-color-text-button-dark, @{cdr-color-text-button-dark}));
+  //ITEM_DOC: Dark button's fill color
+  fill: var(--cdr-button-dark-fill-color, var(--cdr-color-text-button-dark, @{cdr-color-text-button-dark}));
 
   &:hover,
   &:focus {
-    color: @cdr-color-text-button-dark-hover;
-    fill: @cdr-color-text-button-dark-hover;
-    background-color: @cdr-color-background-button-dark-hover;
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-dark-hover, @cdr-prominence-raised;
+    //ITEM_DOC: Dark button's text color when hovered or focused
+    color: var(--cdr-button-dark-text-color-interaction, var(--cdr-color-text-button-dark-hover, @{cdr-color-text-button-dark-hover}));
+    //ITEM_DOC: Dark button's fill color when hovered or focused
+    fill: var(--cdr-button-dark-fill-color-interaction, var(--cdr-color-text-button-dark-hover, @{cdr-color-text-button-dark-hover}));
+    //ITEM_DOC: Dark button's background color when hovered or focused
+    background-color: var(--cdr-button-dark-background-color-interaction, var(--cdr-color-background-button-dark-hover, @{cdr-color-background-button-dark-hover}));
+    //ITEM_DOC: Dark button's box shadow when hovered or focused
+    box-shadow: inset 0 0 0 3px var(--cdr-button-dark-box-shadow-color-interaction, var(--cdr-color-border-button-dark-hover, @{cdr-color-border-button-dark-hover})), @cdr-prominence-raised;
   }
 
   &:active {
-    color: @cdr-color-text-button-dark-active;
-    fill: @cdr-color-text-button-dark-active;
-    background-color: @cdr-color-background-button-dark-active;
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-dark-active,  inset 0 0 0 5px @cdr-color-border-button-dark-active-inset;
+    //ITEM_DOC: Dark button's text color when active
+    color: var(--cdr-button-dark-text-color-active, var(--cdr-color-text-button-dark-active, @{cdr-color-text-button-dark-active}));
+    //ITEM_DOC: Dark button's fill color when active
+    fill: var(--cdr-button-dark-fill-color-active, var(--cdr-color-text-button-dark-active, @{cdr-color-text-button-dark-active}));
+    //ITEM_DOC: Dark button's background color when active
+    background-color: var(--cdr-button-dark-background-color-active, var(--cdr-color-background-button-dark-active, @{cdr-color-background-button-dark-active}));
+    //ITEM_DOC: Dark button's box shadow when active. The box shadow serves as a border. //ITEM_DOC: Dark button's inset box shadow when active. The box shadow serves as a border
+    box-shadow: inset 0 0 0 3px var(--cdr-button-dark-box-shadow-color-active, var(--cdr-color-border-button-dark-active, @{cdr-color-border-button-dark-active})), inset 0 0 0 5px var(--cdr-button-dark-box-shadow-color-active-inset, var(--cdr-color-border-button-dark-active-inset, @{cdr-color-border-button-dark-active-inset}));
   }
 
   &[disabled] {
-    background-color: @cdr-color-background-button-default-disabled;
-    box-shadow: inset 0 0 0 1px @cdr-color-border-button-default-disabled;
-    color: @cdr-color-text-button-dark-disabled;
-    fill: @cdr-color-text-button-dark-disabled;
+    //ITEM_DOC: Dark button's background color when disabled
+    background-color: var(--cdr-button-dark-background-color-disabled, var(--cdr-color-background-button-default-disabled, @{cdr-color-background-button-default-disabled}));
+    //ITEM_DOC: Dark button's box shadow color when disabled. The box shadow serves as a border
+    box-shadow: inset 0 0 0 1px var(--cdr-button-dark-box-shadow-color-disabled, var(--cdr-color-border-button-default-disabled, @{cdr-color-border-button-default-disabled}));
+    //ITEM_DOC: Dark button's text color when disabled
+    color: var(--cdr-button-dark-text-color-disabled, var(--cdr-color-text-button-dark-disabled, @{cdr-color-text-button-dark-disabled}));
+    //ITEM_DOC: Dark button's fill color when disabled
+    fill: var(--cdr-button-dark-fill-color-disabled, var(--cdr-color-text-button-dark-disabled, @{cdr-color-text-button-dark-disabled}));
   }
 }
 
 .cdr-button-sale-mixin() {
-  background-color: @cdr-color-background-button-sale-rest;
-  box-shadow: inset 0 0 0 1px @cdr-color-border-button-sale-rest;
-  color: @cdr-color-text-button-sale;
-  fill: @cdr-color-text-button-sale;
-
+  //ITEM_DOC: Sale button's background color
+  background-color: var(--cdr-button-sale-background-color-rest, var(--cdr-color-background-button-sale-rest, @{cdr-color-background-button-sale-rest}));
+  //ITEM_DOC: Sale button's box shadow which serves as a border
+  box-shadow: inset 0 0 0 1px var(--cdr-button-sale-box-shadow-color-rest, var(--cdr-color-border-button-sale-rest, @{cdr-color-border-button-sale-rest}));
+  //ITEM_DOC: Sale button's text color
+  color: var(--cdr-button-sale-text-color, var(--cdr-color-text-button-sale, @{cdr-color-text-button-sale}));
+  //ITEM_DOC: Sale button's fill color
+  fill: var(--cdr-button-sale-fill-color, var(--cdr-color-text-button-sale, @{cdr-color-text-button-sale}));
 
   &:hover,
   &:focus {
-    color: @cdr-color-text-button-sale-hover;
-    fill: @cdr-color-text-button-sale-hover;
-    background-color: @cdr-color-background-button-sale-hover;
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-sale-hover, @cdr-prominence-raised;
+    //ITEM_DOC: Sale button's text color when hovered or focused
+    color: var(--cdr-button-sale-text-color-interaction, var(--cdr-color-text-button-sale-hover, @{cdr-color-text-button-sale-hover}));
+    //ITEM_DOC: Sale button's fill color when hovered or focused
+    fill: var(--cdr-button-sale-fill-color-interaction, var(--cdr-color-text-button-sale-hover, @{cdr-color-text-button-sale-hover}));
+    //ITEM_DOC: Sale button's background color when hovered or focused
+    background-color: var(--cdr-button-sale-background-color-interaction, var(--cdr-color-background-button-sale-hover, @{cdr-color-background-button-sale-hover}));
+    //ITEM_DOC: Sale button's box shadow when hovered or focused. The box shadow serves as a border
+    box-shadow: inset 0 0 0 3px var(--cdr-button-sale-box-shadow-color-interaction, var(--cdr-color-border-button-sale-hover, @{cdr-color-border-button-sale-hover})), @cdr-prominence-raised;
   }
 
   &:active {
-    color: @cdr-color-text-button-sale-active;
-    fill: @cdr-color-text-button-sale-active;
-    background-color: @cdr-color-background-button-sale-active;
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-sale-active,  inset 0 0 0 5px @cdr-color-border-button-sale-active-inset;
+    //ITEM_DOC: Sale button's text color when active
+    color: var(--cdr-button-sale-text-color-active, var(--cdr-color-text-button-sale-active, @{cdr-color-text-button-sale-active}));
+    //ITEM_DOC: Sale button's fill color when active
+    fill: var(--cdr-button-sale-fill-color-active, var(--cdr-color-text-button-sale-active, @{cdr-color-text-button-sale-active}));
+    //ITEM_DOC: Sale button's background color when active
+    background-color: var(--cdr-button-sale-background-color-active, var(--cdr-color-background-button-sale-active, @{cdr-color-background-button-sale-active}));
+    //ITEM_DOC: Sale button's box shadow when active. The box shadow serves as a border. //ITEM_DOC: Sale button's inset box shadow when active. The box shadow serves as a border
+    box-shadow: inset 0 0 0 3px var(--cdr-button-sale-box-shadow-color-active, var(--cdr-color-border-button-sale-active, @{cdr-color-border-button-sale-active})), inset 0 0 0 5px var(--cdr-button-sale-box-shadow-color-active-inset, var(--cdr-color-border-button-sale-active-inset, @{cdr-color-border-button-sale-active-inset}));
   }
 
   &[disabled] {
-    background-color: @cdr-color-background-button-default-disabled;
-    box-shadow: inset 0 0 0 1px @cdr-color-border-button-default-disabled;
-    color: @cdr-color-text-button-sale-disabled;
-    fill: @cdr-color-text-button-sale-disabled;
+    //ITEM_DOC: Sale button's background color when disabled
+    background-color: var(--cdr-button-sale-background-color-disabled, var(--cdr-color-background-button-default-disabled, @{cdr-color-background-button-default-disabled}));
+    //ITEM_DOC: Sale button's border color when disabled
+    box-shadow: inset 0 0 0 1px var(--cdr-button-sale-box-shadow-color-disabled, var(--cdr-color-border-button-default-disabled, @{cdr-color-border-button-default-disabled}));
+    //ITEM_DOC: Sale button's text color when disabled
+    color: var(--cdr-button-sale-text-color-disabled, var(--cdr-color-text-button-sale-disabled, @{cdr-color-text-button-sale-disabled}));
+    //ITEM_DOC: Sale button's fill color when disabled
+    fill: var(--cdr-button-sale-fill-color-disabled, var(--cdr-color-text-button-sale-disabled, @{cdr-color-text-button-sale-disabled}));
   }
 }
 
+
 .cdr-button-link-mixin() {
-  color: @cdr-color-text-link-rest;
-  fill: @cdr-color-text-link-rest;
+  //ITEM_DOC: Link variant of cdr-button's text color
+  color: var(--cdr-button-link-text-color, var(--cdr-color-text-link-rest, @{cdr-color-text-link-rest}));
+  //ITEM_DOC: Link variant of cdr-button's fill color
+  fill: var(--cdr-button-link-fill-color, var(--cdr-color-text-link-rest, @{cdr-color-text-link-rest}));
   background-color: transparent;
   text-decoration: underline;
 
   &:active,
   &:focus {
-    color: @cdr-color-text-link-active;
+    //ITEM_DOC: Link variant of cdr-button's text color when active or focused
+    color: var(--cdr-button-link-text-color-active, var(--cdr-color-text-link-active, @{cdr-color-text-link-active}));
   }
 
   &:hover {
-    color: @cdr-color-text-link-hover;
+    //ITEM_DOC: Link variant of cdr-button's text color when hovered
+    color: var(--cdr-button-link-text-color-hover, var(--cdr-color-text-link-hover, @{cdr-color-text-link-hover}));
+    //ITEM_DOC: Link variant of cdr-button's text decoration when hovered
     text-decoration: none;
   }
 
   &:focus {
-    outline: @default-outline;
+    //ITEM_DOC: Link variant of cdr-button's outline
+    outline: var(--cdr-button-link-outline, var(--default-outline, @{default-outline}));
     outline-color: -webkit-focus-ring-color;
     outline-offset: 0;
   }
 }
 
+
 .cdr-button-secondary-elevated-mixin() {
-  box-shadow: inset 0 0 0 1px @cdr-color-border-button-secondary-rest, @cdr-prominence-elevated;
+  //ITEM_DOC: Box shadow color of a secondary elevated cdr-button
+  box-shadow: inset 0 0 0 1px var(--cdr-button-secondary-box-shadow, var(--cdr-color-border-button-secondary-rest, @{cdr-color-border-button-secondary-rest})), @cdr-prominence-elevated;
 
   &:hover,
   &:focus {
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-secondary-hover, @cdr-prominence-floating;
+    //ITEM_DOC: Box shadow color of a secondary elevated cdr-button when hovered or focused
+    box-shadow: inset 0 0 0 3px var(--cdr-button-secondary-interaction-box-shadow, var(--cdr-color-border-button-secondary-hover, @{cdr-color-border-button-secondary-hover})), @cdr-prominence-floating;
   }
 
   &:active {
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-secondary-active, inset 0 0 0 5px @cdr-color-border-button-secondary-active-inset, @cdr-prominence-raised;
+    //ITEM_DOC: Box shadow color of a secondary elevated cdr-button when active. //ITEM_DOC: Inset box shadow color of a secondary elevated cdr-button when active
+    box-shadow: inset 0 0 0 3px var(--cdr-button-secondary-active-box-shadow, var(--cdr-color-border-button-secondary-active, @{cdr-color-border-button-secondary-active})), inset 0 0 0 5px var(--cdr-button-secondary-active-inset-box-shadow, var(--cdr-color-border-button-secondary-active-inset, @{cdr-color-border-button-secondary-active-inset})), @cdr-prominence-raised;
   }
 }
 
 .cdr-button-primary-elevated-mixin() {
-  box-shadow: inset 0 0 0 1px @cdr-color-border-button-primary-rest, @cdr-prominence-elevated;
+  //ITEM_DOC: Box shadow color of a primary elevated cdr-button
+  box-shadow: inset 0 0 0 1px var(--cdr-button-primary-box-shadow, var(--cdr-color-border-button-primary-rest, @{cdr-color-border-button-primary-rest})), @cdr-prominence-elevated;
 
   &:hover,
   &:focus {
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-primary-hover, @cdr-prominence-floating;
+    //ITEM_DOC: Box shadow color of a primary elevated cdr-button when hovered or focused
+    box-shadow: inset 0 0 0 3px var(--cdr-button-primary-hover-focus-box-shadow, var(--cdr-color-border-button-primary-hover, @{cdr-color-border-button-primary-hover})), @cdr-prominence-floating;
   }
 
   &:active {
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-primary-active, inset 0 0 0 5px @cdr-color-border-button-primary-active-inset, @cdr-prominence-raised;
+    //ITEM_DOC: Box shadow color of a primary elevated cdr-button when active. //ITEM_DOC: Inset box shadow color of a primary elevated cdr-button when active
+    box-shadow: inset 0 0 0 3px var(--cdr-button-primary-active-box-shadow, var(--cdr-color-border-button-primary-active, @{cdr-color-border-button-primary-active})), inset 0 0 0 5px var(--cdr-button-primary-active-inset-box-shadow, var(--cdr-color-border-button-primary-active-inset, @{cdr-color-border-button-primary-active-inset})), @cdr-prominence-raised;
   }
 }
 
 .cdr-button-dark-elevated-mixin() {
-  box-shadow: inset 0 0 0 1px @cdr-color-border-button-dark-rest, @cdr-prominence-elevated;
+  //ITEM_DOC: Box shadow color of a dark elevated cdr-button
+  box-shadow: inset 0 0 0 1px var(--cdr-button-dark-box-shadow-rest, var(--cdr-color-border-button-dark-rest, @{cdr-color-border-button-dark-rest})), @cdr-prominence-elevated;
 
   &:hover,
   &:focus {
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-dark-hover, @cdr-prominence-floating;
+    //ITEM_DOC: Box shadow color of a dark elevated cdr-button when hovered or focused
+    box-shadow: inset 0 0 0 3px var(--cdr-button-dark-box-shadow-interaction, var(--cdr-color-border-button-dark-hover, @{cdr-color-border-button-dark-hover})), @cdr-prominence-floating;
   }
 
   &:active {
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-dark-active, inset 0 0 0 5px @cdr-color-border-button-dark-active-inset, @cdr-prominence-raised;
+    //ITEM_DOC: Box shadow color of a dark elevated cdr-button when active. //ITEM_DOC: Inset box shadow color of a dark elevated cdr-button when active
+    box-shadow: inset 0 0 0 3px var(--cdr-button-dark-box-shadow-active, var(--cdr-color-border-button-dark-active, @{cdr-color-border-button-dark-active})), inset 0 0 0 5px var(--cdr-button-dark-active-inset-box-shadow, var(--cdr-color-border-button-dark-active-inset, @{cdr-color-border-button-dark-active-inset})), @cdr-prominence-raised;
   }
 }
 
 .cdr-button-sale-elevated-mixin() {
-  box-shadow: inset 0 0 0 1px @cdr-color-border-button-sale-rest, @cdr-prominence-elevated;
+  //ITEM_DOC: Box shadow color of a sale elevated cdr-button
+  box-shadow: inset 0 0 0 1px var(--cdr-button-sale-box-shadow-rest, var(--cdr-color-border-button-sale-rest, @{cdr-color-border-button-sale-rest})), @cdr-prominence-elevated;
 
   &:hover,
   &:focus {
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-sale-hover, @cdr-prominence-floating;
+    //ITEM_DOC: Box shadow color of a sale elevated cdr-button when hovered or focused
+    box-shadow: inset 0 0 0 3px var(--cdr-button-sale-box-shadow-interaction, var(--cdr-color-border-button-sale-hover, @{cdr-color-border-button-sale-hover})), @cdr-prominence-floating;
   }
 
   &:active {
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-sale-active, inset 0 0 0 5px @cdr-color-border-button-sale-active-inset, @cdr-prominence-raised;
+    //ITEM_DOC: Box shadow color of a sale elevated cdr-button when active. //ITEM_DOC: Inset box shadow color of a sale elevated cdr-button when active
+    box-shadow: inset 0 0 0 3px var(--cdr-button-sale-box-shadow-active, var(--cdr-color-border-button-sale-active, @{cdr-color-border-button-sale-active})), inset 0 0 0 5px var(--cdr-button-sale-active-inset-box-shadow, var(--cdr-color-border-button-sale-active-inset, @{cdr-color-border-button-sale-active-inset})), @cdr-prominence-raised;
   }
 }
+
 
 .cdr-button-full-width-mixin() {
   width: 100% !important;
@@ -257,13 +341,17 @@
   display: inline-block;
   line-height: normal;
   padding: @cdr-space-inset-half-x;
-  fill: @cdr-color-icon-default;
+
+  //ITEM_DOC: Fill color of an icon-only cdr-button
+  fill: var(--cdr-button-icon-only-icon-fill, var(--cdr-color-icon-default, @{cdr-color-icon-default}));
 
   &:hover{
     background: none;
     box-shadow: none;
     border: none;
-    fill: @cdr-color-icon-default;
+
+    //ITEM_DOC: Fill color of an icon-only cdr-button when hovered
+    fill: var(--cdr-button-icon-only-icon-fill-hover, var(--cdr-color-icon-default, @{cdr-color-icon-default}));
   }
 
   &:active, &:focus {
@@ -271,9 +359,13 @@
     outline: none;
     border: none;
     box-shadow: none;
-    fill: @cdr-color-icon-default;
+
+    //ITEM_DOC: Fill color of an icon-only cdr-button when active or focused
+    fill: var(--cdr-button-icon-only-icon-fill-active, var(--cdr-color-icon-default, @{cdr-color-icon-default}));
+    
     svg {
-      box-shadow: inset 0 0 0 1px @cdr-color-border-button-secondary-active;
+      //ITEM_DOC: Box shadow of the svg in an icon-only cdr-button when active or focused
+      box-shadow: inset 0 0 0 1px var(--cdr-button-icon-only-icon-svg-box-shadow, var(--cdr-color-border-button-secondary-active, @{cdr-color-border-button-secondary-active}));
     }
   }
 
@@ -281,41 +373,70 @@
     background: transparent;
     box-shadow: none;
     border: none;
-    fill: @cdr-color-icon-disabled;
+
+    //ITEM_DOC: Fill color of a disabled icon-only cdr-button
+    fill: var(--cdr-button-icon-only-disabled-icon-fill, var(--cdr-color-icon-disabled, @{cdr-color-icon-disabled}));
   }
 }
 
 .cdr-button-with-background-mixin() {
   border-radius: 50%;
-  fill: @cdr-color-icon-default;
-  background-color: @cdr-color-background-button-secondary-rest;
-  box-shadow: inset 0 0 0 1px @cdr-color-border-button-secondary-rest;
+
+  //ITEM_DOC: Fill color of a cdr-button with background
+  fill: var(--cdr-button-with-background-icon-fill, var(--cdr-color-icon-default, @{cdr-color-icon-default}));
+
+  //ITEM_DOC: Background color of a cdr-button with background
+  background-color: var(--cdr-button-with-background-background-color, var(--cdr-color-background-button-secondary-rest, @{cdr-color-background-button-secondary-rest}));
+
+  //ITEM_DOC: Box shadow color of a cdr-button with background
+  box-shadow: inset 0 0 0 1px var(--cdr-button-with-background-box-shadow, var(--cdr-color-border-button-secondary-rest, @{cdr-color-border-button-secondary-rest}));
 
   &:hover,
   &:focus {
-    fill: @cdr-color-icon-default;
-    background-color: @cdr-color-background-button-secondary-hover;
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-secondary-hover, @cdr-prominence-raised;
+    //ITEM_DOC: Fill color of a cdr-button with background during interaction
+    fill: var(--cdr-button-with-background-icon-fill-interaction, var(--cdr-color-icon-default, @{cdr-color-icon-default}));
+    
+    //ITEM_DOC: Background color of a cdr-button with background during interaction
+    background-color: var(--cdr-button-with-background-background-color-interaction, var(--cdr-color-background-button-secondary-hover, @{cdr-color-background-button-secondary-hover}));
+    
+    //ITEM_DOC: Box shadow color of a cdr-button with background during interaction
+    box-shadow: inset 0 0 0 3px var(--cdr-button-with-background-box-shadow-interaction, var(--cdr-color-border-button-secondary-hover, @{cdr-color-border-button-secondary-hover})), @cdr-prominence-raised;
+    
     svg {
       box-shadow: none;
     }
   }
+
   &:active {
-    color: @cdr-color-text-button-secondary-active;
-    fill: @cdr-color-text-button-secondary-active;
-    background-color: @cdr-color-background-button-secondary-active;
-    box-shadow: inset 0 0 0 3px @cdr-color-border-button-secondary-active, inset 0 0 0 5px @cdr-color-border-button-secondary-active-inset;
+    //ITEM_DOC: Text color of an active cdr-button with background
+    color: var(--cdr-button-with-background-color-active, var(--cdr-color-text-button-secondary-active, @{cdr-color-text-button-secondary-active}));
+    
+    //ITEM_DOC: Fill color of an active cdr-button with background
+    fill: var(--cdr-button-with-background-fill-active, var(--cdr-color-text-button-secondary-active, @{cdr-color-text-button-secondary-active}));
+    
+    //ITEM_DOC: Background color of an active cdr-button with background
+    background-color: var(--cdr-button-with-background-background-color-active, var(--cdr-color-background-button-secondary-active, @{cdr-color-background-button-secondary-active}));
+    
+    //ITEM_DOC: Box shadow color of an active cdr-button with background
+    box-shadow: inset 0 0 0 3px var(--cdr-button-with-background-box-shadow-active, var(--cdr-color-border-button-secondary-active, @{cdr-color-border-button-secondary-active})), inset 0 0 0 5px var(--cdr-button-with-background-box-shadow-inset-active, var(--cdr-color-border-button-secondary-active-inset, @{cdr-color-border-button-secondary-active-inset}));
+    
     svg {
       box-shadow: none;
     }
   }
 
   &[disabled] {
-    background-color: @cdr-color-background-button-secondary-disabled;
-    box-shadow: inset 0 0 0 1px @cdr-color-border-button-default-disabled;
-    fill: @cdr-color-text-button-secondary-disabled;
+    //ITEM_DOC: Background color of a disabled cdr-button with background
+    background-color: var(--cdr-button-with-background-background-color-disabled, var(--cdr-color-background-button-secondary-disabled, @{cdr-color-background-button-secondary-disabled}));
+    
+    //ITEM_DOC: Box shadow color of a disabled cdr-button with background
+    box-shadow: inset 0 0 0 1px var(--cdr-button-with-background-box-shadow-disabled, var(--cdr-color-border-button-default-disabled, @{cdr-color-border-button-default-disabled}));
+    
+    //ITEM_DOC: Fill color of a disabled cdr-button with background
+    fill: var(--cdr-button-with-background-fill-disabled, var(--cdr-color-text-button-secondary-disabled, @{cdr-color-text-button-secondary-disabled}));
   }
 }
+
 
 .cdr-button-small-mixin() {
   .cdr-button-base-text-mixin-small;
@@ -415,10 +536,12 @@
 
 .cdr-card-base-mixin() {
   position: relative;
-  background-color: @cdr-color-background-primary;
+  //ITEM_DOC: Background color of a cdr-card
+  background-color: var(--cdr-card-base-background-color, var(--cdr-color-background-primary, @{cdr-color-background-primary}));
   border-radius: @cdr-radius-softer;
   box-shadow: @cdr-prominence-raised;
-  color: @cdr-color-text-primary;
+  //ITEM_DOC: Text color of a cdr-card
+  color: var(--cdr-card-base-color, var(--cdr-color-text-primary, @{cdr-color-text-primary}));
   width: 100%;
   transition: box-shadow @cdr-duration-2-x @cdr-timing-function-ease;
   cursor: pointer;
@@ -433,12 +556,14 @@
 
 .cdr-card-link-mixin() {
   position: static;
-  color: @cdr-color-text-primary !important;
+  //ITEM_DOC: Link text color of a cdr-card
+  color: var(--cdr-card-link-color, var(--cdr-color-text-primary, @{cdr-color-text-primary})) !important;
   text-decoration: none !important;
 
   &:hover {
     text-decoration: underline !important;
-    color: @cdr-color-text-link-hover !important;
+    //ITEM_DOC: Link hover text color of a cdr-card
+    color: var(--cdr-card-link-hover-color, var(--cdr-color-text-link-hover, @{cdr-color-text-link-hover})) !important;
   }
 
   &::before {
@@ -457,70 +582,89 @@
 .cdr-chip-base-mixin() {
   display: inline-flex;
   align-items: center;
-
   position: relative;
   width: max-content;
   padding: @cdr-space-half-x @cdr-space-three-quarter-x;
-  border-radius: 30px; // TODO: cdr-radius-softest? cdr-radius-chip?
+  border-radius: 30px;
   border: 0;
 
-  color: @cdr-color-text-chip-default;
-  fill: @cdr-color-text-chip-default;
-  background-color: @cdr-color-background-chip-default-rest;
-  box-shadow: inset 0 0 0 1px @cdr-color-border-chip-default-rest;
+  //ITEM_DOC: Text color of a cdr-chip
+  color: var(--cdr-chip-text-color, var(--cdr-color-text-chip-default, @{cdr-color-text-chip-default}));
+  //ITEM_DOC: Fill color of a cdr-chip
+  fill: var(--cdr-chip-fill-color, var(--cdr-color-text-chip-default, @{cdr-color-text-chip-default}));
+  //ITEM_DOC: Background color of a cdr-chip
+  background-color: var(--cdr-chip-background-color-rest, var(--cdr-color-background-chip-default-rest, @{cdr-color-background-chip-default-rest}));
+  //ITEM_DOC: Box-shadow color of a cdr-chip
+  box-shadow: inset 0 0 0 1px var(--cdr-chip-box-shadow-color-rest, var(--cdr-color-border-chip-default-rest, @{cdr-color-border-chip-default-rest}));
 
   cursor: pointer;
-
   font-family: @cdr-font-family-sans;
   font-size: 14px;
   line-height: 15px;
   font-weight: 400;
   letter-spacing: -0.08px;
-
   transition: color @cdr-duration-1-x @cdr-timing-function-ease, fill @cdr-duration-1-x @cdr-timing-function-ease, background-color @cdr-duration-1-x @cdr-timing-function-ease, box-shadow @cdr-duration-1-x @cdr-timing-function-ease;
-
 
   &:disabled, &:disabled:hover, &:disabled:focus  {
     cursor: not-allowed !important;
-    background-color: @cdr-color-background-chip-default-disabled !important;
-    box-shadow: inset 0 0 0 1px @cdr-color-border-chip-default-disabled !important;
-    color: @cdr-color-text-chip-disabled !important;
+    //ITEM_DOC: Background color of a cdr-chip when disabled
+    background-color: var(--cdr-chip-background-color-disabled, var(--cdr-color-background-chip-default-disabled, @{cdr-color-background-chip-default-disabled})) !important;
+    //ITEM_DOC: Box-shadow color of a cdr-chip when disabled
+    box-shadow: inset 0 0 0 1px var(--cdr-chip-box-shadow-color-disabled, var(--cdr-color-border-chip-default-disabled, @{cdr-color-border-chip-default-disabled})) !important;
+    //ITEM_DOC: Text color of a cdr-chip when disabled
+    color: var(--cdr-chip-text-color-disabled, var(--cdr-color-text-chip-disabled, @{cdr-color-text-chip-disabled})) !important;
   }
 
   &:hover {
-    background-color: @cdr-color-background-chip-default-hover;
-    box-shadow: inset 0 0 0 1px @cdr-color-border-chip-default-hover, @cdr-prominence-elevated;
+    //ITEM_DOC: Background color of a cdr-chip on hover
+    background-color: var(--cdr-chip-background-color-hover, var(--cdr-color-background-chip-default-hover, @{cdr-color-background-chip-default-hover}));
+    //ITEM_DOC: Box-shadow color of a cdr-chip on hover
+    box-shadow: inset 0 0 0 2px var(--cdr-chip-box-shadow-color-hover, var(--cdr-color-border-chip-default-hover, @{cdr-color-border-chip-default-hover}));
   }
 
   &:focus {
     outline: none;
     outline-offset: 0;
-    background-color: @cdr-color-background-chip-default-focus;
-    box-shadow: inset 0 0 0 3px @cdr-color-border-chip-default-focus;
+    //ITEM_DOC: Background color of a cdr-chip on focus
+    background-color: var(--cdr-chip-background-color-focus, var(--cdr-color-background-chip-default-focus, @{cdr-color-background-chip-default-focus}));
+    //ITEM_DOC: Box-shadow color of a cdr-chip on focus
+    box-shadow: inset 0 0 0 3px var(--cdr-chip-box-shadow-color-focus, var(--cdr-color-border-chip-default-focus, @{cdr-color-border-chip-default-focus})), @cdr-prominence-raised;
   }
 
   &:active {
-    background-color: @cdr-color-background-chip-default-active;
-    box-shadow: inset 0 0 0 1px @cdr-color-border-chip-default-active, @cdr-prominence-elevated;
+    //ITEM_DOC: Background color of a cdr-chip when active
+    background-color: var(--cdr-chip-background-color-active, var(--cdr-color-background-chip-default-active, @{cdr-color-background-chip-default-active}));
+    //ITEM_DOC: Box-shadow color of a cdr-chip when active
+    box-shadow: inset 0 0 0 3px var(--cdr-chip-box-shadow-color-active, var(--cdr-color-border-chip-default-active, @{cdr-color-border-chip-default-active})), @cdr-prominence-raised;
   }
 
   &[aria-pressed="true"], &[aria-checked="true"] {
-    text-shadow: 0 0 1px currentColor;
-    background-color: @cdr-color-background-chip-default-selected;
-    box-shadow: inset 0 0 0 1px @cdr-color-border-chip-default-selected-rest;
+    font-weight: 500;
+    //ITEM_DOC: Background color of a cdr-chip when selected
+    background-color: var(--cdr-chip-background-color-selected-rest, var(--cdr-color-background-chip-default-selected, @{cdr-color-background-chip-default-selected}));
+    //ITEM_DOC: Box-shadow color of a cdr-chip when selected
+    box-shadow: inset 0 0 0 2px var(--cdr-chip-box-shadow-color-selected-rest, var(--cdr-color-border-chip-default-selected-rest, @{cdr-color-border-chip-default-selected-rest}));
   }
 
-  &[aria-pressed="true"]:hover,
-  &[aria-checked="true"]:hover {
-    background-color: @cdr-color-background-chip-default-selected-hover;
-    box-shadow: inset 0 0 0 2px @cdr-color-border-chip-default-selected-hover, @cdr-prominence-elevated;
-
+  &[aria-pressed="true"]:hover, &[aria-checked="true"]:hover {
+    //ITEM_DOC: Background color of a cdr-chip when selected and hovered
+    background-color: var(--cdr-chip-background-color-selected-hover, var(--cdr-color-background-chip-default-selected-hover, @{cdr-color-background-chip-default-selected-hover}));
+    //ITEM_DOC: Box-shadow color of a cdr-chip when selected and hovered
+    box-shadow: inset 0 0 0 2px var(--cdr-chip-box-shadow-color-selected-hover, var(--cdr-color-border-chip-default-selected-hover, @{cdr-color-border-chip-default-selected-hover}));
   }
 
-  &[aria-pressed="true"]:focus,
-  &[aria-checked="true"]:focus  {
-    background-color: @cdr-color-background-chip-default-selected-focus;
-    box-shadow: inset 0 0 0 3px @cdr-color-border-chip-default-selected-focus;
+  &[aria-pressed="true"]:focus, &[aria-checked="true"]:focus  {
+    //ITEM_DOC: Background color of a cdr-chip when selected and focused
+    background-color: var(--cdr-chip-background-color-selected-focus, var(--cdr-color-background-chip-default-selected-focus, @{cdr-color-background-chip-default-selected-focus}));
+    //ITEM_DOC: Box-shadow color of a cdr-chip when selected and focused
+    box-shadow: inset 0 0 0 3px var(--cdr-chip-box-shadow-color-selected-focus, var(--cdr-color-border-chip-default-selected-focus, @{cdr-color-border-chip-default-selected-focus})), @cdr-prominence-raised;
+  }
+
+  &[aria-pressed="true"]:active, &[aria-checked="true"]:active  {
+    //ITEM_DOC: Background color of a cdr-chip when selected and active
+    background-color: var(--cdr-chip-background-color-selected-active, var(--cdr-color-background-chip-default-selected-active, @{cdr-color-background-chip-default-selected-active}));
+    //ITEM_DOC: Box-shadow color of a cdr-chip when selected and active
+    box-shadow: inset 0 0 0 3px var(--cdr-chip-box-shadow-color-selected-focus, var(--cdr-color-border-chip-default-selected-focus, @{cdr-color-border-chip-default-selected-focus})), @cdr-prominence-raised;
   }
 }
 
@@ -544,7 +688,8 @@
 }
 
 .cdr-breadcrumb-item-mixin() {
-  color: @cdr-color-text-secondary;
+  //ITEM_DOC: Breadcrumb item color
+  color: var(--cdr-breadcrumb-item-color, var(--cdr-color-text-secondary, @{cdr-color-text-secondary}));
 }
 
 .cdr-breadcrumb-item-linked-mixin() {
@@ -553,7 +698,9 @@
   &:hover,
   &:active,
   &:focus {
-    color: @cdr-color-text-link-hover;
+    //ITEM_DOC: Breadcrumb item linked hover, active and focus color
+    color: var(--cdr-breadcrumb-item-linked-highlight-color, var(--cdr-color-text-link-hover, @{cdr-color-text-link-hover}));
+    text-decoration: underline;
   }
 }
 
@@ -583,21 +730,27 @@
 }
 
 .cdr-form-group-error-mixin() {
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-error;
-  background-color: @cdr-color-background-input-error;
+  //ITEM_DOC: Box-shadow color of a cdr-form-group error
+  box-shadow: inset 0 0 0 1px var(--cdr-form-group-error-box-shadow, var(--cdr-color-border-input-error, @{cdr-color-border-input-error}));
+  //ITEM_DOC: Background color of a cdr-form-group error
+  background-color: var(--cdr-form-group-error-background-color, var(--cdr-color-background-input-error, @{cdr-color-background-input-error}));
   &:hover {
-    background-color: transparent;
+    //ITEM_DOC: Background color of a cdr-form-group error on hover
+    background-color: var(--cdr-form-group-error-background-hover, transparent);
   }
 }
 
 .cdr-form-group-optional-mixin() {
-  color: @cdr-color-text-input-optional;
+  //ITEM_DOC: Text color of an optional cdr-form-group
+  color: var(--cdr-form-group-optional-text-color, var(--cdr-color-text-input-optional, @{cdr-color-text-input-optional}));
 }
 
 .cdr-form-group-disabled-mixin() {
   cursor: not-allowed;
-  color: @cdr-color-text-disabled;
+  //ITEM_DOC: Text color of a disabled cdr-form-group
+  color: var(--cdr-form-group-disabled-text-color, var(--cdr-color-text-disabled, @{cdr-color-text-disabled}));
 }
+
 
 .cdr-form-group-content-mixin() {
   border-radius: @cdr-radius-softer;
@@ -610,8 +763,10 @@
 
 .cdr-form-error-base-mixin() {
   .cdr-text-utility-sans-300;
-  color: @cdr-color-text-input-error;
-  fill: @cdr-color-text-input-error;
+  //ITEM_DOC: Text color of a cdr-form-error
+  color: var(--cdr-form-error-text-color, var(--cdr-color-text-input-error, @{cdr-color-text-input-error}));
+  //ITEM_DOC: Fill color of a cdr-form-error
+  fill: var(--cdr-form-error-fill-color, var(--cdr-color-text-input-error, @{cdr-color-text-input-error}));
   margin-top: @cdr-space-quarter-x;
 }
 
@@ -645,21 +800,25 @@
 
 .cdr-label-standalone-label-mixin() {
   .cdr-text-utility-sans-200;
-  color: @cdr-color-text-input-label;
+  //ITEM_DOC: Text color of a standalone label
+  color: var(--cdr-label-standalone-text-color, var(--cdr-color-text-input-label, @{cdr-color-text-input-label}));
   margin: 0;
 }
 
 .cdr-label-standalone-disabled-mixin() {
-  color:  @cdr-color-text-input-disabled;
+  //ITEM_DOC: Text color of a standalone label when disabled
+  color: var(--cdr-label-standalone-disabled-text-color, var(--cdr-color-text-input-disabled, @{cdr-color-text-input-disabled}));
 }
 
 .cdr-label-standalone-optional-mixin() {
-  color: @cdr-color-text-input-optional;
+  //ITEM_DOC: Text color of a standalone label when optional
+  color: var(--cdr-label-standalone-optional-text-color, var(--cdr-color-text-input-optional, @{cdr-color-text-input-optional}));
 }
 
 .cdr-label-standalone-helper-mixin() {
   .cdr-text-utility-sans-200;
-  color: @cdr-color-text-input-help;
+  //ITEM_DOC: Text color of a standalone helper label
+  color: var(--cdr-label-standalone-helper-text-color, var(--cdr-color-text-input-help, @{cdr-color-text-input-help}));
   margin-top: @cdr-space-eighth-x;
 }
 
@@ -672,8 +831,10 @@
   padding: @cdr-space-half-x;
   padding-left: calc(~"@{cdr-form-figure-size-medium} + @{cdr-space-one-x}");
   padding-right: @cdr-space-three-quarter-x;
-  color: @cdr-color-text-input-label;
-  background-color: @cdr-color-background-input-default;
+  //ITEM_DOC: Text color of a label wrapper
+  color: var(--cdr-label-wrapper-text-color, var(--cdr-color-text-input-label, @{cdr-color-text-input-label}));
+  //ITEM_DOC: Background color of a label wrapper
+  background-color: var(--cdr-label-wrapper-background-color, var(--cdr-color-background-input-default, @{cdr-color-background-input-default}));
   border-radius: @cdr-radius-softer;
   width: 100%;
   display: inline-block;
@@ -682,43 +843,52 @@
 
 .cdr-label-wrapper-primary-mixin() {
   &:hover {
-    background-color: @cdr-color-background-label-default-hover;
+    //ITEM_DOC: Background color of a primary label wrapper when hovered
+    background-color: var(--cdr-label-wrapper-primary-background-color-hover, var(--cdr-color-background-label-default-hover, @{cdr-color-background-label-default-hover}));
     cursor: pointer;
   }
 
   &:focus-within {
-    background-color: @cdr-color-background-label-default-focus;
-    box-shadow: inset 0 0 0 2px @cdr-color-border-label-default-focus;
+    //ITEM_DOC: Background color of a primary label wrapper when it has focus within
+    background-color: var(--cdr-label-wrapper-primary-background-color-focus, var(--cdr-color-background-label-default-focus, @{cdr-color-background-label-default-focus}));
+    //ITEM_DOC: Box shadow color of a primary label wrapper when it has focus within
+    box-shadow: inset 0 0 0 2px var(--cdr-label-wrapper-primary-focus-box-shadow-color, var(--cdr-color-border-label-default-focus, @{cdr-color-border-label-default-focus}));
   }
 
   &:active {
-    background-color: @cdr-color-background-label-default-active;
+    //ITEM_DOC: Background color of a primary label wrapper when active
+    background-color: var(--cdr-label-wrapper-primary-background-color-active, var(--cdr-color-background-label-default-active, @{cdr-color-background-label-default-active}));
   }
-
 }
 
 .cdr-label-wrapper-secondary-mixin() {
-  background-color: @cdr-color-background-input-default;
+  //ITEM_DOC: Background color of a secondary label wrapper
+  background-color: var(--cdr-label-wrapper-secondary-background-color, var(--cdr-color-background-input-default, @{cdr-color-background-input-default}));
   &:hover {
-    background-color: @cdr-color-background-label-secondary-hover;
+    //ITEM_DOC: Background color of a secondary label wrapper when hovered
+    background-color: var(--cdr-label-wrapper-secondary-background-color-hover, var(--cdr-color-background-label-secondary-hover, @{cdr-color-background-label-secondary-hover}));
     cursor: pointer;
   }
 
   &:focus-within {
-    background-color: @cdr-color-background-label-secondary-focus;
+    //ITEM_DOC: Background color of a secondary label wrapper when it has focus within
+    background-color: var(--cdr-label-wrapper-secondary-background-color-focus, var(--cdr-color-background-label-secondary-focus, @{cdr-color-background-label-secondary-focus}));
   }
 
   &:active {
-    background-color: @cdr-color-background-label-secondary-active;
+    //ITEM_DOC: Background color of a secondary label wrapper when active
+    background-color: var(--cdr-label-wrapper-secondary-background-color-active, var(--cdr-color-background-label-secondary-active, @{cdr-color-background-label-secondary-active}));
   }
 }
 
 .cdr-label-wrapper-disabled-mixin() {
-  color: @cdr-color-text-input-disabled !important;
+  //ITEM_DOC: Text color of a disabled label wrapper
+  color: var(--cdr-label-wrapper-text-color-disabled, var(--cdr-color-text-input-disabled, @{cdr-color-text-input-disabled})) !important;
   cursor: not-allowed !important;
 
   &:hover, &:focus-within, &:active {
-    background-color: transparent !important;
+    //ITEM_DOC: Background color of a disabled label wrapper
+    background-color: var(--cdr-label-wrapper-background-color-disabled, var(--cdr-color-background-input-default, @{cdr-color-background-input-default})) !important;
   }
 }
 
@@ -742,8 +912,8 @@
   height: @cdr-form-figure-size-small;
 
   &::after {
-    width: @cdr-form-figure-size-small / 4;
-    height: @cdr-form-figure-size-small / 4;
+    width: calc(~"@{cdr-form-figure-size-small} / 4");
+    height: calc(~"@{cdr-form-figure-size-small} / 4");
   }
 }
 
@@ -752,8 +922,8 @@
   height: @cdr-form-figure-size-medium;
 
   &::after {
-    width: @cdr-form-figure-size-medium / 4;
-    height: @cdr-form-figure-size-medium / 4;
+    width: calc(~"@{cdr-form-figure-size-medium} / 4");
+    height: calc(~"@{cdr-form-figure-size-medium} / 4");
   }
 }
 
@@ -761,9 +931,9 @@
   width: @cdr-form-figure-size-large;
   height: @cdr-form-figure-size-large;
 
-  &::after {
-    width: @cdr-form-figure-size-large / 4;
-    height: @cdr-form-figure-size-large / 4;
+  &::after, .cdr-checkbox__checkbox-box {
+    width: calc(~"@{cdr-form-figure-size-large} / 4");
+    height: calc(~"@{cdr-form-figure-size-large} / 4");
   }
 }
 
@@ -772,19 +942,19 @@
   width: @cdr-form-figure-size-medium;
   height: @cdr-form-figure-size-medium;
   &::after {
-    width: @cdr-form-figure-size-medium / 4;
-    height: @cdr-form-figure-size-medium / 4;
+    width: calc(~"@{cdr-form-figure-size-medium} / 4");
+    height: calc(~"@{cdr-form-figure-size-medium} / 4");
   }
 
   position: absolute;
   left: @cdr-space-half-x;
   border-radius: @cdr-radius-softer;
-  background-color: @cdr-color-background-input-default;
-  box-shadow: 0 0 0 1px @cdr-color-border-input-default;
+  //ITEM_DOC: Background color of a form figure
+  background-color: var(--cdr-form-figure-background-color, var(--cdr-color-background-input-default, @{cdr-color-background-input-default}));
+  //ITEM_DOC: Box shadow color of a form figure
+  box-shadow: 0 0 0 1px var(--cdr-form-figure-box-shadow-color, var(--cdr-color-border-input-default, @{cdr-color-border-input-default}));
   transition: box-shadow @cdr-duration-2-x @cdr-timing-function-ease;
 };
-
-// responsize size mixins
 
 .label-wrapper-small-mixin(@breakpoint: '') {
   &--small@{breakpoint} {
@@ -813,6 +983,17 @@
     & > .cdr-label-wrapper__figure {
       .cdr-label-wrapper-figure-large-mixin;
     }
+
+    .cdr-checkbox__checkbox-box {
+      width: 2rem;
+      height: 2rem;
+    }
+    .cdr-checkbox__svg-box svg {
+      width: 2rem;
+      height: 2rem;
+      left: 0rem;
+      top: -1.7rem;
+    }
   }
 }
 
@@ -821,8 +1002,8 @@
   &::after {
     content: '';
     position: absolute;
-    width: @cdr-form-figure-size-medium / 4;
-    height: @cdr-form-figure-size-medium / 4;
+    width: calc(~"@{cdr-form-figure-size-medium} / 4");
+    height: calc(~"@{cdr-form-figure-size-medium} / 4");
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -831,102 +1012,139 @@
 }
 
 .cdr-form-figure-radio-checked-mixin() {
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-selected;
-  background-color: @cdr-color-background-input-default-selected;
-
+  //ITEM_DOC: Box-shadow color of cdr-radio when selected
+  box-shadow: inset 0 0 0 1px var(--cdr-radio-box-shadow-color-selected, var(--cdr-color-border-input-default-selected, @{cdr-color-border-input-default-selected}));
+  
+  //ITEM_DOC: Background color of cdr-radio when selected
+  background-color: var(--cdr-radio-background-color-selected, var(--cdr-color-background-input-default-selected, @{cdr-color-background-input-default-selected}));
+  
   &::after {
-    background-color: @cdr-color-icon-checkbox-default-selected;
+    //ITEM_DOC: Background color of the inner circle of cdr-radio when selected
+    background-color: var(--cdr-radio-inner-circle-background-color-selected, var(--cdr-color-icon-checkbox-default-selected, @{cdr-color-icon-checkbox-default-selected}));
   }
 }
 
 .cdr-form-figure-radio-hover-mixin() {
   cursor: pointer;
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-hover, 0 0 0 1px @cdr-color-border-input-default-hover;
-  background-color: @cdr-color-background-input-default-hover;
+  //ITEM_DOC: Box-shadow color of cdr-radio on hover
+  box-shadow: inset 0 0 0 1px var(--cdr-radio-box-shadow-color-hover, var(--cdr-color-border-input-default-hover, @{cdr-color-border-input-default-hover})), 0 0 0 1px var(--cdr-radio-box-shadow-color-hover, var(--cdr-color-border-input-default-hover, @{cdr-color-border-input-default-hover}));
 
+  //ITEM_DOC: Background color of cdr-radio on hover
+  background-color: var(--cdr-radio-background-color-hover, var(--cdr-color-background-input-default-hover, @{cdr-color-background-input-default-hover}));
 }
 
 .cdr-form-figure-radio-checked-hover-mixin() {
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-selected-hover, 0 0 0 1px @cdr-color-border-input-default-selected-hover;
-  background-color: @cdr-color-background-input-default-selected-hover;
-
+  //ITEM_DOC: Box-shadow color of cdr-radio when selected on hover
+  box-shadow: inset 0 0 0 1px var(--cdr-radio-box-shadow-color-selected-hover, var(--cdr-color-border-input-default-selected-hover, @{cdr-color-border-input-default-selected-hover})), 0 0 0 1px var(--cdr-radio-box-shadow-color-selected-hover, var(--cdr-color-border-input-default-selected-hover, @{cdr-color-border-input-default-selected-hover}));
+  
+  //ITEM_DOC: Background color of cdr-radio when selected on hover
+  background-color: var(--cdr-radio-background-color-selected-hover, var(--cdr-color-background-input-default-selected-hover, @{cdr-color-background-input-default-selected-hover}));
 }
 
 .cdr-form-figure-radio-disabled-mixin() {
   cursor: not-allowed !important;
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-disabled !important;
-  background-color: @cdr-color-background-input-default-disabled !important;
+
+  //ITEM_DOC: Box-shadow color of cdr-radio when disabled
+  box-shadow: inset 0 0 0 1px var(--cdr-radio-box-shadow-color-disabled, var(--cdr-color-border-input-default-disabled, @{cdr-color-border-input-default-disabled})) !important;
+  
+  //ITEM_DOC: Background color of cdr-radio when disabled
+  background-color: var(--cdr-radio-background-color-disabled, var(--cdr-color-background-input-default-disabled, @{cdr-color-background-input-default-disabled})) !important;
+  
   &:after {
-    background-color: @cdr-color-background-input-default-disabled !important;
+    //ITEM_DOC: Background color of the inner circle of cdr-radio when disabled
+    background-color: var(--cdr-radio-inner-circle-background-color-disabled, var(--cdr-color-background-input-default-disabled, @{cdr-color-background-input-default-disabled})) !important;
   }
 
 }
 
 .cdr-form-figure-radio-checked-disabled-mixin() {
   &::after {
-    background-color: @cdr-color-background-input-default-disabled !important;
+    //ITEM_DOC: Background color of the inner circle of cdr-radio when selected and disabled
+    background-color: var(--cdr-radio-inner-circle-background-color-selected-disabled, var(--cdr-color-background-input-default-disabled, @{cdr-color-background-input-default-disabled})) !important;
   }
 }
 
 .cdr-form-figure-radio-focus-mixin() {
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-active, 0 0 0 1px @cdr-color-border-input-default-active;
-  background-color: @cdr-color-background-input-default-focus;
+  //ITEM_DOC: Box-shadow color of cdr-radio on focus
+  box-shadow: inset 0 0 0 1px var(--cdr-radio-box-shadow-color-focus, var(--cdr-color-border-input-default-active, @{cdr-color-border-input-default-active})), 0 0 0 1px var(--cdr-radio-box-shadow-color-focus, var(--cdr-color-border-input-default-active, @{cdr-color-border-input-default-active}));
+  
+  //ITEM_DOC: Background color of cdr-radio on focus
+  background-color: var(--cdr-radio-background-color-focus, var(--cdr-color-background-input-default-focus, @{cdr-color-background-input-default-focus}));
 }
 
 .cdr-form-figure-radio-checked-focus-mixin() {
-  background-color: @cdr-color-background-input-default-selected-focus;
+  //ITEM_DOC: Background color of cdr-radio when selected on focus
+  background-color: var(--cdr-radio-background-color-selected-focus, var(--cdr-color-background-input-default-selected-focus, @{cdr-color-background-input-default-selected-focus}));
 }
 
 .cdr-form-figure-radio-active-mixin() {
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-active, 0 0 0 1px @cdr-color-border-input-default-active;
-  background-color: @cdr-color-background-input-default-active;
+  //ITEM_DOC: Box-shadow color of cdr-radio when active
+  box-shadow: inset 0 0 0 1px var(--cdr-radio-box-shadow-color-active, var(--cdr-color-border-input-default-active, @{cdr-color-border-input-default-active})), 0 0 0 1px var(--cdr-radio-box-shadow-color-active, var(--cdr-color-border-input-default-active, @{cdr-color-border-input-default-active}));
+
+  //ITEM_DOC: Background color of cdr-radio when active
+  background-color: var(--cdr-radio-background-color-active, var(--cdr-color-background-input-default-active, @{cdr-color-background-input-default-active}));
+  
   &::after {
-    background-color: @cdr-color-icon-checkbox-default-selected-active;
+    //ITEM_DOC: Background color of the inner circle of cdr-radio when selected and active
+    background-color: var(--cdr-radio-inner-circle-background-color-selected-active, var(--cdr-color-icon-checkbox-default-selected-active, @{cdr-color-icon-checkbox-default-selected-active}));
   }
 }
 
+
+
 .cdr-form-figure-checkbox-checked-mixin() {
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-selected;
-  background-color: @cdr-color-background-input-default-selected;
-  background-image: svg-load('node_modules/@rei/cedar-icons/dist/icons/check-lg.svg', fill="@{cdr-color-icon-checkbox-default-selected}");
+  //ITEM_DOC: Box-shadow color of a checked cdr-checkbox
+  box-shadow: inset 0 0 0 1px var(--cdr-form-figure-checkbox-box-shadow-checked, var(--cdr-color-border-input-default-selected, @{cdr-color-border-input-default-selected}));
+  //ITEM_DOC: Background color of a checked cdr-checkbox
+  background-color: var(--cdr-form-figure-checkbox-background-color-checked, var(--cdr-color-background-input-default-selected, @{cdr-color-background-input-default-selected}));
   background-repeat: no-repeat;
 }
 
 .cdr-form-figure-checkbox-hover-mixin() {
   cursor: pointer;
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-hover, 0 0 0 1px @cdr-color-border-input-default-hover;
-  background-color: @cdr-color-background-input-default-hover;
+  //ITEM_DOC: Box-shadow color of a hovered cdr-checkbox
+  box-shadow: inset 0 0 0 1px var(--cdr-form-figure-checkbox-box-shadow-hover, var(--cdr-color-border-input-default-hover, @{cdr-color-border-input-default-hover})), 0 0 0 1px var(--cdr-form-figure-checkbox-box-shadow-hover, var(--cdr-color-border-input-default-hover, @{cdr-color-border-input-default-hover}));
+  //ITEM_DOC: Background color of a hovered cdr-checkbox
+  background-color: var(--cdr-form-figure-checkbox-background-hover, var(--cdr-color-background-input-default-hover, @{cdr-color-background-input-default-hover}));
 }
 
 .cdr-form-figure-checkbox-checked-hover-mixin() {
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-selected-hover, 0 0 0 1px @cdr-color-border-input-default-selected-hover;
-  background-color: @cdr-color-background-input-default-selected-hover;
-  background-image: svg-load('node_modules/@rei/cedar-icons/dist/icons/check-lg.svg', fill="@{cdr-color-icon-checkbox-default-selected-hover}");
+  //ITEM_DOC: Box-shadow color of a checked and hovered cdr-checkbox
+  box-shadow: inset 0 0 0 1px var(--cdr-form-figure-checkbox-checked-box-shadow-hover, var(--cdr-color-border-input-default-selected-hover, @{cdr-color-border-input-default-selected-hover})), 0 0 0 1px var(--cdr-form-figure-checkbox-checked-hover-box-shadow, var(--cdr-color-border-input-default-selected-hover, @{cdr-color-border-input-default-selected-hover}));
+  //ITEM_DOC: Background color of a checked and hovered cdr-checkbox
+  background-color: var(--cdr-form-figure-checkbox-checked-background-hover, var(--cdr-color-background-input-default-selected-hover, @{cdr-color-background-input-default-selected-hover}));
 }
 
 .cdr-form-figure-checkbox-disabled-mixin() {
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-disabled !important;
-  background-color: @cdr-color-background-input-default-disabled !important;
+  //ITEM_DOC: Box-shadow color of a cdr-checkbox when disabled
+  box-shadow: inset 0 0 0 1px var(--cdr-form-figure-checkbox-box-shadow-disabled, var(--cdr-color-border-input-default-disabled, @{cdr-color-border-input-default-disabled})) !important;
+  //ITEM_DOC: Background color of a cdr-checkbox when disabled
+  background-color: var(--cdr-form-figure-checkbox-background-disabled, var(--cdr-color-background-input-default-disabled, @{cdr-color-background-input-default-disabled})) !important;
   background-image: none !important;
 }
 
 .cdr-form-figure-checkbox-checked-disabled-mixin() {
-  background-color: @cdr-color-background-input-default-disabled !important;
+  //ITEM_DOC: Background color of a checked cdr-checkbox when disabled
+  background-color: var(--cdr-form-figure-checkbox-background-checked-disabled, var(--cdr-color-background-input-default-disabled, @{cdr-color-background-input-default-disabled})) !important;
 }
 
 .cdr-form-figure-checkbox-active-mixin() {
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-active, 0 0 0 1px @cdr-color-border-input-default-active;
-  background-color: @cdr-color-background-input-default-active;
-  background-image: svg-load('node_modules/@rei/cedar-icons/dist/icons/check-lg.svg', fill="@{cdr-color-icon-checkbox-default-selected-active}");
+  //ITEM_DOC: Box-shadow color of a cdr-checkbox when active
+  box-shadow: inset 0 0 0 1px var(--cdr-form-figure-checkbox-box-shadow-active, var(--cdr-color-border-input-default-active, @{cdr-color-border-input-default-active})), 0 0 0 1px var(--cdr-form-figure-checkbox-box-shadow-active, var(--cdr-color-border-input-default-active, @{cdr-color-border-input-default-active}));
+  //ITEM_DOC: Background color of a cdr-checkbox when active
+  background-color: var(--cdr-form-figure-checkbox-background-active, var(--cdr-color-background-input-default-active, @{cdr-color-background-input-default-active}));
 }
 
 .cdr-form-figure-checkbox-focus-mixin() {
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-active, 0 0 0 1px @cdr-color-border-input-default-active;
-  background-color: @cdr-color-background-input-default-focus;
+  //ITEM_DOC: Box-shadow color of a cdr-checkbox when focused
+  box-shadow: inset 0 0 0 1px var(--cdr-form-figure-checkbox-box-shadow-focus, var(--cdr-color-border-input-default-active, @{cdr-color-border-input-default-active})), 0 0 0 1px var(--cdr-form-figure-checkbox-box-shadow-focus, var(--cdr-color-border-input-default-active, @{cdr-color-border-input-default-active}));
+  //ITEM_DOC: Background color of a cdr-checkbox when focused
+  background-color: var(--cdr-form-figure-checkbox-background-focus, var(--cdr-color-background-input-default-focus, @{cdr-color-background-input-default-focus}));
 }
 
 .cdr-form-figure-checkbox-checked-focus-mixin() {
-  background-color: @cdr-color-background-input-default-selected-focus;
+  //ITEM_DOC: Background color of a checked cdr-checkbox when focused
+  background-color: var(--cdr-form-figure-checkbox-background-checked-focus, var(--cdr-color-background-input-default-selected-focus, @{cdr-color-background-input-default-selected-focus}));
 }
 
 .cdr-link-base-mixin() {
@@ -937,8 +1155,10 @@
   background-color: transparent;
   border: 0;
   margin: 0;
-  color: @cdr-color-text-link-rest;
-  fill: @cdr-color-text-link-rest;
+  //ITEM_DOC: Color of the link text
+  color: var(--cdr-link-text-color, var(--cdr-color-text-link-rest, @{cdr-color-text-link-rest}));
+  //ITEM_DOC: Color of the link fill
+  fill: var(--cdr-link-fill-color, var(--cdr-color-text-link-rest, @{cdr-color-text-link-rest}));
   cursor: pointer;
   display: inline-flex;
   outline: none;
@@ -948,11 +1168,13 @@
 
   &:active,
   &:focus {
-    color: @cdr-color-text-link-active;
+    //ITEM_DOC: Color of the link text when active or focused
+    color: var(--cdr-link-active-text-color-active, var(--cdr-color-text-link-active, @{cdr-color-text-link-active}));
   }
 
   &:hover {
-    color: @cdr-color-text-link-hover;
+    //ITEM_DOC: Color of the link text when hovered
+    color: var(--cdr-link-text-color-hover, var(--cdr-color-text-link-hover, @{cdr-color-text-link-hover}));
     text-decoration: none;
   }
 
@@ -961,7 +1183,6 @@
     outline-color: -webkit-focus-ring-color;
     outline-offset: 0;
   }
-
 }
 
 .cdr-link-inherit-color-mixin() {
@@ -990,12 +1211,16 @@
 .cdr-input-base-mixin() {
   .cdr-text-utility-sans-300;
   font-weight: 500;
-  color: @cdr-color-text-input-default;
+  //ITEM_DOC: Text color of a cdr-input by default
+  color: var(--cdr-input-text-color-default, var(--cdr-color-text-input-default, @{cdr-color-text-input-default}));
   border: 0;
-  background-color: @cdr-color-background-input-default;
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-default;
+  //ITEM_DOC: Background color of a cdr-input by default
+  background-color: var(--cdr-input-background-color-default, var(--cdr-color-background-input-default, @{cdr-color-background-input-default}));
+  //ITEM_DOC: Box-shadow color of a cdr-input by default
+  box-shadow: inset 0 0 0 1px var(--cdr-input-box-shadow-default, var(--cdr-color-border-input-default, @{cdr-color-border-input-default}));
   border-radius: @cdr-radius-softer;
-  fill: @cdr-color-icon-default;
+  //ITEM_DOC: Fill color of an icon in a cdr-input
+  fill: var(--cdr-input-icon-fill, var(--cdr-color-icon-default, @{cdr-color-icon-default}));
   border-radius: @cdr-radius-softer;
   padding: @cdr-space-inset-half-x;
   height: @cdr-form-input-height-default;
@@ -1003,9 +1228,7 @@
   width: 100%;
   overflow: visible;
   margin: 0;
-
-  /* Prevent iOS from altering border and box-shadow */
-  -webkit-appearance: none;
+  -webkit-appearance: none!important;
 
   &[type=number]::-webkit-inner-spin-button,
   &[type=number]::-webkit-outer-spin-button {
@@ -1017,52 +1240,57 @@
   &:active,
   &:focus {
     outline: none;
-    box-shadow: inset 0 0 0 2px @cdr-color-border-input-default-focus, @cdr-prominence-raised;
+    //ITEM_DOC: Box shadow of a focused or active cdr-input
+    box-shadow: inset 0 0 0 2px var(--cdr-input-box-shadow-focus, var(--cdr-color-border-input-default-focus, @{cdr-color-border-input-default-focus})), @cdr-prominence-raised;
   }
-
   &::placeholder {
     .cdr-text-utility-sans-300;
-
-    color: @cdr-color-text-input-placeholder;
+    color: var(--cdr-input-placeholder-text-color, var(--cdr-color-text-input-placeholder, @{cdr-color-text-input-placeholder}));
   }
 
   &[disabled] {
-    background-color: @cdr-color-background-input-default-disabled;
-    color: @cdr-color-text-input-disabled;
-    box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-disabled;
-
+    //ITEM_DOC: Background color of a disabled cdr-input
+    background-color: var(--cdr-input-background-color-disabled, var(--cdr-color-background-input-default-disabled, @{cdr-color-background-input-default-disabled}));
+    //ITEM_DOC: Text color of a disabled cdr-input
+    color: var(--cdr-input-text-color-disabled, var(--cdr-color-text-input-disabled, @{cdr-color-text-input-disabled}));
+    //ITEM_DOC: Box-shadow color of a disabled cdr-input
+    box-shadow: inset 0 0 0 1px var(--cdr-input-box-shadow-disabled, var(--cdr-color-border-input-default-disabled, @{cdr-color-border-input-default-disabled}));
     &:hover {
-      box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-disabled;
+      box-shadow: inset 0 0 0 1px var(--cdr-input-box-shadow-disabled-hover, var(--cdr-color-border-input-default-disabled, @{cdr-color-border-input-default-disabled}));
       cursor: not-allowed;
     }
-
     &::placeholder {
-      color: @cdr-color-text-input-disabled;
+      color: var(--cdr-input-placeholder-text-color-disabled, var(--cdr-color-text-input-disabled, @{cdr-color-text-input-disabled}));
     }
   }
 }
 
 .cdr-input-primary-mixin() {
-  background-color: @cdr-color-background-input-default;
+  //ITEM_DOC: Background color of a default cdr-input
+  background-color: var(--cdr-input-background-color-default, var(--cdr-color-background-input-default, @{cdr-color-background-input-default}));
   &:active,
   &:focus {
-    background-color: @cdr-color-background-input-default-active;
+    //ITEM_DOC: Background color of a default cdr-input in active or focus state
+    background-color: var(--cdr-input-background-color-default-focus, var(--cdr-color-background-input-default-active, @{cdr-color-background-input-default-active}));
   }
 }
 
 .cdr-input-secondary-mixin() {
-  background-color: @cdr-color-background-input-secondary;
+  //ITEM_DOC: Background color of a secondary cdr-input
+  background-color: var(--cdr-input-background-color-secondary, var(--cdr-color-background-input-secondary, @{cdr-color-background-input-secondary}));
   &:active,
   &:focus {
-    background-color: @cdr-color-background-input-secondary-active;
+    //ITEM_DOC: Background color of a secondary cdr-input in active or focus state
+    background-color: var(--cdr-input-background-color-secondary-active, var(--cdr-color-background-input-secondary-active, @{cdr-color-background-input-secondary-active}));
   }
 }
 
 .cdr-input-error-mixin() {
-  background-color: @cdr-color-background-input-error;
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-error;
+  //ITEM_DOC: Background color of a cdr-input in error state
+  background-color: var(--cdr-input-error-background-color, var(--cdr-color-background-input-error, @{cdr-color-background-input-error}));
+  //ITEM_DOC: Box-shadow color of a cdr-input in error state
+  box-shadow: inset 0 0 0 1px var(--cdr-input-error-box-shadow, var(--cdr-color-border-input-error, @{cdr-color-border-input-error}));
 }
-
 
 .cdr-input-large-mixin() {
   .cdr-text-utility-sans-400;
@@ -1076,15 +1304,19 @@
 
 .cdr-input-helper-text-mixin() {
   .cdr-text-utility-sans-200;
-  color: @cdr-color-text-input-help;
+  //ITEM_DOC: Text color of a cdr-input's helper text
+  color: var(--cdr-input-helper-text-color, var(--cdr-color-text-input-help, @{cdr-color-text-input-help}));
 }
 
 .cdr-select-base-mixin() {
   .cdr-text-utility-sans-300;
   font-weight: 500;
-  background: @cdr-color-background-input-default;
-  color: @cdr-color-text-input-default;
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-default;
+  //ITEM_DOC: Background color of cdr-select
+  background: var(--cdr-select-background-color, var(--cdr-color-background-input-default, @{cdr-color-background-input-default}));
+  //ITEM_DOC: Text color of cdr-select
+  color: var(--cdr-select-text-color, var(--cdr-color-text-input-default, @{cdr-color-text-input-default}));
+  //ITEM_DOC: Box-shadow color of cdr-select
+  box-shadow: inset 0 0 0 1px var(--cdr-select-box-shadow-color, var(--cdr-color-border-input-default, @{cdr-color-border-input-default}));
   border: 0;
   border-radius: @cdr-radius-softer;
   padding-left: @cdr-space-half-x;
@@ -1096,19 +1328,23 @@
   margin: 0;
 
   &[disabled] {
-    background-color: @cdr-color-background-input-default-disabled;
-    color: @cdr-color-text-input-disabled;
-    box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-disabled;
+    //ITEM_DOC: Background color of a disabled cdr-select
+    background-color: var(--cdr-select-background-color-disabled, var(--cdr-color-background-input-default-disabled, @{cdr-color-background-input-default-disabled}));
+    //ITEM_DOC: Text color of a disabled cdr-select
+    color: var(--cdr-select-text-color-disabled, var(--cdr-color-text-input-disabled, @{cdr-color-text-input-disabled}));
+    //ITEM_DOC: Box-shadow color of a disabled cdr-select
+    box-shadow: inset 0 0 0 1px var(--cdr-select-box-shadow-color-disabled, var(--cdr-color-border-input-default-disabled, @{cdr-color-border-input-default-disabled}));
 
     &:hover {
-      box-shadow: inset 0 0 0 1px @cdr-color-border-input-default-disabled;
+      box-shadow: inset 0 0 0 1px var(--cdr-select-hover-box-shadow-color-disabled, var(--cdr-color-border-input-default-disabled, @{cdr-color-border-input-default-disabled}));
       cursor: not-allowed;
     }
   }
 
   &:active,
   &:focus {
-    box-shadow: inset 0 0 0 2px @cdr-color-border-input-default-focus, @cdr-prominence-raised;
+    //ITEM_DOC: Box-shadow color of a cdr-select when active or focused
+    box-shadow: inset 0 0 0 2px var(--cdr-select-box-shadow-color-focus, var(--cdr-color-border-input-default-focus, @{cdr-color-border-input-default-focus}));
     outline: none;
   }
 }
@@ -1117,10 +1353,12 @@
   .cdr-text-utility-sans-300;
 
   font-style: normal;
-  color: @cdr-color-text-primary;
+  //ITEM_DOC: Text color of cdr-select prompt
+  color: var(--cdr-select-prompt-text-color, var(--cdr-color-text-primary, @{cdr-color-text-primary}));
 
   &[disabled] {
-    color: @cdr-color-text-input-disabled;
+    //ITEM_DOC: Text color of a disabled cdr-select prompt
+    color: var(--cdr-select-prompt-text-color-disabled, var(--cdr-color-text-input-disabled, @{cdr-color-text-input-disabled}));
   }
 }
 .cdr-select-large-mixin() {
@@ -1130,26 +1368,65 @@
 }
 
 .cdr-select-primary-mixin() {
-  background-color: @cdr-color-background-input-default;
+  //ITEM_DOC: Background color of a primary cdr-select
+  background-color: var(--cdr-select-primary-background-color, var(--cdr-color-background-input-default, @{cdr-color-background-input-default}));
   &:active,
   &:focus {
-    background-color: @cdr-color-background-input-default-active;
+    //ITEM_DOC: Background color of a primary cdr-select when active or focused
+    background-color: var(--cdr-select-primary-background-color-active, var(--cdr-color-background-input-default-active, @{cdr-color-background-input-default-active}));
   }
 }
 
 .cdr-select-secondary-mixin() {
-  background-color: @cdr-color-background-input-secondary;
+  //ITEM_DOC: Background color of a secondary cdr-select
+  background-color: var(--cdr-select-secondary-background-color, var(--cdr-color-background-input-secondary, @{cdr-color-background-input-secondary}));
+
   &:active,
   &:focus {
-    background-color: @cdr-color-background-input-secondary-active;
+    //ITEM_DOC: Background color of a secondary cdr-select when active or focused
+    background-color: var(--cdr-select-secondary-background-color-active, var(--cdr-color-background-input-secondary-active, @{cdr-color-background-input-secondary-active}));
   }
 }
 
 .cdr-select-error-mixin() {
-  background-color: @cdr-color-background-input-error;
-  box-shadow: inset 0 0 0 1px @cdr-color-border-input-error;
+  //ITEM_DOC: Background color of a cdr-select error
+  background-color: var(--cdr-select-background-color-error, var(--cdr-color-background-input-error, @{cdr-color-background-input-error}));
+  //ITEM_DOC: Box-shadow color of a cdr-select error
+  box-shadow: inset 0 0 0 1px var(--cdr-select-box-shadow-color-error, var(--cdr-color-border-input-error, @{cdr-color-border-input-error}));
 }
 
+.cdr-skeleton-base-mixin() {
+  display: flex;
+  inline-size: 100%;
+  block-size: 100%;
+  min-block-size: 1rem;
+  flex-direction: column;
+}
+.cdr-skeleton-bone-mixin() {
+  flex: 1 1 auto;
+  border-radius: @cdr-radius-soft;
+  // warm-gray-300
+  //ITEM_DOC: Skeleton bone background color
+  background: var(--cdr-skeleton-bone-background-color, #edeae3);
+  background-size: 1200px 100%;
+}
+.cdr-skeleton-shimmer-mixin() {
+  @media (prefers-reduced-motion: no-preference) {
+    // warm-gray-300 => warm-gray-100 => warm-gray-300
+    //ITEM_DOC: Skeleton shimmer gradient part 1 //ITEM_DOC: Skeleton shimmer gradient part 2 //ITEM_DOC: Skeleton shimmer gradient part 3
+    background-image: linear-gradient(90deg, var(--cdr-skeleton-gradient-1,rgba(237,234,227,1)) 0%, var(--cdr-skeleton-gradient-2, rgba(249,248,240,1)) 15%, var(--cdr-skeleton-gradient-3, rgba(237,234,227,1)) 30%);
+    animation: shimmer 3s @cdr-timing-function-linear;
+    animation-iteration-count: infinite;
+  }
+  @keyframes shimmer {
+    0% {
+      background-position: -1200px 0;
+    }
+    100% {
+      background-position: 1200px 0;
+    }
+  }
+}
 .cdr-list-base-mixin() {
   list-style-type: none;
   padding: 0;
@@ -1162,7 +1439,7 @@
 
 .cdr-list-base-nested-mixin() {
   margin-top: @cdr-space-half-x;
-  padding-left: 1em; // TODO: is em correct?
+  padding-left: 1em;
   list-style-type: none;
 }
 
@@ -1196,7 +1473,8 @@
     &::before {
       content: '\2013';
       position: absolute;
-      color: @cdr-color-text-secondary;
+      //ITEM_DOC: Color of the nested ordered cdr-list item prefix
+      color: var(--cdr-list-ordered-nested-prefix-color, var(--cdr-color-text-secondary, @{cdr-color-text-secondary}));
       left: 0;
     }
   }
@@ -1211,7 +1489,8 @@
     position: relative;
     margin-left: -1em;
     padding-right: @cdr-space-half-x;
-    color: @cdr-color-text-secondary;
+    //ITEM_DOC: Color of the unordered cdr-list item prefix
+    color: var(--cdr-list-unordered-prefix-color, var(--cdr-color-text-secondary, @{cdr-color-text-secondary}));
   }
 }
 
@@ -1225,14 +1504,16 @@
       position: relative;
       margin-left: -1em;
       padding-right: @cdr-space-half-x;
-      color: @cdr-color-text-secondary;
+      //ITEM_DOC: Color of the nested unordered cdr-list item prefix
+      color: var(--cdr-list-unordered-nested-prefix-color, var(--cdr-color-text-secondary, @{cdr-color-text-secondary}));
     }
   }
 }
 
 .cdr-table-base-text-mixin() {
   .cdr-text-utility-sans-200;
-  color: @cdr-color-text-primary;
+  //ITEM_DOC: Color of the cdr-table base text
+  color: var(--cdr-table-base-text-color, var(--cdr-color-text-primary, @{cdr-color-text-primary}));
 }
 
 .cdr-table-base-mixin() {
@@ -1242,16 +1523,19 @@
   border-collapse: collapse;
 
   tr {
-    background-color: @cdr-color-background-table-row;
+    //ITEM_DOC: Background color of the table rows
+    background-color: var(--cdr-table-row-background-color, var(--cdr-color-background-table-row, @{cdr-color-background-table-row}));
   }
 
   thead tr {
-    background-color: @cdr-color-background-table-header;
+    //ITEM_DOC: Background color of the table header
+    background-color: var(--cdr-table-header-background-color, var(--cdr-color-background-table-header, @{cdr-color-background-table-header}));
   }
 
   th,
   td {
-    color: @cdr-color-text-primary;
+    //ITEM_DOC: Text color of the table cells
+    color: var(--cdr-table-text-cell-color, var(--cdr-color-text-primary, @{cdr-color-text-primary}));
     padding: @cdr-space-inset-one-x-squish;
     text-align: left;
   }
@@ -1287,47 +1571,49 @@
 }
 
 .cdr-table-border-mixin() {
-  @table-border-default: 1px solid @cdr-color-border-table-default;
-  @table-border-head: 1px solid @cdr-color-border-table-head;
+  //ITEM_DOC: Default border color of the table
+  --table-border-default: 1px solid var(--cdr-table-border-color-default, var(--cdr-color-border-table-default, @{cdr-color-border-table-default}));
+  //ITEM_DOC: Head border color of the table
+  --table-border-head: 1px solid var(--cdr-table-head-border-default, var(--cdr-color-border-table-head, @{cdr-color-border-table-head}));
 
   tr + tr > * {
-    border-top: @table-border-default;
+    border-top: var(--table-border-default);
   }
 
   thead {
     tr + tr > * {
-      border-top: @table-border-head;
+      border-top: var(--table-border-head);
     }
   }
 
   tbody, tfoot {
     tr + tr > * {
-      border-top: @table-border-default;
+      border-top: var(--table-border-default);
     }
   }
 
   thead + tbody,
   tbody + tfoot {
-    border-top: @table-border-default;
+    border-top: var(--table-border-default);
   }
 }
 
 .cdr-table-striped-mixin() {
   tr:nth-child(odd) {
-    background-color: @cdr-color-background-table-row-alt;
+   //ITEM_DOC: Background color of all odd rows in the table
+   background-color: var(--cdr-table-odd-row-background-color, var(--cdr-color-background-table-row-alt, @{cdr-color-background-table-row-alt}));
   }
 
   thead {
-    // override body styling when head is present
     & + tbody tr {
-      // striping rows
       &:nth-child(even) {
-        background-color: @cdr-color-background-table-row-alt;
+        //ITEM_DOC: Background color of odd rows in the table header
+        background-color: var(--cdr-table-header-odd-row-background-color, var(--cdr-color-background-table-row, @{cdr-color-background-table-row}));
       }
 
-      // disabled default
       &:nth-child(odd) {
-        background-color: @cdr-color-background-table-row;
+        //ITEM_DOC: Background color of the odd rows in striped tables
+        background-color: var(--cdr-table-striped-odd-row-background-color, var(--cdr-color-background-table-row, @{cdr-color-background-table-row}));
       }
     }
   }
@@ -1335,9 +1621,9 @@
   tbody,
   tfoot {
     tr {
-      // striping rows
       &:nth-child(odd) {
-        background-color: @cdr-color-background-table-row-alt;
+        //ITEM_DOC: Background color of odd rows in the table body and footer
+        background-color: var(--cdr-table-body-footer-odd-row-background-color, var(--cdr-color-background-table-row-alt, @{cdr-color-background-table-row-alt}));
       }
     }
   }
@@ -1355,6 +1641,7 @@
 
 .cdr-table-hover-mixin {
   tr:hover > * {
-    background-color: @cdr-color-background-table-header;
+    //ITEM_DOC: Background color of table cells on hover
+    background-color: var(--cdr-table-cell-background-color-hover, var(--cdr-color-background-table-header, @{cdr-color-background-table-header}));
   }
 }

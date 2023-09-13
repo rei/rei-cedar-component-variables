@@ -3,7 +3,7 @@
   "notes": [
     "CdrGrid is a simple CSS grid wrapper component"
   ],
-  "docs": "https://rei.github.io/rei-cedar-docs/components/grid/",
+  "docs": "https://cedar.rei.com/components/grid/",
   "examples": [
     {
       "name": "default",

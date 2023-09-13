@@ -3,7 +3,7 @@
   "notes": [
     "See also the CdrLabelWrapper examples"
   ],
-  "docs": "https://rei.github.io/rei-cedar-docs/components/checkbox/",
+  "docs": "https://cedar.rei.com/components/checkbox/",
   "examples": [
     {
       "name": "dynamic",

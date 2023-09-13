@@ -3,7 +3,7 @@
   "notes": [
     "current page should not be rendered in breadcrumbs"
   ],
-  "docs": "https://rei.github.io/rei-cedar-docs/components/breadcrumb/",
+  "docs": "https://cedar.rei.com/components/breadcrumb/",
   "examples": [
     {
       "name": "default",
