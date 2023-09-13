@@ -3,7 +3,7 @@
   "notes": [
     "note that the vue component is a combination of the label and select examples"
   ],
-  "docs": "https://rei.github.io/rei-cedar-docs/components/select/",
+  "docs": "https://cedar.rei.com/components/select/",
   "examples": [
     {
       "name": "default",

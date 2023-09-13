@@ -3,7 +3,7 @@
   "notes": [
     "See the CdrChip docs page for more information on accessibility requirements for chips"
   ],
-  "docs": "https://rei.github.io/rei-cedar-docs/components/chips/",
+  "docs": "https://cedar.rei.com/components/chips/",
   "examples": [
     {
       "name": "default",

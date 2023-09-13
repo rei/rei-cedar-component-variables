@@ -3,7 +3,7 @@
   "notes": [
     "See also the CdrLabelWrapper examples"
   ],
-  "docs": "https://rei.github.io/rei-cedar-docs/components/radio/",
+  "docs": "https://cedar.rei.com/components/radio/",
   "examples": [
     {
       "name": "dynamic",

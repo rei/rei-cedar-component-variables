@@ -3,7 +3,7 @@
   "notes": [
     "CdrTable is a simple wrapper component that applies styles to HTML tables"
   ],
-  "docs": "https://rei.github.io/rei-cedar-docs/components/table/",
+  "docs": "https://cedar.rei.com/components/table/",
   "examples": [
     {
       "name": "default",

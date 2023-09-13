@@ -3,7 +3,7 @@
   "notes": [
     "note that the vue component is a combination of the label and input examples"
   ],
-  "docs": "https://rei.github.io/rei-cedar-docs/components/input/",
+  "docs": "https://cedar.rei.com/components/input/",
   "examples": [
     {
       "name": "default",

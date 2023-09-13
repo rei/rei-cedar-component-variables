@@ -4,7 +4,7 @@
     "Styles for the `inline` variations are not currently supported.",
     "CdrList mixins assume that you are using <li> tags for the list items. See the mixin source in `/dist` if you need to customize that."
   ],
-  "docs": "https://rei.github.io/rei-cedar-docs/components/list/",
+  "docs": "https://cedar.rei.com/components/list/",
   "examples": [
     {
       "name": "ordered",

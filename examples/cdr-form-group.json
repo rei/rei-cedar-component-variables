@@ -3,7 +3,7 @@
   "notes": [
     "Form groups should wrap a `legend` element and contain a group of logically related input elements."
   ],
-  "docs": "https://rei.github.io/rei-cedar-docs/components/form-group/",
+  "docs": "https://cedar.rei.com/components/form-group/",
   "examples": [
     {
       "name": "default",
