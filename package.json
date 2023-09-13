@@ -24,11 +24,11 @@
   "author": "REI Software Engineering",
   "license": "MIT",
   "peerDependencies": {
-    "@rei/cdr-tokens": ">=12.0.0-alpha"
+    "@rei/cdr-tokens": ">=12.0.0"
   },
   "devDependencies": {
     "@rei/cedar-icons": "^2.5.1",
-    "@rei/cdr-tokens": "^12.0.0-alpha.12",
+    "@rei/cdr-tokens": "^12.0.0",
     "@rei/cedar": "^12.0.0",
     "fs-extra": "^9.1.0",
     "less-plugin-sass2less": "^1.2.0",
