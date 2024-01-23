@@ -1,5 +1,6 @@
 const CdrButton = require('./cdr-button');
 const CdrLink = require('./cdr-link');
+const CdrCaption = require('./cdr-caption');
 const CdrChip = require('./cdr-chip');
 const CdrInput = require('./cdr-input');
 const CdrSelect = require('./cdr-select');
@@ -19,6 +20,7 @@ module.exports = {
   CdrBreadcrumb,
   CdrButton,
   CdrCard,
+  CdrCaption,
   CdrChip,
   CdrFormError,
   CdrFormGroup,
@@ -28,6 +30,7 @@ module.exports = {
   CdrLabelWrapper,
   CdrLink,
   CdrList,
+  CdrQuote,
   CdrSelect,
   CdrTable,
   CdrSkeleton

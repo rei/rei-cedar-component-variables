@@ -50,6 +50,14 @@
 }
 }
 
+.cdr-caption-default {
+  @include cdr-caption-container-mixin;
+  @include cdr-caption-summary-mixin;
+  cite {
+    @include cdr-caption-cite-mixin;
+  }
+}
+
 .cdr-chip-default {
   @include cdr-chip-base-mixin;
 }
