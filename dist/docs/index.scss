@@ -208,6 +208,16 @@
   @include cdr-list-unordered-mixin;
 }
 
+.cdr-quote-default {
+  @include cdr-quote-base-container;
+  @include cdr-quote-base-content;
+}
+
+.cdr-quote-pull {
+  @include cdr-quote-pull-container;
+  @include cdr-quote-pull-content
+}
+
 .cdr-select-default {
   @include cdr-select-base-mixin;
   @include cdr-select-primary-mixin;

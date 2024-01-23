@@ -14,7 +14,7 @@ const CdrBreadcrumb = require('./cdr-breadcrumb');
 const CdrFormGroup = require('./cdr-form-group');
 const CdrTable = require('./cdr-table');
 const CdrSkeleton = require('./cdr-skeleton');
-
+const CdrQuote = require('./cdr-quote');
 
 module.exports = {
   CdrBreadcrumb,
