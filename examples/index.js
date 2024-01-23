@@ -30,6 +30,7 @@ module.exports = {
   CdrLabelWrapper,
   CdrLink,
   CdrList,
+  CdrQuote,
   CdrSelect,
   CdrTable,
   CdrSkeleton
