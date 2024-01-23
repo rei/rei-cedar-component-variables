@@ -1,0 +1,18 @@
+{
+  "name": "cdr-caption",
+  "notes": [
+    "Supports caption and citations."
+  ],
+  "docs": "https://cedar.rei.com/components/caption/",
+  "examples": [
+    {
+      "name": "default",
+      "html": "<div class=\"cdr-caption-default\">\n  <p>Caption</p>\n  <cite>Citation</cite>\n</div>",
+      "scss": [
+        "@include cdr-caption-container-mixin;",
+        "@include cdr-caption-summary-mixin;",
+        "cite {\n    @include cdr-caption-cite-mixin;\n  }"
+      ]
+    }
+  ]
+}

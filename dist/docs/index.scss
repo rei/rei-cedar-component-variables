@@ -50,6 +50,14 @@
 }
 }
 
+.cdr-caption-default {
+  @include cdr-caption-container-mixin;
+  @include cdr-caption-summary-mixin;
+  cite {
+    @include cdr-caption-cite-mixin;
+  }
+}
+
 .cdr-chip-default {
   @include cdr-chip-base-mixin;
 }
@@ -198,6 +206,16 @@
 .cdr-list-unordered {
   @include cdr-list-base-mixin;
   @include cdr-list-unordered-mixin;
+}
+
+.cdr-quote-default {
+  @include cdr-quote-base-container;
+  @include cdr-quote-base-content;
+}
+
+.cdr-quote-pull {
+  @include cdr-quote-pull-container;
+  @include cdr-quote-pull-content
 }
 
 .cdr-select-default {
