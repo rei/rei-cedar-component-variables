@@ -1,0 +1,49 @@
+{
+  "name": "cdr-surface-selection",
+  "notes": [
+    "See the CdrSurfaceSelection docs page for more information on accessibility requirements for surface selections"
+  ],
+  "docs": "https://cedar.rei.com/components/surface-selection/",
+  "examples": [
+    {
+      "name": "default",
+      "html": "<button class=\"cdr-surface-selection-default\"/>",
+      "scss": [
+        "@include cdr-surface-base-mixin(",
+        "  $surface-selection-background-colors,",
+        "  $surface-selection-border-colors,",
+        "  $surface-selection-component",
+        ");",
+        "@include cdr-surface-selection-base-mixin(",
+        "  $surface-selection-component",
+        ");",
+        "@include cdr-surface-selection-states-modifiers-mixin(",
+        "  $surface-selection-background-colors,",
+        "  $surface-selection-border-colors,",
+        "  $surface-selection-component",
+        "  $surface-selection-modifiers",
+        ");"
+      ]
+    },
+    {
+      "name": "secondary",
+      "html": "<button class=\"cdr-surface-selection-secondary\"/>",
+      "scss": [
+        "@include cdr-surface-base-mixin(",
+        "  $surface-selection-background-colors,",
+        "  $surface-selection-border-colors,",
+        "  $surface-selection-component",
+        ");",
+        "@include cdr-surface-selection-base-mixin(",
+        "  $surface-selection-component",
+        ");",
+        "@include cdr-surface-selection-states-mixin(",
+        "  $background-colors,",
+        "  $border-colors,",
+        "  $surface-selection-component",
+        "  'secondary'",
+        ");"
+      ]
+    }
+  ]
+}

@@ -29,7 +29,7 @@
   "devDependencies": {
     "@rei/cedar-icons": "^2.5.1",
     "@rei/cdr-tokens": "^12.0.0",
-    "@rei/cedar": "^12.0.0",
+    "@rei/cedar": "github:rei/rei-cedar#box-and-buttons",
     "fs-extra": "^9.1.0",
     "less-plugin-sass2less": "^1.2.0",
     "npm-publish-prerelease": "^1.0.2",

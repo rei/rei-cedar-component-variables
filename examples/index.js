@@ -4,6 +4,7 @@ const CdrCaption = require('./cdr-caption');
 const CdrChip = require('./cdr-chip');
 const CdrInput = require('./cdr-input');
 const CdrSelect = require('./cdr-select');
+const CdrSurfaceSelection = require('./cdr-surface-selection');
 const CdrLabelStandalone = require('./cdr-label-standalone');
 const CdrLabelWrapper = require('./cdr-label-wrapper');
 const CdrFormError = require('./cdr-form-error');
@@ -32,6 +33,7 @@ module.exports = {
   CdrList,
   CdrQuote,
   CdrSelect,
+  CdrSurfaceSelection,
   CdrTable,
   CdrSkeleton
 }
