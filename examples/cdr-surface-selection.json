@@ -1,7 +1,7 @@
 {
   "name": "cdr-surface-selection",
   "notes": [
-    "See the CdrSurfaceSelection docs page for more information on accessibility requirements for surface selections"
+    "See the CdrSurfaceSelection docs page for more information on accessibility requirements for surface selections. For variable examples, see `src/components/surfaceSelection/styles/vars/CdrSurfaceSelection.vars.scss` source file."
   ],
   "docs": "https://cedar.rei.com/components/surface-selection/",
   "examples": [
@@ -9,7 +9,6 @@
       "name": "default",
       "html": "<button class=\"cdr-surface-selection-default\"/>",
       "scss": [
-        "/* CdrSurfaceSelection.vars.scss for details */",
         "@include cdr-surface-base-mixin(",
         "  $surface-selection-background-colors,",
         "  $surface-selection-border-colors,",
@@ -30,7 +29,6 @@
       "name": "secondary",
       "html": "<button class=\"cdr-surface-selection-secondary\"/>",
       "scss": [
-        "/* CdrSurfaceSelection.vars.scss for details */",
         "@include cdr-surface-base-mixin(",
         "  $surface-selection-background-colors,",
         "  $surface-selection-border-colors,",
