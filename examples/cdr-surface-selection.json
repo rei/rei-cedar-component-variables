@@ -1,7 +1,7 @@
 {
   "name": "cdr-surface-selection",
   "notes": [
-    "See the CdrSurfaceSelection docs page for more information on accessibility requirements for surface selections. For variable examples, see `src/components/surfaceSelection/styles/vars/CdrSurfaceSelection.vars.scss` source file."
+    "See the CdrSurfaceSelection docs page for more information on accessibility requirements for surface selections. For variable examples, see CdrSurfaceSelection.vars.scss source file."
   ],
   "docs": "https://cedar.rei.com/components/surface-selection/",
   "examples": [
