@@ -9,7 +9,7 @@
       "name": "default",
       "html": "<button class=\"cdr-surface-selection-default\"/>",
       "scss": [
-        "/* See src/components/surfaceSelection/styles/vars/CdrSurfaceSelection.vars.scss for variable details */",
+        "/* See CdrSurfaceSelection.vars.scss source for variable details */",
         "@include cdr-surface-base-mixin(",
         "  $surface-selection-background-colors,",
         "  $surface-selection-border-colors,",
@@ -30,7 +30,7 @@
       "name": "secondary",
       "html": "<button class=\"cdr-surface-selection-secondary\"/>",
       "scss": [
-        "/* See src/components/surfaceSelection/styles/vars/CdrSurfaceSelection.vars.scss for variable details */",
+        "/* See CdrSurfaceSelection.vars.scss source for variable details */",
         "@include cdr-surface-base-mixin(",
         "  $surface-selection-background-colors,",
         "  $surface-selection-border-colors,",
