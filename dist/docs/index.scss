@@ -241,7 +241,7 @@
 }
 
 .cdr-surface-selection-default {
-  /* See src/components/surfaceSelection/styles/vars/CdrSurfaceSelection.vars.scss for variable details */
+  /* See CdrSurfaceSelection.vars.scss source for variable details */
   @include cdr-surface-base-mixin(
     $surface-selection-background-colors,
     $surface-selection-border-colors,
@@ -259,7 +259,7 @@
 }
 
 .cdr-surface-selection-secondary {
-  /* See src/components/surfaceSelection/styles/vars/CdrSurfaceSelection.vars.scss for variable details */
+  /* See CdrSurfaceSelection.vars.scss source for variable details */
   @include cdr-surface-base-mixin(
     $surface-selection-background-colors,
     $surface-selection-border-colors,
