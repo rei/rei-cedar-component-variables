@@ -240,6 +240,42 @@
   @include cdr-select-secondary-mixin;
 }
 
+.cdr-surface-selection-default {
+  /* See src/components/surfaceSelection/styles/vars/CdrSurfaceSelection.vars.scss for variable details */
+  @include cdr-surface-base-mixin(
+    $surface-selection-background-colors,
+    $surface-selection-border-colors,
+    $surface-selection-component
+  );
+  @include cdr-surface-selection-base-mixin(
+    $surface-selection-component
+  );
+  @include cdr-surface-selection-states-modifiers-mixin(
+    $surface-selection-background-colors,
+    $surface-selection-border-colors,
+    $surface-selection-component
+    $surface-selection-modifiers
+  );
+}
+
+.cdr-surface-selection-secondary {
+  /* See src/components/surfaceSelection/styles/vars/CdrSurfaceSelection.vars.scss for variable details */
+  @include cdr-surface-base-mixin(
+    $surface-selection-background-colors,
+    $surface-selection-border-colors,
+    $surface-selection-component
+  );
+  @include cdr-surface-selection-base-mixin(
+    $surface-selection-component
+  );
+  @include cdr-surface-selection-states-mixin(
+    $background-colors,
+    $border-colors,
+    $surface-selection-component
+    'secondary'
+  );
+}
+
 .cdr-table-default {
   @include cdr-table-base-mixin;
 }
