@@ -1,0 +1,47 @@
+{
+  "name": "cdr-surface",
+  "notes": [
+    "See the CdrSurface docs page for more information. For variable examples, see CdrSurface.vars.scss source file."
+  ],
+  "docs": "https://cedar.rei.com/components/surface/",
+  "examples": [
+    {
+      "name": "default",
+      "html": "<div class=\"cdr-surface\"/>",
+      "scss": [
+        "@include cdr-surface-base-mixin(",
+        "  $surface-background-colors,",
+        "  $surface-border-colors,",
+        "  $surface-component",
+        ");",
+        "@include cdr-surface-modifiers-mixin(",
+        "  $surface-background-colors,",
+        "  $surface-border-colors,",
+        "  $surface-component",
+        "  $surface-modifiers",
+        ");"
+      ]
+    },
+    {
+      "name": "secondary",
+      "html": "<div class=\"cdr-surface-secondary\"/>",
+      "scss": [
+        "@include cdr-surface-base-mixin(",
+        "  $surface-background-colors,",
+        "  $surface-border-colors,",
+        "  $surface-component",
+        ");",
+        "@include cdr-background-mixin(",
+        "  $background-colors,",
+        "  $surface-component",
+        "  'secondary'",
+        ");",
+        "@include cdr-border-color-mixin(",
+        "  $border-colors,",
+        "  $surface-component",
+        "  'secondary'",
+        ");"
+      ]
+    }
+  ]
+}

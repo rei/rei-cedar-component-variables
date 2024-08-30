@@ -3,7 +3,9 @@ const CdrLink = require('./cdr-link');
 const CdrCaption = require('./cdr-caption');
 const CdrChip = require('./cdr-chip');
 const CdrInput = require('./cdr-input');
+const CdrFulfillmentTile = require('./cdr-fulfillment-tile');
 const CdrSelect = require('./cdr-select');
+const CdrSurface = require('./cdr-surface');
 const CdrSurfaceSelection = require('./cdr-surface-selection');
 const CdrLabelStandalone = require('./cdr-label-standalone');
 const CdrLabelWrapper = require('./cdr-label-wrapper');
@@ -27,12 +29,14 @@ module.exports = {
   CdrFormGroup,
   CdrGrid,
   CdrInput,
+  CdrFulfillmentTile,
   CdrLabelStandalone,
   CdrLabelWrapper,
   CdrLink,
   CdrList,
   CdrQuote,
   CdrSelect,
+  CdrSurface,
   CdrSurfaceSelection,
   CdrTable,
   CdrSkeleton
