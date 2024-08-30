@@ -147,7 +147,7 @@
   @include cdr-input-secondary-mixin;
 }
 
-.cdr-surface-selection-default {
+.cdr-fulfillment-tile-default {
   @include cdr-surface-base-mixin(
     $fulfillment-tile-background-colors,
     $fulfillment-tile-border-colors,

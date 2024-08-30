@@ -1,7 +1,7 @@
 {
-  "name": "cdr-surface-selection",
+  "name": "cdr-fulfillment-tile",
   "notes": [
-    "See the CdrFulfillmentTile docs page for more information on accessibility requirements for surface selections. For variable examples, see CdrFulfillmentTile.vars.scss source file."
+    "See the CdrFulfillmentTile docs page for more information on accessibility requirements for Fullfilment tiles. For variable examples, see CdrFulfillmentTile.vars.scss source file."
   ],
   "docs": "https://cedar.rei.com/components/fulfillment-tile/",
   "examples": [
