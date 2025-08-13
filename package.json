@@ -8,8 +8,7 @@
   ],
   "scripts": {
     "build:docs-data": "node ./build/build-docs-data.js",
-    "build:less": "sass2less dist/scss/*.scss 'dist/less/{name}.less' && node ./build/build-less.js",
-    "prepublishOnly": "npm run build:less && npm run build:docs-data",
+    "prepublishOnly": "npm run build:docs-data",
     "prerelease": "npm-publish-prerelease"
   },
   "private": false,
