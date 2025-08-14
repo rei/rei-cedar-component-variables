@@ -1,0 +1,26 @@
+{
+  "name": "cdr-quote",
+  "notes": [
+    "Supports block and pull quotes.",
+    "Use blockquote to provide quote attribution"
+  ],
+  "docs": "https://cedar.rei.com/components/quote/",
+  "examples": [
+    {
+      "name": "default",
+      "html": "<blockquote class=\"cdr-quote-default\">\n  <p>Quote</p>\n  <cite>Attribution</cite>\n</blockquote>",
+      "scss": [
+        "@include cdr-quote-base-container;",
+        "@include cdr-quote-base-content;"
+      ]
+    },
+    {
+      "name": "pull",
+      "html": "<aside class=\"cdr-quote-pull\">\n  <p>Quote</p>\n</aside>",
+      "scss": [
+        "@include cdr-quote-pull-container;",
+        "@include cdr-quote-pull-content"
+      ]
+    }
+  ]
+}
