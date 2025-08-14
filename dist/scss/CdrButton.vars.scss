@@ -1,5 +1,5 @@
 @use '@rei/cdr-tokens/dist/rei-dot-com/scss/cdr-tokens' as tokens;
-@use '../../../../styles/settings/options.vars.scss' as vars;
+@use './options.vars.scss' as vars;
 
 @mixin cdr-button-base-text-mixin-small() {
   font-family: tokens.$cdr-font-family-sans;

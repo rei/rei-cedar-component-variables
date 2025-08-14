@@ -1,6 +1,5 @@
-$default-outline: 0.2rem solid Highlight;
-
 @use '@rei/cdr-tokens/dist/rei-dot-com/scss/cdr-tokens' as tokens;
+@use './options.vars.scss' as vars;
 
 @mixin cdr-breadcrumb-item-mixin() {
   //ITEM_DOC: Breadcrumb item color
