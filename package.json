@@ -1,6 +1,6 @@
 {
   "name": "@rei/cdr-component-variables",
-  "version": "10.2.0",
+  "version": "10.2.1",
   "description": "Style variables exported from Cedar components",
   "style": "dist/scss/index.scss",
   "files": [
