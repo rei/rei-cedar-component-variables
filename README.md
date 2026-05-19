@@ -13,7 +13,7 @@ If you are trying to build a component that is not in Cedar, you should instead 
 
 The component variables inherit values from the design tokens, so you will need to install both packages:
 
-`npm install --save-dev @rei/cdr-tokens @rei/cdr-component-variables`
+`pnpm add --save-dev @rei/cdr-tokens @rei/cdr-component-variables`
 
 Your project must be able to compile SCSS or LESS in order to make use of this package.
 
@@ -63,10 +63,10 @@ To add support for a new component, in `@rei/cedar` update the [build/component-
 
 Update steps:
 - Ensure that your copy of `rei-cedar` and `rei-cedar-component-variables` are in the same directory
-- Run  `npm run build:variables` script in `rei-cedar` to copy the variable files for all supported components into this repository. If you are adding support for a component, you will need to update that build script. If there are no changes to the `/dist` directory, then there is no need to do anything else.
+- Run  `pnpm run build:variables` script in `rei-cedar` to copy the variable files for all supported components into this repository. If you are adding support for a component, you will need to update that build script. If there are no changes to the `/dist` directory, then there is no need to do anything else.
 - Update the `@rei/cdr-tokens` and `@rei/cedar` dependencies in this project's `package.json` to match the versions used to generate the component variables.
 - Update `/examples` as needed
-- Run the `npm run prepublishOnly` script inside this repository to process the imported stylesheets
+- Run the `pnpm run prepublishOnly` script inside this repository to process the imported stylesheets
 - Bump the version of this package
 
 ### Adding Examples to the Doc-site
@@ -109,7 +109,7 @@ See [the examples directory](https://github.com/rei/rei-cedar-component-variable
 #### Testing Example Code
 
 1. Pull in updates from Cedar by running the `build:variables` script in `rei-cedar`, update example JSON code, or add new example files and export them from `examples/index.js` as needed.
-2. Run `npm run prepublishOnly` to build this repo and export the docs data
-3. Run `npm link` to register your local copy of component variables with these changes
-4. In `rei-cedar-docs`, stop your dev server and run `npm link @rei/cdr-component-variables`
+2. Run `pnpm run prepublishOnly` to build this repo and export the docs data
+3. Run `pnpm link --global` to register your local copy of component variables with these changes
+4. In `rei-cedar-docs`, stop your dev server and run `pnpm link --global @rei/cdr-component-variables`
 5. Restart the cedar docs dev server and inspect your changes on the `components/component-variables` page
