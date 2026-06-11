@@ -1,6 +1,6 @@
 {
   "name": "@rei/cdr-component-variables",
-  "version": "10.2.0",
+  "version": "10.2.2",
   "description": "Style variables exported from Cedar components",
   "style": "dist/scss/index.scss",
   "files": [
@@ -23,12 +23,12 @@
   "author": "REI Software Engineering",
   "license": "MIT",
   "peerDependencies": {
-    "@rei/cdr-tokens": "13.2.0"
+    "@rei/cdr-tokens": "^13.3.0"
   },
   "devDependencies": {
-    "@rei/cedar-icons": "^2.5.1",
-    "@rei/cdr-tokens": "^13.0.0",
+    "@rei/cdr-tokens": "^13.3.0",
     "@rei/cedar": "^16.2.0",
+    "@rei/cedar-icons": "^2.5.1",
     "fs-extra": "^9.1.0",
     "less-plugin-sass2less": "^1.2.0",
     "npm-publish-prerelease": "^1.0.2",
