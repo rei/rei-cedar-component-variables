@@ -9,10 +9,10 @@ importers:
   .:
     devDependencies:
       '@rei/cdr-tokens':
-        specifier: 14.0.0
+        specifier: ^14.0.0
         version: 14.0.0
       '@rei/cedar':
-        specifier: 17.0.0
+        specifier: ^17.0.0
         version: 17.0.0(core-js@3.49.0)(vue@3.5.34)
       '@rei/cedar-icons':
         specifier: ^2.5.1
