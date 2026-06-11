@@ -23,8 +23,8 @@ This package contains `/dist/less` and `/dist/scss` folders, each of which conta
 
 SCSS example:
 ```
-@import '@rei/cdr-tokens/dist/rei-dot-com/scss/cdr-tokens.scss'; /* import the tokens file */
-@import '@rei/cdr-component-variables/dist/scss/index.scss'; /* import the component variables */
+@use '@rei/cdr-tokens/dist/rei-dot-com/scss/cdr-tokens.scss' as *; /* load tokens */
+@use '@rei/cdr-component-variables/dist/scss/index.scss' as *; /* load component variables */
 
 .your-button-class {
   /* use mixins to apply many properties at once */
