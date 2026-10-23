@@ -21,6 +21,88 @@ This package contains `/dist/less` and `/dist/scss` folders, each of which conta
 
 ## Usage
 
+### CdrButton semantic contract preview
+
+The local CdrButton output is generated from the TypeScript contract in
+`rei-cedar` PR #249, using `@rei/cdr-tokens@15.0.0-alpha.2`.
+Load these runtime styles once in your application before using the button mixins:
+
+```js
+import '@rei/cdr-tokens/css';
+import '@rei/cdr-tokens/css/color-action';
+```
+
+Then apply the generated mixins to your own HTML:
+
+```scss
+@use '@rei/cdr-component-variables/dist/scss/CdrButton.vars' as button;
+
+.my-button {
+  @include button.cdr-button-base-mixin;
+  @include button.cdr-button-primary-mixin;
+  @include button.cdr-button-large-mixin;
+  @include button.cdr-button-full-width-mixin(xs);
+}
+```
+
+```html
+<button type="button" class="my-button">Continue</button>
+```
+
+All 28 previous public button mixins and 108 component hooks (`--cdr-button-*`)
+remain available. New `--cdr-color-button-*` hooks take precedence over the old
+component hooks. The old global design token names (`--cdr-color-background-button-*`,
+`--cdr-color-text-button-*`, etc.) have been replaced by semantic tokens; migrate
+those overrides to the new component hooks. Colors and keyboard focus behavior
+follow PR #249, so this preview is an API-compatible Sass replacement with a
+token/runtime migration, rather than a pixel-identical v11 stylesheet.
+
+Supported variations: primary, secondary, dark, sale, link, icon-only and
+with-background; four elevated color variants; small, medium and large;
+left/right icons, large icon-only and full-width. Size and full-width mixins accept
+an optional `xs`, `sm`, `md` or `lg` breakpoint. Apply base + color + size; apply
+icon-only after the color and with-background after icon-only. Preserve the
+`cdr-button--has-icon-left` / `cdr-button--has-icon-right` marker for icon spacing.
+Use a native `disabled` attribute and an accessible name on icon-only buttons.
+
+For plain CSS, load `dist/css/CdrButton.css` with the same token styles and use
+`class="cdr-button cdr-button--primary"`. Add `cdr-button--primary-elevated` for
+elevation; responsive modifiers use names such as `cdr-button--small@sm`.
+No Vue import or runtime is needed in either consumption path.
+
+The source changes required in Cedar are included in
+`build/cedar-button-contract.patch`, with the exact upstream revision and patch
+checksum recorded in `build/cedar-source.json`. No unpublished Cedar branch is
+required. From a clone of this fork, run:
+
+```sh
+# From rei-cedar-component-variables; use Node 22 as required by rei-cedar.
+pnpm install --frozen-lockfile
+pnpm setup:cedar
+pnpm build:button
+pnpm test:button
+pnpm --dir ../rei-cedar exec playwright test --config playwright.component-variables.config.ts
+```
+
+`setup:cedar` clones the pinned Cedar revision into a sibling `rei-cedar`
+checkout if missing, applies the included source patch, and installs its build
+dependencies. An existing checkout must already be at the pinned commit. The
+setup checks for conflicts before writing and keeps unrelated local changes.
+Repeated setup is safe when the patch is already applied; after editing the
+contract or recipe, use `build:button` directly.
+
+`build:button` regenerates maps and mixins from the contract, copies their Sass
+dependencies, and builds CSS plus an offline demo at `dist/demo/CdrButton.html`.
+Edit the contract or shared recipe in Cedar, never the generated `dist` files.
+The exported Sass resolves tokens through their physical package path, so plain
+Dart Sass works with `node_modules` on its load path. The standalone
+`cedar-component-variables.scss` remains a flattened file; `index.scss` forwards
+the individual modules. Other components retain their existing mixin behavior.
+
+The preview retains the PR's scoped alpha.2 fixes for the missing white border
+and incorrect brand values. Remove those shared recipe overrides when upstream
+token data is corrected. This work targets SCSS/CSS; it does not add LESS output.
+
 SCSS example:
 ```
 @import '@rei/cdr-tokens/dist/rei-dot-com/scss/cdr-tokens.scss'; /* import the tokens file */

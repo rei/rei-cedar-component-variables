@@ -1,4 +1,4 @@
-@use '@rei/cdr-tokens/scss' as tokens;
+@use '@rei/cdr-tokens/dist/rei-dot-com/scss/cdr-tokens.scss' as tokens;
 
 @mixin cdr-card-base-mixin() {
   position: relative;
@@ -6,7 +6,7 @@
   // ITEM_DOC: Background color of a cdr-card
   background-color: var(
     --cdr-card-base-background-color,
-    var(--cdr-color-background-primary, #{tokens.$cdr-color-background-primary})
+    var(--cdr-color-background-primary, #ffffff)
   );
   border-radius: tokens.$cdr-radius-softer;
   box-shadow: tokens.$cdr-prominence-raised;
