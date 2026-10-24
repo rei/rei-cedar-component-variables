@@ -15,6 +15,8 @@ const CdrFormGroup = require('./cdr-form-group');
 const CdrTable = require('./cdr-table');
 const CdrSkeleton = require('./cdr-skeleton');
 const CdrQuote = require('./cdr-quote');
+const CdrCheckbox = require('./cdr-checkbox');
+const CdrRadio = require('./cdr-radio');
 
 module.exports = {
   CdrBreadcrumb,
@@ -22,6 +24,7 @@ module.exports = {
   CdrCard,
   CdrCaption,
   CdrChip,
+  CdrCheckbox,
   CdrFormError,
   CdrFormGroup,
   CdrGrid,
@@ -31,6 +34,7 @@ module.exports = {
   CdrLink,
   CdrList,
   CdrQuote,
+  CdrRadio,
   CdrSelect,
   CdrTable,
   CdrSkeleton

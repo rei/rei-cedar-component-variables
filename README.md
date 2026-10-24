@@ -23,7 +23,7 @@ This package contains `/dist/less` and `/dist/scss` folders, each of which conta
 
 ### CdrButton semantic contract preview
 
-The local CdrButton output is generated from the TypeScript contract in
+The CdrButton output is generated from the TypeScript contract in
 `rei-cedar` PR #249, using `@rei/cdr-tokens@15.0.0-alpha.2`.
 Load these runtime styles once in your application before using the button mixins:
 
@@ -70,26 +70,26 @@ For plain CSS, load `dist/css/CdrButton.css` with the same token styles and use
 elevation; responsive modifiers use names such as `cdr-button--small@sm`.
 No Vue import or runtime is needed in either consumption path.
 
-The source changes required in Cedar are included in
-`build/cedar-button-contract.patch`, with the exact upstream revision and patch
-checksum recorded in `build/cedar-source.json`. No unpublished Cedar branch is
-required. From a clone of this fork, run:
+The generator and shared recipe are published in the
+[Cedar fork](https://github.com/c4rlosviteri/rei-cedar/tree/1b267cc3e4dba959561467b81e082eb2651d9e3c).
+The source changes are reviewable in [Cedar PR #1](https://github.com/c4rlosviteri/rei-cedar/pull/1).
+`build/cedar-source.json` pins that exact commit for reproducible builds. From a
+clone of this fork, run:
 
 ```sh
 # From rei-cedar-component-variables; use Node 22 as required by rei-cedar.
 pnpm install --frozen-lockfile
 pnpm setup:cedar
-pnpm build:button
-pnpm test:button
+pnpm build:all
+pnpm test:all
 pnpm --dir ../rei-cedar exec playwright test --config playwright.component-variables.config.ts
 ```
 
-`setup:cedar` clones the pinned Cedar revision into a sibling `rei-cedar`
-checkout if missing, applies the included source patch, and installs its build
-dependencies. An existing checkout must already be at the pinned commit. The
-setup checks for conflicts before writing and keeps unrelated local changes.
-Repeated setup is safe when the patch is already applied; after editing the
-contract or recipe, use `build:button` directly.
+`setup:cedar` clones the pinned revision from the Cedar fork into a sibling
+`rei-cedar` checkout if missing and installs its build dependencies. An existing
+checkout must already be at the pinned commit; setup leaves local changes intact
+and rejects other revisions without resetting them. After editing the contract
+or recipe, use `build:button` directly.
 
 `build:button` regenerates maps and mixins from the contract, copies their Sass
 dependencies, and builds CSS plus an offline demo at `dist/demo/CdrButton.html`.
@@ -97,7 +97,38 @@ Edit the contract or shared recipe in Cedar, never the generated `dist` files.
 The exported Sass resolves tokens through their physical package path, so plain
 Dart Sass works with `node_modules` on its load path. The standalone
 `cedar-component-variables.scss` remains a flattened file; `index.scss` forwards
-the individual modules. Other components retain their existing mixin behavior.
+the individual modules.
+
+### Build all components
+
+`pnpm build:all` runs Cedar's `build:variables`, regenerating the contract maps
+before exporting every supported Sass entrypoint and its local dependencies. It
+then rebuilds the documentation examples. Use `pnpm build:button` for a scoped
+Button rebuild, or `pnpm --dir ../rei-cedar build:variables` to run the full
+transfer directly.
+
+The full build covers all 19 documented components: Breadcrumb, Button, Caption,
+Card, Checkbox, Chip, FormError, FormGroup, Grid, Input, LabelStandalone,
+LabelWrapper, Link, List, Quote, Radio, Select, Skeleton and Table. Components
+with TypeScript contracts use their generated maps; the others retain their
+source Sass recipes. Structural values receive contract-derived fallbacks so
+they work without the custom properties initialized by a Vue component. Link's
+colors/states and Caption's styles use recipes shared with Vue.
+
+Load the semantic token families once when using the full package:
+
+```js
+import '@rei/cdr-tokens/css';
+import '@rei/cdr-tokens/css/color-surface';
+import '@rei/cdr-tokens/css/color-action';
+import '@rei/cdr-tokens/css/color-control';
+import '@rei/cdr-tokens/css/color-feedback';
+```
+
+`pnpm test:all` checks setup, all documentation examples, the index and the
+standalone bundle. Browser tests also check default values, inherited overrides
+and semantic dependencies without Vue. This build exports Sass for all supported
+components; the complete class-based CSS and offline demo are specific to Button.
 
 The preview retains the PR's scoped alpha.2 fixes for the missing white border
 and incorrect brand values. Remove those shared recipe overrides when upstream
@@ -141,7 +172,10 @@ The [example project](https://github.com/rei/rei-cedar-component-variables-examp
 
 The `/dist` folder in this project should never be edited directly as it is meant to stay in sync with Cedar. This package should be updated whenever component variable support is added to a new component, or whenever the markup/styling for a supported component changes.
 
-To add support for a new component, in `@rei/cedar` update the [build/component-variables-transfer.js](https://github.com/rei/rei-cedar/blob/next/build/component-variables-transfer.js#L7) file to add the name of the `vars.scss` to the list, add a new JSON file to the [`/examples` directory](https://github.com/rei/rei-cedar-component-variables/tree/next/examples) in this repo, and export that JSON file from `/examples/index.js`.
+To add support for a new component, update the supported list in Cedar's
+`build/component-variables-transfer.ts`, add its JSON file to `/examples`, and
+export that JSON from `/examples/index.js`. Then run `pnpm build:all` and
+`pnpm test:all` from this repository.
 
 Update steps:
 - Ensure that your copy of `rei-cedar` and `rei-cedar-component-variables` are in the same directory

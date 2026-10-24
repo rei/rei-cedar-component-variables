@@ -12,6 +12,16 @@
       "name": "standalone",
       "html": "<a href=\"#\" class=\"cdr-link-standalone\">\n  link standalone\n</a>",
       "scss": ["@include cdr-link-base-mixin;", "@include cdr-link-standalone-mixin;"]
+    },
+    {
+      "name": "inherit-color",
+      "html": "<span style=\"color: rebeccapurple\"><a href=\"#\" class=\"cdr-link-inherit-color\">Inherited link</a></span>",
+      "scss": ["@include cdr-link-base-mixin;", "@include cdr-link-inherit-color-mixin;"]
+    },
+    {
+      "name": "neutral",
+      "html": "<a href=\"#\" class=\"cdr-link-neutral\">Neutral link</a>",
+      "scss": ["@include cdr-link-base-mixin;", "@include cdr-link-neutral-mixin;"]
     }
   ]
 }

@@ -11,15 +11,16 @@
       "html": "<blockquote class=\"cdr-quote-default\">\n  <p>Quote</p>\n  <cite>Attribution</cite>\n</blockquote>",
       "scss": [
         "@include cdr-quote-base-container;",
-        "@include cdr-quote-base-content;"
+        "p { @include cdr-quote-base-content; }"
       ]
     },
     {
       "name": "pull",
       "html": "<aside class=\"cdr-quote-pull\">\n  <p>Quote</p>\n</aside>",
       "scss": [
+        "@include cdr-quote-base-container;",
         "@include cdr-quote-pull-container;",
-        "@include cdr-quote-pull-content"
+        "p { @include cdr-quote-base-content; @include cdr-quote-pull-content; }"
       ]
     }
   ]

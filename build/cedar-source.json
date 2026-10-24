@@ -1,6 +1,6 @@
 {
-  "repository": "https://github.com/rei/rei-cedar.git",
-  "pullRequest": "https://github.com/rei/rei-cedar/pull/249",
-  "commit": "079647d939ea290b4719781fa8ea7eecbfe57ded",
-  "patchSha256": "b932b1856b7960c4b104ff3d2a6fcdac4d0c79e2e254fa262b4d4ddf7b422c04"
+  "repository": "https://github.com/c4rlosviteri/rei-cedar.git",
+  "pullRequest": "https://github.com/c4rlosviteri/rei-cedar/pull/1",
+  "migrationPullRequest": "https://github.com/rei/rei-cedar/pull/249",
+  "commit": "1b267cc3e4dba959561467b81e082eb2651d9e3c"
 }

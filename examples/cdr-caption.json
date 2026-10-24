@@ -10,7 +10,7 @@
       "html": "<div class=\"cdr-caption-default\">\n  <p>Caption</p>\n  <cite>Citation</cite>\n</div>",
       "scss": [
         "@include cdr-caption-container-mixin;",
-        "@include cdr-caption-summary-mixin;",
+        "p { @include cdr-caption-summary-mixin; }",
         "cite {\n    @include cdr-caption-cite-mixin;\n  }"
       ]
     }

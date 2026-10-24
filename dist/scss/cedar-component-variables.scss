@@ -1,4 +1,4 @@
-// GENERATED FILE — pnpm build:variables:button
+// GENERATED FILE — pnpm build:variables
 @use 'sass:map';
 @use '@rei/cdr-tokens/dist/rei-dot-com/scss/cdr-tokens.scss' as tokens;
 
@@ -928,22 +928,52 @@ $button-elevated-colors: (
   @include cdr-button-icon-padding(large, right);
 }
 
+// ============================================================================
+// GENERATED FILE — do not edit manually
+// Source: src/components/card/CdrCard.tokens.ts
+// Regenerate: npx tsx build/generate-component-maps.ts
+// ============================================================================
+
+
+
+// ============================================================================
+// DEFAULTS MAP
+// ============================================================================
+
+$card-defaults: (
+  border-radius: tokens.$cdr-radius-softer,
+  box-shadow: tokens.$cdr-prominence-raised,
+  box-shadow-hover: tokens.$cdr-prominence-floating,
+);
+
+// ============================================================================
+// COLOR MAP
+// ============================================================================
+
+$card-colors: (
+  base: (
+    background: var(--cdr-surface-natural),
+    text: var(--cdr-text-neutral-prominent, #4c473e),
+  ),
+  link: (
+    text: var(--cdr-action-text-neutral-bold),
+    text-hover: var(--cdr-action-text-trigger),
+  ),
+);
+
 @mixin cdr-card-base-mixin() {
   position: relative;
 
   // ITEM_DOC: Background color of a cdr-card
   background-color: var(
     --cdr-card-base-background-color,
-    var(--cdr-color-background-primary, #ffffff)
+    map.get($card-colors, base, background)
   );
-  border-radius: tokens.$cdr-radius-softer;
-  box-shadow: tokens.$cdr-prominence-raised;
+  border-radius: var(--cdr-card-border-radius, map.get($card-defaults, border-radius));
+  box-shadow: var(--cdr-card-box-shadow, map.get($card-defaults, box-shadow));
 
   // ITEM_DOC: Text color of a cdr-card
-  color: var(
-    --cdr-card-base-color,
-    var(--cdr-color-text-primary, #{tokens.$cdr-color-text-primary})
-  );
+  color: var(--cdr-card-base-color, map.get($card-colors, base, text));
   container: card / inline-size;
   width: 100%;
   transition: box-shadow tokens.$cdr-duration-2-x tokens.$cdr-timing-function-ease;
@@ -952,7 +982,7 @@ $button-elevated-colors: (
 
   &:active,
   &:hover {
-    box-shadow: tokens.$cdr-prominence-floating;
+    box-shadow: var(--cdr-card-box-shadow-hover, map.get($card-defaults, box-shadow-hover));
     transform: translateY(-#{tokens.$cdr-space-eighth-x});
     transition: tokens.$cdr-duration-2-x;
   }
@@ -962,10 +992,7 @@ $button-elevated-colors: (
   position: static;
 
   // ITEM_DOC: Link text color of a cdr-card
-  color: var(
-    --cdr-card-link-color,
-    var(--cdr-color-text-primary, #{tokens.$cdr-color-text-primary})
-  ) !important;
+  color: var(--cdr-card-link-color, map.get($card-colors, link, text)) !important;
   text-decoration: none !important;
 
   &:hover {
@@ -974,7 +1001,7 @@ $button-elevated-colors: (
     // ITEM_DOC: Link hover text color of a cdr-card
     color: var(
       --cdr-card-link-hover-color,
-      var(--cdr-color-text-link-hover, #{tokens.$cdr-color-text-link-hover})
+      map.get($card-colors, link, text-hover)
     ) !important;
   }
 
@@ -991,45 +1018,90 @@ $button-elevated-colors: (
   }
 }
 
+// ============================================================================
+// GENERATED FILE — do not edit manually
+// Source: src/components/chip/CdrChip.tokens.ts
+// Regenerate: npx tsx build/generate-component-maps.ts
+// ============================================================================
+
+
+
+// ============================================================================
+// DEFAULTS MAP
+// ============================================================================
+
+$chip-defaults: (
+  // Typography
+  font-family: tokens.$cdr-font-family-sans,
+  font-weight: 400,
+  letter-spacing: -0.08px,
+  font-size: 14px,
+  line-height: 15px,
+  border-radius: 30px
+);
+
+// ============================================================================
+// COLOR MAP
+// ============================================================================
+
+$chip-colors: (
+  default: (
+    background: var(--cdr-surface-neutral-trace),
+    text: var(--cdr-control-text-neutral-prominent),
+    border: var(--cdr-border-neutral-prominent, #979187),
+    fill: var(--cdr-control-icon-neutral-intense),
+    background-hover: var(--cdr-control-surface-neutral-subtle),
+    border-hover: var(--cdr-control-border-neutral),
+    background-focus-visible: var(--cdr-surface-neutral-trace),
+    border-focus-visible: var(--cdr-control-border-neutral-bold),
+    background-active: var(--cdr-control-surface-neutral),
+    border-active: var(--cdr-control-border-neutral-bold),
+    background-disabled: var(--cdr-surface-neutral-trace),
+    text-disabled: var(--cdr-control-text-neutral-faint),
+    border-disabled: var(--cdr-border-neutral, #cecac3),
+  ),
+  selected: (
+    background: var(--cdr-control-surface-natural-bold),
+    border: var(--cdr-control-border-neutral-bold),
+    background-hover: var(--cdr-control-surface-neutral),
+    border-hover: var(--cdr-action-border-neutral-prominent),
+    background-focus-visible: var(--cdr-control-surface-natural-bold),
+    border-focus-visible: var(--cdr-control-border-neutral-bold),
+    background-active: var(--cdr-control-surface-neutral),
+    border-active: var(--cdr-control-border-neutral-bold),
+  ),
+);
+
 @mixin cdr-chip-base-mixin() {
   display: inline-flex;
   align-items: center;
   position: relative;
   width: max-content;
   padding: tokens.$cdr-space-half-x tokens.$cdr-space-three-quarter-x;
-  border-radius: 30px;
+  border-radius: var(--cdr-chip-border-radius, map.get($chip-defaults, border-radius));
   border: 0;
 
   // ITEM_DOC: Text color of a cdr-chip
-  color: var(
-    --cdr-chip-text-color,
-    var(--cdr-color-text-chip-default, #{tokens.$cdr-color-text-chip-default})
-  );
+  color: var(--cdr-chip-text-color, map.get($chip-colors, default, text));
 
   // ITEM_DOC: Fill color of a cdr-chip
-  fill: var(
-    --cdr-chip-fill-color,
-    var(--cdr-color-text-chip-default, #{tokens.$cdr-color-text-chip-default})
-  );
+  fill: var(--cdr-chip-fill-color, map.get($chip-colors, default, fill));
 
   // ITEM_DOC: Background color of a cdr-chip
   background-color: var(
     --cdr-chip-background-color-rest,
-    var(--cdr-color-background-chip-default-rest, #{tokens.$cdr-color-background-chip-default-rest})
+    map.get($chip-colors, default, background)
   );
 
   // ITEM_DOC: Box-shadow color of a cdr-chip
   box-shadow: inset 0 0 0 1px
-    var(
-      --cdr-chip-box-shadow-color-rest,
-      var(--cdr-color-border-chip-default-rest, #{tokens.$cdr-color-border-chip-default-rest})
-    );
+    var(--cdr-chip-box-shadow-color-rest, map.get($chip-colors, default, border));
   cursor: pointer;
-  font-family: tokens.$cdr-font-family-sans;
-  font-size: 14px;
-  line-height: 15px;
-  font-weight: 400;
-  letter-spacing: -0.08px;
+  font-family: var(--cdr-chip-font-family, map.get($chip-defaults, font-family));
+  font-size: var(--cdr-chip-font-size, map.get($chip-defaults, font-size));
+  line-height: var(--cdr-chip-line-height, map.get($chip-defaults, line-height));
+  font-weight: var(--cdr-chip-font-weight, map.get($chip-defaults, font-weight));
+  letter-spacing: var(--cdr-chip-letter-spacing, map.get($chip-defaults, letter-spacing));
   transition:
     color tokens.$cdr-duration-1-x tokens.$cdr-timing-function-ease,
     fill tokens.$cdr-duration-1-x tokens.$cdr-timing-function-ease,
@@ -1044,26 +1116,20 @@ $button-elevated-colors: (
     // ITEM_DOC: Background color of a cdr-chip when disabled
     background-color: var(
       --cdr-chip-background-color-disabled,
-      var(
-        --cdr-color-background-chip-default-disabled,
-        #{tokens.$cdr-color-background-chip-default-disabled}
-      )
+      map.get($chip-colors, default, background-disabled)
     ) !important;
 
     // ITEM_DOC: Box-shadow color of a cdr-chip when disabled
     box-shadow: inset 0 0 0 1px
       var(
         --cdr-chip-box-shadow-color-disabled,
-        var(
-          --cdr-color-border-chip-default-disabled,
-          #{tokens.$cdr-color-border-chip-default-disabled}
-        )
+        map.get($chip-colors, default, border-disabled)
       ) !important;
 
     // ITEM_DOC: Text color of a cdr-chip when disabled
     color: var(
       --cdr-chip-text-color-disabled,
-      var(--cdr-color-text-chip-disabled, #{tokens.$cdr-color-text-chip-disabled})
+      map.get($chip-colors, default, text-disabled)
     ) !important;
   }
 
@@ -1071,18 +1137,12 @@ $button-elevated-colors: (
     // ITEM_DOC: Background color of a cdr-chip on hover
     background-color: var(
       --cdr-chip-background-color-hover,
-      var(
-        --cdr-color-background-chip-default-hover,
-        #{tokens.$cdr-color-background-chip-default-hover}
-      )
+      map.get($chip-colors, default, background-hover)
     );
 
     // ITEM_DOC: Box-shadow color of a cdr-chip on hover
     box-shadow: inset 0 0 0 2px
-      var(
-        --cdr-chip-box-shadow-color-hover,
-        var(--cdr-color-border-chip-default-hover, #{tokens.$cdr-color-border-chip-default-hover})
-      );
+      var(--cdr-chip-box-shadow-color-hover, map.get($chip-colors, default, border-hover));
   }
 
   &:focus {
@@ -1092,10 +1152,7 @@ $button-elevated-colors: (
     // ITEM_DOC: Background color of a cdr-chip on focus
     background-color: var(
       --cdr-chip-background-color-focus,
-      var(
-        --cdr-color-background-chip-default-focus,
-        #{tokens.$cdr-color-background-chip-default-focus}
-      )
+      map.get($chip-colors, default, background-focus-visible)
     );
 
     // ITEM_DOC: Box-shadow color of a cdr-chip on focus
@@ -1103,7 +1160,7 @@ $button-elevated-colors: (
       inset 0 0 0 3px
         var(
           --cdr-chip-box-shadow-color-focus,
-          var(--cdr-color-border-chip-default-focus, #{tokens.$cdr-color-border-chip-default-focus})
+          map.get($chip-colors, default, border-focus-visible)
         ),
       tokens.$cdr-prominence-raised;
   }
@@ -1112,22 +1169,13 @@ $button-elevated-colors: (
     // ITEM_DOC: Background color of a cdr-chip when active
     background-color: var(
       --cdr-chip-background-color-active,
-      var(
-        --cdr-color-background-chip-default-active,
-        #{tokens.$cdr-color-background-chip-default-active}
-      )
+      map.get($chip-colors, default, background-active)
     );
 
     // ITEM_DOC: Box-shadow color of a cdr-chip when active
     box-shadow:
       inset 0 0 0 3px
-        var(
-          --cdr-chip-box-shadow-color-active,
-          var(
-            --cdr-color-border-chip-default-active,
-            #{tokens.$cdr-color-border-chip-default-active}
-          )
-        ),
+        var(--cdr-chip-box-shadow-color-active, map.get($chip-colors, default, border-active)),
       tokens.$cdr-prominence-raised;
   }
 
@@ -1138,21 +1186,12 @@ $button-elevated-colors: (
     // ITEM_DOC: Background color of a cdr-chip when selected
     background-color: var(
       --cdr-chip-background-color-selected-rest,
-      var(
-        --cdr-color-background-chip-default-selected,
-        #{tokens.$cdr-color-background-chip-default-selected}
-      )
+      map.get($chip-colors, selected, background)
     );
 
     // ITEM_DOC: Box-shadow color of a cdr-chip when selected
     box-shadow: inset 0 0 0 2px
-      var(
-        --cdr-chip-box-shadow-color-selected-rest,
-        var(
-          --cdr-color-border-chip-default-selected-rest,
-          #{tokens.$cdr-color-border-chip-default-selected-rest}
-        )
-      );
+      var(--cdr-chip-box-shadow-color-selected-rest, map.get($chip-colors, selected, border));
   }
 
   &[aria-pressed='true']:hover,
@@ -1160,20 +1199,14 @@ $button-elevated-colors: (
     // ITEM_DOC: Background color of a cdr-chip when selected and hovered
     background-color: var(
       --cdr-chip-background-color-selected-hover,
-      var(
-        --cdr-color-background-chip-default-selected-hover,
-        #{tokens.$cdr-color-background-chip-default-selected-hover}
-      )
+      map.get($chip-colors, selected, background-hover)
     );
 
     // ITEM_DOC: Box-shadow color of a cdr-chip when selected and hovered
     box-shadow: inset 0 0 0 2px
       var(
         --cdr-chip-box-shadow-color-selected-hover,
-        var(
-          --cdr-color-border-chip-default-selected-hover,
-          #{tokens.$cdr-color-border-chip-default-selected-hover}
-        )
+        map.get($chip-colors, selected, border-hover)
       );
   }
 
@@ -1182,10 +1215,7 @@ $button-elevated-colors: (
     // ITEM_DOC: Background color of a cdr-chip when selected and focused
     background-color: var(
       --cdr-chip-background-color-selected-focus,
-      var(
-        --cdr-color-background-chip-default-selected-focus,
-        #{tokens.$cdr-color-background-chip-default-selected-focus}
-      )
+      map.get($chip-colors, selected, background-focus-visible)
     );
 
     // ITEM_DOC: Box-shadow color of a cdr-chip when selected and focused
@@ -1193,10 +1223,7 @@ $button-elevated-colors: (
       inset 0 0 0 3px
         var(
           --cdr-chip-box-shadow-color-selected-focus,
-          var(
-            --cdr-color-border-chip-default-selected-focus,
-            #{tokens.$cdr-color-border-chip-default-selected-focus}
-          )
+          map.get($chip-colors, selected, border-focus-visible)
         ),
       tokens.$cdr-prominence-raised;
   }
@@ -1206,10 +1233,7 @@ $button-elevated-colors: (
     // ITEM_DOC: Background color of a cdr-chip when selected and active
     background-color: var(
       --cdr-chip-background-color-selected-active,
-      var(
-        --cdr-color-background-chip-default-selected-active,
-        #{tokens.$cdr-color-background-chip-default-selected-active}
-      )
+      map.get($chip-colors, selected, background-active)
     );
 
     // ITEM_DOC: Box-shadow color of a cdr-chip when selected and active
@@ -1217,10 +1241,7 @@ $button-elevated-colors: (
       inset 0 0 0 3px
         var(
           --cdr-chip-box-shadow-color-selected-focus,
-          var(
-            --cdr-color-border-chip-default-selected-focus,
-            #{tokens.$cdr-color-border-chip-default-selected-focus}
-          )
+          map.get($chip-colors, selected, border-active)
         ),
       tokens.$cdr-prominence-raised;
   }
@@ -1244,29 +1265,124 @@ $button-elevated-colors: (
   margin-right: tokens.$cdr-space-one-x;
 }
 
+// ============================================================================
+// GENERATED FILE — do not edit manually
+// Source: src/components/breadcrumb/CdrBreadcrumb.tokens.ts
+// Regenerate: npx tsx build/generate-component-maps.ts
+// ============================================================================
+
+
+
+// ============================================================================
+// DEFAULTS MAP
+// ============================================================================
+
+$breadcrumb-defaults: (
+  // Typography
+  line-height: 1,
+  list-display: inline-flex,
+  list-flex-wrap: wrap,
+  list-padding: 0,
+  list-margin: 0,
+  item-display: inline-flex,
+  item-flex: none,
+  item-padding: 0,
+  delimiter-color: inherit,
+  delimiter-padding: tokens.$cdr-space-half-x,
+  link-color: inherit,
+  link-text-decoration: none,
+  link-highlight-text-decoration: underline,
+  ellipses-font-family: inherit,
+  ellipses-font-size: inherit,
+  ellipses-line-height: inherit,
+  ellipses-border: none,
+  ellipses-background: none,
+  ellipses-background-color: transparent,
+  ellipses-cursor: pointer,
+  ellipses-display: inline-block,
+  ellipses-fill: inherit,
+  ellipses-padding: 0,
+  ellipses-icon-border-bottom: 1px solid transparent,
+  ellipses-icon-fill: inherit,
+  ellipses-icon-text-decoration: underline
+);
+
+// ============================================================================
+// COLOR MAP
+// ============================================================================
+
+$breadcrumb-colors: (
+  default: (
+    text: var(--cdr-action-text-neutral-prominent),
+    text-hover: var(--cdr-action-text-trigger),
+    text-focus-visible: var(--cdr-action-text-trigger),
+    text-active: var(--cdr-action-text-trigger),
+  ),
+  ellipsis: (
+    text: var(--cdr-action-text-neutral-prominent),
+    text-hover: var(--cdr-action-text-trigger),
+    text-focus-visible: var(--cdr-action-text-trigger),
+    text-active: var(--cdr-action-text-trigger),
+  ),
+);
+
+// ============================================================================
+// Special case mixins
+// Used by the module file and component-variables consumers.
+// ============================================================================
+
 @mixin cdr-breadcrumb-item-mixin() {
-  // ITEM_DOC: Breadcrumb item color
+  // ITEM_DOC: Breadcrumb item color. Override with --cdr-color-breadcrumb-text.
   color: var(
-    --cdr-breadcrumb-item-color,
-    var(--cdr-color-text-secondary, #{tokens.$cdr-color-text-secondary})
+    --cdr-color-breadcrumb-text,
+    var(--cdr-breadcrumb-item-color, map.get($breadcrumb-colors, default, text))
   );
 }
 
 @mixin cdr-breadcrumb-item-linked-mixin() {
-  text-decoration: none;
-  color: inherit;
+  color: var(--cdr-breadcrumb-link-color, map.get($breadcrumb-defaults, link-color));
+  text-decoration: var(--cdr-breadcrumb-link-text-decoration, map.get($breadcrumb-defaults, link-text-decoration));
 
-  &:hover,
-  &:active,
-  &:focus {
-    // ITEM_DOC: Breadcrumb item linked hover, active and focus color
+  &:hover {
+    // ITEM_DOC: Breadcrumb link hover color. Override with --cdr-color-breadcrumb-text-hover.
     color: var(
-      --cdr-breadcrumb-item-linked-highlight-color,
-      var(--cdr-color-text-link-hover, #{tokens.$cdr-color-text-link-hover})
+      --cdr-color-breadcrumb-text-hover,
+      var(
+        --cdr-breadcrumb-item-linked-highlight-color,
+        map.get($breadcrumb-colors, default, text-hover)
+      )
     );
-    text-decoration: underline;
+    text-decoration: var(--cdr-breadcrumb-link-highlight-text-decoration, map.get($breadcrumb-defaults, link-highlight-text-decoration));
+  }
+
+  &:focus {
+    // ITEM_DOC: Breadcrumb link focus color. Override with --cdr-color-breadcrumb-text-focus-visible.
+    color: var(
+      --cdr-color-breadcrumb-text-focus-visible,
+      var(
+        --cdr-breadcrumb-item-linked-highlight-color,
+        map.get($breadcrumb-colors, default, text-focus-visible)
+      )
+    );
+    text-decoration: var(--cdr-breadcrumb-link-highlight-text-decoration, map.get($breadcrumb-defaults, link-highlight-text-decoration));
+  }
+
+  &:active {
+    // ITEM_DOC: Breadcrumb link active color. Override with --cdr-color-breadcrumb-text-active.
+    color: var(
+      --cdr-color-breadcrumb-text-active,
+      var(
+        --cdr-breadcrumb-item-linked-highlight-color,
+        map.get($breadcrumb-colors, default, text-active)
+      )
+    );
+    text-decoration: var(--cdr-breadcrumb-link-highlight-text-decoration, map.get($breadcrumb-defaults, link-highlight-text-decoration));
   }
 }
+
+// ============================================================================
+// Typography mixins
+// ============================================================================
 
 @mixin cdr-breadcrumb-xs-text-mixin() {
   @include tokens.cdr-text-utility-sans-100;
@@ -1275,6 +1391,39 @@ $button-elevated-colors: (
 @mixin cdr-breadcrumb-base-text-mixin() {
   @include tokens.cdr-text-utility-sans-200;
 }
+
+// ============================================================================
+// GENERATED FILE — do not edit manually
+// Source: src/components/formGroup/CdrFormGroup.tokens.ts
+// Regenerate: npx tsx build/generate-component-maps.ts
+// ============================================================================
+
+
+
+// ============================================================================
+// DEFAULTS MAP
+// ============================================================================
+
+$form-group-defaults: (
+  content-border-radius: tokens.$cdr-radius-softer,
+);
+
+// ============================================================================
+// COLOR MAP
+// ============================================================================
+
+$form-group-colors: (
+  error: (
+    background: var(--cdr-feedback-surface-error-trace),
+    border: var(--cdr-feedback-border-error),
+  ),
+  optional: (
+    text: var(--cdr-text-neutral, #746e63),
+  ),
+  disabled: (
+    text: var(--cdr-control-text-neutral-faint),
+  ),
+);
 
 @mixin cdr-form-group-base-mixin() {
   @include tokens.cdr-text-heading-sans-300;
@@ -1293,15 +1442,12 @@ $button-elevated-colors: (
 @mixin cdr-form-group-error-mixin() {
   // ITEM_DOC: Box-shadow color of a cdr-form-group error
   box-shadow: inset 0 0 0 1px
-    var(
-      --cdr-form-group-error-box-shadow,
-      var(--cdr-color-border-input-error, #{tokens.$cdr-color-border-input-error})
-    );
+    var(--cdr-form-group-error-box-shadow, map.get($form-group-colors, error, border));
 
   // ITEM_DOC: Background color of a cdr-form-group error
   background-color: var(
     --cdr-form-group-error-background-color,
-    var(--cdr-color-background-input-error, #{tokens.$cdr-color-background-input-error})
+    map.get($form-group-colors, error, background)
   );
 
   &:hover {
@@ -1314,7 +1460,7 @@ $button-elevated-colors: (
   // ITEM_DOC: Text color of an optional cdr-form-group
   color: var(
     --cdr-form-group-optional-text-color,
-    var(--cdr-color-text-input-optional, #{tokens.$cdr-color-text-input-optional})
+    map.get($form-group-colors, optional, text)
   );
 }
 
@@ -1324,12 +1470,12 @@ $button-elevated-colors: (
   // ITEM_DOC: Text color of a disabled cdr-form-group
   color: var(
     --cdr-form-group-disabled-text-color,
-    var(--cdr-color-text-disabled, #{tokens.$cdr-color-text-disabled})
+    map.get($form-group-colors, disabled, text)
   );
 }
 
 @mixin cdr-form-group-content-mixin() {
-  border-radius: tokens.$cdr-radius-softer;
+  border-radius: var(--cdr-form-group-content-border-radius, map.get($form-group-defaults, content-border-radius));
   display: flex;
   flex-direction: column;
 
@@ -1338,21 +1484,44 @@ $button-elevated-colors: (
   }
 }
 
+// ============================================================================
+// GENERATED FILE — do not edit manually
+// Source: src/components/formError/CdrFormError.tokens.ts
+// Regenerate: npx tsx build/generate-component-maps.ts
+// ============================================================================
+
+
+
+// ============================================================================
+// DEFAULTS MAP
+// ============================================================================
+
+$form-error-defaults: (
+  margin-top: tokens.$cdr-space-quarter-x,
+);
+
+// ============================================================================
+// COLOR MAP
+// ============================================================================
+
+$form-error-colors: (
+  default: (
+    fill: var(--cdr-feedback-icon-error),
+  ),
+);
+
 @mixin cdr-form-error-base-mixin() {
   @include tokens.cdr-text-utility-sans-300;
 
-  // ITEM_DOC: Text color of a cdr-form-error
+  // ITEM_DOC: Text color of a cdr-form-error. Not migrated: no approved text token within the parity tolerance.
   color: var(
     --cdr-form-error-text-color,
     var(--cdr-color-text-input-error, #{tokens.$cdr-color-text-input-error})
   );
 
   // ITEM_DOC: Fill color of a cdr-form-error
-  fill: var(
-    --cdr-form-error-fill-color,
-    var(--cdr-color-text-input-error, #{tokens.$cdr-color-text-input-error})
-  );
-  margin-top: tokens.$cdr-space-quarter-x;
+  fill: var(--cdr-form-error-fill-color, map.get($form-error-colors, default, fill));
+  margin-top: var(--cdr-form-error-margin-top, map.get($form-error-defaults, margin-top));
 }
 
 @mixin cdr-form-error-icon-mixin() {
@@ -1673,49 +1842,84 @@ $button-elevated-colors: (
   }
 }
 
+// ============================================================================
+// GENERATED FILE — do not edit manually
+// Source: src/components/radio/CdrRadio.tokens.ts
+// Regenerate: npx tsx build/generate-component-maps.ts
+// ============================================================================
+
+
+
+// ============================================================================
+// DEFAULTS MAP
+// ============================================================================
+
+$radio-defaults: (
+  figure-radius: 100%,
+  inner-circle-size: 0.4rem,
+  inner-circle-radius: tokens.$cdr-radius-round,
+);
+
+// ============================================================================
+// COLOR MAP
+// ============================================================================
+
+$radio-colors: (
+  default: (
+    background: var(--cdr-control-surface-neutral-faint),
+    border: var(--cdr-control-border-neutral),
+    background-hover: var(--cdr-control-surface-neutral-faint),
+    border-hover: var(--cdr-control-border-neutral-intense),
+    background-focus-visible: var(--cdr-control-surface-neutral-faint),
+    border-focus-visible: var(--cdr-control-border-neutral-bold),
+    background-active: var(--cdr-control-surface-neutral-faint),
+    border-active: var(--cdr-control-border-neutral-bold),
+    background-disabled: var(--cdr-control-surface-neutral-faint),
+    border-disabled: var(--cdr-control-border-neutral-faint),
+  ),
+  checked: (
+    background: var(--cdr-control-surface-neutral-bold),
+    border: var(--cdr-control-border-neutral-bold),
+    fill: var(--cdr-control-icon-neutral-trace),
+    background-hover: var(--cdr-control-surface-neutral-prominent),
+    border-hover: var(--cdr-control-border-neutral-bold),
+    background-focus-visible: var(--cdr-control-surface-neutral-prominent),
+    fill-active: var(--cdr-control-icon-neutral-intense),
+    fill-disabled: var(--cdr-control-icon-neutral-faint),
+  ),
+);
+
 @mixin cdr-form-figure-radio-base-mixin() {
-  border-radius: 100%;
+  border-radius: var(--cdr-radio-figure-radius, map.get($radio-defaults, figure-radius));
 
   &::after {
     content: '';
     position: absolute;
-    width: calc(#{tokens.$cdr-form-figure-size-medium} / 4);
-    height: calc(#{tokens.$cdr-form-figure-size-medium} / 4);
+    width: var(--cdr-radio-inner-circle-size, map.get($radio-defaults, inner-circle-size));
+    height: var(--cdr-radio-inner-circle-size, map.get($radio-defaults, inner-circle-size));
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border-radius: tokens.$cdr-radius-round;
+    border-radius: var(--cdr-radio-inner-circle-radius, map.get($radio-defaults, inner-circle-radius));
   }
 }
 
 @mixin cdr-form-figure-radio-checked-mixin() {
   // ITEM_DOC: Box-shadow color of cdr-radio when selected
   box-shadow: inset 0 0 0 1px
-    var(
-      --cdr-radio-box-shadow-color-selected,
-      var(
-        --cdr-color-border-input-default-selected,
-        #{tokens.$cdr-color-border-input-default-selected}
-      )
-    );
+    var(--cdr-radio-box-shadow-color-selected, map.get($radio-colors, checked, border));
 
   // ITEM_DOC: Background color of cdr-radio when selected
   background-color: var(
     --cdr-radio-background-color-selected,
-    var(
-      --cdr-color-background-input-default-selected,
-      #{tokens.$cdr-color-background-input-default-selected}
-    )
+    map.get($radio-colors, checked, background)
   );
 
   &::after {
     // ITEM_DOC: Background color of the inner circle of cdr-radio when selected
     background-color: var(
       --cdr-radio-inner-circle-background-color-selected,
-      var(
-        --cdr-color-icon-checkbox-default-selected,
-        #{tokens.$cdr-color-icon-checkbox-default-selected}
-      )
+      map.get($radio-colors, checked, fill)
     );
   }
 }
@@ -1726,23 +1930,14 @@ $button-elevated-colors: (
   // ITEM_DOC: Box-shadow color of cdr-radio on hover
   box-shadow:
     inset 0 0 0 1px
-      var(
-        --cdr-radio-box-shadow-color-hover,
-        var(--cdr-color-border-input-default-hover, #{tokens.$cdr-color-border-input-default-hover})
-      ),
+      var(--cdr-radio-box-shadow-color-hover, map.get($radio-colors, default, border-hover)),
     0 0 0 1px
-      var(
-        --cdr-radio-box-shadow-color-hover,
-        var(--cdr-color-border-input-default-hover, #{tokens.$cdr-color-border-input-default-hover})
-      );
+      var(--cdr-radio-box-shadow-color-hover, map.get($radio-colors, default, border-hover));
 
   // ITEM_DOC: Background color of cdr-radio on hover
   background-color: var(
     --cdr-radio-background-color-hover,
-    var(
-      --cdr-color-background-input-default-hover,
-      #{tokens.$cdr-color-background-input-default-hover}
-    )
+    map.get($radio-colors, default, background-hover)
   );
 }
 
@@ -1752,27 +1947,18 @@ $button-elevated-colors: (
     inset 0 0 0 1px
       var(
         --cdr-radio-box-shadow-color-selected-hover,
-        var(
-          --cdr-color-border-input-default-selected-hover,
-          #{tokens.$cdr-color-border-input-default-selected-hover}
-        )
+        map.get($radio-colors, checked, border-hover)
       ),
     0 0 0 1px
       var(
         --cdr-radio-box-shadow-color-selected-hover,
-        var(
-          --cdr-color-border-input-default-selected-hover,
-          #{tokens.$cdr-color-border-input-default-selected-hover}
-        )
+        map.get($radio-colors, checked, border-hover)
       );
 
   // ITEM_DOC: Background color of cdr-radio when selected on hover
   background-color: var(
     --cdr-radio-background-color-selected-hover,
-    var(
-      --cdr-color-background-input-default-selected-hover,
-      #{tokens.$cdr-color-background-input-default-selected-hover}
-    )
+    map.get($radio-colors, checked, background-hover)
   );
 }
 
@@ -1783,29 +1969,20 @@ $button-elevated-colors: (
   box-shadow: inset 0 0 0 1px
     var(
       --cdr-radio-box-shadow-color-disabled,
-      var(
-        --cdr-color-border-input-default-disabled,
-        #{tokens.$cdr-color-border-input-default-disabled}
-      )
+      map.get($radio-colors, default, border-disabled)
     ) !important;
 
   // ITEM_DOC: Background color of cdr-radio when disabled
   background-color: var(
     --cdr-radio-background-color-disabled,
-    var(
-      --cdr-color-background-input-default-disabled,
-      #{tokens.$cdr-color-background-input-default-disabled}
-    )
+    map.get($radio-colors, default, background-disabled)
   ) !important;
 
   &::after {
     // ITEM_DOC: Background color of the inner circle of cdr-radio when disabled
     background-color: var(
       --cdr-radio-inner-circle-background-color-disabled,
-      var(
-        --cdr-color-background-input-default-disabled,
-        #{tokens.$cdr-color-background-input-default-disabled}
-      )
+      map.get($radio-colors, checked, fill-disabled)
     ) !important;
   }
 }
@@ -1815,10 +1992,7 @@ $button-elevated-colors: (
     // ITEM_DOC: Background color of the inner circle of cdr-radio when selected and disabled
     background-color: var(
       --cdr-radio-inner-circle-background-color-selected-disabled,
-      var(
-        --cdr-color-background-input-default-disabled,
-        #{tokens.$cdr-color-background-input-default-disabled}
-      )
+      map.get($radio-colors, checked, fill-disabled)
     ) !important;
   }
 }
@@ -1829,27 +2003,18 @@ $button-elevated-colors: (
     inset 0 0 0 1px
       var(
         --cdr-radio-box-shadow-color-focus,
-        var(
-          --cdr-color-border-input-default-active,
-          #{tokens.$cdr-color-border-input-default-active}
-        )
+        map.get($radio-colors, default, border-focus-visible)
       ),
     0 0 0 1px
       var(
         --cdr-radio-box-shadow-color-focus,
-        var(
-          --cdr-color-border-input-default-active,
-          #{tokens.$cdr-color-border-input-default-active}
-        )
+        map.get($radio-colors, default, border-focus-visible)
       );
 
   // ITEM_DOC: Background color of cdr-radio on focus
   background-color: var(
     --cdr-radio-background-color-focus,
-    var(
-      --cdr-color-background-input-default-focus,
-      #{tokens.$cdr-color-background-input-default-focus}
-    )
+    map.get($radio-colors, default, background-focus-visible)
   );
 }
 
@@ -1857,10 +2022,7 @@ $button-elevated-colors: (
   // ITEM_DOC: Background color of cdr-radio when selected on focus
   background-color: var(
     --cdr-radio-background-color-selected-focus,
-    var(
-      --cdr-color-background-input-default-selected-focus,
-      #{tokens.$cdr-color-background-input-default-selected-focus}
-    )
+    map.get($radio-colors, checked, background-focus-visible)
   );
 }
 
@@ -1868,61 +2030,96 @@ $button-elevated-colors: (
   // ITEM_DOC: Box-shadow color of cdr-radio when active
   box-shadow:
     inset 0 0 0 1px
-      var(
-        --cdr-radio-box-shadow-color-active,
-        var(
-          --cdr-color-border-input-default-active,
-          #{tokens.$cdr-color-border-input-default-active}
-        )
-      ),
+      var(--cdr-radio-box-shadow-color-active, map.get($radio-colors, default, border-active)),
     0 0 0 1px
-      var(
-        --cdr-radio-box-shadow-color-active,
-        var(
-          --cdr-color-border-input-default-active,
-          #{tokens.$cdr-color-border-input-default-active}
-        )
-      );
+      var(--cdr-radio-box-shadow-color-active, map.get($radio-colors, default, border-active));
 
   // ITEM_DOC: Background color of cdr-radio when active
   background-color: var(
     --cdr-radio-background-color-active,
-    var(
-      --cdr-color-background-input-default-active,
-      #{tokens.$cdr-color-background-input-default-active}
-    )
+    map.get($radio-colors, default, background-active)
   );
 
   &::after {
     // ITEM_DOC: Background color of the inner circle of cdr-radio when selected and active
     background-color: var(
       --cdr-radio-inner-circle-background-color-selected-active,
-      var(
-        --cdr-color-icon-checkbox-default-selected-active,
-        #{tokens.$cdr-color-icon-checkbox-default-selected-active}
-      )
+      map.get($radio-colors, checked, fill-active)
     );
   }
 }
+
+// ============================================================================
+// GENERATED FILE — do not edit manually
+// Source: src/components/checkbox/CdrCheckbox.tokens.ts
+// Regenerate: npx tsx build/generate-component-maps.ts
+// ============================================================================
+
+
+
+// ============================================================================
+// DEFAULTS MAP
+// ============================================================================
+
+$checkbox-defaults: (
+  figure-radius: tokens.$cdr-radius-soft,
+  svg-box-right: 2.8rem,
+  svg-box-top: 2rem,
+  svg-top: -1.7rem,
+  svg-left: 0.35rem,
+  svg-width: 1.6rem,
+  svg-height: 1.6rem,
+  indeterminate-width: 8px,
+  indeterminate-height: 2px,
+);
+
+// ============================================================================
+// COLOR MAP
+// ============================================================================
+
+$checkbox-colors: (
+  default: (
+    background: var(--cdr-control-surface-neutral-faint),
+    border: var(--cdr-control-border-neutral),
+    background-hover: var(--cdr-control-surface-neutral-faint),
+    border-hover: var(--cdr-control-border-neutral-intense),
+    background-focus-visible: var(--cdr-control-surface-neutral-faint),
+    border-focus-visible: var(--cdr-control-border-neutral-bold),
+    background-active: var(--cdr-control-surface-neutral-faint),
+    border-active: var(--cdr-control-border-neutral-bold),
+    background-disabled: var(--cdr-control-surface-neutral-faint),
+    border-disabled: var(--cdr-control-border-neutral-faint),
+  ),
+  checked: (
+    background: var(--cdr-control-surface-neutral-bold),
+    border: var(--cdr-control-border-neutral-bold),
+    fill: var(--cdr-control-icon-neutral-trace),
+    background-hover: var(--cdr-control-surface-neutral-prominent),
+    border-hover: var(--cdr-control-border-neutral-bold),
+    fill-hover: var(--cdr-control-icon-neutral-trace),
+    background-focus-visible: var(--cdr-control-surface-neutral-prominent),
+    border-focus-visible: var(--cdr-control-border-neutral-bold),
+    fill-focus-visible: var(--cdr-control-icon-neutral-trace),
+    background-active: var(--cdr-control-surface-neutral-faint),
+    border-active: var(--cdr-control-border-neutral-bold),
+    fill-active: var(--cdr-control-icon-neutral-bold),
+    background-disabled: var(--cdr-control-surface-neutral-faint),
+    border-disabled: var(--cdr-control-border-neutral-faint),
+  ),
+);
 
 @mixin cdr-form-figure-checkbox-checked-mixin() {
   // ITEM_DOC: Box-shadow color of a checked cdr-checkbox
   box-shadow: inset 0 0 0 1px
     var(
       --cdr-form-figure-checkbox-box-shadow-checked,
-      var(
-        --cdr-color-border-input-default-selected,
-        #{tokens.$cdr-color-border-input-default-selected}
-      )
+      map.get($checkbox-colors, checked, border)
     );
 
   // ITEM_DOC: Background color of a checked cdr-checkbox
   background-color: var(
     --cdr-form-figure-checkbox-background-color-checked,
-    var(
-      --cdr-color-background-input-default-selected,
-      #{tokens.$cdr-color-background-input-default-selected}
-    )
+    map.get($checkbox-colors, checked, background)
   );
   background-repeat: no-repeat;
 }
@@ -1935,21 +2132,18 @@ $button-elevated-colors: (
     inset 0 0 0 1px
       var(
         --cdr-form-figure-checkbox-box-shadow-hover,
-        var(--cdr-color-border-input-default-hover, #{tokens.$cdr-color-border-input-default-hover})
+        map.get($checkbox-colors, default, border-hover)
       ),
     0 0 0 1px
       var(
         --cdr-form-figure-checkbox-box-shadow-hover,
-        var(--cdr-color-border-input-default-hover, #{tokens.$cdr-color-border-input-default-hover})
+        map.get($checkbox-colors, default, border-hover)
       );
 
   // ITEM_DOC: Background color of a hovered cdr-checkbox
   background-color: var(
     --cdr-form-figure-checkbox-background-hover,
-    var(
-      --cdr-color-background-input-default-hover,
-      #{tokens.$cdr-color-background-input-default-hover}
-    )
+    map.get($checkbox-colors, default, background-hover)
   );
 }
 
@@ -1959,27 +2153,18 @@ $button-elevated-colors: (
     inset 0 0 0 1px
       var(
         --cdr-form-figure-checkbox-checked-box-shadow-hover,
-        var(
-          --cdr-color-border-input-default-selected-hover,
-          #{tokens.$cdr-color-border-input-default-selected-hover}
-        )
+        map.get($checkbox-colors, checked, border-hover)
       ),
     0 0 0 1px
       var(
         --cdr-form-figure-checkbox-checked-hover-box-shadow,
-        var(
-          --cdr-color-border-input-default-selected-hover,
-          #{tokens.$cdr-color-border-input-default-selected-hover}
-        )
+        map.get($checkbox-colors, checked, border-hover)
       );
 
   // ITEM_DOC: Background color of a checked and hovered cdr-checkbox
   background-color: var(
     --cdr-form-figure-checkbox-checked-background-hover,
-    var(
-      --cdr-color-background-input-default-selected-hover,
-      #{tokens.$cdr-color-background-input-default-selected-hover}
-    )
+    map.get($checkbox-colors, checked, background-hover)
   );
 }
 
@@ -1988,19 +2173,13 @@ $button-elevated-colors: (
   box-shadow: inset 0 0 0 1px
     var(
       --cdr-form-figure-checkbox-box-shadow-disabled,
-      var(
-        --cdr-color-border-input-default-disabled,
-        #{tokens.$cdr-color-border-input-default-disabled}
-      )
+      map.get($checkbox-colors, default, border-disabled)
     ) !important;
 
   // ITEM_DOC: Background color of a cdr-checkbox when disabled
   background-color: var(
     --cdr-form-figure-checkbox-background-disabled,
-    var(
-      --cdr-color-background-input-default-disabled,
-      #{tokens.$cdr-color-background-input-default-disabled}
-    )
+    map.get($checkbox-colors, default, background-disabled)
   ) !important;
   background-image: none !important;
 }
@@ -2009,10 +2188,7 @@ $button-elevated-colors: (
   // ITEM_DOC: Background color of a checked cdr-checkbox when disabled
   background-color: var(
     --cdr-form-figure-checkbox-background-checked-disabled,
-    var(
-      --cdr-color-background-input-default-disabled,
-      #{tokens.$cdr-color-background-input-default-disabled}
-    )
+    map.get($checkbox-colors, checked, background-disabled)
   ) !important;
 }
 
@@ -2022,27 +2198,18 @@ $button-elevated-colors: (
     inset 0 0 0 1px
       var(
         --cdr-form-figure-checkbox-box-shadow-active,
-        var(
-          --cdr-color-border-input-default-active,
-          #{tokens.$cdr-color-border-input-default-active}
-        )
+        map.get($checkbox-colors, default, border-active)
       ),
     0 0 0 1px
       var(
         --cdr-form-figure-checkbox-box-shadow-active,
-        var(
-          --cdr-color-border-input-default-active,
-          #{tokens.$cdr-color-border-input-default-active}
-        )
+        map.get($checkbox-colors, default, border-active)
       );
 
   // ITEM_DOC: Background color of a cdr-checkbox when active
   background-color: var(
     --cdr-form-figure-checkbox-background-active,
-    var(
-      --cdr-color-background-input-default-active,
-      #{tokens.$cdr-color-background-input-default-active}
-    )
+    map.get($checkbox-colors, default, background-active)
   );
 }
 
@@ -2052,27 +2219,18 @@ $button-elevated-colors: (
     inset 0 0 0 1px
       var(
         --cdr-form-figure-checkbox-box-shadow-focus,
-        var(
-          --cdr-color-border-input-default-active,
-          #{tokens.$cdr-color-border-input-default-active}
-        )
+        map.get($checkbox-colors, default, border-focus-visible)
       ),
     0 0 0 1px
       var(
         --cdr-form-figure-checkbox-box-shadow-focus,
-        var(
-          --cdr-color-border-input-default-active,
-          #{tokens.$cdr-color-border-input-default-active}
-        )
+        map.get($checkbox-colors, default, border-focus-visible)
       );
 
   // ITEM_DOC: Background color of a cdr-checkbox when focused
   background-color: var(
     --cdr-form-figure-checkbox-background-focus,
-    var(
-      --cdr-color-background-input-default-focus,
-      #{tokens.$cdr-color-background-input-default-focus}
-    )
+    map.get($checkbox-colors, default, background-focus-visible)
   );
 }
 
@@ -2080,89 +2238,109 @@ $button-elevated-colors: (
   // ITEM_DOC: Background color of a checked cdr-checkbox when focused
   background-color: var(
     --cdr-form-figure-checkbox-background-checked-focus,
-    var(
-      --cdr-color-background-input-default-selected-focus,
-      #{tokens.$cdr-color-background-input-default-selected-focus}
-    )
+    map.get($checkbox-colors, checked, background-focus-visible)
   );
 }
 
+// ============================================================================
+// GENERATED FILE — do not edit manually
+// Source: src/components/link/CdrLink.tokens.ts
+// Regenerate: npx tsx build/generate-component-maps.ts
+// ============================================================================
+
+
+
+// ============================================================================
+// DEFAULTS MAP
+// ============================================================================
+
+$link-defaults: (
+  // Layout
+  padding:               0,
+  // Typography
+  font-family:           inherit,
+  font-size:             inherit,
+  line-height:           inherit,
+  // Color
+  border:                0,
+  align-items:           center,
+  background-color:      transparent,
+  cursor:                pointer,
+  display:               inline-flex,
+  margin:                0,
+  outline:               none,
+  vertical-align:        top,
+  text-decoration:       underline,
+  text-decoration-hover: none,
+);
+
+// ============================================================================
+// COLOR MAP
+// ============================================================================
+
+$link-colors: (
+  default: (
+    // ITEM_DOC: Default link's text color. Override with --cdr-link-text.
+    text: var(--cdr-link-text, var(--cdr-link-text-color, var(--cdr-action-text-trigger))),
+    // ITEM_DOC: Default link's icon color. Override with --cdr-link-icon.
+    fill: var(--cdr-link-icon, var(--cdr-link-fill-color, var(--cdr-action-text-trigger))),
+    // ITEM_DOC: Default link's text color on hover. Override with --cdr-link-text-hover.
+    text-hover: var(--cdr-link-text-hover, var(--cdr-link-text-color-hover, var(--cdr-action-text-trigger))),
+    // ITEM_DOC: Default link's text color on focus. Override with --cdr-link-text-focus-visible.
+    text-focus-visible: var(--cdr-link-text-focus-visible, var(--cdr-link-active-text-color-active, var(--cdr-action-text-trigger-bold))),
+    // ITEM_DOC: Default link's text color when active. Override with --cdr-link-text-active.
+    text-active: var(--cdr-link-text-active, var(--cdr-link-active-text-color-active, var(--cdr-action-text-trigger-bold))),
+  ),
+  neutral: (
+    // ITEM_DOC: Neutral link's text color. Override with --cdr-link-neutral-text.
+    text: var(--cdr-link-neutral-text, var(--cdr-link-text-color, var(--cdr-action-text-neutral-bold))),
+    // ITEM_DOC: Neutral link's text color on hover. Override with --cdr-link-neutral-text-hover.
+    text-hover: var(--cdr-link-neutral-text-hover, var(--cdr-link-text-color-hover, var(--cdr-action-text-neutral-bold))),
+    // ITEM_DOC: Neutral link's text color on focus. Override with --cdr-link-neutral-text-focus-visible.
+    text-focus-visible: var(--cdr-link-neutral-text-focus-visible, var(--cdr-link-active-text-color-active, var(--cdr-action-text-neutral-bold))),
+    // ITEM_DOC: Neutral link's text color when active. Override with --cdr-link-neutral-text-active.
+    text-active: var(--cdr-link-neutral-text-active, var(--cdr-link-active-text-color-active, var(--cdr-action-text-neutral-bold))),
+  ),
+);
+
 /**
- * Base styles for CdrLink.
+ * Base layout for CdrLink.
  * Uses custom properties for easy theming and overrides.
  * - Typography/layout: font, size, alignment, etc.
- * - Color: uses --cdr-link-text-color and --cdr-link-fill-color for theming.
  * - Decoration: uses --cdr-link-text-decoration for underline/none.
  */
 @mixin cdr-link-base-mixin() {
-  font-family: var(--cdr-link-font-family, inherit);
-  font-size: var(--cdr-link-font-size, inherit);
-  line-height: var(--cdr-link-line-height, inherit);
-  align-items: var(--cdr-link-align-items, center);
-  background-color: var(--cdr-link-background-color, transparent);
-  border: var(--cdr-link-border, 0);
-  margin: var(--cdr-link-margin, 0);
-  cursor: var(--cdr-link-cursor, pointer);
-  display: var(--cdr-link-display, inline-flex);
-  outline: var(--cdr-link-outline, none);
-  padding: var(--cdr-link-padding, 0);
-  vertical-align: var(--cdr-link-vertical-align, top);
-
-  // Themed color and decoration
-  color: var(
-    --cdr-link-text-color,
-    var(
-      --cdr-color-text-link-rest,
-      var(--cdr-color-text-link-rest, #{tokens.$cdr-color-text-link-rest})
-    )
-  );
-  fill: var(
-    --cdr-link-fill-color,
-    var(
-      --cdr-color-text-link-rest,
-      var(--cdr-color-text-link-rest, #{tokens.$cdr-color-text-link-rest})
-    )
-  );
-  text-decoration: var(--cdr-link-text-decoration, underline);
-
-  &:active,
-  &:focus {
-    color: var(
-      --cdr-link-active-text-color-active,
-      var(
-        --cdr-color-text-link-active,
-        var(--cdr-color-text-link-active, #{tokens.$cdr-color-text-link-active})
-      )
-    );
-  }
-
-  &:hover {
-    color: var(
-      --cdr-link-text-color-hover,
-      var(
-        --cdr-color-text-link-hover,
-        var(--cdr-color-text-link-hover, #{tokens.$cdr-color-text-link-hover})
-      )
-    );
-    text-decoration: var(--cdr-link-text-decoration-hover, none);
-  }
+  font-family: var(--cdr-link-font-family, map.get($link-defaults, font-family));
+  font-size: var(--cdr-link-font-size, map.get($link-defaults, font-size));
+  line-height: var(--cdr-link-line-height, map.get($link-defaults, line-height));
+  align-items: var(--cdr-link-align-items, map.get($link-defaults, align-items));
+  background-color: var(--cdr-link-background-color, map.get($link-defaults, background-color));
+  border: var(--cdr-link-border, map.get($link-defaults, border));
+  margin: var(--cdr-link-margin, map.get($link-defaults, margin));
+  cursor: var(--cdr-link-cursor, map.get($link-defaults, cursor));
+  display: var(--cdr-link-display, map.get($link-defaults, display));
+  outline: var(--cdr-link-outline, map.get($link-defaults, outline));
+  padding: var(--cdr-link-padding, map.get($link-defaults, padding));
+  vertical-align: var(--cdr-link-vertical-align, map.get($link-defaults, vertical-align));
+  text-decoration: var(--cdr-link-text-decoration, map.get($link-defaults, text-decoration));
+  color: map.get($link-colors, default, text);
+  fill: map.get($link-colors, default, fill);
 
   &:focus {
+    color: map.get($link-colors, default, text-focus-visible);
     outline: 2px solid var(--cdr-color-outline, Highlight);
     outline-color: -webkit-focus-ring-color;
     outline-offset: 0;
   }
-}
 
-@mixin cdr-link-inherit-color-mixin() {
-  // Inherit text and fill color from parent for the link and its icon content
-  color: inherit !important;
-  fill: inherit !important;
+  &:active {
+    color: map.get($link-colors, default, text-active);
+  }
 
-  --cdr-link-text-color: inherit;
-  --cdr-link-fill-color: inherit;
-  --cdr-link-text-color-hover: inherit;
-  --cdr-link-active-text-color-active: inherit;
+  &:hover {
+    color: map.get($link-colors, default, text-hover);
+    text-decoration: var(--cdr-link-text-decoration-hover, map.get($link-defaults, text-decoration-hover));
+  }
 }
 
 @mixin cdr-link-standalone-mixin() {
@@ -2172,16 +2350,91 @@ $button-elevated-colors: (
   --cdr-link-text-decoration-hover: underline;
 }
 
-@mixin cdr-link-neutral-mixin() {
-  // Neutral variant: all states use primary text color
-  // Only set color variables if not already set by another variant
-  --cdr-link-text-color: var(--cdr-color-text-primary, #{tokens.$cdr-color-text-primary});
-  --cdr-link-text-color-hover: var(--cdr-color-text-primary, #{tokens.$cdr-color-text-primary});
-  --cdr-link-active-text-color-active: var(
-    --cdr-color-text-primary,
-    #{tokens.$cdr-color-text-primary}
-  );
+@mixin cdr-link-inherit-color-mixin() {
+  color: inherit !important;
+  fill: inherit !important;
+
+  --cdr-link-text: inherit;
+  --cdr-link-icon: inherit;
+  --cdr-link-text-hover: inherit;
+  --cdr-link-text-focus-visible: inherit;
+  --cdr-link-text-active: inherit;
 }
+
+@mixin cdr-link-neutral-mixin() {
+  color: map.get($link-colors, neutral, text);
+
+  &:hover {
+    color: map.get($link-colors, neutral, text-hover);
+  }
+
+  &:focus {
+    color: map.get($link-colors, neutral, text-focus-visible);
+  }
+
+  &:active {
+    color: map.get($link-colors, neutral, text-active);
+  }
+}
+
+// ============================================================================
+// GENERATED FILE — do not edit manually
+// Source: src/components/input/CdrInput.tokens.ts
+// Regenerate: npx tsx build/generate-component-maps.ts
+// ============================================================================
+
+
+
+// ============================================================================
+// DEFAULTS MAP
+// ============================================================================
+
+$input-defaults: (
+  // Layout
+  radius: tokens.$cdr-radius-softer,
+  padding: tokens.$cdr-space-inset-half-x,
+  height: 4rem,
+  large-height: 4.8rem,
+  icon-offset: tokens.$cdr-space-half-x,
+  helper-margin-top: tokens.$cdr-space-quarter-x
+);
+
+// ============================================================================
+// COLOR MAP
+// ============================================================================
+
+$input-colors: (
+  default: (
+    background: var(--cdr-control-surface-neutral-faint),
+    text: var(--cdr-control-text-neutral-bold),
+    border: var(--cdr-control-border-neutral),
+    fill: var(--cdr-control-icon-neutral-prominent),
+    background-focus-visible: var(--cdr-control-surface-neutral-faint),
+    border-focus-visible: var(--cdr-control-border-neutral-intense),
+    fill-focus-visible: var(--cdr-control-icon-neutral-intense),
+    background-disabled: var(--cdr-control-surface-neutral-faint),
+    text-disabled: var(--cdr-control-text-neutral-faint),
+    border-disabled: var(--cdr-control-border-neutral-faint),
+  ),
+  secondary: (
+    background: var(--cdr-control-surface-neutral-trace),
+    background-focus-visible: var(--cdr-control-surface-neutral-trace),
+  ),
+  error: (
+    background: var(--cdr-feedback-surface-error-trace),
+    border: var(--cdr-feedback-border-error),
+  ),
+  placeholder: (
+    text: var(--cdr-control-text-neutral),
+    text-disabled: var(--cdr-control-text-neutral-faint),
+  ),
+  helper: (
+    text: var(--cdr-control-text-neutral),
+  ),
+  label: (
+    border: var(--cdr-control-border-neutral),
+  ),
+);
 
 @mixin cdr-input-base-mixin() {
   @include tokens.cdr-text-utility-sans-300;
@@ -2189,33 +2442,24 @@ $button-elevated-colors: (
   font-weight: 500;
 
   // ITEM_DOC: Text color of a cdr-input by default
-  color: var(
-    --cdr-input-text-color-default,
-    var(--cdr-color-text-input-default, #{tokens.$cdr-color-text-input-default})
-  );
+  color: var(--cdr-input-text-color-default, map.get($input-colors, default, text));
   border: 0;
 
   // ITEM_DOC: Background color of a cdr-input by default
   background-color: var(
     --cdr-input-background-color-default,
-    var(--cdr-color-background-input-default, #{tokens.$cdr-color-background-input-default})
+    map.get($input-colors, default, background)
   );
 
   // ITEM_DOC: Box-shadow color of a cdr-input by default
   box-shadow: inset 0 0 0 1px
-    var(
-      --cdr-input-box-shadow-default,
-      var(--cdr-color-border-input-default, #{tokens.$cdr-color-border-input-default})
-    );
+    var(--cdr-input-box-shadow-default, map.get($input-colors, default, border));
 
   // ITEM_DOC: Fill color of an icon in a cdr-input
-  fill: var(
-    --cdr-input-icon-fill,
-    var(--cdr-color-icon-default, #{tokens.$cdr-color-icon-default})
-  );
-  border-radius: tokens.$cdr-radius-softer;
-  padding: tokens.$cdr-space-inset-half-x;
-  height: tokens.$cdr-form-input-height-default;
+  fill: var(--cdr-input-icon-fill, map.get($input-colors, default, fill));
+  border-radius: var(--cdr-input-radius, map.get($input-defaults, radius));
+  padding: var(--cdr-input-padding, map.get($input-defaults, padding));
+  height: var(--cdr-input-height, map.get($input-defaults, height));
   display: block;
   width: 100%;
   overflow: visible;
@@ -2237,10 +2481,7 @@ $button-elevated-colors: (
       inset 0 0 0 2px
         var(
           --cdr-input-box-shadow-focus,
-          var(
-            --cdr-color-border-input-default-focus,
-            #{tokens.$cdr-color-border-input-default-focus}
-          )
+          map.get($input-colors, default, border-focus-visible)
         ),
       tokens.$cdr-prominence-raised;
   }
@@ -2248,46 +2489,31 @@ $button-elevated-colors: (
   &::placeholder {
     @include tokens.cdr-text-utility-sans-300;
 
-    color: var(
-      --cdr-input-placeholder-text-color,
-      var(--cdr-color-text-input-placeholder, #{tokens.$cdr-color-text-input-placeholder})
-    );
+    color: var(--cdr-input-placeholder-text-color, map.get($input-colors, placeholder, text));
   }
 
   &[disabled] {
     // ITEM_DOC: Background color of a disabled cdr-input
     background-color: var(
       --cdr-input-background-color-disabled,
-      var(
-        --cdr-color-background-input-default-disabled,
-        #{tokens.$cdr-color-background-input-default-disabled}
-      )
+      map.get($input-colors, default, background-disabled)
     );
 
     // ITEM_DOC: Text color of a disabled cdr-input
     color: var(
       --cdr-input-text-color-disabled,
-      var(--cdr-color-text-input-disabled, #{tokens.$cdr-color-text-input-disabled})
+      map.get($input-colors, default, text-disabled)
     );
 
     // ITEM_DOC: Box-shadow color of a disabled cdr-input
     box-shadow: inset 0 0 0 1px
-      var(
-        --cdr-input-box-shadow-disabled,
-        var(
-          --cdr-color-border-input-default-disabled,
-          #{tokens.$cdr-color-border-input-default-disabled}
-        )
-      );
+      var(--cdr-input-box-shadow-disabled, map.get($input-colors, default, border-disabled));
 
     &:hover {
       box-shadow: inset 0 0 0 1px
         var(
           --cdr-input-box-shadow-disabled-hover,
-          var(
-            --cdr-color-border-input-default-disabled,
-            #{tokens.$cdr-color-border-input-default-disabled}
-          )
+          map.get($input-colors, default, border-disabled)
         );
       cursor: not-allowed;
     }
@@ -2295,7 +2521,7 @@ $button-elevated-colors: (
     &::placeholder {
       color: var(
         --cdr-input-placeholder-text-color-disabled,
-        var(--cdr-color-text-input-disabled, #{tokens.$cdr-color-text-input-disabled})
+        map.get($input-colors, placeholder, text-disabled)
       );
     }
   }
@@ -2305,7 +2531,7 @@ $button-elevated-colors: (
   // ITEM_DOC: Background color of a default cdr-input
   background-color: var(
     --cdr-input-background-color-default,
-    var(--cdr-color-background-input-default, #{tokens.$cdr-color-background-input-default})
+    map.get($input-colors, default, background)
   );
 
   &:active,
@@ -2313,10 +2539,7 @@ $button-elevated-colors: (
     // ITEM_DOC: Background color of a default cdr-input in active or focus state
     background-color: var(
       --cdr-input-background-color-default-focus,
-      var(
-        --cdr-color-background-input-default-active,
-        #{tokens.$cdr-color-background-input-default-active}
-      )
+      map.get($input-colors, default, background-focus-visible)
     );
   }
 }
@@ -2325,7 +2548,7 @@ $button-elevated-colors: (
   // ITEM_DOC: Background color of a secondary cdr-input
   background-color: var(
     --cdr-input-background-color-secondary,
-    var(--cdr-color-background-input-secondary, #{tokens.$cdr-color-background-input-secondary})
+    map.get($input-colors, secondary, background)
   );
 
   &:active,
@@ -2333,10 +2556,7 @@ $button-elevated-colors: (
     // ITEM_DOC: Background color of a secondary cdr-input in active or focus state
     background-color: var(
       --cdr-input-background-color-secondary-active,
-      var(
-        --cdr-color-background-input-secondary-active,
-        #{tokens.$cdr-color-background-input-secondary-active}
-      )
+      map.get($input-colors, secondary, background-focus-visible)
     );
   }
 }
@@ -2345,15 +2565,12 @@ $button-elevated-colors: (
   // ITEM_DOC: Background color of a cdr-input in error state
   background-color: var(
     --cdr-input-error-background-color,
-    var(--cdr-color-background-input-error, #{tokens.$cdr-color-background-input-error})
+    map.get($input-colors, error, background)
   );
 
   // ITEM_DOC: Box-shadow color of a cdr-input in error state
   box-shadow: inset 0 0 0 1px
-    var(
-      --cdr-input-error-box-shadow,
-      var(--cdr-color-border-input-error, #{tokens.$cdr-color-border-input-error})
-    );
+    var(--cdr-input-error-box-shadow, map.get($input-colors, error, border));
 }
 
 @mixin cdr-input-large-mixin() {
@@ -2361,7 +2578,7 @@ $button-elevated-colors: (
 
   line-height: tokens.$cdr-space-half-x + tokens.$cdr-text-utility-sans-400-line-height;
   padding-left: tokens.$cdr-space-half-x;
-  height: tokens.$cdr-form-input-height-large;
+  height: var(--cdr-input-large-height, map.get($input-defaults, large-height));
 
   &::placeholder {
     line-height: tokens.$cdr-space-half-x + tokens.$cdr-text-utility-sans-400-line-height;
@@ -2372,11 +2589,64 @@ $button-elevated-colors: (
   @include tokens.cdr-text-utility-sans-200;
 
   // ITEM_DOC: Text color of a cdr-input's helper text
-  color: var(
-    --cdr-input-helper-text-color,
-    var(--cdr-color-text-input-help, #{tokens.$cdr-color-text-input-help})
-  );
+  color: var(--cdr-input-helper-text-color, map.get($input-colors, helper, text));
 }
+
+// ============================================================================
+// GENERATED FILE — do not edit manually
+// Source: src/components/select/CdrSelect.tokens.ts
+// Regenerate: npx tsx build/generate-component-maps.ts
+// ============================================================================
+
+
+
+// ============================================================================
+// DEFAULTS MAP
+// ============================================================================
+
+$select-defaults: (
+  // Layout
+  radius: tokens.$cdr-radius-softer,
+  height: 4rem,
+  large-height: 4.8rem,
+  padding-left: tokens.$cdr-space-half-x,
+  padding-right: tokens.$cdr-space-two-x,
+  icon-offset: tokens.$cdr-space-half-x,
+  multiple-padding: tokens.$cdr-space-half-x
+);
+
+// ============================================================================
+// COLOR MAP
+// ============================================================================
+
+$select-colors: (
+  default: (
+    background: var(--cdr-control-surface-neutral-faint),
+    text: var(--cdr-control-text-neutral-bold),
+    border: var(--cdr-control-border-neutral),
+    background-focus-visible: var(--cdr-control-surface-neutral-faint),
+    border-focus-visible: var(--cdr-control-border-neutral-intense),
+    background-disabled: var(--cdr-control-surface-neutral-faint),
+    text-disabled: var(--cdr-control-text-neutral-faint),
+    border-disabled: var(--cdr-control-border-neutral-faint),
+  ),
+  secondary: (
+    background: var(--cdr-control-surface-neutral-trace),
+    background-focus-visible: var(--cdr-control-surface-neutral-trace),
+  ),
+  error: (
+    background: var(--cdr-feedback-surface-error-trace),
+    border: var(--cdr-feedback-border-error),
+  ),
+  prompt: (
+    text: var(--cdr-control-text-neutral-prominent),
+    text-disabled: var(--cdr-control-text-neutral-faint),
+  ),
+  caret: (
+    fill: var(--cdr-control-icon-neutral-intense),
+    fill-disabled: var(--cdr-control-icon-neutral),
+  ),
+);
 
 @mixin cdr-select-base-mixin() {
   @include tokens.cdr-text-utility-sans-300;
@@ -2384,28 +2654,19 @@ $button-elevated-colors: (
   font-weight: 500;
 
   // ITEM_DOC: Background color of cdr-select
-  background: var(
-    --cdr-select-background-color,
-    var(--cdr-color-background-input-default, #{tokens.$cdr-color-background-input-default})
-  );
+  background: var(--cdr-select-background-color, map.get($select-colors, default, background));
 
   // ITEM_DOC: Text color of cdr-select
-  color: var(
-    --cdr-select-text-color,
-    var(--cdr-color-text-input-default, #{tokens.$cdr-color-text-input-default})
-  );
+  color: var(--cdr-select-text-color, map.get($select-colors, default, text));
 
   // ITEM_DOC: Box-shadow color of cdr-select
   box-shadow: inset 0 0 0 1px
-    var(
-      --cdr-select-box-shadow-color,
-      var(--cdr-color-border-input-default, #{tokens.$cdr-color-border-input-default})
-    );
+    var(--cdr-select-box-shadow-color, map.get($select-colors, default, border));
   border: 0;
-  border-radius: tokens.$cdr-radius-softer;
-  padding-left: tokens.$cdr-space-half-x;
-  padding-right: tokens.$cdr-space-two-x;
-  height: tokens.$cdr-form-input-height-default;
+  border-radius: var(--cdr-select-radius, map.get($select-defaults, radius));
+  padding-left: var(--cdr-select-padding-left, map.get($select-defaults, padding-left));
+  padding-right: var(--cdr-select-padding-right, map.get($select-defaults, padding-right));
+  height: var(--cdr-select-height, map.get($select-defaults, height));
   display: block;
   width: 100%;
   overflow: auto;
@@ -2415,36 +2676,27 @@ $button-elevated-colors: (
     // ITEM_DOC: Background color of a disabled cdr-select
     background-color: var(
       --cdr-select-background-color-disabled,
-      var(
-        --cdr-color-background-input-default-disabled,
-        #{tokens.$cdr-color-background-input-default-disabled}
-      )
+      map.get($select-colors, default, background-disabled)
     );
 
     // ITEM_DOC: Text color of a disabled cdr-select
     color: var(
       --cdr-select-text-color-disabled,
-      var(--cdr-color-text-input-disabled, #{tokens.$cdr-color-text-input-disabled})
+      map.get($select-colors, default, text-disabled)
     );
 
     // ITEM_DOC: Box-shadow color of a disabled cdr-select
     box-shadow: inset 0 0 0 1px
       var(
         --cdr-select-box-shadow-color-disabled,
-        var(
-          --cdr-color-border-input-default-disabled,
-          #{tokens.$cdr-color-border-input-default-disabled}
-        )
+        map.get($select-colors, default, border-disabled)
       );
 
     &:hover {
       box-shadow: inset 0 0 0 1px
         var(
           --cdr-select-hover-box-shadow-color-disabled,
-          var(
-            --cdr-color-border-input-default-disabled,
-            #{tokens.$cdr-color-border-input-default-disabled}
-          )
+          map.get($select-colors, default, border-disabled)
         );
       cursor: not-allowed;
     }
@@ -2456,7 +2708,7 @@ $button-elevated-colors: (
     box-shadow: inset 0 0 0 2px
       var(
         --cdr-select-box-shadow-color-focus,
-        var(--cdr-color-border-input-default-focus, #{tokens.$cdr-color-border-input-default-focus})
+        map.get($select-colors, default, border-focus-visible)
       );
     outline: none;
   }
@@ -2468,16 +2720,13 @@ $button-elevated-colors: (
   font-style: normal;
 
   // ITEM_DOC: Text color of cdr-select prompt
-  color: var(
-    --cdr-select-prompt-text-color,
-    var(--cdr-color-text-primary, #{tokens.$cdr-color-text-primary})
-  );
+  color: var(--cdr-select-prompt-text-color, map.get($select-colors, prompt, text));
 
   &[disabled] {
     // ITEM_DOC: Text color of a disabled cdr-select prompt
     color: var(
       --cdr-select-prompt-text-color-disabled,
-      var(--cdr-color-text-input-disabled, #{tokens.$cdr-color-text-input-disabled})
+      map.get($select-colors, prompt, text-disabled)
     );
   }
 }
@@ -2485,15 +2734,15 @@ $button-elevated-colors: (
 @mixin cdr-select-large-mixin() {
   @include tokens.cdr-text-utility-sans-400;
 
-  height: tokens.$cdr-form-input-height-large;
-  padding-left: tokens.$cdr-space-half-x;
+  height: var(--cdr-select-large-height, map.get($select-defaults, large-height));
+  padding-left: var(--cdr-select-padding-left, map.get($select-defaults, padding-left));
 }
 
 @mixin cdr-select-primary-mixin() {
   // ITEM_DOC: Background color of a primary cdr-select
   background-color: var(
     --cdr-select-primary-background-color,
-    var(--cdr-color-background-input-default, #{tokens.$cdr-color-background-input-default})
+    map.get($select-colors, default, background)
   );
 
   &:active,
@@ -2501,10 +2750,7 @@ $button-elevated-colors: (
     // ITEM_DOC: Background color of a primary cdr-select when active or focused
     background-color: var(
       --cdr-select-primary-background-color-active,
-      var(
-        --cdr-color-background-input-default-active,
-        #{tokens.$cdr-color-background-input-default-active}
-      )
+      map.get($select-colors, default, background-focus-visible)
     );
   }
 }
@@ -2513,7 +2759,7 @@ $button-elevated-colors: (
   // ITEM_DOC: Background color of a secondary cdr-select
   background-color: var(
     --cdr-select-secondary-background-color,
-    var(--cdr-color-background-input-secondary, #{tokens.$cdr-color-background-input-secondary})
+    map.get($select-colors, secondary, background)
   );
 
   &:active,
@@ -2521,10 +2767,7 @@ $button-elevated-colors: (
     // ITEM_DOC: Background color of a secondary cdr-select when active or focused
     background-color: var(
       --cdr-select-secondary-background-color-active,
-      var(
-        --cdr-color-background-input-secondary-active,
-        #{tokens.$cdr-color-background-input-secondary-active}
-      )
+      map.get($select-colors, secondary, background-focus-visible)
     );
   }
 }
@@ -2533,15 +2776,12 @@ $button-elevated-colors: (
   // ITEM_DOC: Background color of a cdr-select error
   background-color: var(
     --cdr-select-background-color-error,
-    var(--cdr-color-background-input-error, #{tokens.$cdr-color-background-input-error})
+    map.get($select-colors, error, background)
   );
 
   // ITEM_DOC: Box-shadow color of a cdr-select error
   box-shadow: inset 0 0 0 1px
-    var(
-      --cdr-select-box-shadow-color-error,
-      var(--cdr-color-border-input-error, #{tokens.$cdr-color-border-input-error})
-    );
+    var(--cdr-select-box-shadow-color-error, map.get($select-colors, error, border));
 }
 
 /* stylelint-disable no-invalid-position-declaration */
@@ -2889,4 +3129,151 @@ $button-elevated-colors: (
       var(--cdr-color-background-table-header, #{tokens.$cdr-color-background-table-header})
     );
   }
+}
+
+// ============================================================================
+// GENERATED FILE — do not edit manually
+// Source: src/components/caption/CdrCaption.tokens.ts
+// Regenerate: npx tsx build/generate-component-maps.ts
+// ============================================================================
+
+
+
+// ============================================================================
+// DEFAULTS MAP
+// ============================================================================
+
+$caption-defaults: (
+  // Typography
+  line-height: 1,
+  max-width: 530px,
+  padding-block: tokens.$cdr-space-half-x,
+  padding-inline: 0,
+  summary-font-family: tokens.$cdr-font-family-sans,
+  summary-font-size: 1.4rem,
+  summary-font-weight: 400,
+  summary-letter-spacing: 0.08px,
+  summary-line-height: 2.2rem,
+  summary-margin: 0,
+  summary-cite-margin-top: tokens.$cdr-space-half-x,
+  cite-font-family: tokens.$cdr-font-family-sans,
+  cite-font-size: 1.2rem,
+  cite-font-weight: 400,
+  cite-letter-spacing: 0.16px,
+  cite-line-height: 1.8rem,
+  cite-font-style: normal
+);
+
+// ============================================================================
+// COLOR MAP
+// ============================================================================
+
+$caption-colors: (
+  summary: (
+    // ITEM_DOC: Summary caption's text color. Override with --cdr-color-caption-text.
+    text: var(--cdr-color-caption-text, var(--cdr-text-neutral-prominent, #4c473e)),
+  ),
+  cite: (
+    // ITEM_DOC: Cite caption's text color. Override with --cdr-color-caption-cite-text.
+    text: var(--cdr-color-caption-cite-text, var(--cdr-text-neutral, #746e63)),
+  ),
+);
+
+@mixin cdr-caption-container-mixin() {
+  max-width: var(--cdr-caption-max-width, map.get($caption-defaults, max-width));
+  line-height: var(--cdr-caption-line-height, map.get($caption-defaults, line-height));
+  padding: var(--cdr-caption-padding-block, map.get($caption-defaults, padding-block)) var(--cdr-caption-padding-inline, map.get($caption-defaults, padding-inline));
+}
+
+@mixin cdr-caption-summary-mixin() {
+  font-family: var(--cdr-caption-summary-font-family, map.get($caption-defaults, summary-font-family));
+  font-size: var(--cdr-caption-summary-font-size, map.get($caption-defaults, summary-font-size));
+  font-weight: var(--cdr-caption-summary-font-weight, map.get($caption-defaults, summary-font-weight));
+  letter-spacing: var(--cdr-caption-summary-letter-spacing, map.get($caption-defaults, summary-letter-spacing));
+  line-height: var(--cdr-caption-summary-line-height, map.get($caption-defaults, summary-line-height));
+  margin: var(--cdr-caption-summary-margin, map.get($caption-defaults, summary-margin));
+  color: map.get($caption-colors, summary, text);
+
+  + cite {
+    display: inline-block;
+    margin-top: var(--cdr-caption-summary-cite-margin-top, map.get($caption-defaults, summary-cite-margin-top));
+  }
+}
+
+@mixin cdr-caption-cite-mixin() {
+  font-family: var(--cdr-caption-cite-font-family, map.get($caption-defaults, cite-font-family));
+  font-size: var(--cdr-caption-cite-font-size, map.get($caption-defaults, cite-font-size));
+  font-weight: var(--cdr-caption-cite-font-weight, map.get($caption-defaults, cite-font-weight));
+  letter-spacing: var(--cdr-caption-cite-letter-spacing, map.get($caption-defaults, cite-letter-spacing));
+  line-height: var(--cdr-caption-cite-line-height, map.get($caption-defaults, cite-line-height));
+  font-style: var(--cdr-caption-cite-font-style, map.get($caption-defaults, cite-font-style));
+  color: map.get($caption-colors, cite, text);
+}
+
+@mixin cdr-quote-base-container() {
+  margin: 0;
+  padding: tokens.$cdr-space-inset-one-x-stretch;
+  line-height: 1;
+
+  cite {
+    @include tokens.cdr-text-utility-sans-100;
+
+    // ITEM_DOC: Text color of a cdr-quote citation
+    color: var(
+      --cdr-quote-cite-text-color,
+      var(--cdr-color-text-secondary, #{tokens.$cdr-color-text-secondary})
+    );
+    display: block;
+  }
+}
+
+@mixin cdr-quote-base-content() {
+  font-family: tokens.$cdr-font-family-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  letter-spacing: -0.08rem;
+
+  // ITEM_DOC: Text color of cdr-quote content
+  color: var(
+    --cdr-quote-content-text-color,
+    var(--cdr-color-text-primary, #{tokens.$cdr-color-text-primary})
+  );
+  margin: 0;
+
+  @include tokens.cdr-xs-mq-only {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  + cite {
+    padding-top: tokens.$cdr-space-one-x;
+  }
+}
+
+@mixin cdr-quote-pull-container() {
+  border-style: solid;
+
+  // ITEM_DOC: Border color of a cdr-quote pull container
+  border-color: var(
+    --cdr-quote-pull-container-border-color,
+    var(--cdr-color-border-primary, #{tokens.$cdr-color-border-primary})
+  );
+
+  @include tokens.cdr-xs-mq-up {
+    border-width: 0 0 1px;
+    padding: tokens.$cdr-space-inset-one-x-stretch;
+    margin: 0 0 tokens.$cdr-space-one-x;
+  }
+
+  @include tokens.cdr-sm-mq-up {
+    border-width: 0 0 0 1px;
+    padding: tokens.$cdr-space-half-x tokens.$cdr-space-one-x tokens.$cdr-space-half-x
+      tokens.$cdr-space-two-x;
+    margin: tokens.$cdr-space-one-x 0;
+  }
+}
+
+@mixin cdr-quote-pull-content() {
+  font-weight: 600;
 }
