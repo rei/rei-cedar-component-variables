@@ -16,8 +16,8 @@ pnpm test:all
 ```
 
 `build/cedar-source.json` pins the source revision in the
-[Cedar fork](https://github.com/c4rlosviteri/rei-cedar/tree/978decbc815628b30d654e9aebf35c0c8ab1be70).
-The implementation is reviewed in [Cedar PR #1](https://github.com/c4rlosviteri/rei-cedar/pull/1).
+[Cedar repository](https://github.com/rei/rei-cedar/tree/bc75cb8941dabf318364b69bcdac22642f1bf7c5).
+The implementation is reviewed in [Cedar PR #255](https://github.com/rei/rei-cedar/pull/255).
 `setup:cedar` clones that revision into a sibling `rei-cedar` checkout and installs
 its dependencies. Existing checkouts must already be at the pinned revision;
 setup preserves local work and rejects other revisions without resetting them.
