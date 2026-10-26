@@ -21,63 +21,16 @@ This package contains `/dist/less` and `/dist/scss` folders, each of which conta
 
 ## Usage
 
-### CdrButton semantic contract preview
+### Build from migrated Cedar sources
 
-The CdrButton output is generated from the TypeScript contract in
-`rei-cedar` PR #249, using `@rei/cdr-tokens@15.0.0-alpha.2`.
-Load these runtime styles once in your application before using the button mixins:
-
-```js
-import '@rei/cdr-tokens/css';
-import '@rei/cdr-tokens/css/color-action';
-```
-
-Then apply the generated mixins to your own HTML:
-
-```scss
-@use '@rei/cdr-component-variables/dist/scss/CdrButton.vars' as button;
-
-.my-button {
-  @include button.cdr-button-base-mixin;
-  @include button.cdr-button-primary-mixin;
-  @include button.cdr-button-large-mixin;
-  @include button.cdr-button-full-width-mixin(xs);
-}
-```
-
-```html
-<button type="button" class="my-button">Continue</button>
-```
-
-All 28 previous public button mixins and 108 component hooks (`--cdr-button-*`)
-remain available. New `--cdr-color-button-*` hooks take precedence over the old
-component hooks. The old global design token names (`--cdr-color-background-button-*`,
-`--cdr-color-text-button-*`, etc.) have been replaced by semantic tokens; migrate
-those overrides to the new component hooks. Colors and keyboard focus behavior
-follow PR #249, so this preview is an API-compatible Sass replacement with a
-token/runtime migration, rather than a pixel-identical v11 stylesheet.
-
-Supported variations: primary, secondary, dark, sale, link, icon-only and
-with-background; four elevated color variants; small, medium and large;
-left/right icons, large icon-only and full-width. Size and full-width mixins accept
-an optional `xs`, `sm`, `md` or `lg` breakpoint. Apply base + color + size; apply
-icon-only after the color and with-background after icon-only. Preserve the
-`cdr-button--has-icon-left` / `cdr-button--has-icon-right` marker for icon spacing.
-Use a native `disabled` attribute and an accessible name on icon-only buttons.
-
-For plain CSS, load `dist/css/CdrButton.css` with the same token styles and use
-`class="cdr-button cdr-button--primary"`. Add `cdr-button--primary-elevated` for
-elevation; responsive modifiers use names such as `cdr-button--small@sm`.
-No Vue import or runtime is needed in either consumption path.
-
-The generator and shared recipe are published in the
-[Cedar fork](https://github.com/c4rlosviteri/rei-cedar/tree/1b267cc3e4dba959561467b81e082eb2651d9e3c).
-The source changes are reviewable in [Cedar PR #1](https://github.com/c4rlosviteri/rei-cedar/pull/1).
-`build/cedar-source.json` pins that exact commit for reproducible builds. From a
-clone of this fork, run:
+The styles come from the [Cedar fork](https://github.com/c4rlosviteri/rei-cedar/tree/c9be856ed5e6e44622213a9a745ed2638a92ab6f),
+built on [rei/rei-cedar#249](https://github.com/rei/rei-cedar/pull/249).
+The source changes are reviewable in
+[Cedar PR #1](https://github.com/c4rlosviteri/rei-cedar/pull/1).
+`build/cedar-source.json` pins that published revision for reproducible builds.
 
 ```sh
-# From rei-cedar-component-variables; use Node 22 as required by rei-cedar.
+# From rei-cedar-component-variables; use Node 22.
 pnpm install --frozen-lockfile
 pnpm setup:cedar
 pnpm build:all
@@ -85,37 +38,29 @@ pnpm test:all
 pnpm --dir ../rei-cedar exec playwright test --config playwright.component-variables.config.ts
 ```
 
-`setup:cedar` clones the pinned revision from the Cedar fork into a sibling
-`rei-cedar` checkout if missing and installs its build dependencies. An existing
-checkout must already be at the pinned commit; setup leaves local changes intact
-and rejects other revisions without resetting them. After editing the contract
-or recipe, use `build:button` directly.
+`setup:cedar` clones the pinned revision into a sibling `rei-cedar` checkout if
+missing and installs its build dependencies. An existing checkout must already
+be at the pinned commit; setup preserves local work and rejects other revisions
+without resetting them. After editing contracts or recipes, rebuild directly.
 
-`build:button` regenerates maps and mixins from the contract, copies their Sass
-dependencies, and builds CSS plus an offline demo at `dist/demo/CdrButton.html`.
-Edit the contract or shared recipe in Cedar, never the generated `dist` files.
-The exported Sass resolves tokens through their physical package path, so plain
-Dart Sass works with `node_modules` on its load path. The standalone
-`cedar-component-variables.scss` remains a flattened file; `index.scss` forwards
-the individual modules.
+`build:all` runs Cedar's `build:variables`: regenerate contract maps, export every
+supported Sass entrypoint and its dependencies, and build the index and standalone
+bundle. It then rebuilds the documentation examples. Every component uses the
+same export path. Components without contracts retain their source Sass recipes.
 
-### Build all components
-
-`pnpm build:all` runs Cedar's `build:variables`, regenerating the contract maps
-before exporting every supported Sass entrypoint and its local dependencies. It
-then rebuilds the documentation examples. Use `pnpm build:button` for a scoped
-Button rebuild, or `pnpm --dir ../rei-cedar build:variables` to run the full
-transfer directly.
-
-The full build covers all 19 documented components: Breadcrumb, Button, Caption,
+The build covers all 19 documented components: Breadcrumb, Button, Caption,
 Card, Checkbox, Chip, FormError, FormGroup, Grid, Input, LabelStandalone,
-LabelWrapper, Link, List, Quote, Radio, Select, Skeleton and Table. Components
-with TypeScript contracts use their generated maps; the others retain their
-source Sass recipes. Structural values receive contract-derived fallbacks so
-they work without the custom properties initialized by a Vue component. Link's
-colors/states and Caption's styles use recipes shared with Vue.
+LabelWrapper, Link, List, Quote, Radio, Select, Skeleton and Table.
 
-Load the semantic token families once when using the full package:
+Shared pressable recipes use common mixin, CSS and demo generators. Names,
+variants, sizes and compatibility hooks come from their contracts. There is no
+Button-only build script or generator branch. The component's shared Sass recipe
+still owns its selectors and interaction behavior. All 39 existing package
+files remain byte-identical, including the CSS and offline demo artifacts.
+
+Structural fallbacks from the contracts make styles work without Vue initializing
+custom properties. Shared recipes initialize their own defaults. Load the runtime
+token CSS once when using the full package:
 
 ```js
 import '@rei/cdr-tokens/css';
@@ -125,14 +70,21 @@ import '@rei/cdr-tokens/css/color-control';
 import '@rei/cdr-tokens/css/color-feedback';
 ```
 
-`pnpm test:all` checks setup, all documentation examples, the index and the
-standalone bundle. Browser tests also check default values, inherited overrides
-and semantic dependencies without Vue. This build exports Sass for all supported
-components; the complete class-based CSS and offline demo are specific to Button.
+Use `@rei/cdr-tokens@15.0.0-alpha.2`. The existing public mixins and component
+hooks are preserved, with new semantic hooks taking precedence. Old global color-token
+overrides must migrate to component hooks. Colors and focus follow the
+migration; this does not promise pixel identity with v11.
 
-The preview retains the PR's scoped alpha.2 fixes for the missing white border
-and incorrect brand values. Remove those shared recipe overrides when upstream
-token data is corrected. This work targets SCSS/CSS; it does not add LESS output.
+Edit contracts and recipes in Cedar, and regenerate this package's `dist` files.
+Token imports work with standard Dart Sass and `node_modules` on its load path.
+`index.scss` forwards individual modules; `cedar-component-variables.scss` is a
+flattened standalone file. No Vue runtime is required.
+
+`test:all` checks setup, all 81 examples, legacy APIs, package entrypoints and
+byte-identical output against the pre-generalization baseline. Browser tests
+check variants, interaction states, responsive boundaries, inherited overrides
+and semantic dependencies. The build exports Sass for all components and
+retains CSS/demo output for shared pressable recipes. It does not generate LESS.
 
 SCSS example:
 ```

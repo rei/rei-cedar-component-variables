@@ -19,7 +19,8 @@ test('prepares a clean pinned checkout, preserves unrelated work, and is idempot
     execFileSync('git', ['-C', cedar, 'checkout', '--detach', source.commit], { stdio: 'pipe' });
     appendFileSync(path.join(cedar, 'README.md'), '\nLocal work retained.\n');
     assert.equal(prepareCedar(cedar), 'ready');
-    assert.match(readFileSync(path.join(cedar, 'package.json'), 'utf8'), /build:variables:button/);
+    const scripts = JSON.parse(readFileSync(path.join(cedar, 'package.json'), 'utf8')).scripts;
+    assert.ok(scripts['build:variables']);
     assert.match(readFileSync(path.join(cedar, 'README.md'), 'utf8'), /Local work retained/);
     const before = execFileSync('git', ['-C', cedar, 'diff'], { encoding: 'utf8' });
     assert.equal(prepareCedar(cedar), 'ready');

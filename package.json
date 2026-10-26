@@ -10,10 +10,8 @@
     "build:docs-data": "node ./build/build-docs-data.js",
     "prepublishOnly": "npm run build:docs-data",
     "prerelease": "npm-publish-prerelease",
-    "build:button": "pnpm --dir ../rei-cedar build:variables:button && pnpm build:docs-data",
     "build:all": "pnpm --dir ../rei-cedar build:variables && pnpm build:docs-data",
     "test:all": "pnpm test:setup && pnpm --dir ../rei-cedar test:variables",
-    "test:button": "pnpm test:setup && pnpm --dir ../rei-cedar test:variables",
     "setup:cedar": "node build/prepare-cedar.mjs && pnpm --dir ../rei-cedar install --frozen-lockfile",
     "test:setup": "node --test build/prepare-cedar.test.mjs"
   },
