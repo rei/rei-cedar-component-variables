@@ -23,7 +23,7 @@ $card-defaults: (
 $card-colors: (
   base: (
     background: var(--cdr-surface-natural),
-    text: var(--cdr-text-neutral-prominent, #4c473e),
+    text: var(--cdr-text-neutral-prominent),
   ),
   link: (
     text: var(--cdr-action-text-neutral-bold),

@@ -24,7 +24,7 @@ $form-group-colors: (
     border: var(--cdr-feedback-border-error),
   ),
   optional: (
-    text: var(--cdr-text-neutral, #746e63),
+    text: var(--cdr-text-neutral),
   ),
   disabled: (
     text: var(--cdr-control-text-neutral-faint),

@@ -38,10 +38,10 @@ $caption-defaults: (
 $caption-colors: (
   summary: (
     // ITEM_DOC: Summary caption's text color. Override with --cdr-color-caption-text.
-    text: var(--cdr-color-caption-text, var(--cdr-text-neutral-prominent, #4c473e)),
+    text: var(--cdr-color-caption-text, var(--cdr-text-neutral-prominent)),
   ),
   cite: (
     // ITEM_DOC: Cite caption's text color. Override with --cdr-color-caption-cite-text.
-    text: var(--cdr-color-caption-cite-text, var(--cdr-text-neutral, #746e63)),
+    text: var(--cdr-color-caption-cite-text, var(--cdr-text-neutral)),
   ),
 );

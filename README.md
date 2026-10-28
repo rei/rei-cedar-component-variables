@@ -16,7 +16,7 @@ pnpm test:all
 ```
 
 `build/cedar-source.json` pins the source revision in the
-[Cedar repository](https://github.com/rei/rei-cedar/tree/bc75cb8941dabf318364b69bcdac22642f1bf7c5).
+[Cedar repository](https://github.com/rei/rei-cedar/tree/5da2c6e8875ca2c8748ea66fa8d2cc9b7a9b3379).
 The implementation is reviewed in [Cedar PR #255](https://github.com/rei/rei-cedar/pull/255).
 `setup:cedar` clones that revision into a sibling `rei-cedar` checkout and installs
 its dependencies. Existing checkouts must already be at the pinned revision;
@@ -34,15 +34,12 @@ Quote, Radio, Select, Skeleton and Table.
 
 ## Use
 
-Install `@rei/cdr-component-variables` and `@rei/cdr-tokens@15.0.0-alpha.2`.
-Load the runtime token styles once:
+Install `@rei/cdr-component-variables` and `@rei/cdr-tokens@15.0.0-alpha.4`.
+Load the runtime token styles once; the main entry includes the semantic
+foundations:
 
 ```js
 import '@rei/cdr-tokens/css';
-import '@rei/cdr-tokens/css/color-surface';
-import '@rei/cdr-tokens/css/color-action';
-import '@rei/cdr-tokens/css/color-control';
-import '@rei/cdr-tokens/css/color-feedback';
 ```
 
 Apply the mixins to your own selectors:

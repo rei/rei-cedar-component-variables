@@ -28,7 +28,7 @@
   "license": "MIT",
   "devDependencies": {
     "@rei/cedar-icons": "^2.5.1",
-    "@rei/cdr-tokens": "15.0.0-alpha.2",
+    "@rei/cdr-tokens": "15.0.0-alpha.4",
     "@rei/cedar": "17.0.0",
     "fs-extra": "^9.1.0",
     "less-plugin-sass2less": "^1.2.0",
@@ -38,6 +38,6 @@
     "postcss-inline-svg": "^5.0.0"
   },
   "peerDependencies": {
-    "@rei/cdr-tokens": "15.0.0-alpha.2"
+    "@rei/cdr-tokens": "15.0.0-alpha.4"
   }
 }

@@ -2,7 +2,7 @@
   "name": "cdr-button",
   "notes": [
     "Use the base mixin plus a color variant. Icon-only buttons add icon-only after the color variant; a circular background adds with-background last.",
-    "Load @rei/cdr-tokens/css and @rei/cdr-tokens/css/color-action at runtime (15.0.0-alpha.2). No Vue runtime is needed.",
+    "Load @rei/cdr-tokens/css at runtime (15.0.0-alpha.4). No Vue runtime is needed.",
     "Use an accessible name for icon-only buttons. Native disabled attributes activate the disabled styles.",
     "Size and full-width mixins accept an optional breakpoint: xs, sm, md, or lg. Public color overrides use --cdr-color-button-*."
   ],

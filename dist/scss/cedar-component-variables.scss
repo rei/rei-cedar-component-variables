@@ -477,12 +477,6 @@ $button-sizes: (
     --cdr-button-#{$key}: #{$value};
   }
 
-  // Approved alpha.2 gap and brand data fixes, shared with non-Vue consumers.
-  --cdr-border-neutral-trace: #ffffff;
-  --cdr-action-surface-brand: #143528;
-  --cdr-action-text-brand: #143528;
-  --cdr-action-border-brand: #143528;
-
   border-radius: var(--cdr-button-radius, map.get($button-defaults, radius));
   font-family: var(--cdr-button-font-family, map.get($button-defaults, font-family));
   font-style: var(--cdr-button-font-style, map.get($button-defaults, font-style));
@@ -1047,7 +1041,7 @@ $card-defaults: (
 $card-colors: (
   base: (
     background: var(--cdr-surface-natural),
-    text: var(--cdr-text-neutral-prominent, #4c473e),
+    text: var(--cdr-text-neutral-prominent),
   ),
   link: (
     text: var(--cdr-action-text-neutral-bold),
@@ -1142,7 +1136,7 @@ $chip-colors: (
   default: (
     background: var(--cdr-surface-neutral-trace),
     text: var(--cdr-control-text-neutral-prominent),
-    border: var(--cdr-border-neutral-prominent, #979187),
+    border: var(--cdr-border-neutral-prominent),
     fill: var(--cdr-control-icon-neutral-intense),
     background-hover: var(--cdr-control-surface-neutral-subtle),
     border-hover: var(--cdr-control-border-neutral),
@@ -1152,7 +1146,7 @@ $chip-colors: (
     border-active: var(--cdr-control-border-neutral-bold),
     background-disabled: var(--cdr-surface-neutral-trace),
     text-disabled: var(--cdr-control-text-neutral-faint),
-    border-disabled: var(--cdr-border-neutral, #cecac3),
+    border-disabled: var(--cdr-border-neutral),
   ),
   selected: (
     background: var(--cdr-control-surface-natural-bold),
@@ -1500,7 +1494,7 @@ $form-group-colors: (
     border: var(--cdr-feedback-border-error),
   ),
   optional: (
-    text: var(--cdr-text-neutral, #746e63),
+    text: var(--cdr-text-neutral),
   ),
   disabled: (
     text: var(--cdr-control-text-neutral-faint),
@@ -3256,11 +3250,11 @@ $caption-defaults: (
 $caption-colors: (
   summary: (
     // ITEM_DOC: Summary caption's text color. Override with --cdr-color-caption-text.
-    text: var(--cdr-color-caption-text, var(--cdr-text-neutral-prominent, #4c473e)),
+    text: var(--cdr-color-caption-text, var(--cdr-text-neutral-prominent)),
   ),
   cite: (
     // ITEM_DOC: Cite caption's text color. Override with --cdr-color-caption-cite-text.
-    text: var(--cdr-color-caption-cite-text, var(--cdr-text-neutral, #746e63)),
+    text: var(--cdr-color-caption-cite-text, var(--cdr-text-neutral)),
   ),
 );
 
