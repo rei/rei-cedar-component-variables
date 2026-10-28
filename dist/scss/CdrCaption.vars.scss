@@ -1,0 +1,33 @@
+@use 'sass:map';
+@use './CdrCaption.maps' as maps;
+
+@mixin cdr-caption-container-mixin() {
+  max-width: var(--cdr-caption-max-width, map.get(maps.$caption-defaults, max-width));
+  line-height: var(--cdr-caption-line-height, map.get(maps.$caption-defaults, line-height));
+  padding: var(--cdr-caption-padding-block, map.get(maps.$caption-defaults, padding-block)) var(--cdr-caption-padding-inline, map.get(maps.$caption-defaults, padding-inline));
+}
+
+@mixin cdr-caption-summary-mixin() {
+  font-family: var(--cdr-caption-summary-font-family, map.get(maps.$caption-defaults, summary-font-family));
+  font-size: var(--cdr-caption-summary-font-size, map.get(maps.$caption-defaults, summary-font-size));
+  font-weight: var(--cdr-caption-summary-font-weight, map.get(maps.$caption-defaults, summary-font-weight));
+  letter-spacing: var(--cdr-caption-summary-letter-spacing, map.get(maps.$caption-defaults, summary-letter-spacing));
+  line-height: var(--cdr-caption-summary-line-height, map.get(maps.$caption-defaults, summary-line-height));
+  margin: var(--cdr-caption-summary-margin, map.get(maps.$caption-defaults, summary-margin));
+  color: map.get(maps.$caption-colors, summary, text);
+
+  + cite {
+    display: inline-block;
+    margin-top: var(--cdr-caption-summary-cite-margin-top, map.get(maps.$caption-defaults, summary-cite-margin-top));
+  }
+}
+
+@mixin cdr-caption-cite-mixin() {
+  font-family: var(--cdr-caption-cite-font-family, map.get(maps.$caption-defaults, cite-font-family));
+  font-size: var(--cdr-caption-cite-font-size, map.get(maps.$caption-defaults, cite-font-size));
+  font-weight: var(--cdr-caption-cite-font-weight, map.get(maps.$caption-defaults, cite-font-weight));
+  letter-spacing: var(--cdr-caption-cite-letter-spacing, map.get(maps.$caption-defaults, cite-letter-spacing));
+  line-height: var(--cdr-caption-cite-line-height, map.get(maps.$caption-defaults, cite-line-height));
+  font-style: var(--cdr-caption-cite-font-style, map.get(maps.$caption-defaults, cite-font-style));
+  color: map.get(maps.$caption-colors, cite, text);
+}

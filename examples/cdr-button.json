@@ -1,45 +1,351 @@
 {
   "name": "cdr-button",
   "notes": [
-    "All Cedar buttons must use the 'base' mixin as well as either the 'primary' or 'secondary' mixin. Additional modifiers can be added as well.",
-    "Button mixins should ideally be applied to HTML 'button' elements, but may also work on other HTML tags (i.e, div, a, span, etc.)"
+    "Use the base mixin plus a color variant. Icon-only buttons add icon-only after the color variant; a circular background adds with-background last.",
+    "Load @rei/cdr-tokens/css at runtime (15.0.0-alpha.4). No Vue runtime is needed.",
+    "Use an accessible name for icon-only buttons. Native disabled attributes activate the disabled styles.",
+    "Size and full-width mixins accept an optional breakpoint: xs, sm, md, or lg. Public color overrides use --cdr-color-button-*."
   ],
   "docs": "https://cedar.rei.com/components/buttons/",
   "examples": [
     {
       "name": "primary",
       "html": "<button class=\"cdr-button-primary\">primary</button>",
-      "scss": ["@include cdr-button-base-mixin;", "@include cdr-button-primary-mixin;"]
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-primary-mixin;"
+      ]
     },
     {
       "name": "secondary",
       "html": "<button class=\"cdr-button-secondary\">secondary</button>",
-      "scss": ["@include cdr-button-base-mixin;", "@include cdr-button-secondary-mixin;"]
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;"
+      ]
     },
     {
       "name": "sale",
       "html": "<button class=\"cdr-button-sale\">\n  sale\n</button>",
-      "scss": ["@include cdr-button-base-mixin;", "@include cdr-button-sale-mixin;"]
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-sale-mixin;"
+      ]
     },
     {
       "name": "dark",
       "html": "<button class=\"cdr-button-dark\">\n  dark\n</button>",
-      "scss": ["@include cdr-button-base-mixin;", "@include cdr-button-dark-mixin;"]
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-dark-mixin;"
+      ]
     },
     {
       "name": "primary-small",
       "html": "<button class=\"cdr-button-primary-small\">\n  primary-small\n</button>",
-      "scss": ["@include cdr-button-base-mixin;", "@include cdr-button-primary-mixin;", "@include cdr-button-small-mixin;"]
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-primary-mixin;",
+        "@include cdr-button-small-mixin;"
+      ]
     },
     {
       "name": "secondary-medium",
       "html": "<button class=\"cdr-button-secondary-medium\">\n  secondary-medium\n</button>",
-      "scss": ["@include cdr-button-base-mixin;", "@include cdr-button-secondary-mixin;", "@include cdr-button-medium-mixin;"]
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-medium-mixin;"
+      ]
     },
     {
       "name": "primary-large",
       "html": "<button class=\"cdr-button-primary-large\">\n  primary-large\n</button>",
-      "scss": ["@include cdr-button-base-mixin;", "@include cdr-button-primary-mixin;", "@include cdr-button-large-mixin;"]
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-primary-mixin;",
+        "@include cdr-button-large-mixin;"
+      ]
+    },
+    {
+      "name": "primary-elevated",
+      "html": "<button type=\"button\" class=\"cdr-button-primary-elevated\">primary-elevated</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-primary-mixin;",
+        "@include cdr-button-primary-elevated-mixin;"
+      ]
+    },
+    {
+      "name": "secondary-elevated",
+      "html": "<button type=\"button\" class=\"cdr-button-secondary-elevated\">secondary-elevated</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-secondary-elevated-mixin;"
+      ]
+    },
+    {
+      "name": "dark-elevated",
+      "html": "<button type=\"button\" class=\"cdr-button-dark-elevated\">dark-elevated</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-dark-mixin;",
+        "@include cdr-button-dark-elevated-mixin;"
+      ]
+    },
+    {
+      "name": "sale-elevated",
+      "html": "<button type=\"button\" class=\"cdr-button-sale-elevated\">sale-elevated</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-sale-mixin;",
+        "@include cdr-button-sale-elevated-mixin;"
+      ]
+    },
+    {
+      "name": "link",
+      "html": "<button type=\"button\" class=\"cdr-button-link\">link</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-link-mixin;"
+      ]
+    },
+    {
+      "name": "icon-only",
+      "html": "<button type=\"button\" aria-label=\"Add item\" class=\"cdr-button-icon-only\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z\"/></svg></button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-primary-mixin;",
+        "@include cdr-button-icon-only-mixin;"
+      ]
+    },
+    {
+      "name": "icon-only-large",
+      "html": "<button type=\"button\" aria-label=\"Add item\" class=\"cdr-button-icon-only-large\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z\"/></svg></button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-primary-mixin;",
+        "@include cdr-button-icon-only-mixin;",
+        "@include cdr-button-icon-only-large-mixin;"
+      ]
+    },
+    {
+      "name": "with-background",
+      "html": "<button type=\"button\" aria-label=\"Add item\" class=\"cdr-button-with-background\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z\"/></svg></button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-primary-mixin;",
+        "@include cdr-button-icon-only-mixin;",
+        "@include cdr-button-with-background-mixin;"
+      ]
+    },
+    {
+      "name": "icon-left-small",
+      "html": "<button type=\"button\" class=\"cdr-button-icon-left-small cdr-button--has-icon-left\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z\"/></svg>Add item</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-small-mixin;"
+      ]
+    },
+    {
+      "name": "icon-right-small",
+      "html": "<button type=\"button\" class=\"cdr-button-icon-right-small cdr-button--has-icon-right\">Add item<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z\"/></svg></button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-small-mixin;"
+      ]
+    },
+    {
+      "name": "icon-left-medium",
+      "html": "<button type=\"button\" class=\"cdr-button-icon-left-medium cdr-button--has-icon-left\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z\"/></svg>Add item</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-medium-mixin;"
+      ]
+    },
+    {
+      "name": "icon-right-medium",
+      "html": "<button type=\"button\" class=\"cdr-button-icon-right-medium cdr-button--has-icon-right\">Add item<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z\"/></svg></button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-medium-mixin;"
+      ]
+    },
+    {
+      "name": "icon-left-large",
+      "html": "<button type=\"button\" class=\"cdr-button-icon-left-large cdr-button--has-icon-left\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z\"/></svg>Add item</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-large-mixin;"
+      ]
+    },
+    {
+      "name": "icon-right-large",
+      "html": "<button type=\"button\" class=\"cdr-button-icon-right-large cdr-button--has-icon-right\">Add item<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z\"/></svg></button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-large-mixin;"
+      ]
+    },
+    {
+      "name": "full-width",
+      "html": "<button type=\"button\" class=\"cdr-button-full-width\">full-width</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-primary-mixin;",
+        "@include cdr-button-full-width-mixin;"
+      ]
+    },
+    {
+      "name": "small-at-xs",
+      "html": "<button type=\"button\" class=\"cdr-button-small-at-xs\">small-at-xs</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-small-mixin(xs);"
+      ]
+    },
+    {
+      "name": "medium-at-xs",
+      "html": "<button type=\"button\" class=\"cdr-button-medium-at-xs\">medium-at-xs</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-medium-mixin(xs);"
+      ]
+    },
+    {
+      "name": "large-at-xs",
+      "html": "<button type=\"button\" class=\"cdr-button-large-at-xs\">large-at-xs</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-large-mixin(xs);"
+      ]
+    },
+    {
+      "name": "full-width-at-xs",
+      "html": "<button type=\"button\" class=\"cdr-button-full-width-at-xs\">full-width-at-xs</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-full-width-mixin(xs);"
+      ]
+    },
+    {
+      "name": "small-at-sm",
+      "html": "<button type=\"button\" class=\"cdr-button-small-at-sm\">small-at-sm</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-small-mixin(sm);"
+      ]
+    },
+    {
+      "name": "medium-at-sm",
+      "html": "<button type=\"button\" class=\"cdr-button-medium-at-sm\">medium-at-sm</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-medium-mixin(sm);"
+      ]
+    },
+    {
+      "name": "large-at-sm",
+      "html": "<button type=\"button\" class=\"cdr-button-large-at-sm\">large-at-sm</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-large-mixin(sm);"
+      ]
+    },
+    {
+      "name": "full-width-at-sm",
+      "html": "<button type=\"button\" class=\"cdr-button-full-width-at-sm\">full-width-at-sm</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-full-width-mixin(sm);"
+      ]
+    },
+    {
+      "name": "small-at-md",
+      "html": "<button type=\"button\" class=\"cdr-button-small-at-md\">small-at-md</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-small-mixin(md);"
+      ]
+    },
+    {
+      "name": "medium-at-md",
+      "html": "<button type=\"button\" class=\"cdr-button-medium-at-md\">medium-at-md</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-medium-mixin(md);"
+      ]
+    },
+    {
+      "name": "large-at-md",
+      "html": "<button type=\"button\" class=\"cdr-button-large-at-md\">large-at-md</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-large-mixin(md);"
+      ]
+    },
+    {
+      "name": "full-width-at-md",
+      "html": "<button type=\"button\" class=\"cdr-button-full-width-at-md\">full-width-at-md</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-full-width-mixin(md);"
+      ]
+    },
+    {
+      "name": "small-at-lg",
+      "html": "<button type=\"button\" class=\"cdr-button-small-at-lg\">small-at-lg</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-small-mixin(lg);"
+      ]
+    },
+    {
+      "name": "medium-at-lg",
+      "html": "<button type=\"button\" class=\"cdr-button-medium-at-lg\">medium-at-lg</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-medium-mixin(lg);"
+      ]
+    },
+    {
+      "name": "large-at-lg",
+      "html": "<button type=\"button\" class=\"cdr-button-large-at-lg\">large-at-lg</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-large-mixin(lg);"
+      ]
+    },
+    {
+      "name": "full-width-at-lg",
+      "html": "<button type=\"button\" class=\"cdr-button-full-width-at-lg\">full-width-at-lg</button>",
+      "scss": [
+        "@include cdr-button-base-mixin;",
+        "@include cdr-button-secondary-mixin;",
+        "@include cdr-button-full-width-mixin(lg);"
+      ]
     }
   ]
 }

@@ -1,81 +1,44 @@
-@use '@rei/cdr-tokens/scss' as tokens;
+@use 'sass:map';
+@use './CdrLink.maps' as maps;
 
 /**
- * Base styles for CdrLink.
+ * Base layout for CdrLink.
  * Uses custom properties for easy theming and overrides.
  * - Typography/layout: font, size, alignment, etc.
- * - Color: uses --cdr-link-text-color and --cdr-link-fill-color for theming.
  * - Decoration: uses --cdr-link-text-decoration for underline/none.
  */
 @mixin cdr-link-base-mixin() {
-  font-family: var(--cdr-link-font-family, inherit);
-  font-size: var(--cdr-link-font-size, inherit);
-  line-height: var(--cdr-link-line-height, inherit);
-  align-items: var(--cdr-link-align-items, center);
-  background-color: var(--cdr-link-background-color, transparent);
-  border: var(--cdr-link-border, 0);
-  margin: var(--cdr-link-margin, 0);
-  cursor: var(--cdr-link-cursor, pointer);
-  display: var(--cdr-link-display, inline-flex);
-  outline: var(--cdr-link-outline, none);
-  padding: var(--cdr-link-padding, 0);
-  vertical-align: var(--cdr-link-vertical-align, top);
-
-  // Themed color and decoration
-  color: var(
-    --cdr-link-text-color,
-    var(
-      --cdr-color-text-link-rest,
-      var(--cdr-color-text-link-rest, #{tokens.$cdr-color-text-link-rest})
-    )
-  );
-  fill: var(
-    --cdr-link-fill-color,
-    var(
-      --cdr-color-text-link-rest,
-      var(--cdr-color-text-link-rest, #{tokens.$cdr-color-text-link-rest})
-    )
-  );
-  text-decoration: var(--cdr-link-text-decoration, underline);
-
-  &:active,
-  &:focus {
-    color: var(
-      --cdr-link-active-text-color-active,
-      var(
-        --cdr-color-text-link-active,
-        var(--cdr-color-text-link-active, #{tokens.$cdr-color-text-link-active})
-      )
-    );
-  }
-
-  &:hover {
-    color: var(
-      --cdr-link-text-color-hover,
-      var(
-        --cdr-color-text-link-hover,
-        var(--cdr-color-text-link-hover, #{tokens.$cdr-color-text-link-hover})
-      )
-    );
-    text-decoration: var(--cdr-link-text-decoration-hover, none);
-  }
+  font-family: var(--cdr-link-font-family, map.get(maps.$link-defaults, font-family));
+  font-size: var(--cdr-link-font-size, map.get(maps.$link-defaults, font-size));
+  line-height: var(--cdr-link-line-height, map.get(maps.$link-defaults, line-height));
+  align-items: var(--cdr-link-align-items, map.get(maps.$link-defaults, align-items));
+  background-color: var(--cdr-link-background-color, map.get(maps.$link-defaults, background-color));
+  border: var(--cdr-link-border, map.get(maps.$link-defaults, border));
+  margin: var(--cdr-link-margin, map.get(maps.$link-defaults, margin));
+  cursor: var(--cdr-link-cursor, map.get(maps.$link-defaults, cursor));
+  display: var(--cdr-link-display, map.get(maps.$link-defaults, display));
+  outline: var(--cdr-link-outline, map.get(maps.$link-defaults, outline));
+  padding: var(--cdr-link-padding, map.get(maps.$link-defaults, padding));
+  vertical-align: var(--cdr-link-vertical-align, map.get(maps.$link-defaults, vertical-align));
+  text-decoration: var(--cdr-link-text-decoration, map.get(maps.$link-defaults, text-decoration));
+  color: map.get(maps.$link-colors, default, text);
+  fill: map.get(maps.$link-colors, default, fill);
 
   &:focus {
+    color: map.get(maps.$link-colors, default, text-focus-visible);
     outline: 2px solid var(--cdr-color-outline, Highlight);
     outline-color: -webkit-focus-ring-color;
     outline-offset: 0;
   }
-}
 
-@mixin cdr-link-inherit-color-mixin() {
-  // Inherit text and fill color from parent for the link and its icon content
-  color: inherit !important;
-  fill: inherit !important;
+  &:active {
+    color: map.get(maps.$link-colors, default, text-active);
+  }
 
-  --cdr-link-text-color: inherit;
-  --cdr-link-fill-color: inherit;
-  --cdr-link-text-color-hover: inherit;
-  --cdr-link-active-text-color-active: inherit;
+  &:hover {
+    color: map.get(maps.$link-colors, default, text-hover);
+    text-decoration: var(--cdr-link-text-decoration-hover, map.get(maps.$link-defaults, text-decoration-hover));
+  }
 }
 
 @mixin cdr-link-standalone-mixin() {
@@ -85,13 +48,29 @@
   --cdr-link-text-decoration-hover: underline;
 }
 
+@mixin cdr-link-inherit-color-mixin() {
+  color: inherit !important;
+  fill: inherit !important;
+
+  --cdr-link-text: inherit;
+  --cdr-link-icon: inherit;
+  --cdr-link-text-hover: inherit;
+  --cdr-link-text-focus-visible: inherit;
+  --cdr-link-text-active: inherit;
+}
+
 @mixin cdr-link-neutral-mixin() {
-  // Neutral variant: all states use primary text color
-  // Only set color variables if not already set by another variant
-  --cdr-link-text-color: var(--cdr-color-text-primary, #{tokens.$cdr-color-text-primary});
-  --cdr-link-text-color-hover: var(--cdr-color-text-primary, #{tokens.$cdr-color-text-primary});
-  --cdr-link-active-text-color-active: var(
-    --cdr-color-text-primary,
-    #{tokens.$cdr-color-text-primary}
-  );
+  color: map.get(maps.$link-colors, neutral, text);
+
+  &:hover {
+    color: map.get(maps.$link-colors, neutral, text-hover);
+  }
+
+  &:focus {
+    color: map.get(maps.$link-colors, neutral, text-focus-visible);
+  }
+
+  &:active {
+    color: map.get(maps.$link-colors, neutral, text-active);
+  }
 }

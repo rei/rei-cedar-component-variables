@@ -43,6 +43,193 @@
   @include cdr-button-large-mixin;
 }
 
+.cdr-button-primary-elevated {
+  @include cdr-button-base-mixin;
+  @include cdr-button-primary-mixin;
+  @include cdr-button-primary-elevated-mixin;
+}
+
+.cdr-button-secondary-elevated {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-secondary-elevated-mixin;
+}
+
+.cdr-button-dark-elevated {
+  @include cdr-button-base-mixin;
+  @include cdr-button-dark-mixin;
+  @include cdr-button-dark-elevated-mixin;
+}
+
+.cdr-button-sale-elevated {
+  @include cdr-button-base-mixin;
+  @include cdr-button-sale-mixin;
+  @include cdr-button-sale-elevated-mixin;
+}
+
+.cdr-button-link {
+  @include cdr-button-base-mixin;
+  @include cdr-button-link-mixin;
+}
+
+.cdr-button-icon-only {
+  @include cdr-button-base-mixin;
+  @include cdr-button-primary-mixin;
+  @include cdr-button-icon-only-mixin;
+}
+
+.cdr-button-icon-only-large {
+  @include cdr-button-base-mixin;
+  @include cdr-button-primary-mixin;
+  @include cdr-button-icon-only-mixin;
+  @include cdr-button-icon-only-large-mixin;
+}
+
+.cdr-button-with-background {
+  @include cdr-button-base-mixin;
+  @include cdr-button-primary-mixin;
+  @include cdr-button-icon-only-mixin;
+  @include cdr-button-with-background-mixin;
+}
+
+.cdr-button-icon-left-small {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-small-mixin;
+}
+
+.cdr-button-icon-right-small {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-small-mixin;
+}
+
+.cdr-button-icon-left-medium {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-medium-mixin;
+}
+
+.cdr-button-icon-right-medium {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-medium-mixin;
+}
+
+.cdr-button-icon-left-large {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-large-mixin;
+}
+
+.cdr-button-icon-right-large {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-large-mixin;
+}
+
+.cdr-button-full-width {
+  @include cdr-button-base-mixin;
+  @include cdr-button-primary-mixin;
+  @include cdr-button-full-width-mixin;
+}
+
+.cdr-button-small-at-xs {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-small-mixin(xs);
+}
+
+.cdr-button-medium-at-xs {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-medium-mixin(xs);
+}
+
+.cdr-button-large-at-xs {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-large-mixin(xs);
+}
+
+.cdr-button-full-width-at-xs {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-full-width-mixin(xs);
+}
+
+.cdr-button-small-at-sm {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-small-mixin(sm);
+}
+
+.cdr-button-medium-at-sm {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-medium-mixin(sm);
+}
+
+.cdr-button-large-at-sm {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-large-mixin(sm);
+}
+
+.cdr-button-full-width-at-sm {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-full-width-mixin(sm);
+}
+
+.cdr-button-small-at-md {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-small-mixin(md);
+}
+
+.cdr-button-medium-at-md {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-medium-mixin(md);
+}
+
+.cdr-button-large-at-md {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-large-mixin(md);
+}
+
+.cdr-button-full-width-at-md {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-full-width-mixin(md);
+}
+
+.cdr-button-small-at-lg {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-small-mixin(lg);
+}
+
+.cdr-button-medium-at-lg {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-medium-mixin(lg);
+}
+
+.cdr-button-large-at-lg {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-large-mixin(lg);
+}
+
+.cdr-button-full-width-at-lg {
+  @include cdr-button-base-mixin;
+  @include cdr-button-secondary-mixin;
+  @include cdr-button-full-width-mixin(lg);
+}
+
 .cdr-card-default {
   @include cdr-card-base-mixin;
   .link {
@@ -52,7 +239,7 @@
 
 .cdr-caption-default {
   @include cdr-caption-container-mixin;
-  @include cdr-caption-summary-mixin;
+  p { @include cdr-caption-summary-mixin; }
   cite {
     @include cdr-caption-cite-mixin;
   }
@@ -72,6 +259,41 @@
   @include cdr-chip-base-mixin;
   .cdr-chip-content-left { @include cdr-chip-content-left-mixin; }
   .cdr-chip-icon-right-icon { @include cdr-chip-icon-right-mixin; }
+}
+
+.cdr-checkbox-dynamic {
+  @include cdr-label-wrapper-base-mixin;
+  @include cdr-label-wrapper-primary-mixin;
+  input {
+   position: absolute; opacity: 0; z-index: -1;
+}
+  .cdr-checkbox-figure {
+  @include cdr-form-figure-base-mixin;
+}
+  input:checked ~ .cdr-checkbox-figure {
+  @include cdr-form-figure-checkbox-checked-mixin;
+}
+  input:hover ~ .cdr-checkbox-figure {
+  @include cdr-form-figure-checkbox-hover-mixin;
+}
+  input:checked:hover ~ .cdr-checkbox-figure {
+  @include cdr-form-figure-checkbox-checked-hover-mixin;
+}
+  input:disabled ~ .cdr-checkbox-figure {
+  @include cdr-form-figure-checkbox-disabled-mixin;
+}
+  input:checked:disabled ~ .cdr-checkbox-figure {
+  @include cdr-form-figure-checkbox-checked-disabled-mixin;
+}
+  input:focus ~ .cdr-checkbox-figure {
+  @include cdr-form-figure-checkbox-focus-mixin;
+}
+  input:checked:focus ~ .cdr-checkbox-figure {
+  @include cdr-form-figure-checkbox-checked-focus-mixin;
+}
+  input:active ~ .cdr-checkbox-figure {
+  @include cdr-form-figure-checkbox-active-mixin;
+}
 }
 
 .cdr-form-error-default {
@@ -198,6 +420,16 @@
   @include cdr-link-standalone-mixin;
 }
 
+.cdr-link-inherit-color {
+  @include cdr-link-base-mixin;
+  @include cdr-link-inherit-color-mixin;
+}
+
+.cdr-link-neutral {
+  @include cdr-link-base-mixin;
+  @include cdr-link-neutral-mixin;
+}
+
 .cdr-list-ordered {
   @include cdr-list-base-mixin;
   @include cdr-list-ordered-mixin;
@@ -210,12 +442,30 @@
 
 .cdr-quote-default {
   @include cdr-quote-base-container;
-  @include cdr-quote-base-content;
+  p { @include cdr-quote-base-content; }
 }
 
 .cdr-quote-pull {
+  @include cdr-quote-base-container;
   @include cdr-quote-pull-container;
-  @include cdr-quote-pull-content
+  p { @include cdr-quote-base-content; @include cdr-quote-pull-content; }
+}
+
+.cdr-radio-dynamic {
+  @include cdr-label-wrapper-base-mixin;
+  @include cdr-label-wrapper-primary-mixin;
+  input {
+  position: absolute; opacity: 0; z-index: -1;
+}
+  .cdr-radio-figure {@include cdr-form-figure-base-mixin; @include cdr-form-figure-radio-base-mixin;}
+  input:checked ~ .cdr-radio-figure {@include cdr-form-figure-radio-checked-mixin;}
+  input:hover ~ .cdr-radio-figure {@include cdr-form-figure-radio-hover-mixin;}
+  input:checked:hover ~ .cdr-radio-figure {@include cdr-form-figure-radio-checked-hover-mixin;}
+  input:disabled ~ .cdr-radio-figure {@include cdr-form-figure-radio-disabled-mixin;}
+  input:checked:disabled ~ .cdr-radio-figure {@include cdr-form-figure-radio-checked-disabled-mixin;}
+  input:focus ~ .cdr-radio-figure {@include cdr-form-figure-radio-focus-mixin;}
+  input:checked:focus ~ .cdr-radio-figure {@include cdr-form-figure-radio-checked-focus-mixin;}
+  input:active ~ .cdr-radio-figure {@include cdr-form-figure-radio-active-mixin;}
 }
 
 .cdr-select-default {
